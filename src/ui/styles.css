@@ -14,7 +14,16 @@
   --pad: 1rem;
 
   --font-ui: system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-text: Georgia, "Times New Roman", serif;
+  --font-text: "Noto Serif", Georgia, "Times New Roman", serif;
+
+  /* Snippet font stack: a serif base for Latin/Cyrillic/Greek, then per-script
+     Noto Sans families for everything else. CJK is steered per-language in the
+     SnippetPanel (zh→SC, ja→JP, ko→KR). */
+  --font-snippet:
+    "Noto Serif", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans Devanagari", "Noto Sans Thai",
+    "Noto Sans Lao", "Noto Sans Khmer", "Noto Sans Myanmar", "Noto Sans Armenian",
+    "Noto Sans Georgian", "Noto Sans Ethiopic", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR",
+    Georgia, serif;
 }
 
 * {

@@ -8,6 +8,48 @@ importers:
 
   .:
     dependencies:
+      '@fontsource/noto-sans-arabic':
+        specifier: ^5.2.10
+        version: 5.2.10
+      '@fontsource/noto-sans-armenian':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource/noto-sans-devanagari':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource/noto-sans-ethiopic':
+        specifier: ^5.2.7
+        version: 5.2.7
+      '@fontsource/noto-sans-georgian':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource/noto-sans-hebrew':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource/noto-sans-jp':
+        specifier: ^5.2.9
+        version: 5.2.9
+      '@fontsource/noto-sans-khmer':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource/noto-sans-kr':
+        specifier: ^5.2.9
+        version: 5.2.9
+      '@fontsource/noto-sans-lao':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource/noto-sans-myanmar':
+        specifier: ^5.2.7
+        version: 5.2.7
+      '@fontsource/noto-sans-sc':
+        specifier: ^5.2.9
+        version: 5.2.9
+      '@fontsource/noto-sans-thai':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource/noto-serif':
+        specifier: ^5.2.9
+        version: 5.2.9
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -339,6 +381,48 @@ packages:
   '@eslint/plugin-kit@0.7.2':
     resolution: {integrity: sha512-+CNAzxglkrpNf/kKywqQfk74QjtceuOE7Qm+AF8miRvPF/wmmK5+OJOgVh3AVTT3RP2mH3+FOaxlE5v72owk0A==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
+
+  '@fontsource/noto-sans-arabic@5.2.10':
+    resolution: {integrity: sha512-Hgj3NwQJ0NquIADW3hFboFjsts4UvEOJQ8tOX0bhQZgpNKHsMawjv/1SZnq0QvRbP6efHTZM/A1k7tdy9S6sbA==}
+
+  '@fontsource/noto-sans-armenian@5.2.8':
+    resolution: {integrity: sha512-aOFFNMHbTDJxXktda/dwK3fc+Li22OflVnvbMzRE0GaPYeFjUwU7u6/BD0BX0EkdWnCeBnaL8vR94ZLt8Rio2Q==}
+
+  '@fontsource/noto-sans-devanagari@5.2.8':
+    resolution: {integrity: sha512-UyCfyCEX2+QVUDQWb9y2MRTg1O3bTcXixzD2xQfapFOtw4hpH1rfDIbTXulZ4SUEsbB/wWeyyEL9b93Nmwd6Gg==}
+
+  '@fontsource/noto-sans-ethiopic@5.2.7':
+    resolution: {integrity: sha512-Co2bpNTpQ7hBZb00z8/FQOwQZjhu1KM8cucwgLPgyRaK91pmnPC25Q+RGghXP2SZlUuPOIj1UjY8NXCaJFgGLQ==}
+
+  '@fontsource/noto-sans-georgian@5.2.8':
+    resolution: {integrity: sha512-oylTMjvNxSZCqbq+0aCto5rjI14Je55scC04DgxQwpReN+ZXe3Kxpv4ATfb61apvlJZkeqTPSazVoRD+rJhbMg==}
+
+  '@fontsource/noto-sans-hebrew@5.2.8':
+    resolution: {integrity: sha512-FN/GDpE709JQN5f7vmqlbIwz2/vAM6ZnXqRsw47Piq731hvti55V/FLbyU2RWUvlis16ezPf0r+zKTjfdeXF/g==}
+
+  '@fontsource/noto-sans-jp@5.2.9':
+    resolution: {integrity: sha512-6yVGiofnrnbiJjU8ch4JGSs2HqyozxMvsVyVmFwOnDH3u//qQKLqmKM4n0lqN0637uaJNzUW9nIJqbbMgHVQzw==}
+
+  '@fontsource/noto-sans-khmer@5.2.8':
+    resolution: {integrity: sha512-nIuy718KK0thk5hu/plNdJvmoA3AElDZMLidYm2ju5TzmowLAS3OoCMXMneLmek2gGlJQmOtsZtF78OQ5orwQw==}
+
+  '@fontsource/noto-sans-kr@5.2.9':
+    resolution: {integrity: sha512-pbF8F0rUzKkDmnk/KYGAbxjgW4TrIHdFKnV6OQ+kUC9ELCn5utrAURcEgMqq3J9SRX+FvjOz+aBCmfcC8/r7cw==}
+
+  '@fontsource/noto-sans-lao@5.2.8':
+    resolution: {integrity: sha512-Ge85hNE9YetzzRjPBBWKhQKez3t2mtYSM1N3B7sEIkTQn7sn9wX2KzfFb8zJ0gXp47CRb32Kw3A7LOoeiFua1g==}
+
+  '@fontsource/noto-sans-myanmar@5.2.7':
+    resolution: {integrity: sha512-WAbPc6iiIoRbfgK2waaRGujLng3oJ2Bo0uHbugU/dg7ityn+lOMUZZDzc/Sd+85C5zcEKv5ytNjgQ7a3NSW4lw==}
+
+  '@fontsource/noto-sans-sc@5.2.9':
+    resolution: {integrity: sha512-bTUIWGBgJDpwi5qAr+x0/lcgv80IHTB9vl6s2f6EymZEa7qYV99yNRBZuKFT+SYDKVunZrjCEhWtpxqmbXWl5Q==}
+
+  '@fontsource/noto-sans-thai@5.2.8':
+    resolution: {integrity: sha512-HUQAxOzclod9PXQx4uMoGRAsor+64snW91QuBg39jT9lbsp7jJx1i3jAtHPJ7mQxHEHnhRjNp54fb8GqPPC6zg==}
+
+  '@fontsource/noto-serif@5.2.9':
+    resolution: {integrity: sha512-A2b7XBo0dSxxTZg95Ap/HLinXq1pEM8PzSvbBFtPMZM5/1BLKEU1dR+PBnLixvOdcC7mup+/NjmyLryQ1E9WeA==}
 
   '@humanfs/core@0.19.2':
     resolution: {integrity: sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA==}
@@ -1581,6 +1665,34 @@ snapshots:
     dependencies:
       '@eslint/core': 1.2.1
       levn: 0.4.1
+
+  '@fontsource/noto-sans-arabic@5.2.10': {}
+
+  '@fontsource/noto-sans-armenian@5.2.8': {}
+
+  '@fontsource/noto-sans-devanagari@5.2.8': {}
+
+  '@fontsource/noto-sans-ethiopic@5.2.7': {}
+
+  '@fontsource/noto-sans-georgian@5.2.8': {}
+
+  '@fontsource/noto-sans-hebrew@5.2.8': {}
+
+  '@fontsource/noto-sans-jp@5.2.9': {}
+
+  '@fontsource/noto-sans-khmer@5.2.8': {}
+
+  '@fontsource/noto-sans-kr@5.2.9': {}
+
+  '@fontsource/noto-sans-lao@5.2.8': {}
+
+  '@fontsource/noto-sans-myanmar@5.2.7': {}
+
+  '@fontsource/noto-sans-sc@5.2.9': {}
+
+  '@fontsource/noto-sans-thai@5.2.8': {}
+
+  '@fontsource/noto-serif@5.2.9': {}
 
   '@humanfs/core@0.19.2':
     dependencies:

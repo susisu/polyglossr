@@ -4,9 +4,8 @@
     "jsx": "react-jsx",
     "lib": ["esnext", "dom", "dom.iterable"],
     "resolveJsonModule": true,
-    "types": ["vite/client"],
+    "types": ["node", "vite/client"],
     "noEmit": true
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src", "scripts", "vite.config.ts"]
 }

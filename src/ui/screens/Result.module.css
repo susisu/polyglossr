@@ -89,7 +89,7 @@
 
 .snippet {
   overflow: hidden;
-  font-family: var(--font-text);
+  font-family: var(--font-snippet);
   white-space: nowrap;
   text-overflow: ellipsis;
   color: var(--fg-muted);

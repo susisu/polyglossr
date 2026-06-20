@@ -43,6 +43,9 @@ const LANGUAGE_DIFFICULTY: ReadonlyMap<string, Difficulty> = new Map([
   ["lit", 4],
   ["est", 4],
   ["cym", 4],
+  ["slv", 4],
+  ["ind", 3],
+  ["fin", 3],
   // Southeast Asian abugidas.
   ["vie", 3],
   ["lao", 4],

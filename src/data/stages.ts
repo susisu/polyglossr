@@ -3,7 +3,8 @@ import type { Stage } from "./stage.js";
 /**
  * Curated stages. Authored by hand against the generated dataset; `stages.test.ts`
  * checks every source code resolves and that each stage has enough distinct
- * logical languages. More stages are added later.
+ * logical languages. The runtime dataset is pruned to exactly the languages
+ * these stages reference.
  */
 export const STAGES: readonly Stage[] = [
   {
@@ -33,6 +34,68 @@ export const STAGES: readonly Stage[] = [
       "hye", // Armenian
       "kat", // Georgian
       "amh", // Ethiopic (Ge'ez)
+    ],
+  },
+  {
+    id: "europe",
+    name: "Europe",
+    description: "Telling apart the Latin-script (and Greek) languages of Europe.",
+    theme: "region",
+    difficulty: 3,
+    sourceCodes: [
+      "spa",
+      "fra",
+      "ita",
+      "por_PT",
+      "deu_1996",
+      "nld",
+      "pol",
+      "ces",
+      "swe",
+      "ell_monotonic",
+    ],
+  },
+  {
+    id: "east-southeast-asia",
+    name: "East & Southeast Asia",
+    description: "Han, kana, hangul and the scripts of mainland Southeast Asia.",
+    theme: "region",
+    difficulty: 3,
+    sourceCodes: ["cmn_hans", "jpn", "kor", "tha", "lao", "khm", "vie", "mya"],
+  },
+  {
+    id: "latin-lookalikes",
+    name: "Latin Lookalikes",
+    description: "Languages that share the Latin alphabet — read the diacritics for clues.",
+    theme: "difficulty",
+    difficulty: 5,
+    sourceCodes: ["pol", "ces", "hun", "tur", "vie", "hrv", "ron_2006", "lit", "slv", "cym"],
+  },
+  {
+    id: "geoguessr",
+    name: "Languages of GeoGuessr",
+    description: "Languages you meet roaming the map — Serbian shows up in both scripts.",
+    theme: "themed",
+    difficulty: 3,
+    sourceCodes: [
+      "eng",
+      "spa",
+      "fra",
+      "deu_1996",
+      "rus",
+      "jpn",
+      "kor",
+      "tur",
+      "tha",
+      "ind",
+      "nld",
+      "pol",
+      "srp_cyrl",
+      "srp_latn",
+      "ell_monotonic",
+      "swe",
+      "ron_2006",
+      "fin",
     ],
   },
 ];

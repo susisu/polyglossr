@@ -20,6 +20,7 @@ import { fromHtml } from "hast-util-from-html";
 import { toText } from "hast-util-to-text";
 import type { Element, ElementContent, RootContent } from "hast";
 import { udhr } from "udhr";
+import { STAGES } from "../src/data/stages.js";
 
 /** Schema version of the emitted dataset; bump when the shape changes. */
 const SCHEMA_VERSION = 1;
@@ -295,10 +296,24 @@ async function main(): Promise<void> {
     }
   }
 
+  // Prune the runtime dataset to only the sources the stages reference, so the
+  // app bundle carries just the languages in play (the manifest keeps them all).
+  const referenced = new Set<string>();
+  for (const stage of STAGES) {
+    for (const code of stage.sourceCodes) referenced.add(code);
+  }
+  const keptCodes = new Set(sources.map((s) => s.code));
+  for (const code of referenced) {
+    if (!keptCodes.has(code)) {
+      warnings.push(`stage references missing source "${code}"`);
+    }
+  }
+  const runtimeSources = sources.filter((s) => referenced.has(s.code));
+
   const dataset = {
     schemaVersion: SCHEMA_VERSION,
     udhrVersion: "6.0.0",
-    sources,
+    sources: runtimeSources,
   };
   const manifest = {
     schemaVersion: SCHEMA_VERSION,
@@ -331,9 +346,9 @@ async function main(): Promise<void> {
     "utf8",
   );
 
-  const isoCount = byIso.size;
   process.stdout.write(
-    `Generated ${String(sources.length)} sources (${String(isoCount)} logical languages), `
+    `Kept ${String(sources.length)} sources (${String(byIso.size)} logical languages); `
+      + `bundled ${String(runtimeSources.length)} referenced by stages; `
       + `dropped ${String(dropped.length)}, ${String(warnings.length)} warnings.\n`,
   );
 }

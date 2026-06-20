@@ -12,7 +12,7 @@
 
 .text {
   margin: 0;
-  font-family: var(--font-text);
+  font-family: var(--font-snippet);
   font-size: clamp(1.25rem, 3.5vw, 1.875rem);
   line-height: 1.7;
   text-align: start;
