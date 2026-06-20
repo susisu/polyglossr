@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "keptCount": 513,
-  "droppedCount": 19,
+  "keptCount": 511,
+  "droppedCount": 21,
   "kept": [
     {
       "code": "007",
@@ -1424,16 +1424,6 @@
       "snippetCount": 20
     },
     {
-      "code": "deu_1901",
-      "iso6393": "deu",
-      "name": "German, Standard (1901)",
-      "baseName": "German, Standard",
-      "scriptLabel": "1901",
-      "direction": "ltr",
-      "encodingStage": 4,
-      "snippetCount": 20
-    },
-    {
       "code": "deu_1996",
       "iso6393": "deu",
       "name": "German, Standard (1996)",
@@ -1509,16 +1499,6 @@
       "name": "Greek (monotonic)",
       "baseName": "Greek",
       "scriptLabel": "monotonic",
-      "direction": "ltr",
-      "encodingStage": 4,
-      "snippetCount": 20
-    },
-    {
-      "code": "ell_polytonic",
-      "iso6393": "ell",
-      "name": "Greek (polytonic)",
-      "baseName": "Greek",
-      "scriptLabel": "polytonic",
       "direction": "ltr",
       "encodingStage": 4,
       "snippetCount": 20
@@ -5189,6 +5169,16 @@
       "code": "chv",
       "name": "Chuvash",
       "reason": "stage<3"
+    },
+    {
+      "code": "deu_1901",
+      "name": "German, Standard (1901)",
+      "reason": "manual-exclude"
+    },
+    {
+      "code": "ell_polytonic",
+      "name": "Greek (polytonic)",
+      "reason": "manual-exclude"
     },
     {
       "code": "iii",

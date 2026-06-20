@@ -30,13 +30,15 @@ const MIN_SNIPPETS = 6;
 /** Cap snippets per language to keep the dataset small. */
 const MAX_SNIPPETS = 20;
 /**
- * Codes to drop manually. Multiple sources per iso6393 are fine (the logical-
- * language model groups them), so we only drop entries that share an iso6393 AND
- * the same script label, making them indistinguishable in-game:
+ * Codes to drop manually — a curated, by-name list (no general pattern).
+ * Multiple sources per iso6393 are otherwise fine (the logical-language model
+ * groups them); these are specific variants we don't want to present:
  * - `mal_chillus`: alternate Malayalam orthography (keep plain `mal`).
  * - `ven2`: a second copy of Venda (keep `ven`).
+ * - `deu_1901`: pre-reform German orthography (keep modern `deu_1996`).
+ * - `ell_polytonic`: historical polytonic Greek (keep modern `ell_monotonic`).
  */
-const MANUAL_EXCLUDE = new Set<string>(["mal_chillus", "ven2"]);
+const MANUAL_EXCLUDE = new Set<string>(["mal_chillus", "ven2", "deu_1901", "ell_polytonic"]);
 
 /** Segmentation knobs per script class, calibrated so reading effort ≈ 10–20 words. */
 type ScriptClass = "cjk" | "abugida" | "spaced";

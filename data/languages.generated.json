@@ -4543,38 +4543,6 @@
       ]
     },
     {
-      "code": "deu_1901",
-      "iso6393": "deu",
-      "name": "German, Standard (1901)",
-      "baseName": "German, Standard",
-      "scriptLabel": "1901",
-      "bcp47": "de-1901",
-      "direction": "ltr",
-      "encodingStage": 4,
-      "snippets": [
-        "Da die Anerkennung der angeborenen Würde und der gleichen und unveräußerlichen Rechte aller Mitglieder",
-        "der Gemeinschaft der Menschen die Grundlage von Freiheit, Gerechtigkeit und Frieden in der Welt",
-        "da die Nichtanerkennung und Verachtung der Menschenrechte zu Akten der Barbarei geführt haben, die",
-        "das Gewissen der Menschheit mit Empörung erfüllen, und da verkündet worden ist, daß einer",
-        "Welt, in der die Menschen Rede‐ und Glaubensfreiheit und Freiheit von Furcht und Not",
-        "da es notwendig ist, die Menschenrechte durch die Herrschaft des Rechtes zu schützen, damit",
-        "der Mensch nicht gezwungen wird, als letztes Mittel zum Aufstand gegen Tyrannei und Unterdrückung",
-        "da es notwendig ist, die Entwicklung freundschaftlicher Beziehungen zwischen den Nationen zu fördern,",
-        "da die Völker der Vereinten Nationen in der Charta ihren Glauben an die grundlegenden",
-        "Menschenrechte, an die Würde und den Wert der menschlichen Person und an die Gleichberechtigung",
-        "von Mann und Frau erneut bekräftigt und beschlossen haben, den sozialen Fortschritt und bessere",
-        "da die Mitgliedstaaten sich verpflichtet haben, in Zusammenarbeit mit den Vereinten Nationen auf die",
-        "da ein gemeinsames Verständnis dieser Rechte und Freiheiten von größter Wichtigkeit für die volle",
-        "diese Allgemeine Erklärung der Menschenrechte als das von allen Völkern und Nationen zu erreichende",
-        "gemeinsame Ideal, damit jeder einzelne und alle Organe der Gesellschaft sich diese Erklärung stets",
-        "gegenwärtig halten und sich bemühen, durch Unterricht und Erziehung die Achtung vor diesen Rechten",
-        "und Freiheiten zu fördern und durch fortschreitende nationale und internationale Maßnahmen ihre allgemeine und",
-        "tatsächliche Anerkennung und Einhaltung durch die Bevölkerung der Mitgliedstaaten selbst wie auch durch die",
-        "Alle Menschen sind frei und gleich an Würde und Rechten geboren. Sie sind mit",
-        "Vernunft und Gewissen begabt und sollen einander im Geist der Brüderlichkeit begegnen."
-      ]
-    },
-    {
       "code": "deu_1996",
       "iso6393": "deu",
       "name": "German, Standard (1996)",
@@ -4828,38 +4796,6 @@
         "στο οποίο πρέπει να κατατείνουν όλοι οι λαοί και όλα τα έθνη, έτσι ώστε",
         "κάθε άτομο και κάθε όργανο της κοινωνίας, με τη Διακήρυξη αυτή διαρκώς στη σκέψη,",
         "να καταβάλλει, με τη διδασκαλία και την παιδεία, κάθε προσπάθεια για να αναπτυχθεί ο"
-      ]
-    },
-    {
-      "code": "ell_polytonic",
-      "iso6393": "ell",
-      "name": "Greek (polytonic)",
-      "baseName": "Greek",
-      "scriptLabel": "polytonic",
-      "bcp47": "el-polyton",
-      "direction": "ltr",
-      "encodingStage": 4,
-      "snippets": [
-        "Ἐπειδὴ ἡ ἀναγνώριση τῆς ἀξιοπρέπειας, ποὺ εἶναι σύμφυτη σὲ ὅλα τὰ μέλη τῆς ἀνθρώπινης",
-        "οἰκογένειας, καθὼς καὶ τῶν ἴσων καὶ ἀναπαλλοτρίωτων δικαιωμάτων τους ἀποτελεῖ τὸ θεμέλιο τῆς ἐλευθερίας,",
-        "Ἐπειδὴ ἡ παραγνώριση καὶ ἡ περιφρόνηση τῶν δικαιωμάτων τοῦ ἀνθρώπου ὁδήγησαν σὲ πράξεις βαρβαρότητας,",
-        "ποὺ ἐξεγείρουν τὴν ἀνθρώπινη συνείδηση, καὶ ἡ προοπτικὴ ἑνὸς κόσμου ὅπου οἱ ἄνθρωποι θὰ",
-        "εἶναι ἐλεύθεροι νὰ μιλοῦν καὶ νὰ πιστεύουν, λυτρωμένοι ἀπὸ τὸν τρόμο καὶ τὴν ἀθλιότητα,",
-        "Ἐπειδὴ ἔχει οὐσιαστικὴ σημασία νὰ προστατεύονται τὰ ἀνθρώπινα δικαιώματα ἀπὸ ἕνα καθεστὼς δικαίου, ὥστε",
-        "ὁ ἄνθρωπος νὰ μὴν ἀναγκάζεται νὰ προσφεύγει, ὡς ἔσχατο καταφύγιο, στὴν ἐξέγερση κατὰ τῆς",
-        "Ἐπειδὴ ἔχει οὐσιαστικὴ σημασία νὰ ἐνθαρρύνεται ἡ ἀνάπτυξη φιλικῶν σχέσεων ἀνάμεσα στὰ ἔθνη.",
-        "Ἐπειδή, μὲ τὸν καταστατικὸ Χάρτη, οἱ λαοὶ τῶν Ἡνωμένων Ἐθνῶν διακήρυξαν καὶ πάλι τὴν",
-        "πίστη τους στὰ θεμελιακὰ δικαιώματα τοῦ ἀνθρώπου, στήν ἀξιοπρέπεια καὶ τὴν ἀξία τῆς ἀνθρώπινης",
-        "προσωπικότητας, στὴν ἰσότητα δικαιωμάτων ἀνδρῶν καὶ γυναικῶν, καὶ διακήρυξαν πὼς εἶναι ἀποφασισμένοι νὰ συντελέσουν",
-        "στὴν κοινωνικὴ πρόοδο καὶ νὰ δημιουργήσουν καλύτερες συνθῆκες ζωῆς στὰ πλαίσια μιᾶς εὐρύτερης ἐλευθερίας.",
-        "Ἐπειδὴ τὰ κράτη μέλη ἀνέλαβαν τὴν ὑποχρέωση νὰ ἐξασφαλίσουν, σὲ συνεργασία μὲ τὸν Ὀργανισμὸ",
-        "τῶν Ἡνωμένων Ἐθνῶν, τὸν ἀποτελεσματικὸ σεβασμὸ τῶν δικαιωμάτων τοῦ ἀνθρώπου καὶ τῶν θεμελιακῶν ἐλευθεριῶν",
-        "Ἐπειδὴ ἡ ταυτότητα ἀντιλήψεων ὡς πρὸς τὰ δικαιώματα καὶ τὶς ἐλευθερίες αὐτὲς ἔχει ἐξαιρετικὴ",
-        "σημασία γιὰ νὰ ἐκπληρωθεῖ πέρα ὣς πέρα αὐτὴ ἡ ὑποχρέωση,",
-        "Διακηρύσσει ὅτι ἡ παρούσα Οἰκουμενικὴ Διακήρυξη τῶν Δικαιωμάτων τοῦ Ἀνθρώπου ἀποτελεῖ τὸ κοινὸ ἰδανικὸ",
-        "στὸ ὁποῖο πρέπει νὰ κατατείνουν ὅλοι οἱ λαοὶ καὶ ὅλα τὰ ἔθνη, ἔτσι ὥστε",
-        "κάθε ἄτομο καὶ κάθε ὄργανο τῆς κοινωνίας, μὲ τὴν Διακήρυξη αὐτὴ διαρκῶς στὴν σκέψη,",
-        "νὰ καταβάλλει, μὲ τὴν διδασκαλία καὶ τὴν παιδεία, κάθε προσπάθεια γιὰ νὰ ἀναπτυχθεῖ ὁ"
       ]
     },
     {
