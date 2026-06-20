@@ -74,17 +74,6 @@ export const STAGES: readonly Stage[] = [
     sourceCodes: ["cmn_hans", "jpn", "kor", "tha", "lao", "khm", "vie", "mya"],
   },
   {
-    id: "latin-lookalikes",
-    name: { en: "Latin Lookalikes", ja: "紛らわしいラテン文字" },
-    description: {
-      en: "Languages that share the Latin alphabet — read the diacritics for clues.",
-      ja: "ラテン文字を共有する言語たち — 発音区別符号を手がかりに。",
-    },
-    theme: "difficulty",
-    difficulty: 5,
-    sourceCodes: ["pol", "ces", "hun", "tur", "vie", "hrv", "ron_2006", "lit", "slv", "cym"],
-  },
-  {
     id: "geoguessr",
     name: { en: "Languages of GeoGuessr", ja: "GeoGuessr の言語" },
     description: {
