@@ -230,6 +230,22 @@ export const STAGES: readonly Stage[] = [
     sourceCodes: ["hin", "urd", "ben", "guj", "tam", "tel", "kan", "mal", "sin", "nep", "dzo"],
   },
   {
+    id: "celtic",
+    name: { en: "Celtic", ja: "ケルト語派" },
+    description: {
+      en: "The surviving Celtic languages of the British Isles and Brittany.",
+      ja: "ブリテン諸島とブルターニュに受け継がれるケルトの言語たち。",
+    },
+    theme: "themed",
+    difficulty: 4,
+    sourceCodes: [
+      "gle", // Irish
+      "gla", // Scottish Gaelic
+      "cym", // Welsh
+      "bre", // Breton
+    ],
+  },
+  {
     id: "geoguessr-hard",
     name: { en: "Languages of GeoGuessr (Hard)", ja: "GeoGuessr で出会う言語（上級）" },
     description: {
