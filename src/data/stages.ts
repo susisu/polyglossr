@@ -74,6 +74,79 @@ export const STAGES: readonly Stage[] = [
     sourceCodes: ["cmn_hans", "jpn", "kor", "tha", "lao", "khm", "vie", "mya"],
   },
   {
+    id: "europe-hard",
+    name: { en: "Europe (Hard)", ja: "ヨーロッパ（上級）" },
+    description: {
+      en: "Deeper into Europe: regional and minority languages alongside the nationals.",
+      ja: "ヨーロッパの奥へ。国家語に加え、地域語・少数言語も見分けよう。",
+    },
+    theme: "region",
+    difficulty: 4,
+    sourceCodes: [
+      // Romance
+      "spa",
+      "fra",
+      "ita",
+      "por_PT",
+      "ron_2006",
+      "cat",
+      "glg",
+      "prv", // Occitan
+      "roh", // Romansch
+      // Germanic
+      "eng",
+      "deu_1996",
+      "nld",
+      "swe",
+      "dan",
+      "nob",
+      "nno", // Norwegian Nynorsk — distinguished from Bokmål by function words (eg/ikkje vs jeg/ikke)
+      "isl",
+      "fao",
+      "ltz",
+      // Celtic
+      "gle",
+      "gla",
+      "cym",
+      "bre",
+      // Slavic
+      "pol",
+      "ces",
+      "slk",
+      "slv",
+      "hrv",
+      // Bosnian and Montenegrin are omitted: their UDHR translations are near-identical to
+      // Croatian, so even an expert cannot reliably tell them apart. Serbian stays
+      // distinguishable (Ekavian reflex: čoveka vs čovjeka).
+      "srp_cyrl",
+      "srp_latn",
+      "mkd",
+      "bul",
+      "rus",
+      "ukr",
+      "bel",
+      "hsb", // Upper Sorbian
+      // Baltic
+      "lit",
+      "lav",
+      // Uralic
+      "fin",
+      "est",
+      "hun",
+      "sme", // North Saami
+      // Other European families
+      "ell_monotonic",
+      "als",
+      "eus",
+      "mlt",
+      // Eastern edge (transcontinental)
+      "kat", // Georgia
+      "hye", // Armenia
+      "tur", // Turkey
+      "azj_latn", // Azerbaijani (Latin)
+    ],
+  },
+  {
     id: "geoguessr-hard",
     name: { en: "Languages of GeoGuessr (Hard)", ja: "GeoGuessr で出会う言語（上級）" },
     description: {
