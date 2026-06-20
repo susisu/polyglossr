@@ -173,6 +173,7 @@ export const STAGES: readonly Stage[] = [
       "bre",
       // Nordic
       "isl",
+      "fao",
       "dan",
       "nob",
       "swe",
@@ -189,10 +190,9 @@ export const STAGES: readonly Stage[] = [
       "hun",
       // Balkans
       "hrv",
-      // Bosnian (Latin) is omitted: its UDHR translation is near-identical to Croatian
-      // (many snippets are word-for-word the same), so even an expert cannot reliably tell
-      // them apart. Serbian stays distinguishable (Ekavian reflex: čoveka vs čovjeka).
-      // "bos_latn",
+      // Bosnian and Montenegrin are omitted: their UDHR translations are near-identical to
+      // Croatian, so even an expert cannot reliably tell them apart. Serbian stays
+      // distinguishable (Ekavian reflex: čoveka vs čovjeka).
       "srp_cyrl",
       "srp_latn",
       "als",
