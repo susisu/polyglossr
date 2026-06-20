@@ -214,6 +214,83 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
+    id: "europe-branches",
+    name: { en: "Branches of Europe", ja: "ヨーロッパの語派" },
+    description: {
+      en: "Don't name the language — name its branch. Romance, Germanic, Slavic, Celtic and the rest of Europe's family tree.",
+      ja: "言語ではなく語派を答えよう。ロマンス・ゲルマン・スラヴ・ケルトなど、ヨーロッパに枝分かれした語派たち。",
+    },
+    // Options are language branches, not languages: each bundles every Europe
+    // (Hard) language belonging to it. The languages mirror the europe-hard
+    // stage; the Indo-European branches each get an option, and everything
+    // outside Indo-European is collected into a single "Other" option.
+    category: "family",
+    regions: ["europe"],
+    options: [
+      {
+        id: "romance",
+        label: { en: "Romance", ja: "ロマンス語派" },
+        sourceCodes: ["spa", "fra", "ita", "por_PT", "ron_2006", "cat", "glg", "prv", "roh"],
+      },
+      {
+        id: "germanic",
+        label: { en: "Germanic", ja: "ゲルマン語派" },
+        sourceCodes: ["eng", "deu_1996", "nld", "swe", "dan", "nob", "nno", "isl", "fao", "ltz"],
+      },
+      {
+        id: "slavic",
+        label: { en: "Slavic", ja: "スラヴ語派" },
+        sourceCodes: [
+          "pol",
+          "ces",
+          "slk",
+          "slv",
+          "hrv",
+          "srp_cyrl",
+          "srp_latn",
+          "mkd",
+          "bul",
+          "rus",
+          "ukr",
+          "bel",
+          "hsb",
+        ],
+      },
+      {
+        id: "celtic",
+        label: { en: "Celtic", ja: "ケルト語派" },
+        sourceCodes: ["gle", "gla", "cym", "bre"],
+      },
+      {
+        id: "baltic",
+        label: { en: "Baltic", ja: "バルト語派" },
+        sourceCodes: ["lit", "lav"],
+      },
+      {
+        id: "hellenic",
+        label: { en: "Hellenic", ja: "ギリシャ語派" },
+        sourceCodes: ["ell_monotonic"],
+      },
+      {
+        id: "albanian",
+        label: { en: "Albanian", ja: "アルバニア語派" },
+        sourceCodes: ["als"],
+      },
+      {
+        id: "armenian",
+        label: { en: "Armenian", ja: "アルメニア語派" },
+        sourceCodes: ["hye"],
+      },
+      {
+        id: "other",
+        label: { en: "Other (non-Indo-European)", ja: "その他（非印欧語族）" },
+        // Uralic (Finnish, Estonian, Hungarian, North Saami), Basque (isolate),
+        // Turkic (Turkish, Azerbaijani), Kartvelian (Georgian) and Semitic (Maltese).
+        sourceCodes: ["fin", "est", "hun", "sme", "eus", "tur", "azj_latn", "kat", "mlt"],
+      },
+    ],
+  },
+  {
     id: "romance",
     name: { en: "Romance", ja: "ロマンス諸語" },
     description: {
