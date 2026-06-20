@@ -19,11 +19,11 @@ export const STAGES: readonly Stage[] = [
     sourceCodes: ["eng", "spa", "fra", "deu_1996", "rus", "cmn_hans", "jpn", "arb", "hin"],
   },
   {
-    id: "scripts-of-the-world",
-    name: { en: "Scripts of the World", ja: "世界の文字" },
+    id: "scripts-of-the-world-easy",
+    name: { en: "Scripts of the World (Easy)", ja: "世界の文字（初級）" },
     description: {
       en: "One language per writing system — guess it by the script alone.",
-      ja: "書記体系ごとに1言語 — 文字だけで当ててみよう。",
+      ja: "書記体系ごとに1言語。文字だけで当ててみよう。",
     },
     theme: "themed",
     difficulty: 2,
@@ -37,9 +37,6 @@ export const STAGES: readonly Stage[] = [
       "cmn_hans", // Han
       "kor", // Hangul
       "tha", // Thai
-      "hye", // Armenian
-      "kat", // Georgian
-      "amh", // Ethiopic (Ge'ez)
     ],
   },
   {
