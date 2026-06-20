@@ -13,6 +13,8 @@ import "@fontsource/noto-sans-myanmar";
 import "@fontsource/noto-sans-armenian";
 import "@fontsource/noto-sans-georgian";
 import "@fontsource/noto-sans-ethiopic";
+import "@fontsource/noto-sans-cherokee";
+import "@fontsource/noto-sans-canadian-aboriginal";
 import "@fontsource/noto-sans-sc";
 import "@fontsource/noto-sans-jp";
 import "@fontsource/noto-sans-kr";

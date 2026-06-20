@@ -23,6 +23,8 @@
   "dependencies": {
     "@fontsource/noto-sans-arabic": "^5.2.10",
     "@fontsource/noto-sans-armenian": "^5.2.8",
+    "@fontsource/noto-sans-canadian-aboriginal": "^5.2.8",
+    "@fontsource/noto-sans-cherokee": "^5.2.8",
     "@fontsource/noto-sans-devanagari": "^5.2.8",
     "@fontsource/noto-sans-ethiopic": "^5.2.7",
     "@fontsource/noto-sans-georgian": "^5.2.8",

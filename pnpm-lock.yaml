@@ -14,6 +14,12 @@ importers:
       '@fontsource/noto-sans-armenian':
         specifier: ^5.2.8
         version: 5.2.8
+      '@fontsource/noto-sans-canadian-aboriginal':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource/noto-sans-cherokee':
+        specifier: ^5.2.8
+        version: 5.2.8
       '@fontsource/noto-sans-devanagari':
         specifier: ^5.2.8
         version: 5.2.8
@@ -387,6 +393,12 @@ packages:
 
   '@fontsource/noto-sans-armenian@5.2.8':
     resolution: {integrity: sha512-aOFFNMHbTDJxXktda/dwK3fc+Li22OflVnvbMzRE0GaPYeFjUwU7u6/BD0BX0EkdWnCeBnaL8vR94ZLt8Rio2Q==}
+
+  '@fontsource/noto-sans-canadian-aboriginal@5.2.8':
+    resolution: {integrity: sha512-22vy9eVruMqQrNq+54nQCqeRsn3shLuFw9WJ9MxgadiRfhmn5aPtz2sc4egn1g63/+3ddpL9lQNfZ/jljH6Vow==}
+
+  '@fontsource/noto-sans-cherokee@5.2.8':
+    resolution: {integrity: sha512-8YSrhy17x5TD+wFhidQyxqtFgHM6uzRe9QHp/15Rtbyxz6M13q6YJIzf+INTPPS3mSgXTotnHbovhTS6MDiFTQ==}
 
   '@fontsource/noto-sans-devanagari@5.2.8':
     resolution: {integrity: sha512-UyCfyCEX2+QVUDQWb9y2MRTg1O3bTcXixzD2xQfapFOtw4hpH1rfDIbTXulZ4SUEsbB/wWeyyEL9b93Nmwd6Gg==}
@@ -1669,6 +1681,10 @@ snapshots:
   '@fontsource/noto-sans-arabic@5.2.10': {}
 
   '@fontsource/noto-sans-armenian@5.2.8': {}
+
+  '@fontsource/noto-sans-canadian-aboriginal@5.2.8': {}
+
+  '@fontsource/noto-sans-cherokee@5.2.8': {}
 
   '@fontsource/noto-sans-devanagari@5.2.8': {}
 
