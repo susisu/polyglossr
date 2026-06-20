@@ -26,11 +26,37 @@ export function About({ onHome }: Props): ReactElement {
         <ul className={styles["credits"]}>
           <li>
             UDHR text © United Nations. The Declaration is the most translated, copyright-free
-            document in the world, reproduced here via the UN Office of the High Commissioner for
-            Human Rights (OHCHR).
+            document in the world, reproduced here via the{" "}
+            <a
+              className={styles["link"]}
+              href="https://www.ohchr.org/en/universal-declaration-of-human-rights"
+              target="_blank"
+              rel="noreferrer"
+            >
+              UN Office of the High Commissioner for Human Rights (OHCHR)
+            </a>
+            .
           </li>
           <li>
-            Language data via the <code>udhr</code> npm package © Titus Wormer, MIT License.
+            Language data via the{" "}
+            <a
+              className={styles["link"]}
+              href="https://github.com/wooorm/udhr"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <code>udhr</code>
+            </a>{" "}
+            npm package © Titus Wormer,{" "}
+            <a
+              className={styles["link"]}
+              href="https://github.com/wooorm/udhr/blob/main/license"
+              target="_blank"
+              rel="noreferrer"
+            >
+              MIT License
+            </a>
+            .
           </li>
         </ul>
       </section>
