@@ -73,6 +73,15 @@ export const ja = {
         ）を利用しています。
       </>
     ),
+    appTitle: "このアプリについて",
+    copyright: "© 2026 Susisu",
+    sourceCode: (
+      <>
+        ソースコードは{" "}
+        <ExternalLink href="https://github.com/susisu/polyglossr">GitHub</ExternalLink>{" "}
+        で公開しています。
+      </>
+    ),
     backToStages: "ステージ一覧へ",
   },
 } satisfies Messages;

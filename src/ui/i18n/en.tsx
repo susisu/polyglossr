@@ -74,6 +74,14 @@ export const en = {
         .
       </>
     ),
+    appTitle: "About this app",
+    copyright: "© 2026 Susisu",
+    sourceCode: (
+      <>
+        The source code is available on{" "}
+        <ExternalLink href="https://github.com/susisu/polyglossr">GitHub</ExternalLink>.
+      </>
+    ),
     backToStages: "Back to stages",
   },
 } satisfies Messages;

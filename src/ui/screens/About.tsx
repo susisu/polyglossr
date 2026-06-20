@@ -23,6 +23,12 @@ export function About({ onHome }: Props): ReactElement {
         </ul>
       </section>
 
+      <section className={styles["section"]}>
+        <h3 className={styles["subheading"]}>{messages.about.appTitle}</h3>
+        <p>{messages.about.copyright}</p>
+        <p>{messages.about.sourceCode}</p>
+      </section>
+
       <button type="button" className={styles["back"]} onClick={onHome}>
         {messages.about.backToStages}
       </button>

@@ -71,6 +71,12 @@ export interface Messages {
     udhrCredit: ReactNode;
     /** udhr package attribution; must retain the author and MIT license credit. */
     packageCredit: ReactNode;
+    /** Title of the section about the app itself. */
+    appTitle: string;
+    /** Copyright line for the app. */
+    copyright: string;
+    /** Link to the app's source code repository. */
+    sourceCode: ReactNode;
     backToStages: string;
   };
 }
