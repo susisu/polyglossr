@@ -99,3 +99,35 @@ export function rebuildStats(records: Iterable<GameRecord>): Stats {
   for (const record of records) stats = recordGame(stats, record);
   return stats;
 }
+
+/** Minimum times an option must be seen before it ranks as strong/weak. */
+export const MIN_SEEN = 3;
+
+/** A stage option ranked by accuracy, for the strong/weak lists. */
+export interface RankedOption extends OptionStat {
+  accuracy: number;
+}
+
+function rankedOptions(stage: StageStat): RankedOption[] {
+  return Object.values(stage.options)
+    .filter((option) => option.seen >= MIN_SEEN)
+    .map((option) => ({ ...option, accuracy: option.correct / option.seen }));
+}
+
+/** A stage's top `n` options by accuracy (ties broken by most-seen). */
+export function strongOptions(stage: StageStat, n: number): RankedOption[] {
+  return rankedOptions(stage)
+    .sort((a, b) => b.accuracy - a.accuracy || b.seen - a.seen)
+    .slice(0, n);
+}
+
+/**
+ * A stage's bottom `n` options by accuracy (ties broken by most-seen). Options
+ * answered perfectly (100% accuracy) are excluded — they don't need work.
+ */
+export function weakOptions(stage: StageStat, n: number): RankedOption[] {
+  return rankedOptions(stage)
+    .filter((option) => option.accuracy < 1)
+    .sort((a, b) => a.accuracy - b.accuracy || b.seen - a.seen)
+    .slice(0, n);
+}

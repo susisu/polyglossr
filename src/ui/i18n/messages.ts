@@ -18,7 +18,23 @@ export interface Messages {
   stageSelect: {
     intro: string;
     difficultyLabel: (value: number, max: number) => string;
-    optionCount: (count: number) => string;
+    /** Best score shown on a played stage's card. */
+    best: (correct: number, total: number) => string;
+    /** Shown on a stage's card before it has ever been played. */
+    unplayed: string;
+  };
+  stageDetail: {
+    play: string;
+    back: string;
+    best: (correct: number, total: number) => string;
+    played: (count: number) => string;
+    /** Placeholder shown before the stage has been played. */
+    unplayed: string;
+    /** Heading for the player's strongest answers in this stage. */
+    strong: string;
+    /** Heading for the answers the player most often misses in this stage. */
+    needsWork: string;
+    seenCount: (count: number) => string;
   };
   game: {
     progress: (current: number, total: number) => string;

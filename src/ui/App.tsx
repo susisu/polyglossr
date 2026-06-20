@@ -9,11 +9,13 @@ import { useMessages } from "./i18n/index.js";
 import { About } from "./screens/About.js";
 import { Game } from "./screens/Game.js";
 import { Result } from "./screens/Result.js";
+import { StageDetail } from "./screens/StageDetail.js";
 import { StageSelect } from "./screens/StageSelect.js";
 import { getStatsStore } from "./statsStore.js";
 
 type Screen =
   | { kind: "stage-select" }
+  | { kind: "stage-detail"; stage: Stage }
   | { kind: "game"; stage: Stage; seed: number }
   | { kind: "result"; gameState: GameState }
   | { kind: "about" };
@@ -37,6 +39,10 @@ export function App(): ReactElement {
       // Best-effort; the game still works without persistence.
     });
   }, []);
+
+  function selectStage(stage: Stage): void {
+    setScreen({ kind: "stage-detail", stage });
+  }
 
   function startStage(stage: Stage): void {
     setScreen({ kind: "game", stage, seed: randomSeed() });
@@ -66,7 +72,16 @@ export function App(): ReactElement {
       </header>
 
       <main className={styles["main"]}>
-        {screen.kind === "stage-select" && <StageSelect onStart={startStage} />}
+        {screen.kind === "stage-select" && <StageSelect onSelect={selectStage} />}
+        {screen.kind === "stage-detail" && (
+          <StageDetail
+            stage={screen.stage}
+            onStart={() => {
+              startStage(screen.stage);
+            }}
+            onBack={home}
+          />
+        )}
         {screen.kind === "game" && (
           <Game
             stage={screen.stage}

@@ -63,22 +63,6 @@
   margin-top: 0.5rem;
 }
 
-.difficulty {
-  display: inline-flex;
-  gap: 0.25rem;
-}
-
-.dot {
-  width: 0.45rem;
-  height: 0.45rem;
-  border-radius: 50%;
-  background: var(--border);
-}
-
-.dotOn {
-  background: var(--accent);
-}
-
 .count {
   color: var(--fg-muted);
   font-size: 0.8125rem;

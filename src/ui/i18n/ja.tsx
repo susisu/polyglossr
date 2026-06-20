@@ -11,7 +11,18 @@ export const ja = {
     intro:
       "短い文章が表示されるので、それが何語で書かれているかを答えてください。ステージを選んで始めましょう。",
     difficultyLabel: (value, max) => `難易度 ${value}/${max}`,
-    optionCount: (count) => `${count}個の選択肢`,
+    best: (correct, total) => `ベスト ${correct}/${total}`,
+    unplayed: "未プレイ",
+  },
+  stageDetail: {
+    play: "プレイする",
+    back: "戻る",
+    best: (correct, total) => `ベスト ${correct}/${total}`,
+    played: (count) => `${count}回プレイ`,
+    unplayed: "このステージをプレイすると、ここに得意・苦手が表示されます。",
+    strong: "得意",
+    needsWork: "苦手",
+    seenCount: (count) => `${count}回出題`,
   },
   game: {
     progress: (current, total) => `${current} / ${total}`,

@@ -10,7 +10,18 @@ export const en = {
   stageSelect: {
     intro: "A short text appears — name the language it is written in. Pick a stage to begin.",
     difficultyLabel: (value, max) => `Difficulty ${value} of ${max}`,
-    optionCount: (count) => `${count} options`,
+    best: (correct, total) => `Best ${correct}/${total}`,
+    unplayed: "Not played",
+  },
+  stageDetail: {
+    play: "Play",
+    back: "Back",
+    best: (correct, total) => `Best ${correct}/${total}`,
+    played: (count) => `${count} played`,
+    unplayed: "Play this stage and your strengths will show up here.",
+    strong: "Strong",
+    needsWork: "Needs work",
+    seenCount: (count) => `${count} seen`,
   },
   game: {
     progress: (current, total) => `${current} / ${total}`,
