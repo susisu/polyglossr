@@ -74,8 +74,8 @@ export const STAGES: readonly Stage[] = [
     sourceCodes: ["cmn_hans", "jpn", "kor", "tha", "lao", "khm", "vie", "mya"],
   },
   {
-    id: "geoguessr",
-    name: { en: "Languages of GeoGuessr", ja: "GeoGuessr で出会う言語" },
+    id: "geoguessr-hard",
+    name: { en: "Languages of GeoGuessr (Hard)", ja: "GeoGuessr で出会う言語（上級）" },
     description: {
       en: "Languages you meet roaming the map.",
       ja: "マップを歩いて出会う言語たち。",
