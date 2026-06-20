@@ -70,7 +70,9 @@
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0.25rem 0.6rem;
-  max-width: min(32rem, calc(100vw - 2rem));
+  /* Span the content column (border-box) so it lines up with the snippet and
+     options; on phones that means full width minus the page gutter. */
+  width: calc(min(100vw, var(--content-max)) - 2 * var(--gutter));
   padding: 0.75rem 1.1rem;
   border: 1px solid var(--border);
   border-inline-start-width: 3px;

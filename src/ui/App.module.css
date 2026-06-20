@@ -5,7 +5,7 @@
      so the game can pin its snippet while only its options scroll (and the
      verdict toast can anchor to the bottom of the viewport). */
   height: 100dvh;
-  max-width: 56rem;
+  max-width: var(--content-max);
   margin: 0 auto;
 }
 

@@ -27,6 +27,8 @@
   --cleared-soft: #f2ebda;
   --radius: 12px;
   --pad: 1rem;
+  /* Max width of the centered content column. */
+  --content-max: 56rem;
   /* Horizontal page gutter, owned by the header and main (not the app shell),
      so `main`'s scrollbar sits at the column edge rather than inside the padding. */
   --gutter: clamp(1rem, 4vw, 2rem);
