@@ -772,6 +772,9 @@ export const STAGES: readonly Stage[] = [
       { id: "tir", sourceCodes: ["tir"] }, // Tigrinya (Ge'ez script)
       { id: "som", sourceCodes: ["som"] }, // Somali
       { id: "aar", sourceCodes: ["aar"] }, // Afar
+      // Madagascar — geographically African, but the lone Austronesian language
+      // here (its closest relatives are in Borneo), which sets it apart on sight.
+      { id: "plt", sourceCodes: ["plt"] }, // Plateau Malagasy
     ],
   },
   {
@@ -828,6 +831,64 @@ export const STAGES: readonly Stage[] = [
       { id: "huu", sourceCodes: ["huu"] }, // Murui Huitoto
       { id: "yad", sourceCodes: ["yad"] }, // Yagua
       { id: "cof", sourceCodes: ["cof"] }, // Tsafiki (Colorado)
+    ],
+  },
+  {
+    id: "polynesia",
+    name: { en: "Polynesia", ja: "ポリネシア" },
+    description: {
+      en: "The closely related languages of the Polynesian triangle, from Māori and Samoan to Hawaiian and Tahitian.",
+      ja: "ポリネシアン・トライアングルに広がる近縁の言語たち。マオリ語・サモア語からハワイ語・タヒチ語まで。",
+    },
+    // Closely related Oceanic languages, all Latin script: a look-alike stage
+    // told apart by sound-change reflexes and orthography (Hawaiian's k/w and
+    // ʻokina, Samoan g = ŋ, Māori wh/ng and macrons, Tahitian's ʻeta).
+    category: "language",
+    regions: ["oceania"],
+    options: [
+      { id: "mri", sourceCodes: ["mri"] }, // Māori
+      { id: "smo", sourceCodes: ["smo"] }, // Samoan
+      { id: "ton", sourceCodes: ["ton"] }, // Tongan
+      { id: "tah", sourceCodes: ["tah"] }, // Tahitian
+      { id: "haw", sourceCodes: ["haw"] }, // Hawaiian
+      { id: "niu", sourceCodes: ["niu"] }, // Niuean
+      { id: "rar", sourceCodes: ["rar"] }, // Rarotongan (Cook Islands Māori)
+    ],
+  },
+  {
+    id: "melanesia",
+    name: { en: "Melanesia", ja: "メラネシア" },
+    description: {
+      en: "Melanesia: the English-based pidgins of Papua New Guinea, Vanuatu and Solomon Islands, alongside Fijian.",
+      ja: "メラネシア。パプアニューギニア・バヌアツ・ソロモン諸島の英語ベースのピジンと、フィジー語。",
+    },
+    // Tok Pisin, Bislama and Pijin are sibling English-lexified creoles and read
+    // almost alike — the core challenge — with Fijian (Austronesian) as the outlier.
+    category: "language",
+    regions: ["oceania"],
+    options: [
+      { id: "tpi", sourceCodes: ["tpi"] }, // Tok Pisin (Papua New Guinea)
+      { id: "bis", sourceCodes: ["bis"] }, // Bislama (Vanuatu)
+      { id: "pis", sourceCodes: ["pis"] }, // Pijin (Solomon Islands)
+      { id: "fij", sourceCodes: ["fij"] }, // Fijian
+    ],
+  },
+  {
+    id: "micronesia",
+    name: { en: "Micronesia", ja: "ミクロネシア" },
+    description: {
+      en: "Micronesia: Chamorro and Palauan with the languages of the Caroline and Marshall Islands.",
+      ja: "ミクロネシア。チャモロ語・パラオ語と、カロリン諸島・マーシャル諸島の言語たち。",
+    },
+    category: "language",
+    regions: ["oceania"],
+    options: [
+      { id: "cha", sourceCodes: ["cha"] }, // Chamorro (Marianas)
+      { id: "pau", sourceCodes: ["pau"] }, // Palauan
+      { id: "yap", sourceCodes: ["yap"] }, // Yapese
+      { id: "chk", sourceCodes: ["chk"] }, // Chuukese
+      { id: "pon", sourceCodes: ["pon"] }, // Pohnpeian
+      { id: "mah", sourceCodes: ["mah"] }, // Marshallese
     ],
   },
   {
@@ -1258,6 +1319,8 @@ export const STAGES: readonly Stage[] = [
       { id: "tir", sourceCodes: ["tir"] },
       { id: "som", sourceCodes: ["som"] },
       { id: "aar", sourceCodes: ["aar"] },
+      // Africa — Madagascar (Austronesian)
+      { id: "plt", sourceCodes: ["plt"] },
       // Americas — North America
       { id: "nav", sourceCodes: ["nav"] },
       { id: "chr", sourceCodes: ["chr_cased"] },
@@ -1282,6 +1345,26 @@ export const STAGES: readonly Stage[] = [
       { id: "huu", sourceCodes: ["huu"] },
       { id: "yad", sourceCodes: ["yad"] },
       { id: "cof", sourceCodes: ["cof"] },
+      // Oceania — Polynesia
+      { id: "mri", sourceCodes: ["mri"] }, // Māori
+      { id: "smo", sourceCodes: ["smo"] }, // Samoan
+      { id: "ton", sourceCodes: ["ton"] }, // Tongan
+      { id: "tah", sourceCodes: ["tah"] }, // Tahitian
+      { id: "haw", sourceCodes: ["haw"] }, // Hawaiian
+      { id: "niu", sourceCodes: ["niu"] }, // Niuean
+      { id: "rar", sourceCodes: ["rar"] }, // Rarotongan
+      // Oceania — Melanesia
+      { id: "tpi", sourceCodes: ["tpi"] }, // Tok Pisin
+      { id: "bis", sourceCodes: ["bis"] }, // Bislama
+      { id: "pis", sourceCodes: ["pis"] }, // Pijin
+      { id: "fij", sourceCodes: ["fij"] }, // Fijian
+      // Oceania — Micronesia
+      { id: "cha", sourceCodes: ["cha"] }, // Chamorro
+      { id: "pau", sourceCodes: ["pau"] }, // Palauan
+      { id: "yap", sourceCodes: ["yap"] }, // Yapese
+      { id: "chk", sourceCodes: ["chk"] }, // Chuukese
+      { id: "pon", sourceCodes: ["pon"] }, // Pohnpeian
+      { id: "mah", sourceCodes: ["mah"] }, // Marshallese
     ],
   },
 ];
