@@ -42,7 +42,7 @@ export const en = {
     correctCount: (correct) => `${correct} correct`,
     subtitle: (stageName, answered) => `${stageName} · ${answered} answered`,
     playAgain: "Play again",
-    stages: "Stages",
+    backToStages: "Back to stages",
     yourGuess: (name) => `you: ${name}`,
   },
   about: {

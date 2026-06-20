@@ -56,7 +56,7 @@ export interface Messages {
     correctCount: (correct: number) => string;
     subtitle: (stageName: string, answered: number) => string;
     playAgain: string;
-    stages: string;
+    backToStages: string;
     yourGuess: (name: string) => string;
   };
   about: {

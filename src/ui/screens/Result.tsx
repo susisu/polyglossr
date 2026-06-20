@@ -51,7 +51,7 @@ export function Result({ gameState, onPlayAgain, onHome }: Props): ReactElement 
           {messages.result.playAgain}
         </button>
         <button type="button" className={styles["secondary"]} onClick={onHome}>
-          {messages.result.stages}
+          {messages.result.backToStages}
         </button>
       </div>
 

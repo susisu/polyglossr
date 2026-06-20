@@ -43,7 +43,7 @@ export const ja = {
     correctCount: (correct) => `${correct}問正解`,
     subtitle: (stageName, answered) => `${stageName}・${answered}問回答`,
     playAgain: "もう一度",
-    stages: "ステージ一覧",
+    backToStages: "ステージ一覧へ",
     yourGuess: (name) => `あなた: ${name}`,
   },
   about: {
