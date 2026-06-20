@@ -1,7 +1,21 @@
 import { describe, expect, it } from "vitest";
 import { dataset } from "./dataset.js";
+import { localizedLanguageName } from "./localizedNames.js";
 import { REGION_ORDER } from "./region.js";
-import { STAGES } from "./stages.js";
+import type { Stage } from "./stage.js";
+import { getStage, STAGES } from "./stages.js";
+
+/** The distinct logical languages a stage's options can draw from. */
+function stageLangIds(stage: Stage): Set<string> {
+  const langIds = new Set<string>();
+  for (const option of stage.options) {
+    for (const code of option.sourceCodes) {
+      const langId = dataset.sources.get(code)?.langId;
+      if (langId !== undefined) langIds.add(langId);
+    }
+  }
+  return langIds;
+}
 
 describe("stages", () => {
   it("has unique ids", () => {
@@ -56,6 +70,33 @@ describe("stages", () => {
         if (langIds.size > 1) {
           expect(option.label, `${stage.id}: ${option.id}`).toBeDefined();
         }
+      }
+    }
+  });
+
+  it("covers every other stage's languages in True Polyglot", () => {
+    // True Polyglot is the catch-all final stage: any language a player can meet
+    // elsewhere must also be answerable here.
+    const truePolyglot = getStage("true-polyglot");
+    if (truePolyglot === undefined) throw new Error("true-polyglot stage is missing");
+    const covered = stageLangIds(truePolyglot);
+    for (const stage of STAGES) {
+      if (stage.id === truePolyglot.id) continue;
+      for (const langId of stageLangIds(stage)) {
+        expect(covered.has(langId), `${stage.id}: ${langId}`).toBe(true);
+      }
+    }
+  });
+
+  it("has a Japanese name for every language a stage can show", () => {
+    // A sentinel English fallback that no real translation equals: if it comes
+    // back, no Japanese name is defined for that language.
+    const sentinel = "<<no Japanese name>>";
+    for (const stage of STAGES) {
+      for (const langId of stageLangIds(stage)) {
+        expect(localizedLanguageName(langId, sentinel, "ja"), `${stage.id}: ${langId}`).not.toBe(
+          sentinel,
+        );
       }
     }
   });
