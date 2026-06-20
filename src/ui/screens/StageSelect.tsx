@@ -3,6 +3,7 @@ import { REGION_LABELS, REGION_ORDER } from "../../data/region.js";
 import type { Stage } from "../../data/stage.js";
 import { STAGES } from "../../data/stages.js";
 import { TOTAL_QUESTIONS } from "../../engine/game.js";
+import { stageProgress } from "../../stats/aggregate.js";
 import { useLocale, useMessages } from "../i18n/index.js";
 import { useStats } from "../useStats.js";
 import styles from "./StageSelect.module.css";
@@ -33,11 +34,12 @@ export function StageSelect({ onSelect }: Props): ReactElement {
             <ul className={styles["grid"]}>
               {stages.map((stage) => {
                 const stat = stats.perStage[stage.id];
+                const progress = stageProgress(stat, TOTAL_QUESTIONS);
                 return (
                   <li key={stage.id}>
                     <button
                       type="button"
-                      className={styles["card"]}
+                      className={`${styles["card"]} ${styles[progress]}`}
                       onClick={() => {
                         onSelect(stage);
                       }}

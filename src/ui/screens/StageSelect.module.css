@@ -57,6 +57,23 @@
   box-shadow: 0 4px 14px rgb(0 0 0 / 6%);
 }
 
+/* Resting border encodes play progress; hover still highlights with the accent. */
+.card.played:not(:hover) {
+  border-color: var(--played);
+}
+
+.card.cleared:not(:hover) {
+  border-color: var(--cleared);
+}
+
+.card.perfect:not(:hover) {
+  border-color: var(--cleared-strong);
+}
+
+.card.perfect {
+  background: var(--cleared-soft);
+}
+
 .name {
   font-size: 1.25rem;
   font-family: var(--font-text);
@@ -79,4 +96,28 @@
 .count {
   color: var(--fg-muted);
   font-size: 0.8125rem;
+}
+
+/* Once played, the best-score line is highlighted in the stage's progress color. */
+.card.played .count,
+.card.cleared .count,
+.card.perfect .count {
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.card.played .count {
+  background: var(--border);
+}
+
+.card.cleared .count {
+  background: var(--cleared-soft);
+  color: var(--cleared-strong);
+}
+
+.card.perfect .count {
+  background: var(--cleared-strong);
+  color: var(--surface);
 }

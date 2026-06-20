@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { AnswerRecord, GameState } from "../engine/game.js";
-import { emptyStats, rebuildStats, recordGame, toGameRecord } from "./aggregate.js";
+import { emptyStats, rebuildStats, recordGame, stageProgress, toGameRecord } from "./aggregate.js";
+import type { StageStat } from "./stats.js";
 
 function ans(optionId: string, correct: boolean, i: number): AnswerRecord {
   return {
@@ -167,5 +168,28 @@ describe("recordGame", () => {
     ];
     const folded = records.reduce(recordGame, emptyStats());
     expect(rebuildStats(records)).toEqual(folded);
+  });
+});
+
+describe("stageProgress", () => {
+  function stat(played: number, won: number, bestCorrect: number): StageStat {
+    return { played, won, bestCorrect, bestGameId: null, lastPlayedAt: "", options: {} };
+  }
+
+  it("is unplayed when there is no stat or no games", () => {
+    expect(stageProgress(undefined, 20)).toBe("unplayed");
+    expect(stageProgress(stat(0, 0, 0), 20)).toBe("unplayed");
+  });
+
+  it("is played when attempted but never won", () => {
+    expect(stageProgress(stat(3, 0, 12), 20)).toBe("played");
+  });
+
+  it("is cleared once a game is won, short of a perfect score", () => {
+    expect(stageProgress(stat(2, 1, 19), 20)).toBe("cleared");
+  });
+
+  it("is perfect when every question was answered correctly", () => {
+    expect(stageProgress(stat(2, 1, 20), 20)).toBe("perfect");
   });
 });

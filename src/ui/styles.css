@@ -10,6 +10,13 @@
   --danger: #b07a6e;
   --danger-soft: #f5eae6;
   --border: #e4e0d8;
+
+  /* Stage-progress accents — a muted gold for success, kept distinct from the
+     teal interactive accent (used on hover) so the two never read alike. */
+  --played: #cdc3ad;
+  --cleared: #b5934e;
+  --cleared-strong: #8f6d2e;
+  --cleared-soft: #f2ebda;
   --radius: 12px;
   --pad: 1rem;
 

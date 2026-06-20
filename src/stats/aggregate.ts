@@ -100,6 +100,21 @@ export function rebuildStats(records: Iterable<GameRecord>): Stats {
   return stats;
 }
 
+/**
+ * How far a player has progressed on a stage, in increasing order of mastery:
+ * never played, played but never survived, survived at least once, and answered
+ * every question correctly.
+ */
+export type StageProgress = "unplayed" | "played" | "cleared" | "perfect";
+
+/** Classify a stage's progress from its aggregate stat. `totalQuestions` is the stage length. */
+export function stageProgress(stat: StageStat | undefined, totalQuestions: number): StageProgress {
+  if (!stat || stat.played === 0) return "unplayed";
+  if (stat.bestCorrect >= totalQuestions) return "perfect";
+  if (stat.won > 0) return "cleared";
+  return "played";
+}
+
 /** Minimum times an option must be seen before it ranks as strong/weak. */
 export const MIN_SEEN = 1;
 
