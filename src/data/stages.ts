@@ -268,23 +268,84 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
-    id: "east-southeast-asia",
-    name: { en: "East & Southeast Asia", ja: "東・東南アジア" },
+    id: "east-asia",
+    name: { en: "East Asia", ja: "東アジア" },
     description: {
-      en: "Han, kana, hangul and the scripts of mainland Southeast Asia.",
-      ja: "漢字・かな・ハングルと、大陸部東南アジアの文字。",
+      en: "Tell apart the Han-written Chinese tongues — Mandarin, Cantonese, Hokkien and more — alongside Japanese and Korean.",
+      ja: "同じ漢字で書かれる中国諸語を見分けよう。日本語・韓国語も。",
+    },
+    // The Sinitic options (Mandarin, Cantonese, Min Nan, Hakka, Wu) are all written
+    // in simplified Han here, so they cannot be told apart by script — only by
+    // vernacular vocabulary and particles (Cantonese 嘅/唔, Min Nan 合/即, Hakka
+    // 个/系, Wu 脱仔/拉). Mandarin stays simplified-only (cmn_hans): adding the
+    // traditional source would make "traditional = Mandarin" a giveaway. Japanese
+    // and Korean are then unmistakable by script. Tibetan, Mongolian and Uyghur
+    // are deliberately left out — by script and geography they sit with South Asia
+    // (bod, with dzo) and Central Asia (khk, uig), not the Sinosphere.
+    category: "language",
+    regions: ["asia"],
+    options: [
+      { id: "cmn", sourceCodes: ["cmn_hans"] }, // Mandarin (Simplified)
+      { id: "yue", sourceCodes: ["yue"] }, // Cantonese
+      { id: "nan", sourceCodes: ["nan"] }, // Min Nan (Hokkien)
+      { id: "hak", sourceCodes: ["hak"] }, // Hakka
+      { id: "wuu", sourceCodes: ["wuu"] }, // Wu
+      { id: "jpn", sourceCodes: ["jpn"] },
+      { id: "kor", sourceCodes: ["kor"] },
+    ],
+  },
+  {
+    id: "southeast-asia-mainland",
+    name: { en: "Southeast Asia (Mainland)", ja: "東南アジア（大陸部）" },
+    description: {
+      en: "Mainland Southeast Asia: Vietnamese alongside the distinctive scripts of Thai, Lao, Khmer and Burmese.",
+      ja: "大陸部東南アジア。ベトナム語と、タイ・ラオ・クメール・ビルマの個性的な文字たち。",
     },
     category: "language",
     regions: ["asia"],
     options: [
-      { id: "cmn", sourceCodes: ["cmn_hans"] },
-      { id: "jpn", sourceCodes: ["jpn"] },
-      { id: "kor", sourceCodes: ["kor"] },
-      { id: "tha", sourceCodes: ["tha"] },
-      { id: "lao", sourceCodes: ["lao"] },
-      { id: "khm", sourceCodes: ["khm"] },
-      { id: "vie", sourceCodes: ["vie"] },
-      { id: "mya", sourceCodes: ["mya"] },
+      { id: "tha", sourceCodes: ["tha"] }, // Thai
+      { id: "lao", sourceCodes: ["lao"] }, // Lao
+      { id: "khm", sourceCodes: ["khm"] }, // Khmer
+      { id: "mya", sourceCodes: ["mya"] }, // Burmese
+      { id: "vie", sourceCodes: ["vie"] }, // Vietnamese (Latin)
+      { id: "shn", sourceCodes: ["shn"] }, // Shan
+      { id: "mnw", sourceCodes: ["mnw"] }, // Mon
+    ],
+  },
+  {
+    id: "southeast-asia-maritime",
+    name: { en: "Southeast Asia (Maritime)", ja: "東南アジア（島嶼部）" },
+    description: {
+      en: "Island Southeast Asia: a sea of Austronesian languages, from Indonesian and Malay to the tongues of the Philippines.",
+      ja: "島嶼部東南アジア。インドネシア語・マレー語からフィリピンの言語まで広がるオーストロネシア諸語の海。",
+    },
+    // Almost all Latin-script Austronesian, so this is a look-alike discrimination
+    // stage: Indonesian vs Malay are near-twins, the Philippine languages
+    // (Tagalog/Cebuano/Ilocano/Hiligaynon) cluster tightly, and the regional
+    // languages of Indonesia round it out. Malay stays Latin-only (mly_latn):
+    // its Jawi (Arabic) source would be the lone Arabic script and give it away.
+    category: "language",
+    regions: ["asia"],
+    options: [
+      // Malay world
+      { id: "ind", sourceCodes: ["ind"] }, // Indonesian
+      { id: "zlm", sourceCodes: ["mly_latn"] }, // Malay (Latin)
+      // Philippines
+      { id: "tgl", sourceCodes: ["tgl"] }, // Tagalog
+      { id: "ceb", sourceCodes: ["ceb"] }, // Cebuano
+      { id: "ilo", sourceCodes: ["ilo"] }, // Ilocano
+      { id: "hil", sourceCodes: ["hil"] }, // Hiligaynon
+      // Regional languages of Indonesia
+      { id: "jav", sourceCodes: ["jav"] }, // Javanese (Latin)
+      { id: "sun", sourceCodes: ["sun"] }, // Sundanese
+      { id: "ban", sourceCodes: ["ban"] }, // Balinese
+      { id: "min", sourceCodes: ["min"] }, // Minangkabau
+      { id: "ace", sourceCodes: ["ace"] }, // Acehnese
+      { id: "bug", sourceCodes: ["bug"] }, // Buginese
+      { id: "mad", sourceCodes: ["mad"] }, // Madurese
+      // Timor
+      { id: "tet", sourceCodes: ["tet"] }, // Tetun
     ],
   },
   {
@@ -581,6 +642,7 @@ export const STAGES: readonly Stage[] = [
       { id: "mal", sourceCodes: ["mal"] },
       { id: "sin", sourceCodes: ["sin"] },
       { id: "npi", sourceCodes: ["nep"] },
+      { id: "bod", sourceCodes: ["bod"] }, // Tibetan — Tibetan script, with Dzongkha
       { id: "dzo", sourceCodes: ["dzo"] },
     ],
   },
@@ -1116,17 +1178,35 @@ export const STAGES: readonly Stage[] = [
       { id: "bod", sourceCodes: ["bod"] }, // Tibetan
       { id: "dzo", sourceCodes: ["dzo"] },
       { id: "ccp", sourceCodes: ["ccp"] }, // Chakma
-      // Southeast Asia
+      // Southeast Asia — mainland
       { id: "tha", sourceCodes: ["tha"] },
       { id: "lao", sourceCodes: ["lao"] },
       { id: "khm", sourceCodes: ["khm"] },
       { id: "mya", sourceCodes: ["mya"] },
       { id: "vie", sourceCodes: ["vie"] },
+      { id: "shn", sourceCodes: ["shn"] }, // Shan
+      { id: "mnw", sourceCodes: ["mnw"] }, // Mon
+      // Southeast Asia — maritime (Austronesian)
       { id: "ind", sourceCodes: ["ind"] },
       { id: "zlm", sourceCodes: ["mly_latn"] },
       { id: "tgl", sourceCodes: ["tgl"] },
-      // East Asia
+      { id: "ceb", sourceCodes: ["ceb"] }, // Cebuano
+      { id: "ilo", sourceCodes: ["ilo"] }, // Ilocano
+      { id: "hil", sourceCodes: ["hil"] }, // Hiligaynon
+      { id: "jav", sourceCodes: ["jav"] }, // Javanese
+      { id: "sun", sourceCodes: ["sun"] }, // Sundanese
+      { id: "ban", sourceCodes: ["ban"] }, // Balinese
+      { id: "min", sourceCodes: ["min"] }, // Minangkabau
+      { id: "ace", sourceCodes: ["ace"] }, // Acehnese
+      { id: "bug", sourceCodes: ["bug"] }, // Buginese
+      { id: "mad", sourceCodes: ["mad"] }, // Madurese
+      { id: "tet", sourceCodes: ["tet"] }, // Tetun
+      // East Asia — Sinitic (all Han) plus Japanese and Korean
       { id: "cmn", sourceCodes: ["cmn_hans", "cmn_hant"] },
+      { id: "yue", sourceCodes: ["yue"] }, // Cantonese
+      { id: "nan", sourceCodes: ["nan"] }, // Min Nan (Hokkien)
+      { id: "hak", sourceCodes: ["hak"] }, // Hakka
+      { id: "wuu", sourceCodes: ["wuu"] }, // Wu
       { id: "jpn", sourceCodes: ["jpn"] },
       { id: "kor", sourceCodes: ["kor"] },
       // North Asia — Siberia & the Russian Far East
