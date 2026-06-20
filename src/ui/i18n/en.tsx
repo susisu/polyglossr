@@ -8,7 +8,7 @@ export const en = {
     credit: "Texts from the Universal Declaration of Human Rights (UN/OHCHR) — credits",
   },
   stageSelect: {
-    intro: "A short text appears — name the language it is written in. Pick a stage to begin.",
+    intro: "How many of the world's languages can you recognize?",
     best: (correct, total) => `Best ${correct}/${total}`,
     unplayed: "Not played",
   },
@@ -33,8 +33,8 @@ export const en = {
     sourceLabel: (base, script) => `${base} · ${script}`,
   },
   picker: {
-    placeholder: "Which language is this?",
-    noMatch: "No matching language",
+    placeholder: "What is this?",
+    noMatch: "No matching option",
   },
   result: {
     won: "Completed",
@@ -47,7 +47,7 @@ export const en = {
   },
   about: {
     heading: "About PolyGlossr",
-    lead: "A game about recognizing the world's written languages. You are shown a short passage and name the language it is written in.",
+    lead: "A game about recognizing the world's written languages. You are shown a short passage and name what it is.",
     textLicensingTitle: "Text & licensing",
     textLicensingBody:
       "Every passage is an excerpt from the Universal Declaration of Human Rights.",

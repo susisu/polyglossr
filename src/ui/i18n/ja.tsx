@@ -8,8 +8,7 @@ export const ja = {
     credit: "テキストは世界人権宣言（国連／OHCHR）より。クレジット",
   },
   stageSelect: {
-    intro:
-      "短い文章が表示されるので、それが何語で書かれているかを答えてください。ステージを選んで始めましょう。",
+    intro: "世界の言語、いくつ見分けられる？",
     best: (correct, total) => `ベスト ${correct}/${total}`,
     unplayed: "未プレイ",
   },
@@ -34,8 +33,8 @@ export const ja = {
     sourceLabel: (base, script) => `${base}・${script}`,
   },
   picker: {
-    placeholder: "これは何語？",
-    noMatch: "該当する言語がありません",
+    placeholder: "これは何？",
+    noMatch: "該当する選択肢がありません",
   },
   result: {
     won: "クリア",
@@ -48,7 +47,7 @@ export const ja = {
   },
   about: {
     heading: "PolyGlossr について",
-    lead: "世界の言語を見分けるゲームです。短い文章が表示されるので、それが何語で書かれているかを答えてください。",
+    lead: "世界の言語を見分けるゲームです。短い文章が表示されるので、それが何かを答えてください。",
     textLicensingTitle: "テキストとライセンス",
     textLicensingBody: "すべての文章は世界人権宣言からの抜粋です。",
     udhrCredit: (

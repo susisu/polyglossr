@@ -16,6 +16,7 @@ export interface Messages {
     credit: string;
   };
   stageSelect: {
+    /** One-line tagline on the stage list — what the game is, not how to play. */
     intro: string;
     /** Best score shown on a played stage's card. */
     best: (correct: number, total: number) => string;
@@ -47,6 +48,7 @@ export interface Messages {
     sourceLabel: (base: string, script: string) => string;
   };
   picker: {
+    /** Input prompt; phrased generically since a stage may ask for a language, family, or script. */
     placeholder: string;
     noMatch: string;
   };
