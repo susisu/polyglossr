@@ -26,6 +26,10 @@
   font-size: 1rem;
 }
 
+.section p {
+  color: var(--fg-muted);
+}
+
 .credits {
   margin: 0.75rem 0 0;
   padding-inline-start: 1.1rem;
