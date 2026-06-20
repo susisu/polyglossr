@@ -40,15 +40,16 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
-    id: "europe",
-    name: { en: "Europe", ja: "ヨーロッパ" },
+    id: "europe-easy",
+    name: { en: "Europe (Easy)", ja: "ヨーロッパ（初級）" },
     description: {
-      en: "Telling apart the Latin-script (and Greek) languages of Europe.",
-      ja: "ヨーロッパのラテン文字（とギリシャ文字）の言語を見分ける。",
+      en: "Telling apart the languages of Europe.",
+      ja: "ヨーロッパの言語を見分けよう。",
     },
     theme: "region",
     difficulty: 3,
     sourceCodes: [
+      "eng",
       "spa",
       "fra",
       "ita",
