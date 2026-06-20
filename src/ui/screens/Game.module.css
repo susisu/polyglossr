@@ -10,6 +10,11 @@
   gap: 1rem;
 }
 
+.stage {
+  font-family: var(--font-text);
+  font-weight: 600;
+}
+
 .progress {
   font-variant-numeric: tabular-nums;
   color: var(--fg-muted);

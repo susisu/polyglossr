@@ -78,6 +78,7 @@ export function Game({ stage, seed, onFinish, onQuit }: Props): ReactElement {
   return (
     <div className={styles["game"]}>
       <header className={styles["bar"]}>
+        <span className={styles["stage"]}>{stage.name[locale]}</span>
         <span className={styles["progress"]}>
           {messages.game.progress(state.current + 1, state.config.totalQuestions)}
         </span>
