@@ -54,6 +54,7 @@ const LANGUAGE_NAMES: Record<string, Partial<Localized<string>>> = {
   ekk: { ja: "エストニア語" },
   ell: { ja: "ギリシャ語" },
   eng: { ja: "英語" },
+  epo: { ja: "エスペラント" },
   eus: { ja: "バスク語" },
   eve: { ja: "エヴェン語" },
   evn: { ja: "エヴェンキ語" },

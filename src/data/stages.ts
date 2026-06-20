@@ -1248,6 +1248,8 @@ export const STAGES: readonly Stage[] = [
       { id: "als", sourceCodes: ["als"] },
       { id: "eus", sourceCodes: ["eus"] },
       { id: "mlt", sourceCodes: ["mlt"] },
+      // Constructed — appears only here, in no regional stage
+      { id: "epo", sourceCodes: ["epo"] }, // Esperanto
       // Caucasus
       { id: "kat", sourceCodes: ["kat"] },
       { id: "hye", sourceCodes: ["hye"] },
