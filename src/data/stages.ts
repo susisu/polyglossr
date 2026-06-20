@@ -594,11 +594,148 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
+    id: "geoguessr-easy",
+    name: { en: "Languages of GeoGuessr (Easy)", ja: "GeoGuessr で出会う言語（初級）" },
+    description: {
+      en: "The languages you run into most, easy to tell apart.",
+      ja: "マップでよく出会う、見分けやすい言語たち。",
+    },
+    // The most frequently seen, visually distinctive languages — roughly one per
+    // script or region, so the broad area is readable at a glance. Minority and
+    // regional languages are left out entirely, and each look-alike cluster keeps
+    // just one representative (so any Cyrillic reads as Russian here, etc.).
+    category: "language",
+    regions: ["world"],
+    options: [
+      // Western Europe
+      { id: "eng", sourceCodes: ["eng"] },
+      { id: "fra", sourceCodes: ["fra"] },
+      { id: "ita", sourceCodes: ["ita"] },
+      { id: "nld", sourceCodes: ["nld"] },
+      { id: "deu", sourceCodes: ["deu_1996"] },
+      { id: "spa", sourceCodes: ["spa"] },
+      { id: "por", sourceCodes: ["por_PT", "por_BR"] },
+      // Nordic — Swedish stands in for Scandinavian; Finnish is unmistakable
+      { id: "swe", sourceCodes: ["swe"] },
+      { id: "fin", sourceCodes: ["fin"] },
+      // Central Europe
+      { id: "pol", sourceCodes: ["pol"] },
+      { id: "ces", sourceCodes: ["ces"] },
+      { id: "hun", sourceCodes: ["hun"] },
+      // Southeast Europe
+      { id: "ron", sourceCodes: ["ron_2006"] },
+      { id: "ell", sourceCodes: ["ell_monotonic"] },
+      // East Slavic — Russian stands in for all Cyrillic here
+      { id: "rus", sourceCodes: ["rus"] },
+      // Anatolia
+      { id: "tur", sourceCodes: ["tur"] },
+      // East Asia
+      { id: "cmn", sourceCodes: ["cmn_hans", "cmn_hant"] },
+      { id: "jpn", sourceCodes: ["jpn"] },
+      { id: "kor", sourceCodes: ["kor"] },
+      // Southeast Asia
+      { id: "tha", sourceCodes: ["tha"] },
+      { id: "vie", sourceCodes: ["vie"] },
+      { id: "ind", sourceCodes: ["ind"] },
+      // Middle East
+      { id: "arb", sourceCodes: ["arb"] },
+      { id: "heb", sourceCodes: ["heb"] },
+      // South Asia — the two most distinctive scripts of the subcontinent
+      { id: "hin", sourceCodes: ["hin"] },
+      { id: "sin", sourceCodes: ["sin"] },
+    ],
+  },
+  {
+    id: "geoguessr-intermediate",
+    name: { en: "Languages of GeoGuessr (Intermediate)", ja: "GeoGuessr で出会う言語（中級）" },
+    description: {
+      en: "A wider range of the languages you meet on the map.",
+      ja: "マップで出会う、より多くの言語を見分けよう。",
+    },
+    // Broader than the easy stage: regional languages that are distinctive on
+    // sight come back. What stays out is the same-script look-alikes — for each
+    // cluster a single member is kept (Hindi not Marathi, Irish not Scottish
+    // Gaelic, Indonesian not Malay, and so on).
+    category: "language",
+    regions: ["world"],
+    options: [
+      // Western Europe
+      { id: "eng", sourceCodes: ["eng"] },
+      { id: "fra", sourceCodes: ["fra"] },
+      { id: "nld", sourceCodes: ["nld"] },
+      { id: "deu", sourceCodes: ["deu_1996"] },
+      { id: "spa", sourceCodes: ["spa"] },
+      { id: "por", sourceCodes: ["por_PT", "por_BR"] },
+      // Celtic — Irish (Goidelic) and Welsh (Brythonic); Scottish Gaelic and
+      // Breton dropped as look-alikes of those two.
+      { id: "gle", sourceCodes: ["gle"] },
+      { id: "cym", sourceCodes: ["cym"] },
+      // Nordic — Danish stands in for the Danish/Norwegian twin; Faroese dropped
+      { id: "isl", sourceCodes: ["isl"] },
+      { id: "dan", sourceCodes: ["dan"] },
+      { id: "swe", sourceCodes: ["swe"] },
+      { id: "fin", sourceCodes: ["fin"] },
+      // Baltic — Estonian kept; its õ and double vowels set it apart from Finnish
+      { id: "ekk", sourceCodes: ["est"] },
+      { id: "lvs", sourceCodes: ["lav"] },
+      { id: "lit", sourceCodes: ["lit"] },
+      // Central Europe — Slovak (≈Czech) and Slovene dropped
+      { id: "pol", sourceCodes: ["pol"] },
+      { id: "ces", sourceCodes: ["ces"] },
+      { id: "hun", sourceCodes: ["hun"] },
+      // Balkans — Croatian for the Latin Serbo-Croatian, Bulgarian for the
+      // Cyrillic; Serbian and Macedonian dropped as look-alikes.
+      { id: "hrv", sourceCodes: ["hrv"] },
+      { id: "als", sourceCodes: ["als"] },
+      { id: "ron", sourceCodes: ["ron_2006"] },
+      { id: "ell", sourceCodes: ["ell_monotonic"] },
+      { id: "bul", sourceCodes: ["bul"] },
+      // East Slavic — Belarusian (≈Russian/Ukrainian) dropped
+      { id: "rus", sourceCodes: ["rus"] },
+      { id: "ukr", sourceCodes: ["ukr"] },
+      // Caucasus
+      { id: "kat", sourceCodes: ["kat"] },
+      // Turkic & Mongolia — Kazakh and Kyrgyz dropped as Cyrillic look-alikes
+      { id: "tur", sourceCodes: ["tur"] },
+      { id: "khk", sourceCodes: ["khk"] },
+      // East Asia
+      { id: "cmn", sourceCodes: ["cmn_hans", "cmn_hant"] },
+      { id: "jpn", sourceCodes: ["jpn"] },
+      { id: "kor", sourceCodes: ["kor"] },
+      // Southeast Asia — Malay (≈Indonesian) and Tagalog dropped; Lao kept
+      { id: "tha", sourceCodes: ["tha"] },
+      { id: "lao", sourceCodes: ["lao"] },
+      { id: "khm", sourceCodes: ["khm"] },
+      { id: "vie", sourceCodes: ["vie"] },
+      { id: "ind", sourceCodes: ["ind"] },
+      // Mediterranean
+      { id: "mlt", sourceCodes: ["mlt"] },
+      // Middle East
+      { id: "arb", sourceCodes: ["arb"] },
+      { id: "heb", sourceCodes: ["heb"] },
+      // Arctic North America
+      { id: "ike", sourceCodes: ["ike"] },
+      { id: "kal", sourceCodes: ["kal"] },
+      // Himalaya
+      { id: "dzo", sourceCodes: ["dzo"] },
+      // South Asia — one per script; Marathi and Nepali dropped (≈Hindi), and
+      // Urdu dropped (Arabic script, too close to Arabic above)
+      { id: "hin", sourceCodes: ["hin"] },
+      { id: "ben", sourceCodes: ["ben"] },
+      { id: "guj", sourceCodes: ["guj"] },
+      { id: "tam", sourceCodes: ["tam"] },
+      { id: "tel", sourceCodes: ["tel"] },
+      { id: "kan", sourceCodes: ["kan"] },
+      { id: "mal", sourceCodes: ["mal"] },
+      { id: "sin", sourceCodes: ["sin"] },
+    ],
+  },
+  {
     id: "geoguessr-hard",
     name: { en: "Languages of GeoGuessr (Hard)", ja: "GeoGuessr で出会う言語（上級）" },
     description: {
-      en: "Languages you meet roaming the map.",
-      ja: "マップを歩いて出会う言語たち。",
+      en: "From regional tongues to deceptive look-alikes — every language on the map.",
+      ja: "地域語から紛らわしい隣人まで、マップのすべての言語を見分けよう。",
     },
     category: "language",
     regions: ["world"],
