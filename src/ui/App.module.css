@@ -3,16 +3,19 @@
   flex-direction: column;
   /* A fixed-height frame: the header stays put while `main` scrolls internally,
      so the game can pin its snippet while only its options scroll (and the
-     verdict toast can anchor to the bottom of the viewport). */
+     verdict toast can anchor to the bottom of the viewport). The shell spans the
+     full viewport so `main`'s scrollbar sits at the screen edge; the header and
+     `main`'s content are centered to the column themselves. */
   height: 100dvh;
-  max-width: var(--content-max);
-  margin: 0 auto;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  max-width: var(--content-max);
+  margin-inline: auto;
   padding: 1.5rem var(--gutter);
 }
 
@@ -47,11 +50,23 @@
   color: var(--fg);
 }
 
+/* Full-width scroll viewport so the scrollbar sits at the screen edge. It's a
+   flex column whose screens fill it: the game opts into `flex: 1` to pin its
+   chrome and scroll only its options, while taller screens grow and scroll the
+   page. Each screen is centered to the content column by the rule below. */
 .main {
   flex: 1;
   min-height: 0;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+}
+
+.main > * {
+  /* width:100% (not just stretch) because the auto inline margins below disable
+     a flex item's cross-axis stretch, which would otherwise shrink to content. */
+  width: 100%;
+  max-width: var(--content-max);
+  margin-inline: auto;
   padding-inline: var(--gutter);
 }
