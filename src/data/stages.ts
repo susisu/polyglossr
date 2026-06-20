@@ -425,8 +425,11 @@ export const STAGES: readonly Stage[] = [
       { id: "roh", sourceCodes: ["roh"] }, // Romansch
       // Germanic
       { id: "eng", sourceCodes: ["eng"] },
+      { id: "sco", sourceCodes: ["sco"] }, // Scots
       { id: "deu", sourceCodes: ["deu_1996"] },
+      { id: "nds", sourceCodes: ["nds"] }, // Low Saxon (Low German)
       { id: "nld", sourceCodes: ["nld"] },
+      { id: "fry", sourceCodes: ["fri"] }, // West Frisian
       { id: "swe", sourceCodes: ["swe"] },
       { id: "dan", sourceCodes: ["dan"] },
       { id: "nob", sourceCodes: ["nob"] },
@@ -497,7 +500,21 @@ export const STAGES: readonly Stage[] = [
       {
         id: "germanic",
         label: { en: "Germanic", ja: "ゲルマン語派" },
-        sourceCodes: ["eng", "deu_1996", "nld", "swe", "dan", "nob", "nno", "isl", "fao", "ltz"],
+        sourceCodes: [
+          "eng",
+          "sco",
+          "deu_1996",
+          "nds",
+          "nld",
+          "fri",
+          "swe",
+          "dan",
+          "nob",
+          "nno",
+          "isl",
+          "fao",
+          "ltz",
+        ],
       },
       {
         id: "slavic",
@@ -584,8 +601,12 @@ export const STAGES: readonly Stage[] = [
     regions: ["europe"],
     options: [
       { id: "eng", sourceCodes: ["eng"] },
+      { id: "sco", sourceCodes: ["sco"] }, // Scots
       { id: "deu", sourceCodes: ["deu_1996"] },
+      { id: "nds", sourceCodes: ["nds"] }, // Low Saxon (Low German)
       { id: "nld", sourceCodes: ["nld"] },
+      { id: "fry", sourceCodes: ["fri"] }, // West Frisian
+      { id: "afr", sourceCodes: ["afr"] }, // Afrikaans — South African daughter of Dutch
       { id: "swe", sourceCodes: ["swe"] },
       { id: "dan", sourceCodes: ["dan"] },
       { id: "nob", sourceCodes: ["nob"] },
@@ -794,6 +815,9 @@ export const STAGES: readonly Stage[] = [
       { id: "tir", sourceCodes: ["tir"] }, // Tigrinya (Ge'ez script)
       { id: "som", sourceCodes: ["som"] }, // Somali
       { id: "aar", sourceCodes: ["aar"] }, // Afar
+      // Southern Africa — the lone Indo-European (Germanic) language here, a
+      // daughter of Dutch, set apart from the Bantu languages around it.
+      { id: "afr", sourceCodes: ["afr"] }, // Afrikaans
       // Madagascar — geographically African, but the lone Austronesian language
       // here (its closest relatives are in Borneo), which sets it apart on sight.
       { id: "plt", sourceCodes: ["plt"] }, // Plateau Malagasy
@@ -831,6 +855,7 @@ export const STAGES: readonly Stage[] = [
       { id: "cak", sourceCodes: ["cak"] }, // Kaqchikel
       { id: "mam", sourceCodes: ["mam"] }, // Mam
       { id: "tzo", sourceCodes: ["tzc"] }, // Tzotzil
+      { id: "yua", sourceCodes: ["yua"] }, // Yucatec Maya
     ],
   },
   {
@@ -1208,8 +1233,11 @@ export const STAGES: readonly Stage[] = [
       { id: "roh", sourceCodes: ["roh"] },
       // Europe — Germanic
       { id: "eng", sourceCodes: ["eng"] },
+      { id: "sco", sourceCodes: ["sco"] }, // Scots
       { id: "deu", sourceCodes: ["deu_1996"] },
+      { id: "nds", sourceCodes: ["nds"] }, // Low Saxon (Low German)
       { id: "nld", sourceCodes: ["nld"] },
+      { id: "fry", sourceCodes: ["fri"] }, // West Frisian
       { id: "swe", sourceCodes: ["swe"] },
       { id: "dan", sourceCodes: ["dan"] },
       { id: "nob", sourceCodes: ["nob"] },
@@ -1377,6 +1405,8 @@ export const STAGES: readonly Stage[] = [
       { id: "tir", sourceCodes: ["tir"] },
       { id: "som", sourceCodes: ["som"] },
       { id: "aar", sourceCodes: ["aar"] },
+      // Africa — Southern Africa (Germanic)
+      { id: "afr", sourceCodes: ["afr"] }, // Afrikaans
       // Africa — Madagascar (Austronesian)
       { id: "plt", sourceCodes: ["plt"] },
       // Americas — North America
@@ -1392,6 +1422,7 @@ export const STAGES: readonly Stage[] = [
       { id: "cak", sourceCodes: ["cak"] },
       { id: "mam", sourceCodes: ["mam"] },
       { id: "tzo", sourceCodes: ["tzc"] },
+      { id: "yua", sourceCodes: ["yua"] },
       // Americas — South America
       { id: "quz", sourceCodes: ["quz"] },
       { id: "ayr", sourceCodes: ["ayr"] },
