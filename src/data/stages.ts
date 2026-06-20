@@ -734,8 +734,8 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
-    id: "middle-east-north-africa",
-    name: { en: "Middle East & North Africa", ja: "中東・北アフリカ" },
+    id: "west-asia-north-africa",
+    name: { en: "West Asia & North Africa", ja: "西アジア・北アフリカ" },
     description: {
       en: "From the Maghreb to the Gulf: Semitic, Iranian and Berber languages.",
       ja: "マグリブから湾岸まで。セム諸語・イラン諸語・ベルベル諸語。",
