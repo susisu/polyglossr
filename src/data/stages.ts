@@ -22,7 +22,8 @@ export const STAGES: readonly Stage[] = [
       en: "A gentle start: widely spoken languages with distinctive scripts.",
       ja: "まずはここから。特徴的な文字を持つ、広く使われている言語たち。",
     },
-    theme: "difficulty",
+    category: "language",
+    regions: ["world"],
     difficulty: 1,
     options: [
       { id: "eng", sourceCodes: ["eng"] },
@@ -43,7 +44,8 @@ export const STAGES: readonly Stage[] = [
       en: "Name the writing system, not the language — the major scripts of the world.",
       ja: "言語ではなく書記体系を答えよう。世界のメジャーな文字たち。",
     },
-    theme: "themed",
+    category: "script",
+    regions: ["world"],
     difficulty: 2,
     // Options are writing systems, not languages: the answer is the script, and
     // each script draws snippets from several major languages that use it.
@@ -105,7 +107,8 @@ export const STAGES: readonly Stage[] = [
       en: "Telling apart the languages of Europe.",
       ja: "ヨーロッパの言語を見分けよう。",
     },
-    theme: "region",
+    category: "language",
+    regions: ["europe"],
     difficulty: 3,
     options: [
       { id: "eng", sourceCodes: ["eng"] },
@@ -128,7 +131,8 @@ export const STAGES: readonly Stage[] = [
       en: "Han, kana, hangul and the scripts of mainland Southeast Asia.",
       ja: "漢字・かな・ハングルと、大陸部東南アジアの文字。",
     },
-    theme: "region",
+    category: "language",
+    regions: ["asia"],
     difficulty: 3,
     options: [
       { id: "cmn", sourceCodes: ["cmn_hans"] },
@@ -148,7 +152,8 @@ export const STAGES: readonly Stage[] = [
       en: "Deeper into Europe: regional and minority languages alongside the nationals.",
       ja: "ヨーロッパの奥へ。国家語に加え、地域語・少数言語も見分けよう。",
     },
-    theme: "region",
+    category: "language",
+    regions: ["europe"],
     difficulty: 4,
     options: [
       // Romance
@@ -220,7 +225,8 @@ export const STAGES: readonly Stage[] = [
       en: "Sister languages of the Latin world — Spanish, Portuguese, Italian and their neighbours.",
       ja: "ラテン世界の姉妹言語たち。スペイン語・ポルトガル語・イタリア語とその隣人。",
     },
-    theme: "themed",
+    category: "language",
+    regions: ["europe"],
     difficulty: 4,
     options: [
       { id: "spa", sourceCodes: ["spa"] },
@@ -241,7 +247,8 @@ export const STAGES: readonly Stage[] = [
       en: "From English and German to the languages of the North.",
       ja: "英語・ドイツ語から、北欧の言語まで。",
     },
-    theme: "themed",
+    category: "language",
+    regions: ["europe"],
     difficulty: 4,
     options: [
       { id: "eng", sourceCodes: ["eng"] },
@@ -263,7 +270,8 @@ export const STAGES: readonly Stage[] = [
       en: "The Slavic languages, written in both Latin and Cyrillic.",
       ja: "ラテン文字とキリル文字、両方で書かれるスラヴ語派。",
     },
-    theme: "themed",
+    category: "language",
+    regions: ["europe"],
     difficulty: 4,
     options: [
       { id: "pol", sourceCodes: ["pol"] },
@@ -290,7 +298,8 @@ export const STAGES: readonly Stage[] = [
       en: "The scripts and languages of the Indian subcontinent.",
       ja: "インド亜大陸の文字と言語たち。",
     },
-    theme: "region",
+    category: "language",
+    regions: ["asia"],
     difficulty: 4,
     options: [
       { id: "hin", sourceCodes: ["hin"] },
@@ -313,7 +322,8 @@ export const STAGES: readonly Stage[] = [
       en: "The surviving Celtic languages of the British Isles and Brittany.",
       ja: "ブリテン諸島とブルターニュに受け継がれるケルトの言語たち。",
     },
-    theme: "themed",
+    category: "language",
+    regions: ["europe"],
     difficulty: 4,
     options: [
       { id: "gle", sourceCodes: ["gle"] }, // Irish
@@ -329,7 +339,8 @@ export const STAGES: readonly Stage[] = [
       en: "The Turkic and Iranian languages of the steppe and the Silk Road.",
       ja: "草原とシルクロードのテュルク諸語・イラン諸語。",
     },
-    theme: "region",
+    category: "language",
+    regions: ["asia"],
     difficulty: 5,
     options: [
       { id: "kaz", sourceCodes: ["kaz"] }, // Kazakh (Cyrillic)
@@ -349,7 +360,8 @@ export const STAGES: readonly Stage[] = [
       en: "From the Maghreb to the Gulf: Semitic, Iranian and Berber languages.",
       ja: "マグリブから湾岸まで。セム諸語・イラン諸語・ベルベル諸語。",
     },
-    theme: "region",
+    category: "language",
+    regions: ["asia", "africa"],
     difficulty: 5,
     options: [
       { id: "arb", sourceCodes: ["arb"] }, // Standard Arabic
@@ -370,7 +382,8 @@ export const STAGES: readonly Stage[] = [
       en: "A wide sweep below the Sahara: West African, Bantu and Horn of Africa languages.",
       ja: "サハラ以南を広く巡る。西アフリカ・バントゥー・アフリカの角の言語たち。",
     },
-    theme: "region",
+    category: "language",
+    regions: ["africa"],
     difficulty: 5,
     options: [
       // West Africa
@@ -412,7 +425,8 @@ export const STAGES: readonly Stage[] = [
       en: "Native languages of North America, from the Arctic to the Southwest.",
       ja: "北極圏から南西部まで、北アメリカ先住民の言語たち。",
     },
-    theme: "region",
+    category: "language",
+    regions: ["americas"],
     difficulty: 5,
     options: [
       { id: "nav", sourceCodes: ["nav"] }, // Navajo (Latin)
@@ -428,7 +442,8 @@ export const STAGES: readonly Stage[] = [
       en: "Nahuatl and the Mayan languages of Mexico and Guatemala.",
       ja: "ナワトル語と、メキシコ・グアテマラのマヤ諸語。",
     },
-    theme: "region",
+    category: "language",
+    regions: ["americas"],
     difficulty: 5,
     options: [
       { id: "nhn", sourceCodes: ["nhn"] }, // Central Nahuatl
@@ -446,7 +461,8 @@ export const STAGES: readonly Stage[] = [
       en: "From the Andes to the Amazon: the native languages of South America.",
       ja: "アンデスからアマゾンまで、南アメリカ先住民の言語たち。",
     },
-    theme: "region",
+    category: "language",
+    regions: ["americas"],
     difficulty: 5,
     options: [
       { id: "quz", sourceCodes: ["quz"] }, // Cusco Quechua
@@ -468,7 +484,8 @@ export const STAGES: readonly Stage[] = [
       en: "Languages you meet roaming the map.",
       ja: "マップを歩いて出会う言語たち。",
     },
-    theme: "themed",
+    category: "language",
+    regions: ["world"],
     difficulty: 5,
     options: [
       // Western Europe

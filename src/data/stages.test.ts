@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { dataset } from "./dataset.js";
+import { REGION_ORDER } from "./region.js";
 import { STAGES } from "./stages.js";
 
 describe("stages", () => {
@@ -22,6 +23,23 @@ describe("stages", () => {
     for (const stage of STAGES) {
       const ids = stage.options.map((option) => option.id);
       expect(new Set(ids).size, stage.id).toBe(ids.length);
+    }
+  });
+
+  it("tags every stage with at least one known region", () => {
+    for (const stage of STAGES) {
+      expect(stage.regions.length, stage.id).toBeGreaterThan(0);
+      for (const region of stage.regions) {
+        expect(REGION_ORDER, stage.id).toContain(region);
+      }
+    }
+  });
+
+  it("never combines the world region with a geographic one", () => {
+    for (const stage of STAGES) {
+      if (stage.regions.includes("world")) {
+        expect(stage.regions, stage.id).toEqual(["world"]);
+      }
     }
   });
 

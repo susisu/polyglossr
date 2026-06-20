@@ -70,7 +70,8 @@ export function makeFixture(): {
     id: "test-stage",
     name: { en: "Test Stage", ja: "テストステージ" },
     description: { en: "", ja: "" },
-    theme: "themed",
+    category: "language",
+    regions: ["world"],
     difficulty: 1,
     options: [
       { id: "eng", sourceCodes: ["en"] },

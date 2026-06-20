@@ -1,8 +1,17 @@
 import type { Localized } from "../shared/locale.js";
 import type { Difficulty } from "./difficulty.js";
+import type { Region } from "./region.js";
 
-/** How a stage's language set is curated. */
-export type StageTheme = "region" | "difficulty" | "themed";
+/**
+ * What a stage's *options* are made of — describes the answers, not the stage's
+ * editorial theme. `"language"`: each option is one logical language (this
+ * covers family-themed stages like Romance too, since their options are still
+ * individual languages). `"family"`: each option is a language family / branch
+ * (you name the family — no such stage exists yet). `"script"`: each option is a
+ * writing system (the Scripts of the World stage). Orthogonal to
+ * {@link Stage.regions}.
+ */
+export type StageCategory = "language" | "family" | "script";
 
 /**
  * One choice a question can be drawn from. Generating a question first picks an
@@ -40,7 +49,14 @@ export interface Stage {
   id: string;
   name: Localized<string>;
   description: Localized<string>;
-  theme: StageTheme;
+  /** What the options are made of; see {@link StageCategory}. */
+  category: StageCategory;
+  /**
+   * Geographic tags used to group stages for display. A stage may carry several;
+   * `"world"` is exclusive (never combined with a geographic region). See
+   * {@link Region}.
+   */
+  regions: readonly Region[];
   /** Overall difficulty of the stage. */
   difficulty: Difficulty;
   /** The choices a question is drawn from; see {@link StageOption}. */

@@ -75,7 +75,8 @@ describe("generateRun", () => {
       id: "empty",
       name: { en: "", ja: "" },
       description: { en: "", ja: "" },
-      theme: "themed" as const,
+      category: "language" as const,
+      regions: ["world"] as const,
       difficulty: 1 as const,
       options: [{ id: "missing", sourceCodes: ["missing"] }],
     };
