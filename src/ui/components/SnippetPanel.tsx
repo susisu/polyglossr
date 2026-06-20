@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import type { ReactElement } from "react";
 import type { Direction } from "../../data/source.js";
 import styles from "./SnippetPanel.module.css";
@@ -7,6 +8,8 @@ interface Props {
   direction: Direction;
   /** BCP 47 tag, set as `lang` so the browser shapes/fonts the text correctly. */
   bcp47: string;
+  /** Tint the panel once the answer is revealed; null while still choosing. */
+  highlight: "correct" | "incorrect" | null;
 }
 
 /**
@@ -22,11 +25,11 @@ function cjkFont(bcp47: string): string | null {
 }
 
 /** The foreign-language text the player must identify. The star of the screen. */
-export function SnippetPanel({ snippet, direction, bcp47 }: Props): ReactElement {
+export function SnippetPanel({ snippet, direction, bcp47, highlight }: Props): ReactElement {
   const cjk = cjkFont(bcp47);
   const fontFamily = cjk !== null ? `"${cjk}", var(--font-snippet)` : undefined;
   return (
-    <div className={styles["panel"]}>
+    <div className={clsx(styles["panel"], highlight !== null && styles[highlight])}>
       <p className={styles["text"]} dir={direction} lang={bcp47} style={{ fontFamily }}>
         {snippet}
       </p>

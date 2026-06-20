@@ -113,6 +113,10 @@ export function Game({ stage, seed, onFinish, onQuit }: Props): ReactElement {
   const source = sourceFor(sourceCode);
   const revealed = pickedOptionId !== null;
   const pickedCorrect = revealed && pickedOptionId === answerOptionId;
+  const verdict =
+    !revealed ? null
+    : pickedCorrect ? "correct"
+    : "incorrect";
 
   function handlePick(optionId: string): void {
     if (revealed) return;
@@ -164,6 +168,7 @@ export function Game({ stage, seed, onFinish, onQuit }: Props): ReactElement {
           snippet={question.snippet}
           direction={question.direction}
           bcp47={source?.bcp47 ?? "und"}
+          highlight={verdict}
         />
       </div>
 
