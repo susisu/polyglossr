@@ -246,6 +246,147 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
+    id: "central-asia",
+    name: { en: "Central Asia", ja: "中央アジア" },
+    description: {
+      en: "The Turkic and Iranian languages of the steppe and the Silk Road.",
+      ja: "草原とシルクロードのテュルク諸語・イラン諸語。",
+    },
+    theme: "region",
+    difficulty: 5,
+    sourceCodes: [
+      "kaz", // Kazakh (Cyrillic)
+      "kir", // Kyrgyz (Cyrillic)
+      "uzn_cyrl", // Uzbek (Cyrillic)
+      "uzn_latn", // Uzbek (Latin)
+      "tuk_cyrl", // Turkmen (Cyrillic)
+      "tuk_latn", // Turkmen (Latin)
+      "tgk", // Tajik — Persian in Cyrillic
+      "uig_arab", // Uyghur (Arabic)
+      "khk", // Halh Mongolian (Cyrillic)
+      "tat", // Tatar (Cyrillic)
+    ],
+  },
+  {
+    id: "middle-east-north-africa",
+    name: { en: "Middle East & North Africa", ja: "中東・北アフリカ" },
+    description: {
+      en: "From the Maghreb to the Gulf: Semitic, Iranian and Berber languages.",
+      ja: "マグリブから湾岸まで。セム諸語・イラン諸語・ベルベル諸語。",
+    },
+    theme: "region",
+    difficulty: 5,
+    sourceCodes: [
+      "arb", // Standard Arabic
+      "pes_1", // Western Farsi (Persian)
+      "heb", // Hebrew
+      "tur", // Turkish
+      "ckb", // Central Kurdish (Sorani, Arabic script)
+      "kmr", // Northern Kurdish (Kurmanji, Latin script)
+      "pbu", // Northern Pashto
+      "071", // Kabyle (Berber, Latin)
+      "tzm", // Central Atlas Tamazight (Berber, Latin)
+    ],
+  },
+  {
+    id: "sub-saharan-africa",
+    name: { en: "Sub-Saharan Africa", ja: "サブサハラ・アフリカ" },
+    description: {
+      en: "A wide sweep below the Sahara: West African, Bantu and Horn of Africa languages.",
+      ja: "サハラ以南を広く巡る。西アフリカ・バントゥー・アフリカの角の言語たち。",
+    },
+    theme: "region",
+    difficulty: 5,
+    sourceCodes: [
+      // West Africa
+      "hau_3", // Hausa
+      "yor", // Yoruba
+      "ibo", // Igbo
+      "wol", // Wolof
+      "bam", // Bambara
+      "aka_asante", // Twi (Asante)
+      "ewe", // Ewe
+      // Bantu (Central, East & Southern Africa)
+      "swh", // Swahili
+      "lin", // Lingala
+      "kng", // Kongo
+      "lug", // Ganda
+      "kin", // Kinyarwanda — Kirundi (run) omitted as near-identical
+      "sna", // Shona
+      "zul", // Zulu
+      "xho", // Xhosa
+      "nso", // Northern Sotho
+      "sot", // Southern Sotho
+      "tsn", // Tswana
+      "ven", // Venda
+      "tso_ZW", // Tsonga
+      "ssw", // Swati
+      "nya_chinyanja", // Nyanja
+      "umb", // Umbundu
+      // Horn of Africa
+      "amh", // Amharic (Ge'ez script)
+      "tir", // Tigrinya (Ge'ez script)
+      "som", // Somali
+      "aar", // Afar
+    ],
+  },
+  {
+    id: "north-america-indigenous",
+    name: { en: "Indigenous North America", ja: "北アメリカ先住民の言語" },
+    description: {
+      en: "Native languages of North America, from the Arctic to the Southwest.",
+      ja: "北極圏から南西部まで、北アメリカ先住民の言語たち。",
+    },
+    theme: "region",
+    difficulty: 5,
+    sourceCodes: [
+      "nav", // Navajo (Latin)
+      "chr_cased", // Cherokee (Cherokee syllabary)
+      "cic", // Chickasaw (Latin)
+      "ike", // Eastern Canadian Inuktitut (syllabics)
+    ],
+  },
+  {
+    id: "mesoamerica",
+    name: { en: "Mesoamerica", ja: "メソアメリカ" },
+    description: {
+      en: "Nahuatl and the Mayan languages of Mexico and Guatemala.",
+      ja: "ナワトル語と、メキシコ・グアテマラのマヤ諸語。",
+    },
+    theme: "region",
+    difficulty: 5,
+    sourceCodes: [
+      "nhn", // Central Nahuatl
+      "quc", // K'iche'
+      "kek", // Q'eqchi'
+      "cak", // Kaqchikel
+      "mam", // Mam
+      "tzc", // Tzotzil
+    ],
+  },
+  {
+    id: "south-america-indigenous",
+    name: { en: "Indigenous South America", ja: "南アメリカ先住民の言語" },
+    description: {
+      en: "From the Andes to the Amazon: the native languages of South America.",
+      ja: "アンデスからアマゾンまで、南アメリカ先住民の言語たち。",
+    },
+    theme: "region",
+    difficulty: 5,
+    sourceCodes: [
+      "quz", // Cusco Quechua
+      "ayr", // Central Aymara
+      "gug", // Paraguayan Guaraní
+      "arn", // Mapudungun
+      "jiv", // Shuar
+      "shp", // Shipibo-Conibo
+      "cni", // Asháninka
+      "huu", // Murui Huitoto
+      "yad", // Yagua
+      "cof", // Tsafiki (Colorado)
+    ],
+  },
+  {
     id: "geoguessr-hard",
     name: { en: "Languages of GeoGuessr (Hard)", ja: "GeoGuessr で出会う言語（上級）" },
     description: {
