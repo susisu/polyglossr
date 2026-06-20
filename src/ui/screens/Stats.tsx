@@ -9,6 +9,7 @@ import {
   type RankedLanguage,
 } from "../../stats/aggregate.js";
 import type { GameRecord, Stats } from "../../stats/stats.js";
+import { useLocale, useMessages } from "../i18n/index.js";
 import { getStatsStore } from "../statsStore.js";
 import styles from "./Stats.module.css";
 
@@ -16,8 +17,8 @@ interface Props {
   onHome: () => void;
 }
 
-function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString(undefined, {
+function formatDate(iso: string, locale: string): string {
+  return new Date(iso).toLocaleDateString(locale, {
     month: "short",
     day: "numeric",
     year: "numeric",
@@ -31,6 +32,7 @@ function LanguageList({
   title: string;
   languages: RankedLanguage[];
 }): ReactElement {
+  const messages = useMessages();
   return (
     <section className={styles["section"]}>
       <h3 className={styles["subheading"]}>{title}</h3>
@@ -40,7 +42,7 @@ function LanguageList({
             <span>{languageName(language.langId)}</span>
             <span className={styles["accuracy"]}>
               {Math.round(language.accuracy * 100)}%
-              <span className={styles["seen"]}> · {language.seen} seen</span>
+              <span className={styles["seen"]}> · {messages.stats.seenCount(language.seen)}</span>
             </span>
           </li>
         ))}
@@ -51,6 +53,8 @@ function LanguageList({
 
 /** Player statistics: overview, strong/weak languages, per-stage bests, history. */
 export function StatsScreen({ onHome }: Props): ReactElement {
+  const messages = useMessages();
+  const { locale } = useLocale();
   const [stats, setStats] = useState<Stats>(emptyStats);
   const [history, setHistory] = useState<readonly GameRecord[]>([]);
 
@@ -81,21 +85,23 @@ export function StatsScreen({ onHome }: Props): ReactElement {
 
   return (
     <div className={styles["screen"]}>
-      <h2 className={styles["heading"]}>Your stats</h2>
+      <h2 className={styles["heading"]}>{messages.stats.heading}</h2>
 
       {stats.gamesPlayed === 0 ?
-        <p className={styles["empty"]}>Play a game and your progress will appear here.</p>
+        <p className={styles["empty"]}>{messages.stats.empty}</p>
       : <>
           <p className={styles["summary"]}>
-            {stats.gamesPlayed} games · {stats.gamesWon} completed
+            {messages.stats.summary(stats.gamesPlayed, stats.gamesWon)}
           </p>
 
-          {strong.length > 0 && <LanguageList title="Strongest" languages={strong} />}
-          {weak.length > 0 && <LanguageList title="Needs work" languages={weak} />}
+          {strong.length > 0 && (
+            <LanguageList title={messages.stats.strongest} languages={strong} />
+          )}
+          {weak.length > 0 && <LanguageList title={messages.stats.needsWork} languages={weak} />}
 
           {playedStages.length > 0 && (
             <section className={styles["section"]}>
-              <h3 className={styles["subheading"]}>Best by stage</h3>
+              <h3 className={styles["subheading"]}>{messages.stats.bestByStage}</h3>
               <ul className={styles["stageList"]}>
                 {playedStages.map((stage) => {
                   const stat = stats.perStage[stage.id];
@@ -104,8 +110,11 @@ export function StatsScreen({ onHome }: Props): ReactElement {
                     <li key={stage.id} className={styles["stageRow"]}>
                       <span>{stage.name}</span>
                       <span className={styles["best"]}>
-                        best {stat.bestCorrect}/{TOTAL_QUESTIONS}
-                        <span className={styles["seen"]}> · {stat.played} played</span>
+                        {messages.stats.bestScore(stat.bestCorrect, TOTAL_QUESTIONS)}
+                        <span className={styles["seen"]}>
+                          {" · "}
+                          {messages.stats.playedCount(stat.played)}
+                        </span>
                       </span>
                     </li>
                   );
@@ -116,15 +125,18 @@ export function StatsScreen({ onHome }: Props): ReactElement {
 
           {history.length > 0 && (
             <section className={styles["section"]}>
-              <h3 className={styles["subheading"]}>Recent games</h3>
+              <h3 className={styles["subheading"]}>{messages.stats.recentGames}</h3>
               <ul className={styles["history"]}>
                 {history.map((record) => (
                   <li key={record.id} className={styles["historyRow"]}>
                     <span>{getStage(record.stageId)?.name ?? record.stageId}</span>
                     <span className={styles["historyMeta"]}>
                       {record.correct}/{record.total} ·{" "}
-                      {record.status === "won" ? "completed" : "lost"}
-                      <span className={styles["seen"]}> · {formatDate(record.finishedAt)}</span>
+                      {record.status === "won" ? messages.stats.won : messages.stats.lost}
+                      <span className={styles["seen"]}>
+                        {" · "}
+                        {formatDate(record.finishedAt, locale)}
+                      </span>
                     </span>
                   </li>
                 ))}
@@ -135,7 +147,7 @@ export function StatsScreen({ onHome }: Props): ReactElement {
       }
 
       <button type="button" className={styles["back"]} onClick={onHome}>
-        Back to stages
+        {messages.stats.backToStages}
       </button>
     </div>
   );

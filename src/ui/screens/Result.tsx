@@ -3,6 +3,7 @@ import { useEffect, useRef, type ReactElement } from "react";
 import { languageName, sourceFor } from "../../data/selectors.js";
 import { getStage } from "../../data/stages.js";
 import type { GameState } from "../../engine/game.js";
+import { useMessages } from "../i18n/index.js";
 import { getStatsStore } from "../statsStore.js";
 import styles from "./Result.module.css";
 
@@ -14,6 +15,7 @@ interface Props {
 
 /** End-of-game screen: score, per-question review, and stats recording. */
 export function Result({ gameState, onPlayAgain, onHome }: Props): ReactElement {
+  const messages = useMessages();
   const recorded = useRef(false);
 
   useEffect(() => {
@@ -34,18 +36,21 @@ export function Result({ gameState, onPlayAgain, onHome }: Props): ReactElement 
 
   return (
     <div className={styles["screen"]}>
-      <p className={styles["outcome"]}>{won ? "Completed" : "Game over"}</p>
-      <h2 className={styles["score"]}>{gameState.correct} correct</h2>
+      <p className={styles["outcome"]}>{won ? messages.result.won : messages.result.lost}</p>
+      <h2 className={styles["score"]}>{messages.result.correctCount(gameState.correct)}</h2>
       <p className={styles["sub"]}>
-        {stage?.name ?? gameState.config.stageId} · {gameState.answers.length} answered
+        {messages.result.subtitle(
+          stage?.name ?? gameState.config.stageId,
+          gameState.answers.length,
+        )}
       </p>
 
       <div className={styles["actions"]}>
         <button type="button" className={styles["primary"]} onClick={onPlayAgain}>
-          Play again
+          {messages.result.playAgain}
         </button>
         <button type="button" className={styles["secondary"]} onClick={onHome}>
-          Stages
+          {messages.result.stages}
         </button>
       </div>
 
@@ -69,7 +74,9 @@ export function Result({ gameState, onPlayAgain, onHome }: Props): ReactElement 
               <span className={styles["verdict"]}>
                 <span className={styles["answer"]}>{languageName(answer.answerLangId)}</span>
                 {!answer.correct && (
-                  <span className={styles["guess"]}>you: {languageName(answer.pickedLangId)}</span>
+                  <span className={styles["guess"]}>
+                    {messages.result.yourGuess(languageName(answer.pickedLangId))}
+                  </span>
                 )}
               </span>
             </li>

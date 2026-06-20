@@ -37,16 +37,6 @@
   margin-bottom: 0.5rem;
 }
 
-.link {
-  color: var(--accent-strong);
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
-}
-
-.link:hover {
-  color: var(--accent);
-}
-
 .back {
   align-self: flex-start;
   margin-top: 1rem;

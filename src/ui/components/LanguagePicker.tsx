@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { useEffect, useRef, useState, type KeyboardEvent, type ReactElement } from "react";
 import type { Language } from "../../data/language.js";
+import { useMessages } from "../i18n/index.js";
 import styles from "./LanguagePicker.module.css";
 
 interface Props {
@@ -18,6 +19,7 @@ interface Props {
  * languages, so multi-script languages appear once.
  */
 export function LanguagePicker({ languages, onPick, disabled }: Props): ReactElement {
+  const messages = useMessages();
   const [query, setQuery] = useState("");
   const [highlight, setHighlight] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -35,8 +37,8 @@ export function LanguagePicker({ languages, onPick, disabled }: Props): ReactEle
         // Arabic); the sort is stable, so each group keeps the stage's order.
         .toSorted(
           (a, b) =>
-            Number(b.name.toLowerCase().startsWith(needle)) -
-            Number(a.name.toLowerCase().startsWith(needle)),
+            Number(b.name.toLowerCase().startsWith(needle))
+            - Number(a.name.toLowerCase().startsWith(needle)),
         )
     );
   const activeIndex = Math.min(highlight, Math.max(matches.length - 1, 0));
@@ -73,7 +75,7 @@ export function LanguagePicker({ languages, onPick, disabled }: Props): ReactEle
         aria-controls="language-options"
         aria-autocomplete="list"
         autoComplete="off"
-        placeholder="Which language is this?"
+        placeholder={messages.picker.placeholder}
         value={query}
         disabled={disabled}
         onChange={(event) => {
@@ -100,7 +102,7 @@ export function LanguagePicker({ languages, onPick, disabled }: Props): ReactEle
             </button>
           </li>
         ))}
-        {matches.length === 0 && <li className={styles["empty"]}>No matching language</li>}
+        {matches.length === 0 && <li className={styles["empty"]}>{messages.picker.noMatch}</li>}
       </ul>
     </div>
   );

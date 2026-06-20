@@ -4,6 +4,7 @@ import { getStage } from "../data/stages.js";
 import type { GameState } from "../engine/game.js";
 import { requestPersistence } from "../stats/storage.js";
 import styles from "./App.module.css";
+import { useMessages } from "./i18n/index.js";
 import { About } from "./screens/About.js";
 import { Game } from "./screens/Game.js";
 import { Result } from "./screens/Result.js";
@@ -24,6 +25,7 @@ function randomSeed(): number {
 
 /** Root component: a small screen state machine for the whole game. */
 export function App(): ReactElement {
+  const messages = useMessages();
   const [screen, setScreen] = useState<Screen>({ kind: "stage-select" });
 
   useEffect(() => {
@@ -58,7 +60,7 @@ export function App(): ReactElement {
               setScreen({ kind: "stats" });
             }}
           >
-            Stats
+            {messages.nav.stats}
           </button>
           <button
             type="button"
@@ -66,7 +68,7 @@ export function App(): ReactElement {
               setScreen({ kind: "about" });
             }}
           >
-            About
+            {messages.nav.about}
           </button>
         </nav>
       </header>
@@ -106,7 +108,7 @@ export function App(): ReactElement {
             setScreen({ kind: "about" });
           }}
         >
-          Texts from the Universal Declaration of Human Rights (UN/OHCHR) — credits
+          {messages.footer.credit}
         </button>
       </footer>
     </div>

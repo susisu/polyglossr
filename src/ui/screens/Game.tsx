@@ -6,6 +6,8 @@ import type { Stage } from "../../data/stage.js";
 import { answerQuestion, createGame, type GameState } from "../../engine/game.js";
 import { LanguagePicker } from "../components/LanguagePicker.js";
 import { SnippetPanel } from "../components/SnippetPanel.js";
+import { useMessages } from "../i18n/index.js";
+import type { Messages } from "../i18n/messages.js";
 import styles from "./Game.module.css";
 
 interface Props {
@@ -22,14 +24,15 @@ function reducer(state: GameState, action: Action): GameState {
 }
 
 /** Label a source as "Language · Script", e.g. "Serbian · Cyrillic". */
-function sourceLabel(sourceCode: string, answerLangId: string): string {
+function sourceLabel(sourceCode: string, answerLangId: string, messages: Messages): string {
   const source = sourceFor(sourceCode);
   const base = languageName(answerLangId);
-  return source?.scriptLabel ? `${base} · ${source.scriptLabel}` : base;
+  return source?.scriptLabel ? messages.game.sourceLabel(base, source.scriptLabel) : base;
 }
 
 /** The active game: shows a snippet, takes a guess, reveals the answer, advances. */
 export function Game({ stage, seed, onFinish, onQuit }: Props): ReactElement {
+  const messages = useMessages();
   const [state, dispatch] = useReducer(reducer, undefined, () =>
     createGame({ stage, sources: dataset.sources, snippets: dataset.snippets, seed }),
   );
@@ -69,11 +72,11 @@ export function Game({ stage, seed, onFinish, onQuit }: Props): ReactElement {
     <div className={styles["game"]}>
       <header className={styles["bar"]}>
         <span className={styles["progress"]}>
-          {state.current + 1} / {state.config.totalQuestions}
+          {messages.game.progress(state.current + 1, state.config.totalQuestions)}
         </span>
         <span
           className={styles["lives"]}
-          aria-label={`${state.mistakes} of ${state.config.maxMistakes} mistakes`}
+          aria-label={messages.game.mistakesLabel(state.mistakes, state.config.maxMistakes)}
         >
           {Array.from({ length: state.config.maxMistakes }, (_, i) => (
             <span
@@ -83,7 +86,7 @@ export function Game({ stage, seed, onFinish, onQuit }: Props): ReactElement {
           ))}
         </span>
         <button type="button" className={styles["quit"]} onClick={onQuit}>
-          Quit
+          {messages.game.quit}
         </button>
       </header>
 
@@ -97,12 +100,16 @@ export function Game({ stage, seed, onFinish, onQuit }: Props): ReactElement {
         <div
           className={clsx(styles["feedback"], isCorrect ? styles["correct"] : styles["incorrect"])}
         >
-          <p className={styles["verdict"]}>{isCorrect ? "Correct" : "Not quite"}</p>
+          <p className={styles["verdict"]}>
+            {isCorrect ? messages.game.correct : messages.game.notQuite}
+          </p>
           <p className={styles["answer"]}>
-            {sourceLabel(question.sourceCode, question.answerLangId)}
+            {sourceLabel(question.sourceCode, question.answerLangId, messages)}
           </p>
           {!isCorrect && (
-            <p className={styles["yourGuess"]}>You guessed {languageName(pickedLangId)}</p>
+            <p className={styles["yourGuess"]}>
+              {messages.game.youGuessed(languageName(pickedLangId))}
+            </p>
           )}
           <button
             ref={continueRef}
@@ -110,7 +117,7 @@ export function Game({ stage, seed, onFinish, onQuit }: Props): ReactElement {
             className={styles["continue"]}
             onClick={handleContinue}
           >
-            Continue
+            {messages.game.continue}
           </button>
         </div>
       : <LanguagePicker
