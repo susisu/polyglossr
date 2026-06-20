@@ -3,7 +3,7 @@ import type { Stage } from "../data/stage.js";
 import { generateRun, type Question } from "./question.js";
 
 /** Number of questions in a game. */
-export const TOTAL_QUESTIONS = 30;
+export const TOTAL_QUESTIONS = 20;
 /** Wrong answers allowed before game over. */
 export const MAX_MISTAKES = 3;
 
