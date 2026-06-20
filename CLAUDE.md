@@ -6,14 +6,18 @@ shown; the player names the language. Built with TypeScript + React + Vite, clie
 
 ## What it is
 
-- The player picks a **stage** (a curated set of languages with a name and difficulty 1–5),
-  then answers **30 questions**; **3 mistakes** ends the game.
+- The player picks a **stage** (a curated set of answer **options** with a name and
+  difficulty 1–5), then answers **20 questions**; **3 mistakes** ends the game. Selecting a
+  stage opens a **stage detail** screen (overview + the player's strong/weak options) before
+  the game starts.
 - Each question shows a ~10–20-word passage; the player answers by **free text input with
-  suggestions** (not multiple choice), choosing from the stage's languages.
-- Answers are judged by **logical language** (ISO 639-3), so e.g. "Serbian" is correct for
-  either Cyrillic or Latin script. A single stage may include one language in multiple scripts.
-- Play stats and full game history are stored in the browser (IndexedDB); the player can see
-  their strongest / weakest languages and per-stage best scores.
+  suggestions** (not multiple choice), choosing from the stage's **options**.
+- Answers are judged by the **stage option** the snippet was drawn from. An option is currently
+  one logical language (so "Serbian" is correct for either Cyrillic or Latin — both scripts are
+  grouped into one option), but the model also allows an option to be a writing system or a
+  language family.
+- Play stats and full game history are stored in the browser (IndexedDB); stats are scoped
+  **per stage** — best scores, plus the player's strongest / weakest options within each stage.
 - Passages come from the **Universal Declaration of Human Rights** (the same document in every
   language). The source/licensing is shown once, globally, on the About screen — never per
   question (that would reveal the answer).
@@ -50,13 +54,18 @@ src/
 
 - **Source vs logical language.** A udhr `code` (e.g. `srp_cyrl`) is one _source_ = one
   (language × script), the dataset primary key and snippet supplier. Sources are grouped by
-  `iso6393` into _logical languages_ (`srp` → "Serbian"), which are the answer / stats /
-  suggestion unit. `bcp47` is **not** a reliable script discriminator (Simplified Chinese is
-  bare `zh`); always key on `code` for sources and `iso6393` for languages.
-- **Stages** (`src/data/stages.ts`) list source `code`s. The same `iso6393` may appear under
-  multiple codes (e.g. the GeoGuessr stage has Serbian in both scripts). The picker dedupes to
-  distinct logical languages. `stages.test.ts` checks every code resolves and that each stage
-  has ≥ 5 distinct logical languages.
+  `iso6393` into _logical languages_ (`srp` → "Serbian"). `bcp47` is **not** a reliable script
+  discriminator (Simplified Chinese is bare `zh`); always key on `code` for sources and
+  `iso6393` for languages.
+- **Stages and options** (`src/data/stages.ts`). A stage lists **options**; each option has a
+  stable `id` (the answer + stats key, currently an ISO 639-3 code), an optional `label`, and
+  one or more source `code`s. A question first picks an option, then a code within it — so each
+  option carries equal weight regardless of how many codes it bundles. Scripts/variants of one
+  language share a single option (e.g. Serbian `srp_cyrl` + `srp_latn`) so it stays weighted as
+  one. An option with no `label` is named by its single logical language (the picker matches on
+  localized + English name); an option spanning multiple languages (a future script/family)
+  must carry a `label`. `stages.test.ts` checks every code resolves, option ids are unique
+  within a stage, and multi-language options have a label.
 - **Snippet segmentation** (`scripts/generate-data.ts`) is script-aware: word windows for
   spaced scripts; grapheme windows for CJK and spaceless abugidas (Thai/Lao/Khmer/Myanmar/
   Ethiopic). Script class is detected by sampling code points, not by `bcp47`.
@@ -69,18 +78,21 @@ src/
 `udhr` is a **dev dependency only** — the runtime imports the committed JSON, never the package
 or its HTML. `generate-data.ts` filters by encoding stage (`MIN_STAGE`), drops `und`/missing/
 too-few-snippet entries, normalizes names into `baseName` + `scriptLabel`, and **prunes the
-runtime dataset to only the languages the stages reference** (so the bundle carries ~37 sources,
-not 500). The `manifest.generated.json` lists every available language — consult it when
+runtime dataset to only the sources the stages reference** (so the bundle carries ~140 sources,
+not 500+). The `manifest.generated.json` lists every available language — consult it when
 authoring stages. Unwanted specific variants are removed by a curated, by-name `MANUAL_EXCLUDE`
 set (no general pattern) — e.g. historical orthographies `deu_1901`, `ell_polytonic`.
 
 ## Stats & history
 
-History is the source of truth: each `GameRecord` carries a compact per-language tally, so the
-aggregate `Stats` (per-language seen/correct, per-stage best, totals) is fully rebuildable from
-history. The IndexedDB store (`games` + `meta` object stores) falls back to an in-memory store
-when IndexedDB is unavailable, and requests persistent storage on startup. All aggregation is
-pure (`src/stats/aggregate.ts`) and unit-tested; I/O is isolated in `storage.ts`.
+History is the source of truth: each `GameRecord` carries a compact per-option tally, so the
+aggregate `Stats` is fully rebuildable from history. Stats are keyed by **`(stageId, optionId)`**
+— identification difficulty depends on the stage's confusion set, so a global per-language tally
+would be ill-defined; `Stats` holds per-stage best/played plus per-option seen/correct within
+each stage, and overall totals. The IndexedDB store (`games` + `meta` object stores) falls back
+to an in-memory store when IndexedDB is unavailable, and requests persistent storage on startup.
+All aggregation is pure (`src/stats/aggregate.ts`) and unit-tested; I/O is isolated in
+`storage.ts`.
 
 ## Conventions
 
