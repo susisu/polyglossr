@@ -147,6 +147,89 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
+    id: "romance",
+    name: { en: "Romance", ja: "ロマンス諸語" },
+    description: {
+      en: "Sister languages of the Latin world — Spanish, Portuguese, Italian and their neighbours.",
+      ja: "ラテン世界の姉妹言語たち。スペイン語・ポルトガル語・イタリア語とその隣人。",
+    },
+    theme: "themed",
+    difficulty: 4,
+    sourceCodes: [
+      "spa",
+      "fra",
+      "ita",
+      "por_PT",
+      "por_BR",
+      "ron_2006",
+      "cat",
+      "glg",
+      "prv", // Occitan
+      "roh", // Romansch
+    ],
+  },
+  {
+    id: "germanic",
+    name: { en: "Germanic", ja: "ゲルマン語派" },
+    description: {
+      en: "From English and German to the languages of the North.",
+      ja: "英語・ドイツ語から、北欧の言語まで。",
+    },
+    theme: "themed",
+    difficulty: 4,
+    sourceCodes: [
+      "eng",
+      "deu_1996",
+      "nld",
+      "swe",
+      "dan",
+      "nob",
+      "nno", // Norwegian Nynorsk — distinguished from Bokmål by function words (eg/ikkje vs jeg/ikke)
+      "isl",
+      "fao",
+      "ltz",
+    ],
+  },
+  {
+    id: "slavic",
+    name: { en: "Slavic", ja: "スラヴ語派" },
+    description: {
+      en: "The Slavic languages, written in both Latin and Cyrillic.",
+      ja: "ラテン文字とキリル文字、両方で書かれるスラヴ語派。",
+    },
+    theme: "themed",
+    difficulty: 4,
+    sourceCodes: [
+      "pol",
+      "ces",
+      "slk",
+      "slv",
+      "hrv",
+      // Bosnian and Montenegrin are omitted: their UDHR translations are near-identical to
+      // Croatian, so even an expert cannot reliably tell them apart. Serbian stays
+      // distinguishable (Ekavian reflex: čoveka vs čovjeka).
+      "srp_cyrl",
+      "srp_latn",
+      "mkd",
+      "bul",
+      "rus",
+      "ukr",
+      "bel",
+      "hsb", // Upper Sorbian
+    ],
+  },
+  {
+    id: "south-asia",
+    name: { en: "South Asia", ja: "南アジア" },
+    description: {
+      en: "The scripts and languages of the Indian subcontinent.",
+      ja: "インド亜大陸の文字と言語たち。",
+    },
+    theme: "region",
+    difficulty: 4,
+    sourceCodes: ["hin", "urd", "ben", "guj", "tam", "tel", "kan", "mal", "sin", "nep", "dzo"],
+  },
+  {
     id: "geoguessr-hard",
     name: { en: "Languages of GeoGuessr (Hard)", ja: "GeoGuessr で出会う言語（上級）" },
     description: {
