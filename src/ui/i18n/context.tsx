@@ -7,11 +7,12 @@ import {
   type ReactNode,
 } from "react";
 import { en } from "./en.js";
+import { ja } from "./ja.js";
 import { detectLocale, isLocale, type Locale } from "./locale.js";
 import type { Messages } from "./messages.js";
 
 /** Every supported locale's catalog. Add new locales here. */
-const CATALOGS: Record<Locale, Messages> = { en };
+const CATALOGS: Record<Locale, Messages> = { en, ja };
 
 const LOCALE_STORAGE_KEY = "polyglossr.locale";
 

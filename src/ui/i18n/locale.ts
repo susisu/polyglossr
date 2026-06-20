@@ -2,13 +2,13 @@
  * Supported UI locales. To add one, extend this union, add its catalog to
  * `CATALOGS` in `context.tsx`, and list it in `LOCALES` below.
  */
-export type Locale = "en";
+export type Locale = "en" | "ja";
 
 /** Fallback locale when the browser's preferences match nothing supported. */
 export const DEFAULT_LOCALE: Locale = "en";
 
 /** All supported locales, in preference order for the switcher. */
-export const LOCALES = ["en"] as const satisfies readonly Locale[];
+export const LOCALES = ["en", "ja"] as const satisfies readonly Locale[];
 
 /** Narrow an arbitrary string to a supported `Locale`. */
 export function isLocale(value: string): value is Locale {
