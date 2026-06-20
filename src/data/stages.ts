@@ -12,11 +12,11 @@ export const STAGES: readonly Stage[] = [
     name: { en: "First Steps", ja: "はじめの一歩" },
     description: {
       en: "A gentle start: widely spoken languages with distinctive scripts.",
-      ja: "やさしいスタート。特徴的な文字を持つ、広く使われている言語たち。",
+      ja: "まずはここから。特徴的な文字を持つ、広く使われている言語たち。",
     },
     theme: "difficulty",
     difficulty: 1,
-    sourceCodes: ["eng", "spa", "fra", "deu_1996", "rus", "jpn", "arb", "hin"],
+    sourceCodes: ["eng", "spa", "fra", "deu_1996", "rus", "cmn_hans", "jpn", "arb", "hin"],
   },
   {
     id: "scripts-of-the-world",
