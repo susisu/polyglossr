@@ -101,7 +101,7 @@ export function rebuildStats(records: Iterable<GameRecord>): Stats {
 }
 
 /** Minimum times an option must be seen before it ranks as strong/weak. */
-export const MIN_SEEN = 3;
+export const MIN_SEEN = 1;
 
 /** A stage option ranked by accuracy, for the strong/weak lists. */
 export interface RankedOption extends OptionStat {
