@@ -99,8 +99,8 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
-    id: "scripts-of-the-world-intermediate",
-    name: { en: "Scripts of the World (Intermediate)", ja: "世界の文字（中級）" },
+    id: "scripts-of-the-world-medium",
+    name: { en: "Scripts of the World (Medium)", ja: "世界の文字（中級）" },
     description: {
       en: "Past the familiar few — more of the world's writing systems, each its own.",
       ja: "見慣れた文字の先へ。世界の書記体系をもっと見分けよう。",
@@ -163,7 +163,7 @@ export const STAGES: readonly Stage[] = [
       en: "From sister scripts to the rare and remote — every writing system in the game.",
       ja: "姉妹文字から希少な文字まで、世界のあらゆる書記体系を見分けよう。",
     },
-    // Everything the dataset can show: the intermediate scripts plus the easily
+    // Everything the dataset can show: the medium-tier scripts plus the easily
     // confused sisters (Telugu/Kannada, Lao alongside Thai) and the rare scripts
     // (Thaana, Syriac, Adlam, Vai, Chakma, Cherokee, Canadian syllabics).
     category: "script",
@@ -275,8 +275,8 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
-    id: "europe-intermediate",
-    name: { en: "Europe (Intermediate)", ja: "ヨーロッパ（中級）" },
+    id: "europe-medium",
+    name: { en: "Europe (Medium)", ja: "ヨーロッパ（中級）" },
     description: {
       en: "A step beyond the basics: the national languages of Europe.",
       ja: "初級の一歩先へ。ヨーロッパ各国の言語を見分けよう。",
@@ -779,8 +779,8 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
-    id: "geoguessr-intermediate",
-    name: { en: "Languages of GeoGuessr (Intermediate)", ja: "GeoGuessr で出会う言語（中級）" },
+    id: "geoguessr-medium",
+    name: { en: "Languages of GeoGuessr (Medium)", ja: "GeoGuessr で出会う言語（中級）" },
     description: {
       en: "A wider range of the languages you meet on the map.",
       ja: "マップで出会う、より多くの言語を見分けよう。",
