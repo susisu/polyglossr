@@ -10,14 +10,12 @@ import { About } from "./screens/About.js";
 import { Game } from "./screens/Game.js";
 import { Result } from "./screens/Result.js";
 import { StageSelect } from "./screens/StageSelect.js";
-import { StatsScreen } from "./screens/Stats.js";
 import { getStatsStore } from "./statsStore.js";
 
 type Screen =
   | { kind: "stage-select" }
   | { kind: "game"; stage: Stage; seed: number }
   | { kind: "result"; gameState: GameState }
-  | { kind: "stats" }
   | { kind: "about" };
 
 function randomSeed(): number {
@@ -58,14 +56,6 @@ export function App(): ReactElement {
           <button
             type="button"
             onClick={() => {
-              setScreen({ kind: "stats" });
-            }}
-          >
-            {messages.nav.stats}
-          </button>
-          <button
-            type="button"
-            onClick={() => {
               setScreen({ kind: "about" });
             }}
           >
@@ -98,7 +88,6 @@ export function App(): ReactElement {
             onHome={home}
           />
         )}
-        {screen.kind === "stats" && <StatsScreen onHome={home} />}
         {screen.kind === "about" && <About onHome={home} />}
       </main>
 

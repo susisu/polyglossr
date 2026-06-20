@@ -9,7 +9,6 @@ import type { ReactNode } from "react";
  */
 export interface Messages {
   nav: {
-    stats: string;
     about: string;
   };
   footer: {
@@ -19,7 +18,7 @@ export interface Messages {
   stageSelect: {
     intro: string;
     difficultyLabel: (value: number, max: number) => string;
-    languageCount: (count: number) => string;
+    optionCount: (count: number) => string;
   };
   game: {
     progress: (current: number, total: number) => string;
@@ -44,21 +43,6 @@ export interface Messages {
     playAgain: string;
     stages: string;
     yourGuess: (name: string) => string;
-  };
-  stats: {
-    heading: string;
-    empty: string;
-    summary: (played: number, won: number) => string;
-    strongest: string;
-    needsWork: string;
-    seenCount: (count: number) => string;
-    bestByStage: string;
-    bestScore: (correct: number, total: number) => string;
-    playedCount: (count: number) => string;
-    recentGames: string;
-    won: string;
-    lost: string;
-    backToStages: string;
   };
   about: {
     heading: string;

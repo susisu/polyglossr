@@ -72,7 +72,11 @@ export function makeFixture(): {
     description: { en: "", ja: "" },
     theme: "themed",
     difficulty: 1,
-    sourceCodes: ["en", "sr_c", "sr_l", "ar"],
+    options: [
+      { id: "eng", sourceCodes: ["en"] },
+      { id: "srp", sourceCodes: ["sr_c", "sr_l"] },
+      { id: "arb", sourceCodes: ["ar"] },
+    ],
   };
   return { sources, snippets, stage };
 }

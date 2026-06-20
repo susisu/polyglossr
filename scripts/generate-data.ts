@@ -321,7 +321,9 @@ async function main(): Promise<void> {
   // app bundle carries just the languages in play (the manifest keeps them all).
   const referenced = new Set<string>();
   for (const stage of STAGES) {
-    for (const code of stage.sourceCodes) referenced.add(code);
+    for (const option of stage.options) {
+      for (const code of option.sourceCodes) referenced.add(code);
+    }
   }
   const keptCodes = new Set(sources.map((s) => s.code));
   for (const code of referenced) {

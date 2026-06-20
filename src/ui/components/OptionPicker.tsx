@@ -1,27 +1,24 @@
 import clsx from "clsx";
 import { useEffect, useRef, useState, type KeyboardEvent, type ReactElement } from "react";
-import type { Language } from "../../data/language.js";
-import { languageName } from "../../data/selectors.js";
-import { useLocale, useMessages } from "../i18n/index.js";
-import styles from "./LanguagePicker.module.css";
+import type { StageOptionView } from "../../data/selectors.js";
+import { useMessages } from "../i18n/index.js";
+import styles from "./OptionPicker.module.css";
 
 interface Props {
-  /** Candidate logical languages for this stage. */
-  languages: readonly Language[];
-  /** Called with the chosen logical language id. */
-  onPick: (langId: string) => void;
+  /** Answer candidates (the stage's options) for this question. */
+  options: readonly StageOptionView[];
+  /** Called with the chosen option id. */
+  onPick: (optionId: string) => void;
   disabled: boolean;
 }
 
 /**
- * Free-text input that suggests the stage's languages. The player must pick a
+ * Free-text input that suggests the stage's options. The player must pick a
  * suggestion (arrow keys + Enter, or click) — arbitrary text can't be submitted,
- * so the answer is always a real logical language. Candidates are distinct
- * languages, so multi-script languages appear once.
+ * so the answer is always a real option of the stage.
  */
-export function LanguagePicker({ languages, onPick, disabled }: Props): ReactElement {
+export function OptionPicker({ options, onPick, disabled }: Props): ReactElement {
   const messages = useMessages();
-  const { locale } = useLocale();
   const [query, setQuery] = useState("");
   const [highlight, setHighlight] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -30,18 +27,11 @@ export function LanguagePicker({ languages, onPick, disabled }: Props): ReactEle
     inputRef.current?.focus();
   }, []);
 
-  // Show the localized name, but match on both it and the English name, so a
-  // player on the Japanese UI can still type "russian" instead of "ロシア語".
-  const candidates = languages.map((language) => ({
-    id: language.id,
-    name: languageName(language.id, locale),
-    search: [languageName(language.id, locale), language.name].map((s) => s.toLowerCase()),
-  }));
   const needle = query.trim().toLowerCase();
   const matches =
-    needle === "" ? candidates : (
-      candidates
-        .filter((candidate) => candidate.search.some((s) => s.includes(needle)))
+    needle === "" ? options : (
+      options
+        .filter((option) => option.search.some((s) => s.includes(needle)))
         // Rank prefix matches above mid-word matches (e.g. "r" → Russian before
         // Arabic); the sort is stable, so each group keeps the stage's order.
         .toSorted(
@@ -52,8 +42,8 @@ export function LanguagePicker({ languages, onPick, disabled }: Props): ReactEle
     );
   const activeIndex = Math.min(highlight, Math.max(matches.length - 1, 0));
 
-  function choose(langId: string): void {
-    if (!disabled) onPick(langId);
+  function choose(optionId: string): void {
+    if (!disabled) onPick(optionId);
   }
 
   function handleKeyDown(event: KeyboardEvent<HTMLInputElement>): void {
@@ -81,7 +71,7 @@ export function LanguagePicker({ languages, onPick, disabled }: Props): ReactEle
         type="text"
         role="combobox"
         aria-expanded={matches.length > 0}
-        aria-controls="language-options"
+        aria-controls="stage-options"
         aria-autocomplete="list"
         autoComplete="off"
         placeholder={messages.picker.placeholder}
@@ -93,21 +83,21 @@ export function LanguagePicker({ languages, onPick, disabled }: Props): ReactEle
         }}
         onKeyDown={handleKeyDown}
       />
-      <ul className={styles["options"]} id="language-options" role="listbox">
-        {matches.map((candidate, index) => (
-          <li key={candidate.id} role="option" aria-selected={index === activeIndex}>
+      <ul className={styles["options"]} id="stage-options" role="listbox">
+        {matches.map((option, index) => (
+          <li key={option.id} role="option" aria-selected={index === activeIndex}>
             <button
               type="button"
               className={clsx(styles["option"], index === activeIndex && styles["active"])}
               disabled={disabled}
               onClick={() => {
-                choose(candidate.id);
+                choose(option.id);
               }}
               onMouseEnter={() => {
                 setHighlight(index);
               }}
             >
-              {candidate.name}
+              {option.name}
             </button>
           </li>
         ))}

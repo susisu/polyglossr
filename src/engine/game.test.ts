@@ -13,25 +13,25 @@ import type { Question } from "./question.js";
 
 const CONFIG: GameConfig = { stageId: "t", totalQuestions: 5, maxMistakes: 3, seed: 1 };
 
-function question(index: number, langId: string): Question {
+function question(index: number, optionId: string): Question {
   return {
     index,
-    sourceCode: `${langId}-src`,
-    answerLangId: langId,
+    sourceCode: `${optionId}-src`,
+    optionId,
     snippet: `s${index}`,
     direction: "ltr",
   };
 }
 
-function gameOf(langIds: readonly string[]): GameState {
-  const questions = langIds.map((langId, i) => question(i, langId));
+function gameOf(optionIds: readonly string[]): GameState {
+  const questions = optionIds.map((optionId, i) => question(i, optionId));
   return startGame({ ...CONFIG, totalQuestions: questions.length }, questions);
 }
 
 /** Answer the current question correctly. */
 function answerRight(state: GameState): GameState {
   const q = state.questions[state.current];
-  return answerQuestion(state, q?.answerLangId ?? "");
+  return answerQuestion(state, q?.optionId ?? "");
 }
 
 describe("startGame", () => {
@@ -63,13 +63,13 @@ describe("answerQuestion", () => {
     expect(state.correct).toBe(0);
     expect(state.mistakes).toBe(1);
     expect(state.answers[0]?.correct).toBe(false);
-    expect(state.answers[0]?.pickedLangId).toBe("deu");
+    expect(state.answers[0]?.pickedOptionId).toBe("deu");
   });
 
-  it("accepts any script of the answer language (langId match)", () => {
-    // The question's source is a specific script, but the answer is the langId.
+  it("accepts any script of a multi-script option (option-id match)", () => {
+    // The question's source is a specific script, but the answer is the option id.
     const questions: Question[] = [
-      { index: 0, sourceCode: "sr_l", answerLangId: "srp", snippet: "x", direction: "ltr" },
+      { index: 0, sourceCode: "sr_l", optionId: "srp", snippet: "x", direction: "ltr" },
     ];
     const state = answerQuestion(startGame({ ...CONFIG, totalQuestions: 1 }, questions), "srp");
     expect(state.status).toBe("won");

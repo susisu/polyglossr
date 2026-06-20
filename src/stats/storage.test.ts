@@ -8,8 +8,8 @@ function finishedGame(stageId: string, seed: number, correct: number): GameState
   const answers: AnswerRecord[] = Array.from({ length: 5 }, (_, i) => ({
     questionIndex: i,
     sourceCode: "eng-s",
-    answerLangId: "eng",
-    pickedLangId: i < correct ? "eng" : "zzz",
+    optionId: "eng",
+    pickedOptionId: i < correct ? "eng" : "zzz",
     correct: i < correct,
   }));
   return {

@@ -23,10 +23,10 @@ export interface AnswerRecord {
   readonly questionIndex: number;
   /** Source shown (carries the script/variant). */
   readonly sourceCode: string;
-  /** Correct logical language. */
-  readonly answerLangId: string;
-  /** Logical language the player chose. */
-  readonly pickedLangId: string;
+  /** Correct answer: the stage option the snippet was drawn from. */
+  readonly optionId: string;
+  /** The stage option the player chose. */
+  readonly pickedOptionId: string;
   readonly correct: boolean;
 }
 
@@ -86,22 +86,22 @@ export function createGame(input: CreateGameInput): GameState {
 }
 
 /**
- * Apply the player's answer (a logical language id) to the current question and
+ * Apply the player's answer (a stage option id) to the current question and
  * return the next immutable state. A no-op once the game is over.
  */
-export function answerQuestion(state: GameState, pickedLangId: string): GameState {
+export function answerQuestion(state: GameState, pickedOptionId: string): GameState {
   if (state.status !== "playing") return state;
   const question = state.questions[state.current];
   if (question === undefined) return state;
 
-  const correct = question.answerLangId === pickedLangId;
+  const correct = question.optionId === pickedOptionId;
   const answers: AnswerRecord[] = [
     ...state.answers,
     {
       questionIndex: question.index,
       sourceCode: question.sourceCode,
-      answerLangId: question.answerLangId,
-      pickedLangId,
+      optionId: question.optionId,
+      pickedOptionId,
       correct,
     },
   ];

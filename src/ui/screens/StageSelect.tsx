@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import type { ReactElement } from "react";
-import { stageLanguages } from "../../data/selectors.js";
 import type { Stage } from "../../data/stage.js";
 import { STAGES } from "../../data/stages.js";
 import { useLocale, useMessages } from "../i18n/index.js";
@@ -46,7 +45,7 @@ export function StageSelect({ onStart }: Props): ReactElement {
               <span className={styles["meta"]}>
                 <DifficultyDots value={stage.difficulty} />
                 <span className={styles["count"]}>
-                  {messages.stageSelect.languageCount(stageLanguages(stage, locale).length)}
+                  {messages.stageSelect.optionCount(stage.options.length)}
                 </span>
               </span>
             </button>

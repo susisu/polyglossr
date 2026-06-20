@@ -1,15 +1,11 @@
 import type { GameState } from "../engine/game.js";
 import {
   STATS_SCHEMA_VERSION,
-  type GameLanguageResult,
   type GameRecord,
-  type LanguageStat,
+  type OptionStat,
   type StageStat,
   type Stats,
 } from "./stats.js";
-
-/** Minimum times a language must be seen before it ranks as strong/weak. */
-export const MIN_SEEN = 3;
 
 /** A fresh, empty stats aggregate. */
 export function emptyStats(): Stats {
@@ -17,27 +13,26 @@ export function emptyStats(): Stats {
     schemaVersion: STATS_SCHEMA_VERSION,
     gamesPlayed: 0,
     gamesWon: 0,
-    perLanguage: {},
     perStage: {},
   };
 }
 
-/** Tally per-language seen/correct from a finished game's answers. */
-function tallyLanguages(state: GameState): GameLanguageResult[] {
-  const byLang = new Map<string, GameLanguageResult>();
+/** Tally per-option seen/correct from a finished game's answers. */
+function tallyOptions(state: GameState): OptionStat[] {
+  const byOption = new Map<string, OptionStat>();
   for (const answer of state.answers) {
-    const prev = byLang.get(answer.answerLangId) ?? {
-      langId: answer.answerLangId,
+    const prev = byOption.get(answer.optionId) ?? {
+      optionId: answer.optionId,
       seen: 0,
       correct: 0,
     };
-    byLang.set(answer.answerLangId, {
-      langId: answer.answerLangId,
+    byOption.set(answer.optionId, {
+      optionId: answer.optionId,
       seen: prev.seen + 1,
       correct: prev.correct + (answer.correct ? 1 : 0),
     });
   }
-  return Array.from(byLang.values()).sort((a, b) => a.langId.localeCompare(b.langId, "en"));
+  return Array.from(byOption.values()).sort((a, b) => a.optionId.localeCompare(b.optionId, "en"));
 }
 
 /** Summarize a finished game into a history record. `now` is epoch milliseconds. */
@@ -51,22 +46,12 @@ export function toGameRecord(state: GameState, now: number): GameRecord {
     mistakes: state.mistakes,
     total: state.config.totalQuestions,
     seed: state.config.seed,
-    languages: tallyLanguages(state),
+    options: tallyOptions(state),
   };
 }
 
 /** Fold one game record into the aggregate stats, returning a new Stats. */
 export function recordGame(stats: Stats, record: GameRecord): Stats {
-  const perLanguage: Record<string, LanguageStat> = { ...stats.perLanguage };
-  for (const result of record.languages) {
-    const prev = perLanguage[result.langId] ?? { langId: result.langId, seen: 0, correct: 0 };
-    perLanguage[result.langId] = {
-      langId: result.langId,
-      seen: prev.seen + result.seen,
-      correct: prev.correct + result.correct,
-    };
-  }
-
   const won = record.status === "won";
   const prevStage: StageStat = stats.perStage[record.stageId] ?? {
     played: 0,
@@ -74,7 +59,19 @@ export function recordGame(stats: Stats, record: GameRecord): Stats {
     bestCorrect: 0,
     bestGameId: null,
     lastPlayedAt: record.finishedAt,
+    options: {},
   };
+
+  const options: Record<string, OptionStat> = { ...prevStage.options };
+  for (const result of record.options) {
+    const prev = options[result.optionId] ?? { optionId: result.optionId, seen: 0, correct: 0 };
+    options[result.optionId] = {
+      optionId: result.optionId,
+      seen: prev.seen + result.seen,
+      correct: prev.correct + result.correct,
+    };
+  }
+
   const isBest = record.correct > prevStage.bestCorrect;
   const perStage: Record<string, StageStat> = {
     ...stats.perStage,
@@ -84,6 +81,7 @@ export function recordGame(stats: Stats, record: GameRecord): Stats {
       bestCorrect: Math.max(prevStage.bestCorrect, record.correct),
       bestGameId: isBest ? record.id : prevStage.bestGameId,
       lastPlayedAt: record.finishedAt,
+      options,
     },
   };
 
@@ -91,7 +89,6 @@ export function recordGame(stats: Stats, record: GameRecord): Stats {
     schemaVersion: STATS_SCHEMA_VERSION,
     gamesPlayed: stats.gamesPlayed + 1,
     gamesWon: stats.gamesWon + (won ? 1 : 0),
-    perLanguage,
     perStage,
   };
 }
@@ -101,33 +98,4 @@ export function rebuildStats(records: Iterable<GameRecord>): Stats {
   let stats = emptyStats();
   for (const record of records) stats = recordGame(stats, record);
   return stats;
-}
-
-/** A language ranked by accuracy, used for strong/weak lists. */
-export interface RankedLanguage extends LanguageStat {
-  accuracy: number;
-}
-
-function ranked(stats: Stats): RankedLanguage[] {
-  return Object.values(stats.perLanguage)
-    .filter((stat) => stat.seen >= MIN_SEEN)
-    .map((stat) => ({ ...stat, accuracy: stat.correct / stat.seen }));
-}
-
-/** Top `n` languages by accuracy (ties broken by most-seen). */
-export function strongLanguages(stats: Stats, n: number): RankedLanguage[] {
-  return ranked(stats)
-    .sort((a, b) => b.accuracy - a.accuracy || b.seen - a.seen)
-    .slice(0, n);
-}
-
-/**
- * Bottom `n` languages by accuracy (ties broken by most-seen). Languages answered
- * perfectly (100% accuracy) are excluded — they don't need work.
- */
-export function weakLanguages(stats: Stats, n: number): RankedLanguage[] {
-  return ranked(stats)
-    .filter((stat) => stat.accuracy < 1)
-    .sort((a, b) => a.accuracy - b.accuracy || b.seen - a.seen)
-    .slice(0, n);
 }

@@ -3,8 +3,15 @@ import type { Stage } from "./stage.js";
 /**
  * Curated stages. Authored by hand against the generated dataset; `stages.test.ts`
  * checks every source code resolves and that each stage has enough distinct
- * logical languages. The runtime dataset is pruned to exactly the languages
- * these stages reference.
+ * options. The runtime dataset is pruned to exactly the languages these stages
+ * reference.
+ *
+ * Each stage lists its options; a question first picks an option, then a code
+ * within it. An option's `id` is its answer + stats key (ISO 639-3 here, since
+ * every current option is one logical language). Multiple scripts/variants of
+ * the same language share one option (e.g. Serbian Cyrillic + Latin) so that
+ * language stays weighted as one. Options carry no `label` yet, so they display
+ * by language name; script/family labels come in a later reorganization.
  */
 export const STAGES: readonly Stage[] = [
   {
@@ -16,7 +23,17 @@ export const STAGES: readonly Stage[] = [
     },
     theme: "difficulty",
     difficulty: 1,
-    sourceCodes: ["eng", "spa", "fra", "deu_1996", "rus", "cmn_hans", "jpn", "arb", "hin"],
+    options: [
+      { id: "eng", sourceCodes: ["eng"] },
+      { id: "spa", sourceCodes: ["spa"] },
+      { id: "fra", sourceCodes: ["fra"] },
+      { id: "deu", sourceCodes: ["deu_1996"] },
+      { id: "rus", sourceCodes: ["rus"] },
+      { id: "cmn", sourceCodes: ["cmn_hans"] },
+      { id: "jpn", sourceCodes: ["jpn"] },
+      { id: "arb", sourceCodes: ["arb"] },
+      { id: "hin", sourceCodes: ["hin"] },
+    ],
   },
   {
     id: "scripts-of-the-world-easy",
@@ -27,16 +44,16 @@ export const STAGES: readonly Stage[] = [
     },
     theme: "themed",
     difficulty: 2,
-    sourceCodes: [
-      "eng", // Latin
-      "rus", // Cyrillic
-      "ell_monotonic", // Greek
-      "arb", // Arabic
-      "heb", // Hebrew
-      "hin", // Devanagari
-      "cmn_hans", // Han
-      "kor", // Hangul
-      "tha", // Thai
+    options: [
+      { id: "eng", sourceCodes: ["eng"] }, // Latin
+      { id: "rus", sourceCodes: ["rus"] }, // Cyrillic
+      { id: "ell", sourceCodes: ["ell_monotonic"] }, // Greek
+      { id: "arb", sourceCodes: ["arb"] }, // Arabic
+      { id: "heb", sourceCodes: ["heb"] }, // Hebrew
+      { id: "hin", sourceCodes: ["hin"] }, // Devanagari
+      { id: "cmn", sourceCodes: ["cmn_hans"] }, // Han
+      { id: "kor", sourceCodes: ["kor"] }, // Hangul
+      { id: "tha", sourceCodes: ["tha"] }, // Thai
     ],
   },
   {
@@ -48,18 +65,18 @@ export const STAGES: readonly Stage[] = [
     },
     theme: "region",
     difficulty: 3,
-    sourceCodes: [
-      "eng",
-      "spa",
-      "fra",
-      "ita",
-      "por_PT",
-      "deu_1996",
-      "nld",
-      "pol",
-      "ces",
-      "swe",
-      "ell_monotonic",
+    options: [
+      { id: "eng", sourceCodes: ["eng"] },
+      { id: "spa", sourceCodes: ["spa"] },
+      { id: "fra", sourceCodes: ["fra"] },
+      { id: "ita", sourceCodes: ["ita"] },
+      { id: "por", sourceCodes: ["por_PT"] },
+      { id: "deu", sourceCodes: ["deu_1996"] },
+      { id: "nld", sourceCodes: ["nld"] },
+      { id: "pol", sourceCodes: ["pol"] },
+      { id: "ces", sourceCodes: ["ces"] },
+      { id: "swe", sourceCodes: ["swe"] },
+      { id: "ell", sourceCodes: ["ell_monotonic"] },
     ],
   },
   {
@@ -71,7 +88,16 @@ export const STAGES: readonly Stage[] = [
     },
     theme: "region",
     difficulty: 3,
-    sourceCodes: ["cmn_hans", "jpn", "kor", "tha", "lao", "khm", "vie", "mya"],
+    options: [
+      { id: "cmn", sourceCodes: ["cmn_hans"] },
+      { id: "jpn", sourceCodes: ["jpn"] },
+      { id: "kor", sourceCodes: ["kor"] },
+      { id: "tha", sourceCodes: ["tha"] },
+      { id: "lao", sourceCodes: ["lao"] },
+      { id: "khm", sourceCodes: ["khm"] },
+      { id: "vie", sourceCodes: ["vie"] },
+      { id: "mya", sourceCodes: ["mya"] },
+    ],
   },
   {
     id: "europe-hard",
@@ -82,68 +108,67 @@ export const STAGES: readonly Stage[] = [
     },
     theme: "region",
     difficulty: 4,
-    sourceCodes: [
+    options: [
       // Romance
-      "spa",
-      "fra",
-      "ita",
-      "por_PT",
-      "ron_2006",
-      "cat",
-      "glg",
-      "prv", // Occitan
-      "roh", // Romansch
+      { id: "spa", sourceCodes: ["spa"] },
+      { id: "fra", sourceCodes: ["fra"] },
+      { id: "ita", sourceCodes: ["ita"] },
+      { id: "por", sourceCodes: ["por_PT"] },
+      { id: "ron", sourceCodes: ["ron_2006"] },
+      { id: "cat", sourceCodes: ["cat"] },
+      { id: "glg", sourceCodes: ["glg"] },
+      { id: "oci", sourceCodes: ["prv"] }, // Occitan
+      { id: "roh", sourceCodes: ["roh"] }, // Romansch
       // Germanic
-      "eng",
-      "deu_1996",
-      "nld",
-      "swe",
-      "dan",
-      "nob",
-      "nno", // Norwegian Nynorsk — distinguished from Bokmål by function words (eg/ikkje vs jeg/ikke)
-      "isl",
-      "fao",
-      "ltz",
+      { id: "eng", sourceCodes: ["eng"] },
+      { id: "deu", sourceCodes: ["deu_1996"] },
+      { id: "nld", sourceCodes: ["nld"] },
+      { id: "swe", sourceCodes: ["swe"] },
+      { id: "dan", sourceCodes: ["dan"] },
+      { id: "nob", sourceCodes: ["nob"] },
+      { id: "nno", sourceCodes: ["nno"] }, // Norwegian Nynorsk — distinguished from Bokmål by function words (eg/ikkje vs jeg/ikke)
+      { id: "isl", sourceCodes: ["isl"] },
+      { id: "fao", sourceCodes: ["fao"] },
+      { id: "ltz", sourceCodes: ["ltz"] },
       // Celtic
-      "gle",
-      "gla",
-      "cym",
-      "bre",
+      { id: "gle", sourceCodes: ["gle"] },
+      { id: "gla", sourceCodes: ["gla"] },
+      { id: "cym", sourceCodes: ["cym"] },
+      { id: "bre", sourceCodes: ["bre"] },
       // Slavic
-      "pol",
-      "ces",
-      "slk",
-      "slv",
-      "hrv",
+      { id: "pol", sourceCodes: ["pol"] },
+      { id: "ces", sourceCodes: ["ces"] },
+      { id: "slk", sourceCodes: ["slk"] },
+      { id: "slv", sourceCodes: ["slv"] },
+      { id: "hrv", sourceCodes: ["hrv"] },
       // Bosnian and Montenegrin are omitted: their UDHR translations are near-identical to
       // Croatian, so even an expert cannot reliably tell them apart. Serbian stays
       // distinguishable (Ekavian reflex: čoveka vs čovjeka).
-      "srp_cyrl",
-      "srp_latn",
-      "mkd",
-      "bul",
-      "rus",
-      "ukr",
-      "bel",
-      "hsb", // Upper Sorbian
+      { id: "srp", sourceCodes: ["srp_cyrl", "srp_latn"] },
+      { id: "mkd", sourceCodes: ["mkd"] },
+      { id: "bul", sourceCodes: ["bul"] },
+      { id: "rus", sourceCodes: ["rus"] },
+      { id: "ukr", sourceCodes: ["ukr"] },
+      { id: "bel", sourceCodes: ["bel"] },
+      { id: "hsb", sourceCodes: ["hsb"] }, // Upper Sorbian
       // Baltic
-      "lit",
-      "lav",
+      { id: "lit", sourceCodes: ["lit"] },
+      { id: "lvs", sourceCodes: ["lav"] },
       // Uralic
-      "fin",
-      "est",
-      "hun",
-      "sme", // North Saami
+      { id: "fin", sourceCodes: ["fin"] },
+      { id: "ekk", sourceCodes: ["est"] },
+      { id: "hun", sourceCodes: ["hun"] },
+      { id: "sme", sourceCodes: ["sme"] }, // North Saami
       // Other European families
-      "ell_monotonic",
-      "als",
-      "eus",
-      "mlt",
+      { id: "ell", sourceCodes: ["ell_monotonic"] },
+      { id: "als", sourceCodes: ["als"] },
+      { id: "eus", sourceCodes: ["eus"] },
+      { id: "mlt", sourceCodes: ["mlt"] },
       // Eastern edge (transcontinental)
-      "kat", // Georgia
-      "hye", // Armenia
-      "tur", // Turkey
-      "azj_latn", // Azerbaijani (Latin)
+      { id: "kat", sourceCodes: ["kat"] }, // Georgia
+      { id: "hye", sourceCodes: ["hye"] }, // Armenia
+      { id: "tur", sourceCodes: ["tur"] }, // Turkey
+      { id: "azj", sourceCodes: ["azj_latn"] }, // Azerbaijani (Latin)
     ],
   },
   {
@@ -155,17 +180,16 @@ export const STAGES: readonly Stage[] = [
     },
     theme: "themed",
     difficulty: 4,
-    sourceCodes: [
-      "spa",
-      "fra",
-      "ita",
-      "por_PT",
-      "por_BR",
-      "ron_2006",
-      "cat",
-      "glg",
-      "prv", // Occitan
-      "roh", // Romansch
+    options: [
+      { id: "spa", sourceCodes: ["spa"] },
+      { id: "fra", sourceCodes: ["fra"] },
+      { id: "ita", sourceCodes: ["ita"] },
+      { id: "por", sourceCodes: ["por_PT", "por_BR"] },
+      { id: "ron", sourceCodes: ["ron_2006"] },
+      { id: "cat", sourceCodes: ["cat"] },
+      { id: "glg", sourceCodes: ["glg"] },
+      { id: "oci", sourceCodes: ["prv"] }, // Occitan
+      { id: "roh", sourceCodes: ["roh"] }, // Romansch
     ],
   },
   {
@@ -177,17 +201,17 @@ export const STAGES: readonly Stage[] = [
     },
     theme: "themed",
     difficulty: 4,
-    sourceCodes: [
-      "eng",
-      "deu_1996",
-      "nld",
-      "swe",
-      "dan",
-      "nob",
-      "nno", // Norwegian Nynorsk — distinguished from Bokmål by function words (eg/ikkje vs jeg/ikke)
-      "isl",
-      "fao",
-      "ltz",
+    options: [
+      { id: "eng", sourceCodes: ["eng"] },
+      { id: "deu", sourceCodes: ["deu_1996"] },
+      { id: "nld", sourceCodes: ["nld"] },
+      { id: "swe", sourceCodes: ["swe"] },
+      { id: "dan", sourceCodes: ["dan"] },
+      { id: "nob", sourceCodes: ["nob"] },
+      { id: "nno", sourceCodes: ["nno"] }, // Norwegian Nynorsk — distinguished from Bokmål by function words (eg/ikkje vs jeg/ikke)
+      { id: "isl", sourceCodes: ["isl"] },
+      { id: "fao", sourceCodes: ["fao"] },
+      { id: "ltz", sourceCodes: ["ltz"] },
     ],
   },
   {
@@ -199,23 +223,22 @@ export const STAGES: readonly Stage[] = [
     },
     theme: "themed",
     difficulty: 4,
-    sourceCodes: [
-      "pol",
-      "ces",
-      "slk",
-      "slv",
-      "hrv",
+    options: [
+      { id: "pol", sourceCodes: ["pol"] },
+      { id: "ces", sourceCodes: ["ces"] },
+      { id: "slk", sourceCodes: ["slk"] },
+      { id: "slv", sourceCodes: ["slv"] },
+      { id: "hrv", sourceCodes: ["hrv"] },
       // Bosnian and Montenegrin are omitted: their UDHR translations are near-identical to
       // Croatian, so even an expert cannot reliably tell them apart. Serbian stays
       // distinguishable (Ekavian reflex: čoveka vs čovjeka).
-      "srp_cyrl",
-      "srp_latn",
-      "mkd",
-      "bul",
-      "rus",
-      "ukr",
-      "bel",
-      "hsb", // Upper Sorbian
+      { id: "srp", sourceCodes: ["srp_cyrl", "srp_latn"] },
+      { id: "mkd", sourceCodes: ["mkd"] },
+      { id: "bul", sourceCodes: ["bul"] },
+      { id: "rus", sourceCodes: ["rus"] },
+      { id: "ukr", sourceCodes: ["ukr"] },
+      { id: "bel", sourceCodes: ["bel"] },
+      { id: "hsb", sourceCodes: ["hsb"] }, // Upper Sorbian
     ],
   },
   {
@@ -227,7 +250,19 @@ export const STAGES: readonly Stage[] = [
     },
     theme: "region",
     difficulty: 4,
-    sourceCodes: ["hin", "urd", "ben", "guj", "tam", "tel", "kan", "mal", "sin", "nep", "dzo"],
+    options: [
+      { id: "hin", sourceCodes: ["hin"] },
+      { id: "urd", sourceCodes: ["urd"] },
+      { id: "ben", sourceCodes: ["ben"] },
+      { id: "guj", sourceCodes: ["guj"] },
+      { id: "tam", sourceCodes: ["tam"] },
+      { id: "tel", sourceCodes: ["tel"] },
+      { id: "kan", sourceCodes: ["kan"] },
+      { id: "mal", sourceCodes: ["mal"] },
+      { id: "sin", sourceCodes: ["sin"] },
+      { id: "npi", sourceCodes: ["nep"] },
+      { id: "dzo", sourceCodes: ["dzo"] },
+    ],
   },
   {
     id: "celtic",
@@ -238,11 +273,11 @@ export const STAGES: readonly Stage[] = [
     },
     theme: "themed",
     difficulty: 4,
-    sourceCodes: [
-      "gle", // Irish
-      "gla", // Scottish Gaelic
-      "cym", // Welsh
-      "bre", // Breton
+    options: [
+      { id: "gle", sourceCodes: ["gle"] }, // Irish
+      { id: "gla", sourceCodes: ["gla"] }, // Scottish Gaelic
+      { id: "cym", sourceCodes: ["cym"] }, // Welsh
+      { id: "bre", sourceCodes: ["bre"] }, // Breton
     ],
   },
   {
@@ -254,17 +289,15 @@ export const STAGES: readonly Stage[] = [
     },
     theme: "region",
     difficulty: 5,
-    sourceCodes: [
-      "kaz", // Kazakh (Cyrillic)
-      "kir", // Kyrgyz (Cyrillic)
-      "uzn_cyrl", // Uzbek (Cyrillic)
-      "uzn_latn", // Uzbek (Latin)
-      "tuk_cyrl", // Turkmen (Cyrillic)
-      "tuk_latn", // Turkmen (Latin)
-      "tgk", // Tajik — Persian in Cyrillic
-      "uig_arab", // Uyghur (Arabic)
-      "khk", // Halh Mongolian (Cyrillic)
-      "tat", // Tatar (Cyrillic)
+    options: [
+      { id: "kaz", sourceCodes: ["kaz"] }, // Kazakh (Cyrillic)
+      { id: "kir", sourceCodes: ["kir"] }, // Kyrgyz (Cyrillic)
+      { id: "uzn", sourceCodes: ["uzn_cyrl", "uzn_latn"] }, // Uzbek (Cyrillic + Latin)
+      { id: "tuk", sourceCodes: ["tuk_cyrl", "tuk_latn"] }, // Turkmen (Cyrillic + Latin)
+      { id: "tgk", sourceCodes: ["tgk"] }, // Tajik — Persian in Cyrillic
+      { id: "uig", sourceCodes: ["uig_arab"] }, // Uyghur (Arabic)
+      { id: "khk", sourceCodes: ["khk"] }, // Halh Mongolian (Cyrillic)
+      { id: "tat", sourceCodes: ["tat"] }, // Tatar (Cyrillic)
     ],
   },
   {
@@ -276,16 +309,16 @@ export const STAGES: readonly Stage[] = [
     },
     theme: "region",
     difficulty: 5,
-    sourceCodes: [
-      "arb", // Standard Arabic
-      "pes_1", // Western Farsi (Persian)
-      "heb", // Hebrew
-      "tur", // Turkish
-      "ckb", // Central Kurdish (Sorani, Arabic script)
-      "kmr", // Northern Kurdish (Kurmanji, Latin script)
-      "pbu", // Northern Pashto
-      "071", // Kabyle (Berber, Latin)
-      "tzm", // Central Atlas Tamazight (Berber, Latin)
+    options: [
+      { id: "arb", sourceCodes: ["arb"] }, // Standard Arabic
+      { id: "pes", sourceCodes: ["pes_1"] }, // Western Farsi (Persian)
+      { id: "heb", sourceCodes: ["heb"] }, // Hebrew
+      { id: "tur", sourceCodes: ["tur"] }, // Turkish
+      { id: "ckb", sourceCodes: ["ckb"] }, // Central Kurdish (Sorani, Arabic script)
+      { id: "kmr", sourceCodes: ["kmr"] }, // Northern Kurdish (Kurmanji, Latin script)
+      { id: "pbu", sourceCodes: ["pbu"] }, // Northern Pashto
+      { id: "kab", sourceCodes: ["071"] }, // Kabyle (Berber, Latin)
+      { id: "tzm", sourceCodes: ["tzm"] }, // Central Atlas Tamazight (Berber, Latin)
     ],
   },
   {
@@ -297,37 +330,37 @@ export const STAGES: readonly Stage[] = [
     },
     theme: "region",
     difficulty: 5,
-    sourceCodes: [
+    options: [
       // West Africa
-      "hau_3", // Hausa
-      "yor", // Yoruba
-      "ibo", // Igbo
-      "wol", // Wolof
-      "bam", // Bambara
-      "aka_asante", // Twi (Asante)
-      "ewe", // Ewe
+      { id: "hau", sourceCodes: ["hau_3"] }, // Hausa
+      { id: "yor", sourceCodes: ["yor"] }, // Yoruba
+      { id: "ibo", sourceCodes: ["ibo"] }, // Igbo
+      { id: "wol", sourceCodes: ["wol"] }, // Wolof
+      { id: "bam", sourceCodes: ["bam"] }, // Bambara
+      { id: "twi", sourceCodes: ["aka_asante"] }, // Twi (Asante)
+      { id: "ewe", sourceCodes: ["ewe"] }, // Ewe
       // Bantu (Central, East & Southern Africa)
-      "swh", // Swahili
-      "lin", // Lingala
-      "kng", // Kongo
-      "lug", // Ganda
-      "kin", // Kinyarwanda — Kirundi (run) omitted as near-identical
-      "sna", // Shona
-      "zul", // Zulu
-      "xho", // Xhosa
-      "nso", // Northern Sotho
-      "sot", // Southern Sotho
-      "tsn", // Tswana
-      "ven", // Venda
-      "tso_ZW", // Tsonga
-      "ssw", // Swati
-      "nya_chinyanja", // Nyanja
-      "umb", // Umbundu
+      { id: "swh", sourceCodes: ["swh"] }, // Swahili
+      { id: "lin", sourceCodes: ["lin"] }, // Lingala
+      { id: "kng", sourceCodes: ["kng"] }, // Kongo
+      { id: "lug", sourceCodes: ["lug"] }, // Ganda
+      { id: "kin", sourceCodes: ["kin"] }, // Kinyarwanda — Kirundi (run) omitted as near-identical
+      { id: "sna", sourceCodes: ["sna"] }, // Shona
+      { id: "zul", sourceCodes: ["zul"] }, // Zulu
+      { id: "xho", sourceCodes: ["xho"] }, // Xhosa
+      { id: "nso", sourceCodes: ["nso"] }, // Northern Sotho
+      { id: "sot", sourceCodes: ["sot"] }, // Southern Sotho
+      { id: "tsn", sourceCodes: ["tsn"] }, // Tswana
+      { id: "ven", sourceCodes: ["ven"] }, // Venda
+      { id: "tso", sourceCodes: ["tso_ZW"] }, // Tsonga
+      { id: "ssw", sourceCodes: ["ssw"] }, // Swati
+      { id: "nya", sourceCodes: ["nya_chinyanja"] }, // Nyanja
+      { id: "umb", sourceCodes: ["umb"] }, // Umbundu
       // Horn of Africa
-      "amh", // Amharic (Ge'ez script)
-      "tir", // Tigrinya (Ge'ez script)
-      "som", // Somali
-      "aar", // Afar
+      { id: "amh", sourceCodes: ["amh"] }, // Amharic (Ge'ez script)
+      { id: "tir", sourceCodes: ["tir"] }, // Tigrinya (Ge'ez script)
+      { id: "som", sourceCodes: ["som"] }, // Somali
+      { id: "aar", sourceCodes: ["aar"] }, // Afar
     ],
   },
   {
@@ -339,11 +372,11 @@ export const STAGES: readonly Stage[] = [
     },
     theme: "region",
     difficulty: 5,
-    sourceCodes: [
-      "nav", // Navajo (Latin)
-      "chr_cased", // Cherokee (Cherokee syllabary)
-      "cic", // Chickasaw (Latin)
-      "ike", // Eastern Canadian Inuktitut (syllabics)
+    options: [
+      { id: "nav", sourceCodes: ["nav"] }, // Navajo (Latin)
+      { id: "chr", sourceCodes: ["chr_cased"] }, // Cherokee (Cherokee syllabary)
+      { id: "cic", sourceCodes: ["cic"] }, // Chickasaw (Latin)
+      { id: "ike", sourceCodes: ["ike"] }, // Eastern Canadian Inuktitut (syllabics)
     ],
   },
   {
@@ -355,13 +388,13 @@ export const STAGES: readonly Stage[] = [
     },
     theme: "region",
     difficulty: 5,
-    sourceCodes: [
-      "nhn", // Central Nahuatl
-      "quc", // K'iche'
-      "kek", // Q'eqchi'
-      "cak", // Kaqchikel
-      "mam", // Mam
-      "tzc", // Tzotzil
+    options: [
+      { id: "nhn", sourceCodes: ["nhn"] }, // Central Nahuatl
+      { id: "quc", sourceCodes: ["quc"] }, // K'iche'
+      { id: "kek", sourceCodes: ["kek"] }, // Q'eqchi'
+      { id: "cak", sourceCodes: ["cak"] }, // Kaqchikel
+      { id: "mam", sourceCodes: ["mam"] }, // Mam
+      { id: "tzo", sourceCodes: ["tzc"] }, // Tzotzil
     ],
   },
   {
@@ -373,17 +406,17 @@ export const STAGES: readonly Stage[] = [
     },
     theme: "region",
     difficulty: 5,
-    sourceCodes: [
-      "quz", // Cusco Quechua
-      "ayr", // Central Aymara
-      "gug", // Paraguayan Guaraní
-      "arn", // Mapudungun
-      "jiv", // Shuar
-      "shp", // Shipibo-Conibo
-      "cni", // Asháninka
-      "huu", // Murui Huitoto
-      "yad", // Yagua
-      "cof", // Tsafiki (Colorado)
+    options: [
+      { id: "quz", sourceCodes: ["quz"] }, // Cusco Quechua
+      { id: "ayr", sourceCodes: ["ayr"] }, // Central Aymara
+      { id: "gug", sourceCodes: ["gug"] }, // Paraguayan Guaraní
+      { id: "arn", sourceCodes: ["arn"] }, // Mapudungun
+      { id: "jiv", sourceCodes: ["jiv"] }, // Shuar
+      { id: "shp", sourceCodes: ["shp"] }, // Shipibo-Conibo
+      { id: "cni", sourceCodes: ["cni"] }, // Asháninka
+      { id: "huu", sourceCodes: ["huu"] }, // Murui Huitoto
+      { id: "yad", sourceCodes: ["yad"] }, // Yagua
+      { id: "cof", sourceCodes: ["cof"] }, // Tsafiki (Colorado)
     ],
   },
   {
@@ -395,96 +428,93 @@ export const STAGES: readonly Stage[] = [
     },
     theme: "themed",
     difficulty: 5,
-    sourceCodes: [
+    options: [
       // Western Europe
-      "eng",
-      "fra",
-      "nld",
-      "deu_1996",
-      "spa",
-      "por_PT",
-      "por_BR",
-      "cat",
-      "eus",
+      { id: "eng", sourceCodes: ["eng"] },
+      { id: "fra", sourceCodes: ["fra"] },
+      { id: "nld", sourceCodes: ["nld"] },
+      { id: "deu", sourceCodes: ["deu_1996"] },
+      { id: "spa", sourceCodes: ["spa"] },
+      { id: "por", sourceCodes: ["por_PT", "por_BR"] },
+      { id: "cat", sourceCodes: ["cat"] },
+      { id: "eus", sourceCodes: ["eus"] },
       // Celtic
-      "gle",
-      "gla",
-      "cym",
-      "bre",
+      { id: "gle", sourceCodes: ["gle"] },
+      { id: "gla", sourceCodes: ["gla"] },
+      { id: "cym", sourceCodes: ["cym"] },
+      { id: "bre", sourceCodes: ["bre"] },
       // Nordic
-      "isl",
-      "fao",
-      "dan",
-      "nob",
-      "swe",
-      "fin",
+      { id: "isl", sourceCodes: ["isl"] },
+      { id: "fao", sourceCodes: ["fao"] },
+      { id: "dan", sourceCodes: ["dan"] },
+      { id: "nob", sourceCodes: ["nob"] },
+      { id: "swe", sourceCodes: ["swe"] },
+      { id: "fin", sourceCodes: ["fin"] },
       // Baltic
-      "est",
-      "lav",
-      "lit",
+      { id: "ekk", sourceCodes: ["est"] },
+      { id: "lvs", sourceCodes: ["lav"] },
+      { id: "lit", sourceCodes: ["lit"] },
       // Central Europe
-      "pol",
-      "ces",
-      "slk",
-      "slv",
-      "hun",
+      { id: "pol", sourceCodes: ["pol"] },
+      { id: "ces", sourceCodes: ["ces"] },
+      { id: "slk", sourceCodes: ["slk"] },
+      { id: "slv", sourceCodes: ["slv"] },
+      { id: "hun", sourceCodes: ["hun"] },
       // Balkans
-      "hrv",
+      { id: "hrv", sourceCodes: ["hrv"] },
       // Bosnian and Montenegrin are omitted: their UDHR translations are near-identical to
       // Croatian, so even an expert cannot reliably tell them apart. Serbian stays
       // distinguishable (Ekavian reflex: čoveka vs čovjeka).
-      "srp_cyrl",
-      "srp_latn",
-      "als",
-      "ron_2006",
-      "ell_monotonic",
-      "mkd",
-      "bul",
+      { id: "srp", sourceCodes: ["srp_cyrl", "srp_latn"] },
+      { id: "als", sourceCodes: ["als"] },
+      { id: "ron", sourceCodes: ["ron_2006"] },
+      { id: "ell", sourceCodes: ["ell_monotonic"] },
+      { id: "mkd", sourceCodes: ["mkd"] },
+      { id: "bul", sourceCodes: ["bul"] },
       // East Slavic
-      "rus",
-      "ukr",
-      "bel",
+      { id: "rus", sourceCodes: ["rus"] },
+      { id: "ukr", sourceCodes: ["ukr"] },
+      { id: "bel", sourceCodes: ["bel"] },
       // Caucasus
-      "kat",
+      { id: "kat", sourceCodes: ["kat"] },
       // Turkic & Central Asia
-      "tur",
-      "kaz",
-      "kir",
+      { id: "tur", sourceCodes: ["tur"] },
+      { id: "kaz", sourceCodes: ["kaz"] },
+      { id: "kir", sourceCodes: ["kir"] },
       // Mongolia
-      "khk",
+      { id: "khk", sourceCodes: ["khk"] },
       // East Asia
-      "cmn_hans",
-      "cmn_hant",
-      "jpn",
-      "kor",
+      { id: "cmn", sourceCodes: ["cmn_hans", "cmn_hant"] },
+      { id: "jpn", sourceCodes: ["jpn"] },
+      { id: "kor", sourceCodes: ["kor"] },
       // Southeast Asia
-      "tha",
-      "lao",
-      "khm",
-      "vie",
-      "ind",
-      "mly_latn",
-      "tgl",
+      { id: "tha", sourceCodes: ["tha"] },
+      { id: "lao", sourceCodes: ["lao"] },
+      { id: "khm", sourceCodes: ["khm"] },
+      { id: "vie", sourceCodes: ["vie"] },
+      { id: "ind", sourceCodes: ["ind"] },
+      { id: "zlm", sourceCodes: ["mly_latn"] },
+      { id: "tgl", sourceCodes: ["tgl"] },
       // Mediterranean
-      "mlt",
+      { id: "mlt", sourceCodes: ["mlt"] },
       // Middle East
-      "arb",
-      "heb",
+      { id: "arb", sourceCodes: ["arb"] },
+      { id: "heb", sourceCodes: ["heb"] },
       // Arctic North America
-      "ike",
+      { id: "ike", sourceCodes: ["ike"] },
       // Himalaya
-      "dzo",
-      "nep",
+      { id: "dzo", sourceCodes: ["dzo"] },
+      { id: "npi", sourceCodes: ["nep"] },
       // South Asia
-      "hin",
-      "urd",
-      "ben",
-      "guj",
-      "tam",
-      "tel",
-      "kan",
-      "mal",
-      "sin",
+      { id: "hin", sourceCodes: ["hin"] },
+      { id: "urd", sourceCodes: ["urd"] },
+      { id: "ben", sourceCodes: ["ben"] },
+      { id: "guj", sourceCodes: ["guj"] },
+      { id: "tam", sourceCodes: ["tam"] },
+      { id: "tel", sourceCodes: ["tel"] },
+      { id: "kan", sourceCodes: ["kan"] },
+      { id: "mal", sourceCodes: ["mal"] },
+      { id: "sin", sourceCodes: ["sin"] },
     ],
   },
 ];

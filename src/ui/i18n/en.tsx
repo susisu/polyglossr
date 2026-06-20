@@ -3,14 +3,14 @@ import type { Messages } from "./messages.js";
 
 /** English UI catalog. The reference locale; other catalogs mirror its shape. */
 export const en = {
-  nav: { stats: "Stats", about: "About" },
+  nav: { about: "About" },
   footer: {
     credit: "Texts from the Universal Declaration of Human Rights (UN/OHCHR) — credits",
   },
   stageSelect: {
     intro: "A short text appears — name the language it is written in. Pick a stage to begin.",
     difficultyLabel: (value, max) => `Difficulty ${value} of ${max}`,
-    languageCount: (count) => `${count} languages`,
+    optionCount: (count) => `${count} options`,
   },
   game: {
     progress: (current, total) => `${current} / ${total}`,
@@ -34,21 +34,6 @@ export const en = {
     playAgain: "Play again",
     stages: "Stages",
     yourGuess: (name) => `you: ${name}`,
-  },
-  stats: {
-    heading: "Your stats",
-    empty: "Play a game and your progress will appear here.",
-    summary: (played, won) => `${played} games · ${won} completed`,
-    strongest: "Strongest",
-    needsWork: "Needs work",
-    seenCount: (count) => `${count} seen`,
-    bestByStage: "Best by stage",
-    bestScore: (correct, total) => `best ${correct}/${total}`,
-    playedCount: (count) => `${count} played`,
-    recentGames: "Recent games",
-    won: "completed",
-    lost: "lost",
-    backToStages: "Back to stages",
   },
   about: {
     heading: "About PolyGlossr",

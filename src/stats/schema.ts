@@ -1,14 +1,16 @@
 import * as v from "valibot";
 
+const OptionStatSchema = v.object({
+  optionId: v.string(),
+  seen: v.number(),
+  correct: v.number(),
+});
+
 /** Valibot schema for a persisted {@link import("./stats.js").Stats} blob. */
 export const StatsSchema = v.object({
   schemaVersion: v.number(),
   gamesPlayed: v.number(),
   gamesWon: v.number(),
-  perLanguage: v.record(
-    v.string(),
-    v.object({ langId: v.string(), seen: v.number(), correct: v.number() }),
-  ),
   perStage: v.record(
     v.string(),
     v.object({
@@ -17,6 +19,7 @@ export const StatsSchema = v.object({
       bestCorrect: v.number(),
       bestGameId: v.nullable(v.string()),
       lastPlayedAt: v.string(),
+      options: v.record(v.string(), OptionStatSchema),
     }),
   ),
 });
@@ -31,5 +34,5 @@ export const GameRecordSchema = v.object({
   mistakes: v.number(),
   total: v.number(),
   seed: v.number(),
-  languages: v.array(v.object({ langId: v.string(), seen: v.number(), correct: v.number() })),
+  options: v.array(OptionStatSchema),
 });

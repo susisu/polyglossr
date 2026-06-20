@@ -3,7 +3,7 @@ import type { Messages } from "./messages.js";
 
 /** Japanese UI catalog. Mirrors the shape of `en`. */
 export const ja = {
-  nav: { stats: "統計", about: "概要" },
+  nav: { about: "概要" },
   footer: {
     credit: "テキストは世界人権宣言（国連／OHCHR）より。クレジット",
   },
@@ -11,7 +11,7 @@ export const ja = {
     intro:
       "短い文章が表示されるので、それが何語で書かれているかを答えてください。ステージを選んで始めましょう。",
     difficultyLabel: (value, max) => `難易度 ${value}/${max}`,
-    languageCount: (count) => `${count}言語`,
+    optionCount: (count) => `${count}個の選択肢`,
   },
   game: {
     progress: (current, total) => `${current} / ${total}`,
@@ -35,21 +35,6 @@ export const ja = {
     playAgain: "もう一度",
     stages: "ステージ一覧",
     yourGuess: (name) => `あなた: ${name}`,
-  },
-  stats: {
-    heading: "あなたの成績",
-    empty: "プレイすると、ここに成績が表示されます。",
-    summary: (played, won) => `${played}ゲーム・${won}クリア`,
-    strongest: "得意な言語",
-    needsWork: "苦手な言語",
-    seenCount: (count) => `${count}回出題`,
-    bestByStage: "ステージ別ベスト",
-    bestScore: (correct, total) => `ベスト ${correct}/${total}`,
-    playedCount: (count) => `${count}回プレイ`,
-    recentGames: "最近のゲーム",
-    won: "クリア",
-    lost: "失敗",
-    backToStages: "ステージ一覧へ",
   },
   about: {
     heading: "PolyGlossr について",

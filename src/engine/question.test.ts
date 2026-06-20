@@ -53,17 +53,18 @@ describe("generateRun", () => {
     expect(new Set(firstPass).size).toBe(12);
   });
 
-  it("labels every question with its source's logical language", () => {
+  it("labels every question with its source's logical language (option id)", () => {
+    // In the fixture each option's id is the source's langId.
     const { sources } = makeFixture();
     for (const q of runWith()) {
-      expect(sources.get(q.sourceCode)?.langId).toBe(q.answerLangId);
+      expect(sources.get(q.sourceCode)?.langId).toBe(q.optionId);
     }
   });
 
-  it("draws both scripts of a multi-script language under one answer", () => {
+  it("draws both scripts of a multi-script option under one answer", () => {
     const run = runWith({ totalQuestions: 12 });
     const serbianSources = new Set(
-      run.filter((q) => q.answerLangId === "srp").map((q) => q.sourceCode),
+      run.filter((q) => q.optionId === "srp").map((q) => q.sourceCode),
     );
     expect(serbianSources).toEqual(new Set(["sr_c", "sr_l"]));
   });
@@ -76,7 +77,7 @@ describe("generateRun", () => {
       description: { en: "", ja: "" },
       theme: "themed" as const,
       difficulty: 1 as const,
-      sourceCodes: ["missing"],
+      options: [{ id: "missing", sourceCodes: ["missing"] }],
     };
     expect(generateRun({ stage, sources, snippets, totalQuestions: 5, seed: 1 })).toEqual([]);
   });

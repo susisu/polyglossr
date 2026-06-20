@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useEffect, useRef, type ReactElement } from "react";
-import { languageName, sourceFor } from "../../data/selectors.js";
+import { sourceFor, stageOptionName } from "../../data/selectors.js";
 import { getStage } from "../../data/stages.js";
 import type { GameState } from "../../engine/game.js";
 import { useLocale, useMessages } from "../i18n/index.js";
@@ -59,6 +59,10 @@ export function Result({ gameState, onPlayAgain, onHome }: Props): ReactElement 
         {gameState.answers.map((answer) => {
           const question = gameState.questions[answer.questionIndex];
           const source = sourceFor(answer.sourceCode);
+          const answerName =
+            stage ? stageOptionName(stage, answer.optionId, locale) : answer.optionId;
+          const guessName =
+            stage ? stageOptionName(stage, answer.pickedOptionId, locale) : answer.pickedOptionId;
           return (
             <li key={answer.questionIndex} className={styles["row"]}>
               <span
@@ -73,13 +77,9 @@ export function Result({ gameState, onPlayAgain, onHome }: Props): ReactElement 
                 {question?.snippet ?? ""}
               </span>
               <span className={styles["verdict"]}>
-                <span className={styles["answer"]}>
-                  {languageName(answer.answerLangId, locale)}
-                </span>
+                <span className={styles["answer"]}>{answerName}</span>
                 {!answer.correct && (
-                  <span className={styles["guess"]}>
-                    {messages.result.yourGuess(languageName(answer.pickedLangId, locale))}
-                  </span>
+                  <span className={styles["guess"]}>{messages.result.yourGuess(guessName)}</span>
                 )}
               </span>
             </li>
