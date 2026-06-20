@@ -30,22 +30,24 @@ export function LanguagePicker({ languages, onPick, disabled }: Props): ReactEle
     inputRef.current?.focus();
   }, []);
 
-  // Suggest and match on the localized display name (the text the player types).
+  // Show the localized name, but match on both it and the English name, so a
+  // player on the Japanese UI can still type "russian" instead of "ロシア語".
   const candidates = languages.map((language) => ({
     id: language.id,
     name: languageName(language.id, locale),
+    search: [languageName(language.id, locale), language.name].map((s) => s.toLowerCase()),
   }));
   const needle = query.trim().toLowerCase();
   const matches =
     needle === "" ? candidates : (
       candidates
-        .filter((candidate) => candidate.name.toLowerCase().includes(needle))
+        .filter((candidate) => candidate.search.some((s) => s.includes(needle)))
         // Rank prefix matches above mid-word matches (e.g. "r" → Russian before
         // Arabic); the sort is stable, so each group keeps the stage's order.
         .toSorted(
           (a, b) =>
-            Number(b.name.toLowerCase().startsWith(needle))
-            - Number(a.name.toLowerCase().startsWith(needle)),
+            Number(b.search.some((s) => s.startsWith(needle)))
+            - Number(a.search.some((s) => s.startsWith(needle))),
         )
     );
   const activeIndex = Math.min(highlight, Math.max(matches.length - 1, 0));

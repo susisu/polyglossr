@@ -1,0 +1,31 @@
+.switcher {
+  display: inline-flex;
+  gap: 0.15rem;
+  margin-inline-start: 0.25rem;
+  padding: 0.15rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.option {
+  padding: 0.25rem 0.6rem;
+  font: inherit;
+  font-size: 0.8125rem;
+  color: var(--fg-muted);
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease;
+}
+
+.option:hover {
+  color: var(--fg);
+}
+
+.active {
+  color: var(--fg);
+  background: var(--accent-soft);
+}

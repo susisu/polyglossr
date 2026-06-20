@@ -4,6 +4,7 @@ import { getStage } from "../data/stages.js";
 import type { GameState } from "../engine/game.js";
 import { requestPersistence } from "../stats/storage.js";
 import styles from "./App.module.css";
+import { LocaleSwitcher } from "./components/LocaleSwitcher.js";
 import { useMessages } from "./i18n/index.js";
 import { About } from "./screens/About.js";
 import { Game } from "./screens/Game.js";
@@ -70,6 +71,7 @@ export function App(): ReactElement {
           >
             {messages.nav.about}
           </button>
+          <LocaleSwitcher />
         </nav>
       </header>
 
