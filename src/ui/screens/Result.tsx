@@ -3,7 +3,7 @@ import { useEffect, useRef, type ReactElement } from "react";
 import { languageName, sourceFor } from "../../data/selectors.js";
 import { getStage } from "../../data/stages.js";
 import type { GameState } from "../../engine/game.js";
-import { useMessages } from "../i18n/index.js";
+import { useLocale, useMessages } from "../i18n/index.js";
 import { getStatsStore } from "../statsStore.js";
 import styles from "./Result.module.css";
 
@@ -16,6 +16,7 @@ interface Props {
 /** End-of-game screen: score, per-question review, and stats recording. */
 export function Result({ gameState, onPlayAgain, onHome }: Props): ReactElement {
   const messages = useMessages();
+  const { locale } = useLocale();
   const recorded = useRef(false);
 
   useEffect(() => {
@@ -40,7 +41,7 @@ export function Result({ gameState, onPlayAgain, onHome }: Props): ReactElement 
       <h2 className={styles["score"]}>{messages.result.correctCount(gameState.correct)}</h2>
       <p className={styles["sub"]}>
         {messages.result.subtitle(
-          stage?.name ?? gameState.config.stageId,
+          stage ? stage.name[locale] : gameState.config.stageId,
           gameState.answers.length,
         )}
       </p>
@@ -72,10 +73,12 @@ export function Result({ gameState, onPlayAgain, onHome }: Props): ReactElement 
                 {question?.snippet ?? ""}
               </span>
               <span className={styles["verdict"]}>
-                <span className={styles["answer"]}>{languageName(answer.answerLangId)}</span>
+                <span className={styles["answer"]}>
+                  {languageName(answer.answerLangId, locale)}
+                </span>
                 {!answer.correct && (
                   <span className={styles["guess"]}>
-                    {messages.result.yourGuess(languageName(answer.pickedLangId))}
+                    {messages.result.yourGuess(languageName(answer.pickedLangId, locale))}
                   </span>
                 )}
               </span>

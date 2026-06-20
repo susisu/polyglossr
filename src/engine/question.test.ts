@@ -72,8 +72,8 @@ describe("generateRun", () => {
     const { sources, snippets } = makeFixture();
     const stage = {
       id: "empty",
-      name: "",
-      description: "",
+      name: { en: "", ja: "" },
+      description: { en: "", ja: "" },
       theme: "themed" as const,
       difficulty: 1 as const,
       sourceCodes: ["missing"],

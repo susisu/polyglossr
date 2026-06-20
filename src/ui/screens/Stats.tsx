@@ -8,6 +8,7 @@ import {
   weakLanguages,
   type RankedLanguage,
 } from "../../stats/aggregate.js";
+import type { Locale } from "../../shared/locale.js";
 import type { GameRecord, Stats } from "../../stats/stats.js";
 import { useLocale, useMessages } from "../i18n/index.js";
 import { getStatsStore } from "../statsStore.js";
@@ -25,6 +26,12 @@ function formatDate(iso: string, locale: string): string {
   });
 }
 
+/** Localized stage name for a recorded stage id, falling back to the raw id. */
+function stageLabel(stageId: string, locale: Locale): string {
+  const stage = getStage(stageId);
+  return stage ? stage.name[locale] : stageId;
+}
+
 function LanguageList({
   title,
   languages,
@@ -33,13 +40,14 @@ function LanguageList({
   languages: RankedLanguage[];
 }): ReactElement {
   const messages = useMessages();
+  const { locale } = useLocale();
   return (
     <section className={styles["section"]}>
       <h3 className={styles["subheading"]}>{title}</h3>
       <ul className={styles["langList"]}>
         {languages.map((language) => (
           <li key={language.langId} className={styles["langRow"]}>
-            <span>{languageName(language.langId)}</span>
+            <span>{languageName(language.langId, locale)}</span>
             <span className={styles["accuracy"]}>
               {Math.round(language.accuracy * 100)}%
               <span className={styles["seen"]}> · {messages.stats.seenCount(language.seen)}</span>
@@ -108,7 +116,7 @@ export function StatsScreen({ onHome }: Props): ReactElement {
                   if (stat === undefined) return null;
                   return (
                     <li key={stage.id} className={styles["stageRow"]}>
-                      <span>{stage.name}</span>
+                      <span>{stage.name[locale]}</span>
                       <span className={styles["best"]}>
                         {messages.stats.bestScore(stat.bestCorrect, TOTAL_QUESTIONS)}
                         <span className={styles["seen"]}>
@@ -129,7 +137,7 @@ export function StatsScreen({ onHome }: Props): ReactElement {
               <ul className={styles["history"]}>
                 {history.map((record) => (
                   <li key={record.id} className={styles["historyRow"]}>
-                    <span>{getStage(record.stageId)?.name ?? record.stageId}</span>
+                    <span>{stageLabel(record.stageId, locale)}</span>
                     <span className={styles["historyMeta"]}>
                       {record.correct}/{record.total} ·{" "}
                       {record.status === "won" ? messages.stats.won : messages.stats.lost}

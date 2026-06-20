@@ -3,7 +3,7 @@ import type { ReactElement } from "react";
 import { stageLanguages } from "../../data/selectors.js";
 import type { Stage } from "../../data/stage.js";
 import { STAGES } from "../../data/stages.js";
-import { useMessages } from "../i18n/index.js";
+import { useLocale, useMessages } from "../i18n/index.js";
 import styles from "./StageSelect.module.css";
 
 interface Props {
@@ -27,6 +27,7 @@ function DifficultyDots({ value }: { value: number }): ReactElement {
 /** Landing screen: pick a stage to play. */
 export function StageSelect({ onStart }: Props): ReactElement {
   const messages = useMessages();
+  const { locale } = useLocale();
   return (
     <div className={styles["screen"]}>
       <p className={styles["intro"]}>{messages.stageSelect.intro}</p>
@@ -40,12 +41,12 @@ export function StageSelect({ onStart }: Props): ReactElement {
                 onStart(stage);
               }}
             >
-              <span className={styles["name"]}>{stage.name}</span>
-              <span className={styles["desc"]}>{stage.description}</span>
+              <span className={styles["name"]}>{stage.name[locale]}</span>
+              <span className={styles["desc"]}>{stage.description[locale]}</span>
               <span className={styles["meta"]}>
                 <DifficultyDots value={stage.difficulty} />
                 <span className={styles["count"]}>
-                  {messages.stageSelect.languageCount(stageLanguages(stage).length)}
+                  {messages.stageSelect.languageCount(stageLanguages(stage, locale).length)}
                 </span>
               </span>
             </button>

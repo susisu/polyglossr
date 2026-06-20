@@ -68,8 +68,8 @@ export function makeFixture(): {
   ]);
   const stage: Stage = {
     id: "test-stage",
-    name: "Test Stage",
-    description: "",
+    name: { en: "Test Stage", ja: "テストステージ" },
+    description: { en: "", ja: "" },
     theme: "themed",
     difficulty: 1,
     sourceCodes: ["en", "sr_c", "sr_l", "ar"],

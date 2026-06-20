@@ -1,12 +1,13 @@
 import clsx from "clsx";
 import { useEffect, useMemo, useReducer, useRef, useState, type ReactElement } from "react";
 import { dataset } from "../../data/dataset.js";
-import { languageName, sourceFor, stageLanguages } from "../../data/selectors.js";
+import { languageName, scriptLabel, sourceFor, stageLanguages } from "../../data/selectors.js";
+import type { Locale } from "../../shared/locale.js";
 import type { Stage } from "../../data/stage.js";
 import { answerQuestion, createGame, type GameState } from "../../engine/game.js";
 import { LanguagePicker } from "../components/LanguagePicker.js";
 import { SnippetPanel } from "../components/SnippetPanel.js";
-import { useMessages } from "../i18n/index.js";
+import { useLocale, useMessages } from "../i18n/index.js";
 import type { Messages } from "../i18n/messages.js";
 import styles from "./Game.module.css";
 
@@ -24,15 +25,21 @@ function reducer(state: GameState, action: Action): GameState {
 }
 
 /** Label a source as "Language · Script", e.g. "Serbian · Cyrillic". */
-function sourceLabel(sourceCode: string, answerLangId: string, messages: Messages): string {
-  const source = sourceFor(sourceCode);
-  const base = languageName(answerLangId);
-  return source?.scriptLabel ? messages.game.sourceLabel(base, source.scriptLabel) : base;
+function sourceLabel(
+  sourceCode: string,
+  answerLangId: string,
+  messages: Messages,
+  locale: Locale,
+): string {
+  const base = languageName(answerLangId, locale);
+  const script = scriptLabel(sourceCode, locale);
+  return script !== null ? messages.game.sourceLabel(base, script) : base;
 }
 
 /** The active game: shows a snippet, takes a guess, reveals the answer, advances. */
 export function Game({ stage, seed, onFinish, onQuit }: Props): ReactElement {
   const messages = useMessages();
+  const { locale } = useLocale();
   const [state, dispatch] = useReducer(reducer, undefined, () =>
     createGame({ stage, sources: dataset.sources, snippets: dataset.snippets, seed }),
   );
@@ -41,7 +48,7 @@ export function Game({ stage, seed, onFinish, onQuit }: Props): ReactElement {
   const [pickedLangId, setPickedLangId] = useState<string | null>(null);
   const continueRef = useRef<HTMLButtonElement>(null);
 
-  const languages = useMemo(() => stageLanguages(stage), [stage]);
+  const languages = useMemo(() => stageLanguages(stage, locale), [stage, locale]);
 
   useEffect(() => {
     if (state.status !== "playing") onFinish(state);
@@ -104,11 +111,11 @@ export function Game({ stage, seed, onFinish, onQuit }: Props): ReactElement {
             {isCorrect ? messages.game.correct : messages.game.notQuite}
           </p>
           <p className={styles["answer"]}>
-            {sourceLabel(question.sourceCode, question.answerLangId, messages)}
+            {sourceLabel(question.sourceCode, question.answerLangId, messages, locale)}
           </p>
           {!isCorrect && (
             <p className={styles["yourGuess"]}>
-              {messages.game.youGuessed(languageName(pickedLangId))}
+              {messages.game.youGuessed(languageName(pickedLangId, locale))}
             </p>
           )}
           <button

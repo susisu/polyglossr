@@ -1,3 +1,4 @@
+import type { Localized } from "../shared/locale.js";
 import type { Difficulty } from "./difficulty.js";
 
 /** How a stage's language set is curated. */
@@ -11,8 +12,8 @@ export type StageTheme = "region" | "difficulty" | "themed";
 export interface Stage {
   /** Stable slug; used as the stats key. */
   id: string;
-  name: string;
-  description: string;
+  name: Localized<string>;
+  description: Localized<string>;
   theme: StageTheme;
   /** Overall difficulty of the stage. */
   difficulty: Difficulty;

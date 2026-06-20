@@ -9,16 +9,22 @@ import type { Stage } from "./stage.js";
 export const STAGES: readonly Stage[] = [
   {
     id: "first-steps",
-    name: "First Steps",
-    description: "A gentle start: widely spoken languages with distinctive scripts.",
+    name: { en: "First Steps", ja: "はじめの一歩" },
+    description: {
+      en: "A gentle start: widely spoken languages with distinctive scripts.",
+      ja: "やさしいスタート。特徴的な文字を持つ、広く使われている言語たち。",
+    },
     theme: "difficulty",
     difficulty: 1,
     sourceCodes: ["eng", "spa", "fra", "deu_1996", "rus", "jpn", "arb", "hin"],
   },
   {
     id: "scripts-of-the-world",
-    name: "Scripts of the World",
-    description: "One language per writing system — guess it by the script alone.",
+    name: { en: "Scripts of the World", ja: "世界の文字" },
+    description: {
+      en: "One language per writing system — guess it by the script alone.",
+      ja: "書記体系ごとに1言語 — 文字だけで当ててみよう。",
+    },
     theme: "themed",
     difficulty: 2,
     sourceCodes: [
@@ -38,8 +44,11 @@ export const STAGES: readonly Stage[] = [
   },
   {
     id: "europe",
-    name: "Europe",
-    description: "Telling apart the Latin-script (and Greek) languages of Europe.",
+    name: { en: "Europe", ja: "ヨーロッパ" },
+    description: {
+      en: "Telling apart the Latin-script (and Greek) languages of Europe.",
+      ja: "ヨーロッパのラテン文字（とギリシャ文字）の言語を見分ける。",
+    },
     theme: "region",
     difficulty: 3,
     sourceCodes: [
@@ -57,24 +66,33 @@ export const STAGES: readonly Stage[] = [
   },
   {
     id: "east-southeast-asia",
-    name: "East & Southeast Asia",
-    description: "Han, kana, hangul and the scripts of mainland Southeast Asia.",
+    name: { en: "East & Southeast Asia", ja: "東・東南アジア" },
+    description: {
+      en: "Han, kana, hangul and the scripts of mainland Southeast Asia.",
+      ja: "漢字・かな・ハングルと、大陸部東南アジアの文字。",
+    },
     theme: "region",
     difficulty: 3,
     sourceCodes: ["cmn_hans", "jpn", "kor", "tha", "lao", "khm", "vie", "mya"],
   },
   {
     id: "latin-lookalikes",
-    name: "Latin Lookalikes",
-    description: "Languages that share the Latin alphabet — read the diacritics for clues.",
+    name: { en: "Latin Lookalikes", ja: "紛らわしいラテン文字" },
+    description: {
+      en: "Languages that share the Latin alphabet — read the diacritics for clues.",
+      ja: "ラテン文字を共有する言語たち — 発音区別符号を手がかりに。",
+    },
     theme: "difficulty",
     difficulty: 5,
     sourceCodes: ["pol", "ces", "hun", "tur", "vie", "hrv", "ron_2006", "lit", "slv", "cym"],
   },
   {
     id: "geoguessr",
-    name: "Languages of GeoGuessr",
-    description: "Languages you meet roaming the map — Serbian shows up in both scripts.",
+    name: { en: "Languages of GeoGuessr", ja: "GeoGuessr の言語" },
+    description: {
+      en: "Languages you meet roaming the map — Serbian shows up in both scripts.",
+      ja: "マップを歩いて出会う言語たち — セルビア語は両方の文字で登場。",
+    },
     theme: "themed",
     difficulty: 3,
     sourceCodes: [

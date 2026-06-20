@@ -1,7 +1,8 @@
 import clsx from "clsx";
 import { useEffect, useRef, useState, type KeyboardEvent, type ReactElement } from "react";
 import type { Language } from "../../data/language.js";
-import { useMessages } from "../i18n/index.js";
+import { languageName } from "../../data/selectors.js";
+import { useLocale, useMessages } from "../i18n/index.js";
 import styles from "./LanguagePicker.module.css";
 
 interface Props {
@@ -20,6 +21,7 @@ interface Props {
  */
 export function LanguagePicker({ languages, onPick, disabled }: Props): ReactElement {
   const messages = useMessages();
+  const { locale } = useLocale();
   const [query, setQuery] = useState("");
   const [highlight, setHighlight] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -28,11 +30,16 @@ export function LanguagePicker({ languages, onPick, disabled }: Props): ReactEle
     inputRef.current?.focus();
   }, []);
 
+  // Suggest and match on the localized display name (the text the player types).
+  const candidates = languages.map((language) => ({
+    id: language.id,
+    name: languageName(language.id, locale),
+  }));
   const needle = query.trim().toLowerCase();
   const matches =
-    needle === "" ? languages : (
-      languages
-        .filter((language) => language.name.toLowerCase().includes(needle))
+    needle === "" ? candidates : (
+      candidates
+        .filter((candidate) => candidate.name.toLowerCase().includes(needle))
         // Rank prefix matches above mid-word matches (e.g. "r" → Russian before
         // Arabic); the sort is stable, so each group keeps the stage's order.
         .toSorted(
@@ -85,20 +92,20 @@ export function LanguagePicker({ languages, onPick, disabled }: Props): ReactEle
         onKeyDown={handleKeyDown}
       />
       <ul className={styles["options"]} id="language-options" role="listbox">
-        {matches.map((language, index) => (
-          <li key={language.id} role="option" aria-selected={index === activeIndex}>
+        {matches.map((candidate, index) => (
+          <li key={candidate.id} role="option" aria-selected={index === activeIndex}>
             <button
               type="button"
               className={clsx(styles["option"], index === activeIndex && styles["active"])}
               disabled={disabled}
               onClick={() => {
-                choose(language.id);
+                choose(candidate.id);
               }}
               onMouseEnter={() => {
                 setHighlight(index);
               }}
             >
-              {language.name}
+              {candidate.name}
             </button>
           </li>
         ))}

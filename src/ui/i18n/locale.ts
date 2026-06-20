@@ -1,19 +1,6 @@
-/**
- * Supported UI locales. To add one, extend this union, add its catalog to
- * `CATALOGS` in `context.tsx`, and list it in `LOCALES` below.
- */
-export type Locale = "en" | "ja";
+import { DEFAULT_LOCALE, isLocale, type Locale } from "../../shared/locale.js";
 
-/** Fallback locale when the browser's preferences match nothing supported. */
-export const DEFAULT_LOCALE: Locale = "en";
-
-/** All supported locales, in preference order for the switcher. */
-export const LOCALES = ["en", "ja"] as const satisfies readonly Locale[];
-
-/** Narrow an arbitrary string to a supported `Locale`. */
-export function isLocale(value: string): value is Locale {
-  return LOCALES.some((locale) => locale === value);
-}
+export { DEFAULT_LOCALE, LOCALES, isLocale, type Locale } from "../../shared/locale.js";
 
 /** Pick the best supported locale from the browser's language preferences. */
 export function detectLocale(): Locale {
