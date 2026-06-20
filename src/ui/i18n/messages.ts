@@ -11,10 +11,6 @@ export interface Messages {
   nav: {
     about: string;
   };
-  footer: {
-    /** Footer credit link; opens the About screen. */
-    credit: string;
-  };
   stageSelect: {
     /** One-line tagline on the stage list — what the game is, not how to play. */
     intro: string;

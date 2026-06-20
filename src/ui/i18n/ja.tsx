@@ -4,9 +4,6 @@ import type { Messages } from "./messages.js";
 /** Japanese UI catalog. Mirrors the shape of `en`. */
 export const ja = {
   nav: { about: "概要" },
-  footer: {
-    credit: "テキストは世界人権宣言（国連／OHCHR）より。クレジット",
-  },
   stageSelect: {
     intro: "世界の言語、いくつ見分けられる？",
     best: (correct, total) => `ベスト ${correct}/${total}`,

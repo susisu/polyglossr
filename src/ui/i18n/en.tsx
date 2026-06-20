@@ -4,9 +4,6 @@ import type { Messages } from "./messages.js";
 /** English UI catalog. The reference locale; other catalogs mirror its shape. */
 export const en = {
   nav: { about: "About" },
-  footer: {
-    credit: "Texts from the Universal Declaration of Human Rights (UN/OHCHR) — credits",
-  },
   stageSelect: {
     intro: "How many of the world's languages can you recognize?",
     best: (correct, total) => `Best ${correct}/${total}`,

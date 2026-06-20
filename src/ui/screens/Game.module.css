@@ -58,8 +58,8 @@
   cursor: pointer;
 }
 
-/* Verdict toast: one at a time, pinned just above the fixed footer. It fades in,
-   holds, then fades out over its lifetime (cleared from state at the same mark). */
+/* Verdict toast: one at a time, pinned near the bottom of the viewport. It fades
+   in, holds, then fades out over its lifetime (cleared from state at the same mark). */
 .toast {
   position: fixed;
   left: 50%;

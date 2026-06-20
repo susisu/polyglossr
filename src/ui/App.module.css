@@ -1,9 +1,9 @@
 .app {
   display: flex;
   flex-direction: column;
-  /* A fixed-height frame: the header and footer stay put while `main` scrolls
-     internally. This keeps the footer anchored (where the game's toast lives)
-     and lets the game pin its snippet while only its options scroll. */
+  /* A fixed-height frame: the header stays put while `main` scrolls internally,
+     so the game can pin its snippet while only its options scroll (and the
+     verdict toast can anchor to the bottom of the viewport). */
   height: 100dvh;
   max-width: 56rem;
   margin: 0 auto;
@@ -54,22 +54,4 @@
   flex-direction: column;
   overflow-y: auto;
   padding-inline: var(--gutter);
-}
-
-.footer {
-  padding: 1.5rem var(--gutter);
-}
-
-.credit {
-  font: inherit;
-  font-size: 0.8125rem;
-  color: var(--fg-muted);
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  text-align: start;
-}
-
-.credit:hover {
-  color: var(--fg);
 }

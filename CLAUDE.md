@@ -124,8 +124,8 @@ All aggregation is pure (`src/stats/aggregate.ts`) and unit-tested; I/O is isola
 ## Notes & caveats
 
 - **Licensing is required UI.** The About screen must keep the UDHR text attribution (United
-  Nations / OHCHR, copyright-free) and the `udhr` package credit (© Titus Wormer, MIT). Keep a
-  global, always-reachable credit link (footer).
+  Nations / OHCHR, copyright-free) and the `udhr` package credit (© Titus Wormer, MIT). Keep the
+  About screen reachable from the global header nav so the credit is always one tap away.
 - **No `ttb`.** udhr has zero top-to-bottom entries; `Direction` is `"ltr" | "rtl"` only.
   Traditional Mongolian comes through as `ltr`, low stage, and is filtered out.
 - **Fonts.** Noto is self-hosted via `@fontsource` for glyph coverage (no tofu). Subsets

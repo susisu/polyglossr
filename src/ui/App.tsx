@@ -105,18 +105,6 @@ export function App(): ReactElement {
         )}
         {screen.kind === "about" && <About onHome={home} />}
       </main>
-
-      <footer className={styles["footer"]}>
-        <button
-          type="button"
-          className={styles["credit"]}
-          onClick={() => {
-            setScreen({ kind: "about" });
-          }}
-        >
-          {messages.footer.credit}
-        </button>
-      </footer>
     </div>
   );
 }
