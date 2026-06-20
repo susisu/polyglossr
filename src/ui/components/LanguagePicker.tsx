@@ -29,7 +29,15 @@ export function LanguagePicker({ languages, onPick, disabled }: Props): ReactEle
   const needle = query.trim().toLowerCase();
   const matches =
     needle === "" ? languages : (
-      languages.filter((language) => language.name.toLowerCase().includes(needle))
+      languages
+        .filter((language) => language.name.toLowerCase().includes(needle))
+        // Rank prefix matches above mid-word matches (e.g. "r" → Russian before
+        // Arabic); the sort is stable, so each group keeps the stage's order.
+        .toSorted(
+          (a, b) =>
+            Number(b.name.toLowerCase().startsWith(needle)) -
+            Number(a.name.toLowerCase().startsWith(needle)),
+        )
     );
   const activeIndex = Math.min(highlight, Math.max(matches.length - 1, 0));
 
