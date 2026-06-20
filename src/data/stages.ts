@@ -7,11 +7,12 @@ import type { Stage } from "./stage.js";
  * reference.
  *
  * Each stage lists its options; a question first picks an option, then a code
- * within it. An option's `id` is its answer + stats key (ISO 639-3 here, since
- * every current option is one logical language). Multiple scripts/variants of
- * the same language share one option (e.g. Serbian Cyrillic + Latin) so that
- * language stays weighted as one. Options carry no `label` yet, so they display
- * by language name; script/family labels come in a later reorganization.
+ * within it. An option's `id` is its answer + stats key. For a single-language
+ * option this is its ISO 639-3 code, and it displays by language name. An option
+ * that groups several languages by writing system (e.g. the "Scripts of the
+ * World" stage) keys on a script id and must carry a `label`; multiple
+ * scripts/variants of one language likewise share a single option (e.g. Serbian
+ * Cyrillic + Latin) so that language stays weighted as one.
  */
 export const STAGES: readonly Stage[] = [
   {
@@ -39,21 +40,62 @@ export const STAGES: readonly Stage[] = [
     id: "scripts-of-the-world-easy",
     name: { en: "Scripts of the World (Easy)", ja: "世界の文字（初級）" },
     description: {
-      en: "One language per writing system — guess it by the script alone.",
-      ja: "書記体系ごとに1言語。文字だけで当ててみよう。",
+      en: "Name the writing system, not the language — the major scripts of the world.",
+      ja: "言語ではなく書記体系を答えよう。世界のメジャーな文字たち。",
     },
     theme: "themed",
     difficulty: 2,
+    // Options are writing systems, not languages: the answer is the script, and
+    // each script draws snippets from several major languages that use it.
     options: [
-      { id: "eng", sourceCodes: ["eng"] }, // Latin
-      { id: "rus", sourceCodes: ["rus"] }, // Cyrillic
-      { id: "ell", sourceCodes: ["ell_monotonic"] }, // Greek
-      { id: "arb", sourceCodes: ["arb"] }, // Arabic
-      { id: "heb", sourceCodes: ["heb"] }, // Hebrew
-      { id: "hin", sourceCodes: ["hin"] }, // Devanagari
-      { id: "cmn", sourceCodes: ["cmn_hans"] }, // Han
-      { id: "kor", sourceCodes: ["kor"] }, // Hangul
-      { id: "tha", sourceCodes: ["tha"] }, // Thai
+      {
+        id: "latn",
+        label: { en: "Latin", ja: "ラテン文字" },
+        sourceCodes: ["eng", "spa", "fra", "deu_1996", "por_PT", "ita", "nld"],
+      },
+      {
+        id: "cyrl",
+        label: { en: "Cyrillic", ja: "キリル文字" },
+        sourceCodes: ["rus", "ukr", "bul", "srp_cyrl"],
+      },
+      {
+        id: "grek",
+        label: { en: "Greek", ja: "ギリシャ文字" },
+        sourceCodes: ["ell_monotonic"],
+      },
+      {
+        id: "arab",
+        label: { en: "Arabic", ja: "アラビア文字" },
+        sourceCodes: ["arb", "pes_1", "urd"],
+      },
+      {
+        id: "hebr",
+        label: { en: "Hebrew", ja: "ヘブライ文字" },
+        sourceCodes: ["heb"],
+      },
+      {
+        id: "deva",
+        label: { en: "Devanagari", ja: "デーヴァナーガリー文字" },
+        sourceCodes: ["hin", "nep", "mar"],
+      },
+      {
+        id: "hani",
+        label: { en: "Han", ja: "漢字" },
+        // Chinese only: Japanese is 漢字仮名交じり, so it would mix scripts within
+        // one option and overlap visually with this one. It belongs in a stage
+        // that distinguishes languages, not bare writing systems.
+        sourceCodes: ["cmn_hans", "cmn_hant"],
+      },
+      {
+        id: "hang",
+        label: { en: "Hangul", ja: "ハングル" },
+        sourceCodes: ["kor"],
+      },
+      {
+        id: "thai",
+        label: { en: "Thai", ja: "タイ文字" },
+        sourceCodes: ["tha"],
+      },
     ],
   },
   {
