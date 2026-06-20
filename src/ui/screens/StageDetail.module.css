@@ -26,8 +26,33 @@
 }
 
 .record {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
   color: var(--fg-muted);
-  font-size: 0.9375rem;
+  font-size: 0.8125rem;
+}
+
+/* Best-score highlight, matching the stage-select cards' progress colors. */
+.best {
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.best.played {
+  background: var(--border);
+}
+
+.best.cleared {
+  background: var(--cleared-soft);
+  color: var(--cleared-strong);
+}
+
+.best.perfect {
+  background: var(--cleared-strong);
+  color: var(--surface);
 }
 
 .seen {

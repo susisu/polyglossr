@@ -2,7 +2,12 @@ import type { ReactElement } from "react";
 import { stageOptionName } from "../../data/selectors.js";
 import type { Stage } from "../../data/stage.js";
 import { TOTAL_QUESTIONS } from "../../engine/game.js";
-import { strongOptions, weakOptions, type RankedOption } from "../../stats/aggregate.js";
+import {
+  stageProgress,
+  strongOptions,
+  weakOptions,
+  type RankedOption,
+} from "../../stats/aggregate.js";
 import { useLocale, useMessages } from "../i18n/index.js";
 import { useStats } from "../useStats.js";
 import styles from "./StageDetail.module.css";
@@ -62,11 +67,10 @@ export function StageDetail({ stage, onStart, onBack }: Props): ReactElement {
       {stat !== undefined && (
         <div className={styles["meta"]}>
           <span className={styles["record"]}>
-            {messages.stageDetail.best(stat.bestCorrect, TOTAL_QUESTIONS)}
-            <span className={styles["seen"]}>
-              {" · "}
-              {messages.stageDetail.played(stat.played)}
+            <span className={`${styles["best"]} ${styles[stageProgress(stat, TOTAL_QUESTIONS)]}`}>
+              {messages.stageDetail.best(stat.bestCorrect, TOTAL_QUESTIONS)}
             </span>
+            <span className={styles["seen"]}>{messages.stageDetail.played(stat.played)}</span>
           </span>
         </div>
       )}
