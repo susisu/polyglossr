@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "keptCount": 490,
-  "droppedCount": 42,
+  "keptCount": 513,
+  "droppedCount": 19,
   "kept": [
     {
       "code": "007",
@@ -14,11 +14,41 @@
       "snippetCount": 20
     },
     {
+      "code": "008",
+      "iso6393": "pov",
+      "name": "Crioulo, Upper Guinea (008)",
+      "baseName": "Crioulo, Upper Guinea",
+      "scriptLabel": "008",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "009",
+      "iso6393": "kmb",
+      "name": "Mbundu (009)",
+      "baseName": "Mbundu",
+      "scriptLabel": "009",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
       "code": "010",
       "iso6393": "tdt",
       "name": "Tetun Dili",
       "baseName": "Tetun Dili",
       "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "011",
+      "iso6393": "umb",
+      "name": "Umbundu (011)",
+      "baseName": "Umbundu",
+      "scriptLabel": "011",
       "direction": "ltr",
       "encodingStage": 4,
       "snippetCount": 20
@@ -64,11 +94,31 @@
       "snippetCount": 20
     },
     {
+      "code": "030",
+      "iso6393": "ktu",
+      "name": "Kituba (2)",
+      "baseName": "Kituba",
+      "scriptLabel": "2",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
       "code": "032",
       "iso6393": "azb",
       "name": "South Azerbaijani",
       "baseName": "South Azerbaijani",
       "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "041",
+      "iso6393": "lvs",
+      "name": "Latvian (2)",
+      "baseName": "Latvian",
+      "scriptLabel": "2",
       "direction": "ltr",
       "encodingStage": 4,
       "snippetCount": 20
@@ -134,6 +184,16 @@
       "snippetCount": 20
     },
     {
+      "code": "048",
+      "iso6393": "min",
+      "name": "Minangkabau (2)",
+      "baseName": "Minangkabau",
+      "scriptLabel": "2",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
       "code": "049",
       "iso6393": "bjn",
       "name": "Banjar",
@@ -149,6 +209,26 @@
       "name": "Morisyen",
       "baseName": "Morisyen",
       "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "053",
+      "iso6393": "hau",
+      "name": "Hausa (2)",
+      "baseName": "Hausa",
+      "scriptLabel": "2",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "054",
+      "iso6393": "cat",
+      "name": "Catalan (2)",
+      "baseName": "Catalan",
+      "scriptLabel": "2",
       "direction": "ltr",
       "encodingStage": 4,
       "snippetCount": 20
@@ -189,6 +269,16 @@
       "name": "Somali (Af Marka)",
       "baseName": "Somali",
       "scriptLabel": "Af Marka",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "059",
+      "iso6393": "sme",
+      "name": "North Saami (2)",
+      "baseName": "North Saami",
+      "scriptLabel": "2",
       "direction": "ltr",
       "encodingStage": 4,
       "snippetCount": 20
@@ -264,11 +354,31 @@
       "snippetCount": 20
     },
     {
+      "code": "067",
+      "iso6393": "fin",
+      "name": "Finnish (2)",
+      "baseName": "Finnish",
+      "scriptLabel": "2",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
       "code": "068",
       "iso6393": "fra",
       "name": "French (Welche)",
       "baseName": "French",
       "scriptLabel": "Welche",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "069",
+      "iso6393": "mri",
+      "name": "Maori (2)",
+      "baseName": "Maori",
+      "scriptLabel": "2",
       "direction": "ltr",
       "encodingStage": 4,
       "snippetCount": 20
@@ -319,6 +429,16 @@
       "name": "Achuar-Shiwiar",
       "baseName": "Achuar-Shiwiar",
       "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "acu_1",
+      "iso6393": "acu",
+      "name": "Achuar-Shiwiar (1)",
+      "baseName": "Achuar-Shiwiar",
+      "scriptLabel": "1",
       "direction": "ltr",
       "encodingStage": 4,
       "snippetCount": 20
@@ -448,6 +568,16 @@
       "iso6393": "ame",
       "name": "Yaneshaʼ",
       "baseName": "Yaneshaʼ",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "amh",
+      "iso6393": "amh",
+      "name": "Amharic",
+      "baseName": "Amharic",
       "scriptLabel": null,
       "direction": "ltr",
       "encodingStage": 4,
@@ -1294,6 +1424,26 @@
       "snippetCount": 20
     },
     {
+      "code": "deu_1901",
+      "iso6393": "deu",
+      "name": "German, Standard (1901)",
+      "baseName": "German, Standard",
+      "scriptLabel": "1901",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "deu_1996",
+      "iso6393": "deu",
+      "name": "German, Standard (1996)",
+      "baseName": "German, Standard",
+      "scriptLabel": "1996",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
       "code": "dga",
       "iso6393": "dga",
       "name": "Dagaare, Southern",
@@ -1589,6 +1739,16 @@
       "name": "Fulfulde, Nigerian",
       "baseName": "Fulfulde, Nigerian",
       "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "fuv2",
+      "iso6393": "fuv",
+      "name": "Fulfulde, Nigerian (2)",
+      "baseName": "Fulfulde, Nigerian",
+      "scriptLabel": "2",
       "direction": "ltr",
       "encodingStage": 4,
       "snippetCount": 20
@@ -2539,6 +2699,16 @@
       "name": "Latin",
       "baseName": "Latin",
       "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lat_1",
+      "iso6393": "lat",
+      "name": "Latin (1)",
+      "baseName": "Latin",
+      "scriptLabel": "1",
       "direction": "ltr",
       "encodingStage": 4,
       "snippetCount": 20
@@ -3724,6 +3894,16 @@
       "snippetCount": 20
     },
     {
+      "code": "rmn_1",
+      "iso6393": "rmn",
+      "name": "Romani, Balkan (1)",
+      "baseName": "Romani, Balkan",
+      "scriptLabel": "1",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
       "code": "rmy",
       "iso6393": "rup",
       "name": "Aromanian",
@@ -3799,6 +3979,36 @@
       "name": "Romansch (Vallader)",
       "baseName": "Romansch",
       "scriptLabel": "Vallader",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ron_1953",
+      "iso6393": "ron",
+      "name": "Romanian (1953)",
+      "baseName": "Romanian",
+      "scriptLabel": "1953",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ron_1993",
+      "iso6393": "ron",
+      "name": "Romanian (1993)",
+      "baseName": "Romanian",
+      "scriptLabel": "1993",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ron_2006",
+      "iso6393": "ron",
+      "name": "Romanian (2006)",
+      "baseName": "Romanian",
+      "scriptLabel": "2006",
       "direction": "ltr",
       "encodingStage": 4,
       "snippetCount": 20
@@ -4284,6 +4494,16 @@
       "snippetCount": 20
     },
     {
+      "code": "tha2",
+      "iso6393": "tha",
+      "name": "Thai (2)",
+      "baseName": "Thai",
+      "scriptLabel": "2",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
       "code": "tir",
       "iso6393": "tir",
       "name": "Tigrigna",
@@ -4579,6 +4799,16 @@
       "name": "Urdu",
       "baseName": "Urdu",
       "scriptLabel": null,
+      "direction": "rtl",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "urd_2",
+      "iso6393": "urd",
+      "name": "Urdu (2)",
+      "baseName": "Urdu",
+      "scriptLabel": "2",
       "direction": "rtl",
       "encodingStage": 4,
       "snippetCount": 20
@@ -4906,21 +5136,6 @@
   ],
   "dropped": [
     {
-      "code": "008",
-      "name": "Crioulo, Upper Guinea (008)",
-      "reason": "numbered-duplicate"
-    },
-    {
-      "code": "009",
-      "name": "Mbundu (009)",
-      "reason": "numbered-duplicate"
-    },
-    {
-      "code": "011",
-      "name": "Umbundu (011)",
-      "reason": "numbered-duplicate"
-    },
-    {
       "code": "013",
       "name": "(Mijisa)",
       "reason": "undetermined-iso6393"
@@ -4966,79 +5181,14 @@
       "reason": "undetermined-iso6393"
     },
     {
-      "code": "030",
-      "name": "Kituba (2)",
-      "reason": "numbered-duplicate"
-    },
-    {
-      "code": "041",
-      "name": "Latvian (2)",
-      "reason": "numbered-duplicate"
-    },
-    {
-      "code": "048",
-      "name": "Minangkabau (2)",
-      "reason": "numbered-duplicate"
-    },
-    {
       "code": "050",
       "name": "(Bataknese)",
       "reason": "undetermined-iso6393"
     },
     {
-      "code": "053",
-      "name": "Hausa (2)",
-      "reason": "numbered-duplicate"
-    },
-    {
-      "code": "054",
-      "name": "Catalan (2)",
-      "reason": "numbered-duplicate"
-    },
-    {
-      "code": "059",
-      "name": "North Saami (2)",
-      "reason": "numbered-duplicate"
-    },
-    {
-      "code": "067",
-      "name": "Finnish (2)",
-      "reason": "numbered-duplicate"
-    },
-    {
-      "code": "069",
-      "name": "Maori (2)",
-      "reason": "numbered-duplicate"
-    },
-    {
-      "code": "acu_1",
-      "name": "Achuar-Shiwiar (1)",
-      "reason": "numbered-duplicate"
-    },
-    {
-      "code": "amh",
-      "name": "Amharic",
-      "reason": "too-few-snippets(0)"
-    },
-    {
       "code": "chv",
       "name": "Chuvash",
       "reason": "stage<3"
-    },
-    {
-      "code": "deu_1901",
-      "name": "German, Standard (1901)",
-      "reason": "numbered-duplicate"
-    },
-    {
-      "code": "deu_1996",
-      "name": "German, Standard (1996)",
-      "reason": "numbered-duplicate"
-    },
-    {
-      "code": "fuv2",
-      "name": "Fulfulde, Nigerian (2)",
-      "reason": "numbered-duplicate"
     },
     {
       "code": "iii",
@@ -5056,34 +5206,9 @@
       "reason": "stage<3"
     },
     {
-      "code": "lat_1",
-      "name": "Latin (1)",
-      "reason": "numbered-duplicate"
-    },
-    {
       "code": "mal_chillus",
       "name": "Malayalam",
       "reason": "manual-exclude"
-    },
-    {
-      "code": "rmn_1",
-      "name": "Romani, Balkan (1)",
-      "reason": "numbered-duplicate"
-    },
-    {
-      "code": "ron_1953",
-      "name": "Romanian (1953)",
-      "reason": "numbered-duplicate"
-    },
-    {
-      "code": "ron_1993",
-      "name": "Romanian (1993)",
-      "reason": "numbered-duplicate"
-    },
-    {
-      "code": "ron_2006",
-      "name": "Romanian (2006)",
-      "reason": "numbered-duplicate"
     },
     {
       "code": "taj",
@@ -5096,19 +5221,9 @@
       "reason": "stage<3"
     },
     {
-      "code": "tha2",
-      "name": "Thai (2)",
-      "reason": "numbered-duplicate"
-    },
-    {
       "code": "tzm_tfng",
       "name": "Tamazight, Central Atlas (Tifinagh)",
       "reason": "stage<3"
-    },
-    {
-      "code": "urd_2",
-      "name": "Urdu (2)",
-      "reason": "numbered-duplicate"
     },
     {
       "code": "ven2",

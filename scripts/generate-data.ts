@@ -30,9 +30,9 @@ const MIN_SNIPPETS = 6;
 /** Cap snippets per language to keep the dataset small. */
 const MAX_SNIPPETS = 20;
 /**
- * Codes to drop manually. The `(N)` name rule handles numbered dups; these are
- * non-canonical variants that share an iso6393 + script with another entry and
- * would be indistinguishable in-game:
+ * Codes to drop manually. Multiple sources per iso6393 are fine (the logical-
+ * language model groups them), so we only drop entries that share an iso6393 AND
+ * the same script label, making them indistinguishable in-game:
  * - `mal_chillus`: alternate Malayalam orthography (keep plain `mal`).
  * - `ven2`: a second copy of Venda (keep `ven`).
  */
@@ -118,6 +118,7 @@ const ABUGIDA_RANGES: ReadonlyArray<readonly [number, number]> = [
   [0x0e00, 0x0e7f], // Thai
   [0x0e80, 0x0eff], // Lao
   [0x1000, 0x109f], // Myanmar
+  [0x1200, 0x139f], // Ethiopic (Ge'ez) — syllabic, often uses the ፡ wordspace, not ASCII spaces
   [0x1780, 0x17ff], // Khmer
 ];
 
@@ -191,11 +192,6 @@ function splitName(name: string): { baseName: string; scriptLabel: string | null
   return { baseName: name.trim(), scriptLabel: null };
 }
 
-/** A name ending in a bare number, e.g. "Urdu (2)", marks a true duplicate entry. */
-function isNumberedDuplicate(name: string): boolean {
-  return /\(\s*\d+\s*\)\s*$/u.test(name);
-}
-
 interface DropRecord {
   code: string;
   name: string;
@@ -230,8 +226,6 @@ async function main(): Promise<void> {
       dropped.push({ code: entry.code, name: entry.name, reason: "ttb-direction" });
     } else if (MANUAL_EXCLUDE.has(entry.code)) {
       dropped.push({ code: entry.code, name: entry.name, reason: "manual-exclude" });
-    } else if (isNumberedDuplicate(entry.name)) {
-      dropped.push({ code: entry.code, name: entry.name, reason: "numbered-duplicate" });
     } else {
       candidates.push(entry);
     }
