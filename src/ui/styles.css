@@ -20,10 +20,14 @@
      Noto Sans families for everything else. CJK is steered per-language in the
      SnippetPanel (zh→SC, ja→JP, ko→KR). */
   --font-snippet:
-    "Noto Serif", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans Devanagari", "Noto Sans Thai",
-    "Noto Sans Lao", "Noto Sans Khmer", "Noto Sans Myanmar", "Noto Sans Armenian",
-    "Noto Sans Georgian", "Noto Sans Ethiopic", "Noto Sans Cherokee",
-    "Noto Sans Canadian Aboriginal", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", Georgia, serif;
+    "Noto Serif", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans Syriac", "Noto Sans Thaana",
+    "Noto Sans Adlam", "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Sans Gurmukhi",
+    "Noto Sans Gujarati", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Kannada",
+    "Noto Sans Malayalam", "Noto Sans Sinhala", "Noto Sans Thai", "Noto Sans Lao",
+    "Noto Sans Khmer", "Noto Sans Myanmar", "Noto Serif Tibetan", "Noto Sans Chakma",
+    "Noto Sans Armenian", "Noto Sans Georgian", "Noto Sans Ethiopic", "Noto Sans Cherokee",
+    "Noto Sans Canadian Aboriginal", "Noto Sans Vai", "Noto Sans SC", "Noto Sans JP",
+    "Noto Sans KR", Georgia, serif;
 }
 
 * {

@@ -99,6 +99,139 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
+    id: "scripts-of-the-world-intermediate",
+    name: { en: "Scripts of the World (Intermediate)", ja: "世界の文字（中級）" },
+    description: {
+      en: "Past the familiar few — more of the world's writing systems, each its own.",
+      ja: "見慣れた文字の先へ。世界の書記体系をもっと見分けよう。",
+    },
+    // Options are writing systems. Beyond the easy stage's nine: the major scripts
+    // that are still unmistakable on sight. Sister scripts that are easily confused
+    // (Telugu/Kannada, Lao vs Thai) and the rare ones are held back for the hard
+    // stage. Japanese is left out on purpose — it mixes kana with Han rather than
+    // being one bare script, so it belongs in a language stage.
+    category: "script",
+    regions: ["world"],
+    options: [
+      // Europe
+      {
+        id: "latn",
+        label: { en: "Latin", ja: "ラテン文字" },
+        sourceCodes: ["eng", "spa", "fra", "deu_1996", "ita", "nld"],
+      },
+      {
+        id: "cyrl",
+        label: { en: "Cyrillic", ja: "キリル文字" },
+        sourceCodes: ["rus", "ukr", "bul", "srp_cyrl"],
+      },
+      { id: "grek", label: { en: "Greek", ja: "ギリシャ文字" }, sourceCodes: ["ell_monotonic"] },
+      // Middle East
+      {
+        id: "arab",
+        label: { en: "Arabic", ja: "アラビア文字" },
+        sourceCodes: ["arb", "pes_1", "urd"],
+      },
+      { id: "hebr", label: { en: "Hebrew", ja: "ヘブライ文字" }, sourceCodes: ["heb"] },
+      // Caucasus
+      { id: "armn", label: { en: "Armenian", ja: "アルメニア文字" }, sourceCodes: ["hye"] },
+      { id: "geor", label: { en: "Georgian", ja: "ジョージア文字" }, sourceCodes: ["kat"] },
+      // South Asia
+      {
+        id: "deva",
+        label: { en: "Devanagari", ja: "デーヴァナーガリー文字" },
+        sourceCodes: ["hin", "nep", "mar"],
+      },
+      { id: "beng", label: { en: "Bengali", ja: "ベンガル文字" }, sourceCodes: ["ben"] },
+      { id: "taml", label: { en: "Tamil", ja: "タミル文字" }, sourceCodes: ["tam"] },
+      { id: "mlym", label: { en: "Malayalam", ja: "マラヤーラム文字" }, sourceCodes: ["mal"] },
+      { id: "sinh", label: { en: "Sinhala", ja: "シンハラ文字" }, sourceCodes: ["sin"] },
+      // Southeast Asia
+      { id: "thai", label: { en: "Thai", ja: "タイ文字" }, sourceCodes: ["tha"] },
+      { id: "khmr", label: { en: "Khmer", ja: "クメール文字" }, sourceCodes: ["khm"] },
+      { id: "mymr", label: { en: "Myanmar", ja: "ミャンマー文字" }, sourceCodes: ["mya"] },
+      // Africa
+      { id: "ethi", label: { en: "Ethiopic", ja: "エチオピア文字" }, sourceCodes: ["amh", "tir"] },
+      // East Asia
+      { id: "hani", label: { en: "Han", ja: "漢字" }, sourceCodes: ["cmn_hans", "cmn_hant"] },
+      { id: "hang", label: { en: "Hangul", ja: "ハングル" }, sourceCodes: ["kor"] },
+    ],
+  },
+  {
+    id: "scripts-of-the-world-hard",
+    name: { en: "Scripts of the World (Hard)", ja: "世界の文字（上級）" },
+    description: {
+      en: "From sister scripts to the rare and remote — every writing system in the game.",
+      ja: "姉妹文字から希少な文字まで、世界のあらゆる書記体系を見分けよう。",
+    },
+    // Everything the dataset can show: the intermediate scripts plus the easily
+    // confused sisters (Telugu/Kannada, Lao alongside Thai) and the rare scripts
+    // (Thaana, Syriac, Adlam, Vai, Chakma, Cherokee, Canadian syllabics).
+    category: "script",
+    regions: ["world"],
+    options: [
+      // Europe
+      {
+        id: "latn",
+        label: { en: "Latin", ja: "ラテン文字" },
+        sourceCodes: ["eng", "spa", "fra", "deu_1996", "ita", "nld"],
+      },
+      {
+        id: "cyrl",
+        label: { en: "Cyrillic", ja: "キリル文字" },
+        sourceCodes: ["rus", "ukr", "bul", "srp_cyrl"],
+      },
+      { id: "grek", label: { en: "Greek", ja: "ギリシャ文字" }, sourceCodes: ["ell_monotonic"] },
+      // Middle East & other right-to-left scripts
+      {
+        id: "arab",
+        label: { en: "Arabic", ja: "アラビア文字" },
+        sourceCodes: ["arb", "pes_1", "urd"],
+      },
+      { id: "hebr", label: { en: "Hebrew", ja: "ヘブライ文字" }, sourceCodes: ["heb"] },
+      { id: "syrc", label: { en: "Syriac", ja: "シリア文字" }, sourceCodes: ["aii"] },
+      { id: "thaa", label: { en: "Thaana", ja: "ターナ文字" }, sourceCodes: ["div"] },
+      { id: "adlm", label: { en: "Adlam", ja: "アドラム文字" }, sourceCodes: ["fuf_adlm"] },
+      // South Asia — northern Brahmic
+      {
+        id: "deva",
+        label: { en: "Devanagari", ja: "デーヴァナーガリー文字" },
+        sourceCodes: ["hin", "nep", "mar"],
+      },
+      { id: "beng", label: { en: "Bengali", ja: "ベンガル文字" }, sourceCodes: ["ben"] },
+      { id: "guru", label: { en: "Gurmukhi", ja: "グルムキー文字" }, sourceCodes: ["pan"] },
+      { id: "gujr", label: { en: "Gujarati", ja: "グジャラート文字" }, sourceCodes: ["guj"] },
+      // South Asia — Dravidian, Sinhala, Chakma
+      { id: "taml", label: { en: "Tamil", ja: "タミル文字" }, sourceCodes: ["tam"] },
+      { id: "telu", label: { en: "Telugu", ja: "テルグ文字" }, sourceCodes: ["tel"] },
+      { id: "knda", label: { en: "Kannada", ja: "カンナダ文字" }, sourceCodes: ["kan"] },
+      { id: "mlym", label: { en: "Malayalam", ja: "マラヤーラム文字" }, sourceCodes: ["mal"] },
+      { id: "sinh", label: { en: "Sinhala", ja: "シンハラ文字" }, sourceCodes: ["sin"] },
+      { id: "cakm", label: { en: "Chakma", ja: "チャクマ文字" }, sourceCodes: ["ccp"] },
+      // Southeast Asia & Tibetan
+      { id: "thai", label: { en: "Thai", ja: "タイ文字" }, sourceCodes: ["tha"] },
+      { id: "laoo", label: { en: "Lao", ja: "ラオ文字" }, sourceCodes: ["lao"] },
+      { id: "khmr", label: { en: "Khmer", ja: "クメール文字" }, sourceCodes: ["khm"] },
+      { id: "mymr", label: { en: "Myanmar", ja: "ミャンマー文字" }, sourceCodes: ["mya"] },
+      { id: "tibt", label: { en: "Tibetan", ja: "チベット文字" }, sourceCodes: ["bod", "dzo"] },
+      // Caucasus
+      { id: "armn", label: { en: "Armenian", ja: "アルメニア文字" }, sourceCodes: ["hye"] },
+      { id: "geor", label: { en: "Georgian", ja: "ジョージア文字" }, sourceCodes: ["kat"] },
+      // Africa
+      { id: "ethi", label: { en: "Ethiopic", ja: "エチオピア文字" }, sourceCodes: ["amh", "tir"] },
+      { id: "vaii", label: { en: "Vai", ja: "ヴァイ文字" }, sourceCodes: ["vai"] },
+      // East Asia
+      { id: "hani", label: { en: "Han", ja: "漢字" }, sourceCodes: ["cmn_hans", "cmn_hant"] },
+      { id: "hang", label: { en: "Hangul", ja: "ハングル" }, sourceCodes: ["kor"] },
+      // Indigenous North America
+      { id: "cher", label: { en: "Cherokee", ja: "チェロキー文字" }, sourceCodes: ["chr_cased"] },
+      {
+        id: "cans",
+        label: { en: "Canadian Aboriginal", ja: "カナダ先住民文字" },
+        sourceCodes: ["ike"],
+      },
+    ],
+  },
+  {
     id: "europe-easy",
     name: { en: "Europe (Easy)", ja: "ヨーロッパ（初級）" },
     description: {
@@ -702,9 +835,8 @@ export const STAGES: readonly Stage[] = [
       { id: "cmn", sourceCodes: ["cmn_hans", "cmn_hant"] },
       { id: "jpn", sourceCodes: ["jpn"] },
       { id: "kor", sourceCodes: ["kor"] },
-      // Southeast Asia — Malay (≈Indonesian) and Tagalog dropped; Lao kept
+      // Southeast Asia — Malay (≈Indonesian), Tagalog, and Lao (≈Thai) dropped
       { id: "tha", sourceCodes: ["tha"] },
-      { id: "lao", sourceCodes: ["lao"] },
       { id: "khm", sourceCodes: ["khm"] },
       { id: "vie", sourceCodes: ["vie"] },
       { id: "ind", sourceCodes: ["ind"] },
