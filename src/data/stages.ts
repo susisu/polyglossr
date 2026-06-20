@@ -151,6 +151,7 @@ export const STAGES: readonly Stage[] = [
       "vie",
       "ind",
       "mly_latn",
+      "tgl",
       // Mediterranean
       "mlt",
       // Middle East
