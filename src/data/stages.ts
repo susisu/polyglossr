@@ -621,6 +621,35 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
+    id: "north-asia",
+    name: { en: "North Asia", ja: "北アジア" },
+    description: {
+      en: "Across Siberia and the Russian Far East: Turkic, Tungusic and Samoyedic languages and the Paleosiberian isolates.",
+      ja: "シベリアからロシア極東まで。テュルク・ツングース・サモエードの言語と、古シベリアの孤立した言語たち。",
+    },
+    category: "language",
+    regions: ["asia"],
+    options: [
+      // Turkic — Siberian
+      { id: "sah", sourceCodes: ["sah"] }, // Yakut (Sakha)
+      { id: "tyv", sourceCodes: ["tyv"] }, // Tuvan
+      { id: "kjh", sourceCodes: ["kjh"] }, // Khakas
+      { id: "alt", sourceCodes: ["alt"] }, // Southern Altai
+      { id: "cjs", sourceCodes: ["cjs"] }, // Shor
+      // Tungusic
+      { id: "evn", sourceCodes: ["evn"] }, // Evenki
+      { id: "eve", sourceCodes: ["eve"] }, // Even
+      { id: "gld", sourceCodes: ["gld"] }, // Nanai
+      { id: "oaa", sourceCodes: ["oaa"] }, // Orok (Uilta)
+      // Samoyedic (Uralic)
+      { id: "yrk", sourceCodes: ["yrk"] }, // Nenets
+      { id: "nio", sourceCodes: ["nio"] }, // Nganasan
+      // Paleosiberian isolates
+      { id: "niv", sourceCodes: ["niv"] }, // Nivkh (Gilyak)
+      { id: "ykg", sourceCodes: ["ykg"] }, // Northern Yukaghir
+    ],
+  },
+  {
     id: "middle-east-north-africa",
     name: { en: "Middle East & North Africa", ja: "中東・北アフリカ" },
     description: {
@@ -986,7 +1015,7 @@ export const STAGES: readonly Stage[] = [
     // each as a single language option. This is the union of all language-stage
     // options plus the languages that otherwise appear only inside the script and
     // family stages (Assyrian Neo-Aramaic, Tibetan, Chakma, Maldivian, Pular,
-    // Punjabi, Vai) — so a player here must name all 143. Grouped geographically
+    // Punjabi, Vai) — so a player here must name them all. Grouped geographically
     // for authoring; multi-code options bundle the scripts/variants of one
     // language (e.g. Serbian Cyrillic + Latin) so it stays weighted as one.
     category: "language",
@@ -1100,6 +1129,20 @@ export const STAGES: readonly Stage[] = [
       { id: "cmn", sourceCodes: ["cmn_hans", "cmn_hant"] },
       { id: "jpn", sourceCodes: ["jpn"] },
       { id: "kor", sourceCodes: ["kor"] },
+      // North Asia — Siberia & the Russian Far East
+      { id: "sah", sourceCodes: ["sah"] }, // Yakut (Sakha)
+      { id: "tyv", sourceCodes: ["tyv"] }, // Tuvan
+      { id: "kjh", sourceCodes: ["kjh"] }, // Khakas
+      { id: "alt", sourceCodes: ["alt"] }, // Southern Altai
+      { id: "cjs", sourceCodes: ["cjs"] }, // Shor
+      { id: "evn", sourceCodes: ["evn"] }, // Evenki
+      { id: "eve", sourceCodes: ["eve"] }, // Even
+      { id: "gld", sourceCodes: ["gld"] }, // Nanai
+      { id: "oaa", sourceCodes: ["oaa"] }, // Orok (Uilta)
+      { id: "yrk", sourceCodes: ["yrk"] }, // Nenets
+      { id: "nio", sourceCodes: ["nio"] }, // Nganasan
+      { id: "niv", sourceCodes: ["niv"] }, // Nivkh (Gilyak)
+      { id: "ykg", sourceCodes: ["ykg"] }, // Northern Yukaghir
       // Africa — Berber
       { id: "kab", sourceCodes: ["071"] },
       { id: "tzm", sourceCodes: ["tzm"] },
