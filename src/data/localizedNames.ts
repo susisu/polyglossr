@@ -8,8 +8,10 @@ import type { Locale, Localized } from "../shared/locale.js";
  */
 const LANGUAGE_NAMES: Record<string, Partial<Localized<string>>> = {
   aar: { ja: "アファル語" },
+  abk: { ja: "アブハズ語" },
   ace: { ja: "アチェ語" },
   acf: { ja: "セントルシア・クレオール語" },
+  ady: { ja: "アディゲ語" },
   aii: { ja: "アッシリア新アラム語" },
   als: { ja: "アルバニア語" },
   alt: { ja: "アルタイ語" },
@@ -94,6 +96,7 @@ const LANGUAGE_NAMES: Record<string, Partial<Localized<string>>> = {
   kan: { ja: "カンナダ語" },
   kat: { ja: "ジョージア語" },
   kaz: { ja: "カザフ語" },
+  kbd: { ja: "カバルド語" },
   kea: { ja: "カーボベルデ・クレオール語" },
   kek: { ja: "ケクチ語" },
   khk: { ja: "モンゴル語" },
@@ -137,6 +140,7 @@ const LANGUAGE_NAMES: Record<string, Partial<Localized<string>>> = {
   nya: { ja: "ニャンジャ語" },
   oaa: { ja: "ウイルタ語" },
   oci: { ja: "オック語" },
+  oss: { ja: "オセット語" },
   pan: { ja: "パンジャブ語" },
   pap: { ja: "パピアメント語" },
   pau: { ja: "パラオ語" },

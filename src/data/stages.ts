@@ -663,6 +663,28 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
+    id: "caucasus",
+    name: { en: "The Caucasus", ja: "コーカサス" },
+    description: {
+      en: "Between the Black and Caspian seas: Georgian and Armenian, each with its own alphabet, alongside the languages of the North Caucasus.",
+      ja: "黒海とカスピ海のあいだ。独自の文字を持つジョージア語・アルメニア語と、北コーカサスの言語たち。",
+    },
+    // Georgian and Armenian are unmistakable by their own unique scripts; the
+    // rest are a Cyrillic look-alike set — the Circassian sisters Adyghe and
+    // Kabardian are especially close, Abkhaz stands out by its unusually long
+    // alphabet, and Ossetian is an Iranian language written in Cyrillic.
+    category: "language",
+    regions: ["asia", "europe"],
+    options: [
+      { id: "kat", sourceCodes: ["kat"] }, // Georgian (Georgian script)
+      { id: "hye", sourceCodes: ["hye"] }, // Armenian (Armenian script)
+      { id: "abk", sourceCodes: ["abk"] }, // Abkhaz (Cyrillic)
+      { id: "ady", sourceCodes: ["ady"] }, // Adyghe / West Circassian (Cyrillic)
+      { id: "kbd", sourceCodes: ["kbd"] }, // Kabardian / East Circassian (Cyrillic)
+      { id: "oss", sourceCodes: ["oss"] }, // Ossetian (Cyrillic, Iranian)
+    ],
+  },
+  {
     id: "central-asia",
     name: { en: "Central Asia", ja: "中央アジア" },
     description: {
@@ -1229,6 +1251,10 @@ export const STAGES: readonly Stage[] = [
       // Caucasus
       { id: "kat", sourceCodes: ["kat"] },
       { id: "hye", sourceCodes: ["hye"] },
+      { id: "abk", sourceCodes: ["abk"] }, // Abkhaz (Cyrillic)
+      { id: "ady", sourceCodes: ["ady"] }, // Adyghe (Cyrillic)
+      { id: "kbd", sourceCodes: ["kbd"] }, // Kabardian (Cyrillic)
+      { id: "oss", sourceCodes: ["oss"] }, // Ossetian (Cyrillic, Iranian)
       // Middle East & West Asia — Semitic
       { id: "arb", sourceCodes: ["arb"] },
       { id: "heb", sourceCodes: ["heb"] },
