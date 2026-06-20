@@ -62,6 +62,7 @@ const LANGUAGE_NAMES: Record<string, Partial<Localized<string>>> = {
   jiv: { ja: "シュアル語" },
   jpn: { ja: "日本語" },
   kab: { ja: "カビール語" },
+  kal: { ja: "グリーンランド語" },
   kan: { ja: "カンナダ語" },
   kat: { ja: "ジョージア語" },
   kaz: { ja: "カザフ語" },

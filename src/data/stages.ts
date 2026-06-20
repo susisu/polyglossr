@@ -544,6 +544,7 @@ export const STAGES: readonly Stage[] = [
       { id: "heb", sourceCodes: ["heb"] },
       // Arctic North America
       { id: "ike", sourceCodes: ["ike"] },
+      { id: "kal", sourceCodes: ["kal"] },
       // Himalaya
       { id: "dzo", sourceCodes: ["dzo"] },
       { id: "npi", sourceCodes: ["nep"] },
@@ -552,6 +553,7 @@ export const STAGES: readonly Stage[] = [
       { id: "urd", sourceCodes: ["urd"] },
       { id: "ben", sourceCodes: ["ben"] },
       { id: "guj", sourceCodes: ["guj"] },
+      { id: "mar", sourceCodes: ["mar"] },
       { id: "tam", sourceCodes: ["tam"] },
       { id: "tel", sourceCodes: ["tel"] },
       { id: "kan", sourceCodes: ["kan"] },

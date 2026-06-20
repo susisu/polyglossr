@@ -1791,6 +1791,38 @@
       ]
     },
     {
+      "code": "kal",
+      "iso6393": "kal",
+      "name": "Inuktitut, Greenlandic",
+      "baseName": "Inuktitut, Greenlandic",
+      "scriptLabel": null,
+      "bcp47": "kl",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippets": [
+        "Ataqqinassusermik inuup nammineq pigisaanik aammalu anooqatigiinnut ilaasortaasut tamarmik naligiimmik annaasassaanngitsumillu pisinnaatitaaffeqarnissaannik akuersissuteqarneq nunarsuarmi kiffaanngissuseqarnermut,",
+        "Inuttut pisinnaatitaaffinnik sumiginnaanerit asissuinerillu naakkittaatsuliornerujussuarnik silarsuarmiunut tarnip nalunngissusiinik aalassatsitsisartunik nassataqartarmata, aammalu nunarsuarmik inuit killilersugaanngitsumik",
+        "oqalussinnaatitaaffigalugulu upperisakkut pisinnaatitaaffeqarfiannik ersiorfiginagulu atugarliorfigisassarinngisaannik pilersitsinissaq inuiaat anguniagaattut pingaarnerpaatut tusarliunneqartareersimam mat ,",
+        "pingaaruteqarluinnar mat inuttut pisinnaatitaaffiit inatsisitigut illersorneqarnissaat, inuk allatut sapilerluni qunutitsinermut qunusiaanermullu akiuunniartariaqalissanngippat,",
+        "Naalagaaffiit Peqatigiit inuisa isumaqatigiissutikkut uppernarsaqqimmassuk inuttut pisinnaatitaaffiit tunngaviusut, inuup ataqqinassusiata erianassusiatalu aammalu angutit arnallu",
+        "naligiimmik pisinnaatitaaffeqarnerisa pingaartinneqarnissaat isumalluarfigigitsik, aalajangiussimallugulu inuttut atugarisanik siuarsaaniarnissaq inuuniarnermilu atugarisanik pitsaanerulersitsinissaq,",
+        "naalagaaffiit ilaasortaasut imminnut pisussanngortim mata Naalagaaffiit Peqatigiit suleqatigalugit sulissutigissallugu inuttut pisinnaatitaaffinnut aammalu tunngavissiisutut killilersugaanngitsumik",
+        "pisinnaatitaaffinnik aammalu killilersugaanngitsumik iliorsinnaatitaaffinnik tamakkuninnga peqatigiilluni paasinninneq pisussaaffimmik tamatuminnga piviusunngortitsinissamut pingaaruteqarnerpaam mat,",
+        "taamaattumik tamanut nalunaarutigaat inuttut pisinnaatitaaffiit pillugit silarsuarmioqatigiinnut nalunaarut manna inunnut tamanut inuiaqatigiinnullu tamanut tunngatillugu",
+        "peqatigiinnikkut anguniagassatut, siunertaralugu inuup kialuunniit aammalu inuiaqatigiinnik sullissisut kikkulluunniit tamatigut Nalunaarutikkut matumuuna anguniassagaat atuartitsineq",
+        "perorsaanerlu aqqutigalugit pisinnaatitaaffinnut killilersugaanngitsumillu iliorsinnaatitaanernut tamakkununnga ataqqinninnerulernissaq aammalu inuiaqatigiit nunallu allat alliartuinnartumik suliniuteqarnerisigut qularnaarniassallugu",
+        "sumiluunniit sunniuteqartumik akuersaarneqarlutillu naammassiniarneqarnissaat, naalagaaffinni ilaasortaasuni innuttaasut aammalu sumiiffinni naalagaaffinnit taakkunannga aqunneqartuni innuttaasut akornanni.",
+        "Inuit tamarmik inunngorput nammineersinnaassuseqarlutik assigiimmillu ataqqinassuseqarlutillu pisinnaatitaaffeqarlutik. Solaqassusermik tarnillu nalunngissusianik pilersugaapput, imminnullu iliorfigeqatigiittariaqaraluarput qatanngutigiittut",
+        "Kinal uunniit pisinnaatitaaffinnik killilersugaanngitsumillu iliorsinnaatitaaffinnik nalunaarummi maani taaneqartunik tamanik atuiumasinnaavoq, sukkulluunniit assigiinngisitsinertaqanngitsumik, s. ass.",
+        "inuiannut sorlernut ataneq, ammip qalipaataa, arnaaneq/angutaaneq, oqaatsit, upperisaq, naalakkersuinikkut isuma allatulluunniit isumaqarneq, inuiaassutsikkut imaluunniit",
+        "innuttaaqatigiinni qanoq atugaqartuneerneq, pigisaqassuseq, inunnguutsimit imaluunniit inuiaqatigiinni allatut inissisimaneq pissutigalugit.",
+        "Aammattaaq nunami imaluunniit sumiiffimmi eqqartuussisinnaanikkut pissutsit imaluunniitt naalakkersuinikkut imaluunniit nunat allamiut inuup aalajangersimasup attaveqarfigisaasa",
+        "isumaat pissutiagalugit assigiinngisitsineqassanngilaq, sumiiffik naalakkersuinikkut attaveqarfeqanngikkaluarpalluunniit, allanit oqartussaaffigineqaraluarpat namminersortuunngikkaluarpalluunniit, imaluunniit imminut naalakkersorsinnaassusia arlaatigut killiliivigineqarsimagaluarpat.",
+        "Kikkulluunniit tamarmik inatsiseqarnikkut naligiissitaasussaapput, aammalu sutigulluunniit assigiinngisitsinertaqanngitsumik inatsisitigut illersorneqarnissamut pisinnaatitaallutik. Kikkulluunniit tamatmik assigiimmik pisinnaatitaapput",
+        "nalunaarummut matumunnga akerliusumik sutigulluunniit assigiinngisinneqarnissamut taamatulluunniit assigiinngisinneqalernissamut kajumissaarutaasinnaasunut sunulluunniit illersorneqarnissamut."
+      ]
+    },
+    {
       "code": "kan",
       "iso6393": "kan",
       "name": "Kannada",
