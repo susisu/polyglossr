@@ -148,6 +148,11 @@ function detectScriptClass(sample: string): ScriptClass {
   return "spaced";
 }
 
+/** Count graphemes in a text run (length proxy for spaceless scripts). */
+function countGraphemes(text: string, segmenter: Intl.Segmenter): number {
+  return Array.from(segmenter.segment(text)).length;
+}
+
 /** Cut one paragraph into non-overlapping snippets per the script-class config. */
 function cutParagraph(text: string, cls: ScriptClass, locale: string): string[] {
   const cfg = SEG[cls];
@@ -159,11 +164,27 @@ function cutParagraph(text: string, cls: ScriptClass, locale: string): string[] 
       if (chunk.length >= cfg.min) out.push(chunk.join(" "));
     }
   } else {
-    const segmenter = new Intl.Segmenter(locale, { granularity: "grapheme" });
-    const graphemes = Array.from(segmenter.segment(text), (s) => s.segment);
-    for (let i = 0; i < graphemes.length; i += cfg.target) {
-      const chunk = graphemes.slice(i, i + cfg.target);
-      if (chunk.length >= cfg.min) out.push(chunk.join(""));
+    // Spaceless scripts (CJK, Thai, ...) have no spaces to split on. Break only
+    // at dictionary word boundaries (via Intl.Segmenter) so a snippet never ends
+    // mid-word, while still measuring length in graphemes to keep reading effort
+    // uniform. Accumulate words until the target length, then flush.
+    const wordSegmenter = new Intl.Segmenter(locale, { granularity: "word" });
+    const graphemeSegmenter = new Intl.Segmenter(locale, { granularity: "grapheme" });
+    let chunk = "";
+    let length = 0;
+    for (const { segment } of wordSegmenter.segment(text)) {
+      chunk += segment;
+      length += countGraphemes(segment, graphemeSegmenter);
+      if (length >= cfg.target) {
+        const snippet = chunk.trim();
+        if (snippet.length > 0) out.push(snippet);
+        chunk = "";
+        length = 0;
+      }
+    }
+    if (length >= cfg.min) {
+      const snippet = chunk.trim();
+      if (snippet.length > 0) out.push(snippet);
     }
   }
   return out;
