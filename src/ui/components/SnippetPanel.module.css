@@ -1,0 +1,20 @@
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 9rem;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 4%);
+}
+
+.text {
+  margin: 0;
+  font-family: var(--font-text);
+  font-size: clamp(1.25rem, 3.5vw, 1.875rem);
+  line-height: 1.7;
+  text-align: start;
+  text-wrap: balance;
+}

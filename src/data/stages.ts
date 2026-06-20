@@ -3,7 +3,7 @@ import type { Stage } from "./stage.js";
 /**
  * Curated stages. Authored by hand against the generated dataset; `stages.test.ts`
  * checks every source code resolves and that each stage has enough distinct
- * logical languages. More stages land in M8.
+ * logical languages. More stages are added later.
  */
 export const STAGES: readonly Stage[] = [
   {

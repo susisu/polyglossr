@@ -1,0 +1,70 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+
+.brand {
+  font-family: var(--font-text);
+  font-size: 1.375rem;
+  letter-spacing: 0.01em;
+  color: var(--fg);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav button {
+  padding: 0.4rem 0.85rem;
+  font: inherit;
+  font-size: 0.9375rem;
+  color: var(--fg-muted);
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 160ms ease;
+}
+
+.nav button:hover {
+  color: var(--fg);
+}
+
+.main {
+  flex: 1;
+  padding: 1rem 0 3rem;
+}
+
+.footer {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.credit {
+  font: inherit;
+  font-size: 0.8125rem;
+  color: var(--fg-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: start;
+}
+
+.credit:hover {
+  color: var(--fg);
+}

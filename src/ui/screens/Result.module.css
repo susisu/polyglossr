@@ -1,0 +1,113 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.outcome {
+  margin: 0;
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.score {
+  margin: 0;
+  font-family: var(--font-text);
+  font-size: 2.25rem;
+  font-weight: 500;
+}
+
+.sub {
+  margin: 0;
+  color: var(--fg-muted);
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1.25rem 0 2rem;
+}
+
+.primary {
+  padding: 0.6rem 1.4rem;
+  font: inherit;
+  color: var(--surface);
+  background: var(--accent);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 160ms ease;
+}
+
+.primary:hover {
+  background: var(--accent-strong);
+}
+
+.secondary {
+  padding: 0.6rem 1.4rem;
+  font: inherit;
+  color: var(--fg);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.mark {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+}
+
+.ok {
+  background: var(--accent);
+}
+
+.no {
+  background: var(--danger);
+}
+
+.snippet {
+  overflow: hidden;
+  font-family: var(--font-text);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--fg-muted);
+}
+
+.verdict {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.1rem;
+  text-align: end;
+}
+
+.answer {
+  font-size: 0.9375rem;
+}
+
+.guess {
+  font-size: 0.8125rem;
+  color: var(--danger);
+}

@@ -5,7 +5,10 @@
   --fg: #2b2a28;
   --fg-muted: #6f6b64;
   --accent: #6b8f86;
+  --accent-strong: #557a71;
+  --accent-soft: #eaf1ee;
   --danger: #b07a6e;
+  --danger-soft: #f5eae6;
   --border: #e4e0d8;
   --radius: 12px;
   --pad: 1rem;
