@@ -81,10 +81,14 @@ export const STAGES: readonly Stage[] = [
       {
         id: "hani",
         label: { en: "Han", ja: "漢字" },
-        // Chinese only: Japanese is 漢字仮名交じり, so it would mix scripts within
-        // one option and overlap visually with this one. It belongs in a stage
-        // that distinguishes languages, not bare writing systems.
+        // Chinese only — Japanese sets itself apart by mixing kana into its Han,
+        // so it gets its own option below.
         sourceCodes: ["cmn_hans", "cmn_hant"],
+      },
+      {
+        id: "jpan",
+        label: { en: "Japanese (kana + kanji)", ja: "日本語（漢字仮名交じり）" },
+        sourceCodes: ["jpn"],
       },
       {
         id: "hang",
@@ -105,11 +109,10 @@ export const STAGES: readonly Stage[] = [
       en: "Past the familiar few — more of the world's writing systems, each its own.",
       ja: "見慣れた文字の先へ。世界の書記体系をもっと見分けよう。",
     },
-    // Options are writing systems. Beyond the easy stage's nine: the major scripts
+    // Options are writing systems. Beyond the easy stage's ten: the major scripts
     // that are still unmistakable on sight. Sister scripts that are easily confused
     // (Telugu/Kannada, Lao vs Thai) and the rare ones are held back for the hard
-    // stage. Japanese is left out on purpose — it mixes kana with Han rather than
-    // being one bare script, so it belongs in a language stage.
+    // stage.
     category: "script",
     regions: ["world"],
     options: [
@@ -153,6 +156,11 @@ export const STAGES: readonly Stage[] = [
       { id: "ethi", label: { en: "Ethiopic", ja: "エチオピア文字" }, sourceCodes: ["amh", "tir"] },
       // East Asia
       { id: "hani", label: { en: "Han", ja: "漢字" }, sourceCodes: ["cmn_hans", "cmn_hant"] },
+      {
+        id: "jpan",
+        label: { en: "Japanese (kana + kanji)", ja: "日本語（漢字仮名交じり）" },
+        sourceCodes: ["jpn"],
+      },
       { id: "hang", label: { en: "Hangul", ja: "ハングル" }, sourceCodes: ["kor"] },
     ],
   },
@@ -221,6 +229,11 @@ export const STAGES: readonly Stage[] = [
       { id: "vaii", label: { en: "Vai", ja: "ヴァイ文字" }, sourceCodes: ["vai"] },
       // East Asia
       { id: "hani", label: { en: "Han", ja: "漢字" }, sourceCodes: ["cmn_hans", "cmn_hant"] },
+      {
+        id: "jpan",
+        label: { en: "Japanese (kana + kanji)", ja: "日本語（漢字仮名交じり）" },
+        sourceCodes: ["jpn"],
+      },
       { id: "hang", label: { en: "Hangul", ja: "ハングル" }, sourceCodes: ["kor"] },
       // Indigenous North America
       { id: "cher", label: { en: "Cherokee", ja: "チェロキー文字" }, sourceCodes: ["chr_cased"] },
