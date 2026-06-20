@@ -33,7 +33,6 @@ export interface Messages {
   game: {
     progress: (current: number, total: number) => string;
     mistakesLabel: (mistakes: number, max: number) => string;
-    quit: string;
     correct: string;
     notQuite: string;
     youGuessed: (name: string) => string;

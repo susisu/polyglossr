@@ -21,7 +21,6 @@ export const ja = {
   game: {
     progress: (current, total) => `${current} / ${total}`,
     mistakesLabel: (mistakes, max) => `ミス ${mistakes}/${max}`,
-    quit: "やめる",
     correct: "正解",
     notQuite: "不正解",
     youGuessed: (name) => `あなたの回答: ${name}`,

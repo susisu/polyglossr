@@ -21,7 +21,6 @@ interface Props {
   stage: Stage;
   seed: number;
   onFinish: (state: GameState) => void;
-  onQuit: () => void;
 }
 
 // How long the revealed answer lingers before the next question auto-advances,
@@ -76,7 +75,7 @@ function languageNameOf(sourceCode: string, locale: Locale): string | null {
 }
 
 /** The active game: shows a snippet, takes a guess, reveals the answer, advances. */
-export function Game({ stage, seed, onFinish, onQuit }: Props): ReactElement {
+export function Game({ stage, seed, onFinish }: Props): ReactElement {
   const messages = useMessages();
   const { locale } = useLocale();
   const [state, dispatch] = useReducer(reducer, undefined, () =>
@@ -95,7 +94,7 @@ export function Game({ stage, seed, onFinish, onQuit }: Props): ReactElement {
     if (state.status !== "playing") onFinish(state);
   }, [state, onFinish]);
 
-  // Drop any pending timers when the game unmounts (quit, finish, navigation).
+  // Drop any pending timers when the game unmounts (finish, navigation).
   useEffect(
     () => () => {
       if (advanceTimer.current !== null) clearTimeout(advanceTimer.current);
@@ -158,9 +157,6 @@ export function Game({ stage, seed, onFinish, onQuit }: Props): ReactElement {
             />
           ))}
         </span>
-        <button type="button" className={styles["quit"]} onClick={onQuit}>
-          {messages.game.quit}
-        </button>
       </header>
 
       <div className={styles["snippetSlot"]}>

@@ -21,7 +21,6 @@ export const en = {
   game: {
     progress: (current, total) => `${current} / ${total}`,
     mistakesLabel: (mistakes, max) => `${mistakes} of ${max} mistakes`,
-    quit: "Quit",
     correct: "Correct",
     notQuite: "Not quite",
     youGuessed: (name) => `You guessed ${name}`,

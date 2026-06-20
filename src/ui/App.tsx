@@ -89,7 +89,6 @@ export function App(): ReactElement {
             onFinish={(gameState) => {
               setScreen({ kind: "result", gameState });
             }}
-            onQuit={home}
           />
         )}
         {screen.kind === "result" && (
