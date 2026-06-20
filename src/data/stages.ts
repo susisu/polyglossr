@@ -142,6 +142,61 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
+    id: "europe-intermediate",
+    name: { en: "Europe (Intermediate)", ja: "ヨーロッパ（中級）" },
+    description: {
+      en: "A step beyond the basics: the national languages of Europe.",
+      ja: "初級の一歩先へ。ヨーロッパ各国の言語を見分けよう。",
+    },
+    // A middle tier between europe-easy and europe-hard: the europe-hard set with
+    // the regional/minority languages, the smallest speaker counts, and the
+    // hardest-to-tell-apart look-alikes pruned. Languages that are small but
+    // unmistakable in writing (Icelandic, Greek, Georgian, Armenian) are kept —
+    // they are points an intermediate player can actually earn.
+    category: "language",
+    regions: ["europe"],
+    options: [
+      // Romance — regional Catalan/Galician/Occitan/Romansch dropped
+      { id: "spa", sourceCodes: ["spa"] },
+      { id: "fra", sourceCodes: ["fra"] },
+      { id: "ita", sourceCodes: ["ita"] },
+      { id: "por", sourceCodes: ["por_PT"] },
+      { id: "ron", sourceCodes: ["ron_2006"] },
+      // Germanic — Danish keeps the Danish/Norwegian near-twin slot (also avoids
+      // Norwegian's Bokmål/Nynorsk split); Faroese and Luxembourgish dropped as
+      // small/look-alike. Icelandic kept: tiny but unmistakable (þ/ð).
+      { id: "eng", sourceCodes: ["eng"] },
+      { id: "deu", sourceCodes: ["deu_1996"] },
+      { id: "nld", sourceCodes: ["nld"] },
+      { id: "swe", sourceCodes: ["swe"] },
+      { id: "dan", sourceCodes: ["dan"] },
+      { id: "isl", sourceCodes: ["isl"] },
+      // Slavic — one representative per look-alike cluster: Czech (not Slovak),
+      // Croatian (not Serbian/Slovene/Bosnian), Bulgarian (not Macedonian),
+      // Russian + Ukrainian (not Belarusian). Sorbian dropped as regional.
+      { id: "pol", sourceCodes: ["pol"] },
+      { id: "ces", sourceCodes: ["ces"] },
+      { id: "hrv", sourceCodes: ["hrv"] },
+      { id: "rus", sourceCodes: ["rus"] },
+      { id: "ukr", sourceCodes: ["ukr"] },
+      { id: "bul", sourceCodes: ["bul"] },
+      // Baltic — both national, told apart by Latvian's macrons
+      { id: "lit", sourceCodes: ["lit"] },
+      { id: "lvs", sourceCodes: ["lav"] },
+      // Uralic — Estonian (look-alike of Finnish) and Saami (regional) dropped
+      { id: "fin", sourceCodes: ["fin"] },
+      { id: "hun", sourceCodes: ["hun"] },
+      // Other branches, each unmistakable
+      { id: "ell", sourceCodes: ["ell_monotonic"] },
+      { id: "als", sourceCodes: ["als"] }, // Albanian
+      // Eastern edge — Turkish kept; Azerbaijani dropped as a Turkish look-alike.
+      // Georgian and Armenian kept for their unique scripts.
+      { id: "tur", sourceCodes: ["tur"] },
+      { id: "kat", sourceCodes: ["kat"] }, // Georgia
+      { id: "hye", sourceCodes: ["hye"] }, // Armenia
+    ],
+  },
+  {
     id: "europe-hard",
     name: { en: "Europe (Hard)", ja: "ヨーロッパ（上級）" },
     description: {
