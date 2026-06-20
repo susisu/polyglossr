@@ -90,11 +90,6 @@
   cursor: pointer;
 }
 
-.empty {
-  margin: 0.5rem 0;
-  color: var(--fg-muted);
-}
-
 .section {
   margin-top: 1rem;
 }
@@ -122,5 +117,8 @@
 }
 
 .accuracy {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
   font-size: 0.9375rem;
 }

@@ -28,8 +28,6 @@ export interface Messages {
     back: string;
     best: (correct: number, total: number) => string;
     played: (count: number) => string;
-    /** Placeholder shown before the stage has been played. */
-    unplayed: string;
     /** Heading for the player's strongest answers in this stage. */
     strong: string;
     /** Heading for the answers the player most often misses in this stage. */

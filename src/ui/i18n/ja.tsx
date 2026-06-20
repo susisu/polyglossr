@@ -17,7 +17,6 @@ export const ja = {
     back: "戻る",
     best: (correct, total) => `ベスト ${correct}/${total}`,
     played: (count) => `${count}回プレイ`,
-    unplayed: "このステージをプレイすると、ここに得意・苦手が表示されます。",
     strong: "得意",
     needsWork: "苦手",
     seenCount: (count) => `${count}回出題`,

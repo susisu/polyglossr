@@ -39,10 +39,7 @@ function OptionList({
             <span>{stageOptionName(stage, option.optionId, locale)}</span>
             <span className={styles["accuracy"]}>
               {Math.round(option.accuracy * 100)}%
-              <span className={styles["seen"]}>
-                {" · "}
-                {messages.stageDetail.seenCount(option.seen)}
-              </span>
+              <span className={styles["seen"]}>{messages.stageDetail.seenCount(option.seen)}</span>
             </span>
           </li>
         ))}
@@ -84,9 +81,8 @@ export function StageDetail({ stage, onStart, onBack }: Props): ReactElement {
         </button>
       </div>
 
-      {stat === undefined ?
-        <p className={styles["empty"]}>{messages.stageDetail.unplayed}</p>
-      : <>
+      {stat !== undefined && (
+        <>
           {strong.length > 0 && (
             <OptionList stage={stage} title={messages.stageDetail.strong} options={strong} />
           )}
@@ -94,7 +90,7 @@ export function StageDetail({ stage, onStart, onBack }: Props): ReactElement {
             <OptionList stage={stage} title={messages.stageDetail.needsWork} options={weak} />
           )}
         </>
-      }
+      )}
     </div>
   );
 }

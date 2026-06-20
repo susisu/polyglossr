@@ -17,7 +17,6 @@ export const en = {
     back: "Back",
     best: (correct, total) => `Best ${correct}/${total}`,
     played: (count) => `${count} played`,
-    unplayed: "Play this stage and your strengths will show up here.",
     strong: "Strong",
     needsWork: "Needs work",
     seenCount: (count) => `${count} seen`,
