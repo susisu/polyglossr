@@ -1,0 +1,33 @@
+:root {
+  /* Calm, serene palette — soft paper, low contrast, a single muted accent. */
+  --bg: #f7f5f0;
+  --surface: #fffefb;
+  --fg: #2b2a28;
+  --fg-muted: #6f6b64;
+  --accent: #6b8f86;
+  --danger: #b07a6e;
+  --border: #e4e0d8;
+  --radius: 12px;
+  --pad: 1rem;
+
+  --font-ui: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-text: Georgia, "Times New Roman", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-ui);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
