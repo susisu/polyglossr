@@ -892,6 +892,36 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
+    id: "creoles",
+    name: { en: "Creoles of the World", ja: "世界のクレオール語" },
+    description: {
+      en: "Contact languages born of trade and empire — French-, Portuguese- and English-lexified creoles from the Caribbean to the Indian Ocean.",
+      ja: "交易と帝国が生んだ接触言語たち。カリブ海からインド洋まで、フランス語・ポルトガル語・英語をもとにしたクレオール語。",
+    },
+    // Grouped by lexifier (the language that gave most of the vocabulary):
+    // creoles sharing one are sibling look-alikes — the core challenge — while
+    // the lexifier families mark the broad divisions. Latin script throughout,
+    // so identification rests on vocabulary and spelling, not script.
+    category: "language",
+    regions: ["world"],
+    options: [
+      // French-lexified
+      { id: "hat", sourceCodes: ["hat_kreyol", "hat_popular"] }, // Haitian Creole
+      { id: "mfe", sourceCodes: ["052"] }, // Morisyen (Mauritius)
+      { id: "crs", sourceCodes: ["crs"] }, // Seselwa (Seychelles)
+      { id: "acf", sourceCodes: ["056"] }, // Saint Lucian Creole
+      // Portuguese-lexified
+      { id: "kea", sourceCodes: ["kea"] }, // Kabuverdianu (Cape Verde)
+      { id: "cri", sourceCodes: ["007"] }, // Sãotomense (São Tomé)
+      // English-lexified
+      { id: "jam", sourceCodes: ["055"] }, // Jamaican Creole (Patois)
+      { id: "pcm", sourceCodes: ["pcm"] }, // Nigerian Pidgin
+      { id: "kri", sourceCodes: ["kri"] }, // Krio (Sierra Leone)
+      // Iberian-lexified, Dutch-influenced
+      { id: "pap", sourceCodes: ["pap"] }, // Papiamentu (ABC islands)
+    ],
+  },
+  {
     id: "geoguessr-easy",
     name: { en: "Languages of GeoGuessr (Easy)", ja: "GeoGuessr で出会う言語（初級）" },
     description: {
@@ -1365,6 +1395,17 @@ export const STAGES: readonly Stage[] = [
       { id: "chk", sourceCodes: ["chk"] }, // Chuukese
       { id: "pon", sourceCodes: ["pon"] }, // Pohnpeian
       { id: "mah", sourceCodes: ["mah"] }, // Marshallese
+      // Creoles — cross-regional contact languages, grouped by lexifier
+      { id: "hat", sourceCodes: ["hat_kreyol", "hat_popular"] }, // Haitian Creole (French)
+      { id: "mfe", sourceCodes: ["052"] }, // Morisyen (French)
+      { id: "crs", sourceCodes: ["crs"] }, // Seselwa (French)
+      { id: "acf", sourceCodes: ["056"] }, // Saint Lucian Creole (French)
+      { id: "kea", sourceCodes: ["kea"] }, // Kabuverdianu (Portuguese)
+      { id: "cri", sourceCodes: ["007"] }, // Sãotomense (Portuguese)
+      { id: "jam", sourceCodes: ["055"] }, // Jamaican Creole (English)
+      { id: "pcm", sourceCodes: ["pcm"] }, // Nigerian Pidgin (English)
+      { id: "kri", sourceCodes: ["kri"] }, // Krio (English)
+      { id: "pap", sourceCodes: ["pap"] }, // Papiamentu (Iberian)
     ],
   },
 ];
