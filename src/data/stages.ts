@@ -87,7 +87,7 @@ export const STAGES: readonly Stage[] = [
       },
       {
         id: "jpan",
-        label: { en: "Japanese (kana + kanji)", ja: "日本語（漢字仮名交じり）" },
+        label: { en: "Kanji + Kana", ja: "漢字仮名交じり" },
         sourceCodes: ["jpn"],
       },
       {
@@ -158,7 +158,7 @@ export const STAGES: readonly Stage[] = [
       { id: "hani", label: { en: "Han", ja: "漢字" }, sourceCodes: ["cmn_hans", "cmn_hant"] },
       {
         id: "jpan",
-        label: { en: "Japanese (kana + kanji)", ja: "日本語（漢字仮名交じり）" },
+        label: { en: "Kanji + Kana", ja: "漢字仮名交じり" },
         sourceCodes: ["jpn"],
       },
       { id: "hang", label: { en: "Hangul", ja: "ハングル" }, sourceCodes: ["kor"] },
@@ -231,7 +231,7 @@ export const STAGES: readonly Stage[] = [
       { id: "hani", label: { en: "Han", ja: "漢字" }, sourceCodes: ["cmn_hans", "cmn_hant"] },
       {
         id: "jpan",
-        label: { en: "Japanese (kana + kanji)", ja: "日本語（漢字仮名交じり）" },
+        label: { en: "Kanji + Kana", ja: "漢字仮名交じり" },
         sourceCodes: ["jpn"],
       },
       { id: "hang", label: { en: "Hangul", ja: "ハングル" }, sourceCodes: ["kor"] },
