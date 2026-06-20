@@ -121,9 +121,13 @@ export function strongLanguages(stats: Stats, n: number): RankedLanguage[] {
     .slice(0, n);
 }
 
-/** Bottom `n` languages by accuracy (ties broken by most-seen). */
+/**
+ * Bottom `n` languages by accuracy (ties broken by most-seen). Languages answered
+ * perfectly (100% accuracy) are excluded — they don't need work.
+ */
 export function weakLanguages(stats: Stats, n: number): RankedLanguage[] {
   return ranked(stats)
+    .filter((stat) => stat.accuracy < 1)
     .sort((a, b) => a.accuracy - b.accuracy || b.seen - a.seen)
     .slice(0, n);
 }

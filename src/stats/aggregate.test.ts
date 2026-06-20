@@ -165,4 +165,19 @@ describe("strongLanguages / weakLanguages", () => {
     const weak = weakLanguages(stats, 2);
     expect(weak.map((s) => s.langId)).toEqual(["fra", "deu"]);
   });
+
+  it("excludes perfectly-answered languages from weak", () => {
+    const withPerfect: Stats = {
+      ...stats,
+      perLanguage: {
+        ...stats.perLanguage,
+        spa: { langId: "spa", seen: 5, correct: 5 }, // 1.0
+      },
+    };
+    const weak = weakLanguages(withPerfect, 5);
+    expect(weak.some((s) => s.langId === "spa")).toBe(false);
+    // Perfect languages still count as strong.
+    const strong = strongLanguages(withPerfect, 1);
+    expect(strong.map((s) => s.langId)).toEqual(["spa"]);
+  });
 });
