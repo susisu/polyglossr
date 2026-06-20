@@ -264,6 +264,7 @@ export const STAGES: readonly Stage[] = [
       { id: "pol", sourceCodes: ["pol"] },
       { id: "ces", sourceCodes: ["ces"] },
       { id: "swe", sourceCodes: ["swe"] },
+      { id: "rus", sourceCodes: ["rus"] },
       { id: "ell", sourceCodes: ["ell_monotonic"] },
     ],
   },
