@@ -82,6 +82,7 @@ const LANGUAGE_NAMES: Record<string, Partial<Localized<string>>> = {
   lvs: { ja: "ラトビア語" },
   mal: { ja: "マラヤーラム語" },
   mam: { ja: "マム語" },
+  mar: { ja: "マラーティー語" },
   mkd: { ja: "マケドニア語" },
   mlt: { ja: "マルタ語" },
   mya: { ja: "ビルマ語" },
