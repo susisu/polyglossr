@@ -5,7 +5,7 @@ import type { Messages } from "./messages.js";
 export const ja = {
   nav: { stats: "統計", about: "概要" },
   footer: {
-    credit: "本文は世界人権宣言（国連／OHCHR）より。クレジット",
+    credit: "テキストは世界人権宣言（国連／OHCHR）より。クレジット",
   },
   stageSelect: {
     intro:
