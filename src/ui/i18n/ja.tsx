@@ -5,11 +5,11 @@ import type { Messages } from "./messages.js";
 export const ja = {
   nav: { stats: "統計", about: "概要" },
   footer: {
-    credit: "本文は世界人権宣言（国連／OHCHR）より — クレジット",
+    credit: "本文は世界人権宣言（国連／OHCHR）より。クレジット",
   },
   stageSelect: {
     intro:
-      "短い文章が表示されます。それが何語で書かれているかを答えてください。全30問、ミスは3回まで。セットを選んで始めましょう。",
+      "短い文章が表示されるので、それが何語で書かれているかを答えてください。ステージを選んで始めましょう。",
     difficultyLabel: (value, max) => `難易度 ${value}/${max}`,
     languageCount: (count) => `${count}言語`,
   },
@@ -53,27 +53,22 @@ export const ja = {
   },
   about: {
     heading: "PolyGlossr について",
-    lead: "世界の文字・言語を見分ける、静かなゲームです。短い文章が表示されるので、それが何語で書かれているかを答えます。",
+    lead: "世界の言語を見分けるゲームです。短い文章が表示されるので、それが何語で書かれているかを答えてください。",
     textLicensingTitle: "テキストとライセンス",
-    textLicensingBody: (
-      <>
-        すべての文章は<strong>世界人権宣言</strong>からの抜粋です —
-        どの言語でも同じ文書です。プレイ中は、各文章の言語や出典は意図的に表示されません。
-      </>
-    ),
+    textLicensingBody: "すべての文章は世界人権宣言からの抜粋です。",
     udhrCredit: (
       <>
         世界人権宣言の本文 ©
-        国際連合。この宣言は世界で最も多くの言語に翻訳された著作権フリーの文書であり、ここでは
+        国際連合。この宣言は世界で最も多くの言語に翻訳された著作権フリーの文書であり、本文は
         <ExternalLink href="https://www.ohchr.org/en/universal-declaration-of-human-rights">
           国連人権高等弁務官事務所（OHCHR）
         </ExternalLink>
-        を通じて掲載しています。
+        が公開しているものを使用しています。
       </>
     ),
     packageCredit: (
       <>
-        言語データは npm パッケージ{" "}
+        言語データの取得には npm パッケージ{" "}
         <ExternalLink href="https://github.com/wooorm/udhr">
           <code>udhr</code>
         </ExternalLink>{" "}

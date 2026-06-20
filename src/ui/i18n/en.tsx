@@ -8,8 +8,7 @@ export const en = {
     credit: "Texts from the Universal Declaration of Human Rights (UN/OHCHR) — credits",
   },
   stageSelect: {
-    intro:
-      "A short text appears — name the language it is written in. Thirty questions, three mistakes allowed. Pick a set to begin.",
+    intro: "A short text appears — name the language it is written in. Pick a stage to begin.",
     difficultyLabel: (value, max) => `Difficulty ${value} of ${max}`,
     languageCount: (count) => `${count} languages`,
   },
@@ -53,15 +52,10 @@ export const en = {
   },
   about: {
     heading: "About PolyGlossr",
-    lead: "A quiet game about recognizing the world's written languages. You are shown a short passage and name the language it is written in.",
+    lead: "A game about recognizing the world's written languages. You are shown a short passage and name the language it is written in.",
     textLicensingTitle: "Text & licensing",
-    textLicensingBody: (
-      <>
-        Every passage is an excerpt from the <strong>Universal Declaration of Human Rights</strong>
-        {" — "}the same document in every language. The specific language and source of each passage
-        are not shown during play, by design.
-      </>
-    ),
+    textLicensingBody:
+      "Every passage is an excerpt from the Universal Declaration of Human Rights.",
     udhrCredit: (
       <>
         UDHR text © United Nations. The Declaration is the most translated, copyright-free document
