@@ -1,4 +1,3 @@
-import { difficultyFor, type Difficulty } from "./difficulty.js";
 import type { SourceEntry } from "./source.js";
 
 /**
@@ -11,8 +10,6 @@ export interface Language {
   id: string;
   /** Base display name, e.g. "Serbian". */
   name: string;
-  /** Gameplay difficulty. */
-  difficulty: Difficulty;
   /** The udhr source codes that belong to this language (one per script/variant). */
   sourceCodes: readonly string[];
 }
@@ -33,7 +30,6 @@ export function buildLanguages(sources: Iterable<SourceEntry>): Map<string, Lang
       // Sources of one language agree on baseName (generate-time warnings flag any
       // mismatch); take the first deterministically.
       name: group[0]?.baseName ?? id,
-      difficulty: difficultyFor(id),
       sourceCodes: group.map((source) => source.code),
     });
   }

@@ -1,5 +1,4 @@
 import type { Localized } from "../shared/locale.js";
-import type { Difficulty } from "./difficulty.js";
 import type { Region } from "./region.js";
 
 /**
@@ -57,8 +56,6 @@ export interface Stage {
    * {@link Region}.
    */
   regions: readonly Region[];
-  /** Overall difficulty of the stage. */
-  difficulty: Difficulty;
   /** The choices a question is drawn from; see {@link StageOption}. */
   options: readonly StageOption[];
 }

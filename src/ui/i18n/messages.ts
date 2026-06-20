@@ -17,7 +17,6 @@ export interface Messages {
   };
   stageSelect: {
     intro: string;
-    difficultyLabel: (value: number, max: number) => string;
     /** Best score shown on a played stage's card. */
     best: (correct: number, total: number) => string;
     /** Shown on a stage's card before it has ever been played. */

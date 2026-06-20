@@ -10,7 +10,6 @@ export const ja = {
   stageSelect: {
     intro:
       "短い文章が表示されるので、それが何語で書かれているかを答えてください。ステージを選んで始めましょう。",
-    difficultyLabel: (value, max) => `難易度 ${value}/${max}`,
     best: (correct, total) => `ベスト ${correct}/${total}`,
     unplayed: "未プレイ",
   },

@@ -24,7 +24,6 @@ export const STAGES: readonly Stage[] = [
     },
     category: "language",
     regions: ["world"],
-    difficulty: 1,
     options: [
       { id: "eng", sourceCodes: ["eng"] },
       { id: "spa", sourceCodes: ["spa"] },
@@ -46,7 +45,6 @@ export const STAGES: readonly Stage[] = [
     },
     category: "script",
     regions: ["world"],
-    difficulty: 2,
     // Options are writing systems, not languages: the answer is the script, and
     // each script draws snippets from several major languages that use it.
     options: [
@@ -109,7 +107,6 @@ export const STAGES: readonly Stage[] = [
     },
     category: "language",
     regions: ["europe"],
-    difficulty: 3,
     options: [
       { id: "eng", sourceCodes: ["eng"] },
       { id: "spa", sourceCodes: ["spa"] },
@@ -133,7 +130,6 @@ export const STAGES: readonly Stage[] = [
     },
     category: "language",
     regions: ["asia"],
-    difficulty: 3,
     options: [
       { id: "cmn", sourceCodes: ["cmn_hans"] },
       { id: "jpn", sourceCodes: ["jpn"] },
@@ -154,7 +150,6 @@ export const STAGES: readonly Stage[] = [
     },
     category: "language",
     regions: ["europe"],
-    difficulty: 4,
     options: [
       // Romance
       { id: "spa", sourceCodes: ["spa"] },
@@ -227,7 +222,6 @@ export const STAGES: readonly Stage[] = [
     },
     category: "language",
     regions: ["europe"],
-    difficulty: 4,
     options: [
       { id: "spa", sourceCodes: ["spa"] },
       { id: "fra", sourceCodes: ["fra"] },
@@ -249,7 +243,6 @@ export const STAGES: readonly Stage[] = [
     },
     category: "language",
     regions: ["europe"],
-    difficulty: 4,
     options: [
       { id: "eng", sourceCodes: ["eng"] },
       { id: "deu", sourceCodes: ["deu_1996"] },
@@ -272,7 +265,6 @@ export const STAGES: readonly Stage[] = [
     },
     category: "language",
     regions: ["europe"],
-    difficulty: 4,
     options: [
       { id: "pol", sourceCodes: ["pol"] },
       { id: "ces", sourceCodes: ["ces"] },
@@ -300,7 +292,6 @@ export const STAGES: readonly Stage[] = [
     },
     category: "language",
     regions: ["asia"],
-    difficulty: 4,
     options: [
       { id: "hin", sourceCodes: ["hin"] },
       { id: "urd", sourceCodes: ["urd"] },
@@ -324,7 +315,6 @@ export const STAGES: readonly Stage[] = [
     },
     category: "language",
     regions: ["europe"],
-    difficulty: 4,
     options: [
       { id: "gle", sourceCodes: ["gle"] }, // Irish
       { id: "gla", sourceCodes: ["gla"] }, // Scottish Gaelic
@@ -341,7 +331,6 @@ export const STAGES: readonly Stage[] = [
     },
     category: "language",
     regions: ["asia"],
-    difficulty: 5,
     options: [
       { id: "kaz", sourceCodes: ["kaz"] }, // Kazakh (Cyrillic)
       { id: "kir", sourceCodes: ["kir"] }, // Kyrgyz (Cyrillic)
@@ -362,7 +351,6 @@ export const STAGES: readonly Stage[] = [
     },
     category: "language",
     regions: ["asia", "africa"],
-    difficulty: 5,
     options: [
       { id: "arb", sourceCodes: ["arb"] }, // Standard Arabic
       { id: "pes", sourceCodes: ["pes_1"] }, // Western Farsi (Persian)
@@ -384,7 +372,6 @@ export const STAGES: readonly Stage[] = [
     },
     category: "language",
     regions: ["africa"],
-    difficulty: 5,
     options: [
       // West Africa
       { id: "hau", sourceCodes: ["hau_3"] }, // Hausa
@@ -427,7 +414,6 @@ export const STAGES: readonly Stage[] = [
     },
     category: "language",
     regions: ["americas"],
-    difficulty: 5,
     options: [
       { id: "nav", sourceCodes: ["nav"] }, // Navajo (Latin)
       { id: "chr", sourceCodes: ["chr_cased"] }, // Cherokee (Cherokee syllabary)
@@ -444,7 +430,6 @@ export const STAGES: readonly Stage[] = [
     },
     category: "language",
     regions: ["americas"],
-    difficulty: 5,
     options: [
       { id: "nhn", sourceCodes: ["nhn"] }, // Central Nahuatl
       { id: "quc", sourceCodes: ["quc"] }, // K'iche'
@@ -463,7 +448,6 @@ export const STAGES: readonly Stage[] = [
     },
     category: "language",
     regions: ["americas"],
-    difficulty: 5,
     options: [
       { id: "quz", sourceCodes: ["quz"] }, // Cusco Quechua
       { id: "ayr", sourceCodes: ["ayr"] }, // Central Aymara
@@ -486,7 +470,6 @@ export const STAGES: readonly Stage[] = [
     },
     category: "language",
     regions: ["world"],
-    difficulty: 5,
     options: [
       // Western Europe
       { id: "eng", sourceCodes: ["eng"] },

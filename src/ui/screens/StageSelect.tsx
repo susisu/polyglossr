@@ -3,7 +3,6 @@ import { REGION_LABELS, REGION_ORDER } from "../../data/region.js";
 import type { Stage } from "../../data/stage.js";
 import { STAGES } from "../../data/stages.js";
 import { TOTAL_QUESTIONS } from "../../engine/game.js";
-import { DifficultyDots } from "../components/DifficultyDots.js";
 import { useLocale, useMessages } from "../i18n/index.js";
 import { useStats } from "../useStats.js";
 import styles from "./StageSelect.module.css";
@@ -46,7 +45,6 @@ export function StageSelect({ onSelect }: Props): ReactElement {
                       <span className={styles["name"]}>{stage.name[locale]}</span>
                       <span className={styles["desc"]}>{stage.description[locale]}</span>
                       <span className={styles["meta"]}>
-                        <DifficultyDots value={stage.difficulty} />
                         <span className={styles["count"]}>
                           {stat ?
                             messages.stageSelect.best(stat.bestCorrect, TOTAL_QUESTIONS)

@@ -72,7 +72,6 @@ export function makeFixture(): {
     description: { en: "", ja: "" },
     category: "language",
     regions: ["world"],
-    difficulty: 1,
     options: [
       { id: "eng", sourceCodes: ["en"] },
       { id: "srp", sourceCodes: ["sr_c", "sr_l"] },

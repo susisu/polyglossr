@@ -9,7 +9,6 @@ export const en = {
   },
   stageSelect: {
     intro: "A short text appears — name the language it is written in. Pick a stage to begin.",
-    difficultyLabel: (value, max) => `Difficulty ${value} of ${max}`,
     best: (correct, total) => `Best ${correct}/${total}`,
     unplayed: "Not played",
   },

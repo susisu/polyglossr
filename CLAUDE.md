@@ -6,10 +6,11 @@ shown; the player names the language. Built with TypeScript + React + Vite, clie
 
 ## What it is
 
-- The player picks a **stage** (a curated set of answer **options** with a name and
-  difficulty 1–5), then answers **20 questions**; **3 mistakes** ends the game. Selecting a
-  stage opens a **stage detail** screen (overview + the player's strong/weak options) before
-  the game starts.
+- The player picks a **stage** (a curated set of answer **options**, tagged by `category` —
+  what the options are: languages, families, or writing systems — and `region`), then answers
+  **20 questions**; **3 mistakes** ends the game. The stage select groups stages by region
+  (`world` first). Selecting a stage opens a **stage detail** screen (overview + the player's
+  strong/weak options) before the game starts.
 - Each question shows a ~10–20-word passage; the player answers by **free text input with
   suggestions** (not multiple choice), choosing from the stage's **options**.
 - Answers are judged by the **stage option** the snippet was drawn from. An option is currently
@@ -27,7 +28,7 @@ shown; the player names the language. Built with TypeScript + React + Vite, clie
 - `pnpm dev` — Vite dev server.
 - `pnpm build` / `pnpm preview` — production build / preview.
 - `pnpm generate` — regenerate `data/*.generated.json` from the `udhr` package (run after
-  changing stages, difficulty, or the pipeline).
+  changing stages or the pipeline).
 - `pnpm generate:check` — regenerate and fail if the committed data differs (CI drift guard).
 - `pnpm typecheck` / `pnpm test` (`test:dev` for watch) / `pnpm lint(:check)` / `pnpm format(:check)`.
 
@@ -43,7 +44,7 @@ scripts/generate-data.ts   build-time pipeline: udhr HTML -> committed dataset J
 data/                      languages.generated.json (runtime, pruned) + manifest.generated.json (all langs)
 src/
   shared/    rng (seeded mulberry32), shuffle — pure, deterministic
-  data/      source/language/stage/difficulty types, dataset loader (valibot), stages, selectors
+  data/      source/language/stage/region types, dataset loader (valibot), stages, selectors
   engine/    question generation + game state machine — pure, data-injected, fully tested
   stats/     Stats/GameRecord types, pure aggregation, IndexedDB store (+ in-memory fallback)
   ui/        App (screen state machine), screens/, components/, fonts.ts, styles.css (tokens)
@@ -66,6 +67,15 @@ src/
   localized + English name); an option spanning multiple languages (a future script/family)
   must carry a `label`. `stages.test.ts` checks every code resolves, option ids are unique
   within a stage, and multi-language options have a label.
+- **Stage taxonomy.** Each stage carries a `category` (`"language" | "family" | "script"` —
+  what its _options_ are; family-themed stages like Romance are still `"language"` because their
+  options are individual languages) and `regions` (geographic tags from `src/data/region.ts`).
+  Regions are tags, not a partition: a stage may carry several (MENA is `["asia", "africa"]`),
+  and `"world"` is exclusive — it marks stages with no particular home and is never combined with
+  a geographic region. The stage select renders one section per region (`world` first), so a
+  multi-region stage shows under each. There is **deliberately no difficulty rating**: scoring
+  languages by difficulty passes judgment on their speakers; the "Easy"/"Hard" in some stage
+  names refers only to how many options the stage has.
 - **Snippet segmentation** (`scripts/generate-data.ts`) is script-aware: word windows for
   spaced scripts; grapheme windows for CJK and spaceless abugidas (Thai/Lao/Khmer/Myanmar/
   Ethiopic). Script class is detected by sampling code points, not by `bcp47`.

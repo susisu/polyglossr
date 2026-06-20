@@ -3,7 +3,6 @@ import { stageOptionName } from "../../data/selectors.js";
 import type { Stage } from "../../data/stage.js";
 import { TOTAL_QUESTIONS } from "../../engine/game.js";
 import { strongOptions, weakOptions, type RankedOption } from "../../stats/aggregate.js";
-import { DifficultyDots } from "../components/DifficultyDots.js";
 import { useLocale, useMessages } from "../i18n/index.js";
 import { useStats } from "../useStats.js";
 import styles from "./StageDetail.module.css";
@@ -60,9 +59,8 @@ export function StageDetail({ stage, onStart, onBack }: Props): ReactElement {
     <div className={styles["screen"]}>
       <h2 className={styles["heading"]}>{stage.name[locale]}</h2>
       <p className={styles["desc"]}>{stage.description[locale]}</p>
-      <div className={styles["meta"]}>
-        <DifficultyDots value={stage.difficulty} />
-        {stat !== undefined && (
+      {stat !== undefined && (
+        <div className={styles["meta"]}>
           <span className={styles["record"]}>
             {messages.stageDetail.best(stat.bestCorrect, TOTAL_QUESTIONS)}
             <span className={styles["seen"]}>
@@ -70,8 +68,8 @@ export function StageDetail({ stage, onStart, onBack }: Props): ReactElement {
               {messages.stageDetail.played(stat.played)}
             </span>
           </span>
-        )}
-      </div>
+        </div>
+      )}
 
       <div className={styles["actions"]}>
         <button type="button" className={styles["primary"]} onClick={onStart}>

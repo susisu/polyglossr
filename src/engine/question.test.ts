@@ -77,7 +77,6 @@ describe("generateRun", () => {
       description: { en: "", ja: "" },
       category: "language" as const,
       regions: ["world"] as const,
-      difficulty: 1 as const,
       options: [{ id: "missing", sourceCodes: ["missing"] }],
     };
     expect(generateRun({ stage, sources, snippets, totalQuestions: 5, seed: 1 })).toEqual([]);
