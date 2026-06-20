@@ -1,0 +1,5120 @@
+{
+  "schemaVersion": 1,
+  "keptCount": 490,
+  "droppedCount": 42,
+  "kept": [
+    {
+      "code": "007",
+      "iso6393": "cri",
+      "name": "Sãotomense",
+      "baseName": "Sãotomense",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "010",
+      "iso6393": "tdt",
+      "name": "Tetun Dili",
+      "baseName": "Tetun Dili",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "020",
+      "iso6393": "duu",
+      "name": "Drung",
+      "baseName": "Drung",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "027",
+      "iso6393": "guk",
+      "name": "Gumuz",
+      "baseName": "Gumuz",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "028",
+      "iso6393": "kbr",
+      "name": "Kafa",
+      "baseName": "Kafa",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "029",
+      "iso6393": "sid",
+      "name": "Sidamo",
+      "baseName": "Sidamo",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "032",
+      "iso6393": "azb",
+      "name": "South Azerbaijani",
+      "baseName": "South Azerbaijani",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "042",
+      "iso6393": "spa",
+      "name": "Spanish (resolution)",
+      "baseName": "Spanish",
+      "scriptLabel": "resolution",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "043",
+      "iso6393": "dje",
+      "name": "Zarma",
+      "baseName": "Zarma",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "044",
+      "iso6393": "mwl",
+      "name": "Mirandese",
+      "baseName": "Mirandese",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "045",
+      "iso6393": "mas",
+      "name": "Maasai",
+      "baseName": "Maasai",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "046",
+      "iso6393": "pmy",
+      "name": "Malay, Papuan",
+      "baseName": "Malay, Papuan",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "047",
+      "iso6393": "abs",
+      "name": "Malay, Ambonese",
+      "baseName": "Malay, Ambonese",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "049",
+      "iso6393": "bjn",
+      "name": "Banjar",
+      "baseName": "Banjar",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "052",
+      "iso6393": "mfe",
+      "name": "Morisyen",
+      "baseName": "Morisyen",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "055",
+      "iso6393": "jam",
+      "name": "Jamaican Creole English",
+      "baseName": "Jamaican Creole English",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "056",
+      "iso6393": "acf",
+      "name": "Saint Lucian Creole French",
+      "baseName": "Saint Lucian Creole French",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "057",
+      "iso6393": "ymm",
+      "name": "Maay",
+      "baseName": "Maay",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "058",
+      "iso6393": "som",
+      "name": "Somali (Af Marka)",
+      "baseName": "Somali",
+      "scriptLabel": "Af Marka",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "060",
+      "iso6393": "smn",
+      "name": "Inari Saami",
+      "baseName": "Inari Saami",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "061",
+      "iso6393": "sms",
+      "name": "Skolt Saami",
+      "baseName": "Skolt Saami",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "062",
+      "iso6393": "swh",
+      "name": "Swahili (Chimwiini)",
+      "baseName": "Swahili",
+      "scriptLabel": "Chimwiini",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "063",
+      "iso6393": "swh",
+      "name": "Swahili (Kibajuni)",
+      "baseName": "Swahili",
+      "scriptLabel": "Kibajuni",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "064",
+      "iso6393": "dbr",
+      "name": "Dabarre",
+      "baseName": "Dabarre",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "065",
+      "iso6393": "gex",
+      "name": "Garre",
+      "baseName": "Garre",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "066",
+      "iso6393": "jii",
+      "name": "Jiiddu",
+      "baseName": "Jiiddu",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "068",
+      "iso6393": "fra",
+      "name": "French (Welche)",
+      "baseName": "French",
+      "scriptLabel": "Welche",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "071",
+      "iso6393": "kab",
+      "name": "Kabyle",
+      "baseName": "Kabyle",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "aar",
+      "iso6393": "aar",
+      "name": "Afar",
+      "baseName": "Afar",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "abk",
+      "iso6393": "abk",
+      "name": "Abkhaz",
+      "baseName": "Abkhaz",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ace",
+      "iso6393": "ace",
+      "name": "Aceh",
+      "baseName": "Aceh",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "acu",
+      "iso6393": "acu",
+      "name": "Achuar-Shiwiar",
+      "baseName": "Achuar-Shiwiar",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ada",
+      "iso6393": "ada",
+      "name": "Dangme",
+      "baseName": "Dangme",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ady",
+      "iso6393": "ady",
+      "name": "Adyghe",
+      "baseName": "Adyghe",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "afr",
+      "iso6393": "afr",
+      "name": "Afrikaans",
+      "baseName": "Afrikaans",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "agr",
+      "iso6393": "agr",
+      "name": "Aguaruna",
+      "baseName": "Aguaruna",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "aii",
+      "iso6393": "aii",
+      "name": "Assyrian Neo-Aramaic",
+      "baseName": "Assyrian Neo-Aramaic",
+      "scriptLabel": null,
+      "direction": "rtl",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ajg",
+      "iso6393": "ajg",
+      "name": "Aja",
+      "baseName": "Aja",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "aka_akuapem",
+      "iso6393": "twi",
+      "name": "Twi (Akuapem)",
+      "baseName": "Twi",
+      "scriptLabel": "Akuapem",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "aka_asante",
+      "iso6393": "twi",
+      "name": "Twi (Asante)",
+      "baseName": "Twi",
+      "scriptLabel": "Asante",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "aka_fante",
+      "iso6393": "fat",
+      "name": "Fante",
+      "baseName": "Fante",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "als",
+      "iso6393": "als",
+      "name": "Albanian, Tosk",
+      "baseName": "Albanian, Tosk",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "alt",
+      "iso6393": "alt",
+      "name": "Altai, Southern",
+      "baseName": "Altai, Southern",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "amc",
+      "iso6393": "amc",
+      "name": "Amahuaca",
+      "baseName": "Amahuaca",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ame",
+      "iso6393": "ame",
+      "name": "Yaneshaʼ",
+      "baseName": "Yaneshaʼ",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ami",
+      "iso6393": "ami",
+      "name": "Amis",
+      "baseName": "Amis",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "amr",
+      "iso6393": "amr",
+      "name": "Amarakaeri",
+      "baseName": "Amarakaeri",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "arb",
+      "iso6393": "arb",
+      "name": "Arabic, Standard",
+      "baseName": "Arabic, Standard",
+      "scriptLabel": null,
+      "direction": "rtl",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "arl",
+      "iso6393": "arl",
+      "name": "Arabela",
+      "baseName": "Arabela",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "arn",
+      "iso6393": "arn",
+      "name": "Mapudungun",
+      "baseName": "Mapudungun",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ast",
+      "iso6393": "ast",
+      "name": "Asturian",
+      "baseName": "Asturian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "auc",
+      "iso6393": "auc",
+      "name": "Waorani",
+      "baseName": "Waorani",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "auv",
+      "iso6393": "oci",
+      "name": "Occitan (Auvergnat)",
+      "baseName": "Occitan",
+      "scriptLabel": "Auvergnat",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ayo",
+      "iso6393": "ayo",
+      "name": "Ayoreo",
+      "baseName": "Ayoreo",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ayr",
+      "iso6393": "ayr",
+      "name": "Aymara, Central",
+      "baseName": "Aymara, Central",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "azj_cyrl",
+      "iso6393": "azj",
+      "name": "Azerbaijani, North (Cyrillic)",
+      "baseName": "Azerbaijani, North",
+      "scriptLabel": "Cyrillic",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "azj_latn",
+      "iso6393": "azj",
+      "name": "Azerbaijani, North (Latin)",
+      "baseName": "Azerbaijani, North",
+      "scriptLabel": "Latin",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "bam",
+      "iso6393": "bam",
+      "name": "Bamanankan",
+      "baseName": "Bamanankan",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ban",
+      "iso6393": "ban",
+      "name": "Bali",
+      "baseName": "Bali",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "bax",
+      "iso6393": "bax",
+      "name": "Bamun",
+      "baseName": "Bamun",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "bba",
+      "iso6393": "bba",
+      "name": "Baatonum",
+      "baseName": "Baatonum",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "bci",
+      "iso6393": "bci",
+      "name": "Baoulé",
+      "baseName": "Baoulé",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "bcl",
+      "iso6393": "bcl",
+      "name": "Bicolano, Central",
+      "baseName": "Bicolano, Central",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "bel",
+      "iso6393": "bel",
+      "name": "Belarusan",
+      "baseName": "Belarusan",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "bem",
+      "iso6393": "bem",
+      "name": "Bemba",
+      "baseName": "Bemba",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ben",
+      "iso6393": "ben",
+      "name": "Bengali",
+      "baseName": "Bengali",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "bfa",
+      "iso6393": "bfa",
+      "name": "Bari",
+      "baseName": "Bari",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "bho",
+      "iso6393": "bho",
+      "name": "Bhojpuri",
+      "baseName": "Bhojpuri",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "bin",
+      "iso6393": "bin",
+      "name": "Edo",
+      "baseName": "Edo",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "bis",
+      "iso6393": "bis",
+      "name": "Bislama",
+      "baseName": "Bislama",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "blt",
+      "iso6393": "blt",
+      "name": "Tai Dam",
+      "baseName": "Tai Dam",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "blu",
+      "iso6393": "hnj",
+      "name": "Hmong Njua",
+      "baseName": "Hmong Njua",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "boa",
+      "iso6393": "boa",
+      "name": "Bora",
+      "baseName": "Bora",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "bod",
+      "iso6393": "bod",
+      "name": "Tibetan, Central",
+      "baseName": "Tibetan, Central",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "bos_cyrl",
+      "iso6393": "bos",
+      "name": "Bosnian (Cyrillic)",
+      "baseName": "Bosnian",
+      "scriptLabel": "Cyrillic",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "bos_latn",
+      "iso6393": "bos",
+      "name": "Bosnian (Latin)",
+      "baseName": "Bosnian",
+      "scriptLabel": "Latin",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "bre",
+      "iso6393": "bre",
+      "name": "Breton",
+      "baseName": "Breton",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "btb",
+      "iso6393": "bum",
+      "name": "Bulu",
+      "baseName": "Bulu",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "buc",
+      "iso6393": "buc",
+      "name": "Bushi",
+      "baseName": "Bushi",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "bug",
+      "iso6393": "bug",
+      "name": "Bugis",
+      "baseName": "Bugis",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "bul",
+      "iso6393": "bul",
+      "name": "Bulgarian",
+      "baseName": "Bulgarian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "bvi",
+      "iso6393": "bvi",
+      "name": "Belanda Viri",
+      "baseName": "Belanda Viri",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cab",
+      "iso6393": "cab",
+      "name": "Garifuna",
+      "baseName": "Garifuna",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cak",
+      "iso6393": "cak",
+      "name": "Kaqchikel, Central",
+      "baseName": "Kaqchikel, Central",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cas",
+      "iso6393": "cas",
+      "name": "Tsimané",
+      "baseName": "Tsimané",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cat",
+      "iso6393": "cat",
+      "name": "Catalan",
+      "baseName": "Catalan",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cbi",
+      "iso6393": "cbi",
+      "name": "Chachi",
+      "baseName": "Chachi",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cbr",
+      "iso6393": "cbr",
+      "name": "Cashibo-Cacataibo",
+      "baseName": "Cashibo-Cacataibo",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cbs",
+      "iso6393": "cbs",
+      "name": "Cashinahua",
+      "baseName": "Cashinahua",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cbt",
+      "iso6393": "cbt",
+      "name": "Chayahuita",
+      "baseName": "Chayahuita",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cbu",
+      "iso6393": "cbu",
+      "name": "Candoshi-Shapra",
+      "baseName": "Candoshi-Shapra",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ccp",
+      "iso6393": "ccp",
+      "name": "Chakma",
+      "baseName": "Chakma",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ccx",
+      "iso6393": "zyb",
+      "name": "Zhuang, Yongbei",
+      "baseName": "Zhuang, Yongbei",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ceb",
+      "iso6393": "ceb",
+      "name": "Cebuano",
+      "baseName": "Cebuano",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ces",
+      "iso6393": "ces",
+      "name": "Czech",
+      "baseName": "Czech",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cha",
+      "iso6393": "cha",
+      "name": "Chamorro",
+      "baseName": "Chamorro",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "chj",
+      "iso6393": "chj",
+      "name": "Chinantec, Ojitlán",
+      "baseName": "Chinantec, Ojitlán",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "chk",
+      "iso6393": "chk",
+      "name": "Chuukese",
+      "baseName": "Chuukese",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "chr_cased",
+      "iso6393": "chr",
+      "name": "Cherokee (cased)",
+      "baseName": "Cherokee",
+      "scriptLabel": "cased",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "chr_uppercase",
+      "iso6393": "chr",
+      "name": "Cherokee (uppercase)",
+      "baseName": "Cherokee",
+      "scriptLabel": "uppercase",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cic",
+      "iso6393": "cic",
+      "name": "Chickasaw",
+      "baseName": "Chickasaw",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 16
+    },
+    {
+      "code": "cjk",
+      "iso6393": "cjk",
+      "name": "Chokwe",
+      "baseName": "Chokwe",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cjk_AO",
+      "iso6393": "cjk",
+      "name": "Chokwe (Angola)",
+      "baseName": "Chokwe",
+      "scriptLabel": "Angola",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cjs",
+      "iso6393": "cjs",
+      "name": "Shor",
+      "baseName": "Shor",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cjy",
+      "iso6393": "cjy",
+      "name": "Chinese, Jinyu",
+      "baseName": "Chinese, Jinyu",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ckb",
+      "iso6393": "ckb",
+      "name": "Kurdish, Central",
+      "baseName": "Kurdish, Central",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cmn_hans",
+      "iso6393": "cmn",
+      "name": "Chinese, Mandarin (Simplified)",
+      "baseName": "Chinese, Mandarin",
+      "scriptLabel": "Simplified",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cmn_hans_beijing",
+      "iso6393": "cmn",
+      "name": "Chinese, Mandarin (Beijing)",
+      "baseName": "Chinese, Mandarin",
+      "scriptLabel": "Beijing",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cmn_hans_guiyang",
+      "iso6393": "cmn",
+      "name": "Chinese, Mandarin (Guiyang)",
+      "baseName": "Chinese, Mandarin",
+      "scriptLabel": "Guiyang",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cmn_hans_harbin",
+      "iso6393": "cmn",
+      "name": "Chinese, Mandarin (Harbin)",
+      "baseName": "Chinese, Mandarin",
+      "scriptLabel": "Harbin",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cmn_hans_nanjing",
+      "iso6393": "cmn",
+      "name": "Chinese, Mandarin (Nanjing)",
+      "baseName": "Chinese, Mandarin",
+      "scriptLabel": "Nanjing",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cmn_hans_tianjin",
+      "iso6393": "cmn",
+      "name": "Chinese, Mandarin (Tianjin)",
+      "baseName": "Chinese, Mandarin",
+      "scriptLabel": "Tianjin",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cmn_hant",
+      "iso6393": "cmn",
+      "name": "Chinese, Mandarin (Traditional)",
+      "baseName": "Chinese, Mandarin",
+      "scriptLabel": "Traditional",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cnh",
+      "iso6393": "cnh",
+      "name": "Chin, Haka",
+      "baseName": "Chin, Haka",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cni",
+      "iso6393": "cni",
+      "name": "Asháninka",
+      "baseName": "Asháninka",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cnr",
+      "iso6393": "cnr",
+      "name": "Montenegrin",
+      "baseName": "Montenegrin",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cof",
+      "iso6393": "cof",
+      "name": "Colorado",
+      "baseName": "Colorado",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cos",
+      "iso6393": "cos",
+      "name": "Corsican",
+      "baseName": "Corsican",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cot",
+      "iso6393": "cot",
+      "name": "Caquinte",
+      "baseName": "Caquinte",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cpu",
+      "iso6393": "cpu",
+      "name": "Ashéninka, Pichis",
+      "baseName": "Ashéninka, Pichis",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "crh",
+      "iso6393": "crh",
+      "name": "Crimean Tatar",
+      "baseName": "Crimean Tatar",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "crs",
+      "iso6393": "crs",
+      "name": "Seselwa Creole French",
+      "baseName": "Seselwa Creole French",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "csa",
+      "iso6393": "csa",
+      "name": "Chinantec, Chiltepec",
+      "baseName": "Chinantec, Chiltepec",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "csw",
+      "iso6393": "csw",
+      "name": "Cree, Swampy",
+      "baseName": "Cree, Swampy",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ctd",
+      "iso6393": "ctd",
+      "name": "Chin, Tedim",
+      "baseName": "Chin, Tedim",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "cym",
+      "iso6393": "cym",
+      "name": "Welsh",
+      "baseName": "Welsh",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "dag",
+      "iso6393": "dag",
+      "name": "Dagbani",
+      "baseName": "Dagbani",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "dan",
+      "iso6393": "dan",
+      "name": "Danish",
+      "baseName": "Danish",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ddn",
+      "iso6393": "ddn",
+      "name": "Dendi",
+      "baseName": "Dendi",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "dga",
+      "iso6393": "dga",
+      "name": "Dagaare, Southern",
+      "baseName": "Dagaare, Southern",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "dip",
+      "iso6393": "dip",
+      "name": "Dinka, Northeastern",
+      "baseName": "Dinka, Northeastern",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "div",
+      "iso6393": "div",
+      "name": "Maldivian",
+      "baseName": "Maldivian",
+      "scriptLabel": null,
+      "direction": "rtl",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "dyo",
+      "iso6393": "dyo",
+      "name": "Jola-Fonyi",
+      "baseName": "Jola-Fonyi",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "dyu",
+      "iso6393": "dyu",
+      "name": "Jula",
+      "baseName": "Jula",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "dzo",
+      "iso6393": "dzo",
+      "name": "Dzongkha",
+      "baseName": "Dzongkha",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ell_monotonic",
+      "iso6393": "ell",
+      "name": "Greek (monotonic)",
+      "baseName": "Greek",
+      "scriptLabel": "monotonic",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ell_polytonic",
+      "iso6393": "ell",
+      "name": "Greek (polytonic)",
+      "baseName": "Greek",
+      "scriptLabel": "polytonic",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "emk",
+      "iso6393": "emk",
+      "name": "Maninkakan, Eastern",
+      "baseName": "Maninkakan, Eastern",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "eml",
+      "iso6393": "rgn",
+      "name": "Romagnolo",
+      "baseName": "Romagnolo",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "eng",
+      "iso6393": "eng",
+      "name": "English",
+      "baseName": "English",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "epo",
+      "iso6393": "epo",
+      "name": "Esperanto",
+      "baseName": "Esperanto",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ese",
+      "iso6393": "ese",
+      "name": "Ese Ejja",
+      "baseName": "Ese Ejja",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "est",
+      "iso6393": "ekk",
+      "name": "Estonian",
+      "baseName": "Estonian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "eus",
+      "iso6393": "eus",
+      "name": "Basque",
+      "baseName": "Basque",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "eve",
+      "iso6393": "eve",
+      "name": "Even",
+      "baseName": "Even",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "evn",
+      "iso6393": "evn",
+      "name": "Evenki",
+      "baseName": "Evenki",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ewe",
+      "iso6393": "ewe",
+      "name": "Éwé",
+      "baseName": "Éwé",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "fao",
+      "iso6393": "fao",
+      "name": "Faroese",
+      "baseName": "Faroese",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "fij",
+      "iso6393": "fij",
+      "name": "Fijian",
+      "baseName": "Fijian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "fin",
+      "iso6393": "fin",
+      "name": "Finnish",
+      "baseName": "Finnish",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "fkv",
+      "iso6393": "fkv",
+      "name": "Finnish, Kven",
+      "baseName": "Finnish, Kven",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "flm",
+      "iso6393": "cfm",
+      "name": "Chin, Falam",
+      "baseName": "Chin, Falam",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "fon",
+      "iso6393": "fon",
+      "name": "Fon",
+      "baseName": "Fon",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "fra",
+      "iso6393": "fra",
+      "name": "French",
+      "baseName": "French",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "fri",
+      "iso6393": "fry",
+      "name": "Frisian, Western",
+      "baseName": "Frisian, Western",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "fuf",
+      "iso6393": "fuf",
+      "name": "Pular",
+      "baseName": "Pular",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "fuf_adlm",
+      "iso6393": "fuf",
+      "name": "Pular (Adlam)",
+      "baseName": "Pular",
+      "scriptLabel": "Adlam",
+      "direction": "rtl",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "fur",
+      "iso6393": "fur",
+      "name": "Friulian",
+      "baseName": "Friulian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "fuv",
+      "iso6393": "fuv",
+      "name": "Fulfulde, Nigerian",
+      "baseName": "Fulfulde, Nigerian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "fvr",
+      "iso6393": "fvr",
+      "name": "Fur",
+      "baseName": "Fur",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "gaa",
+      "iso6393": "gaa",
+      "name": "Ga",
+      "baseName": "Ga",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "gag",
+      "iso6393": "gag",
+      "name": "Gagauz",
+      "baseName": "Gagauz",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "gan",
+      "iso6393": "gan",
+      "name": "Chinese, Gan",
+      "baseName": "Chinese, Gan",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "gax",
+      "iso6393": "gaz",
+      "name": "Oromo, Borana-Arsi-Guji",
+      "baseName": "Oromo, Borana-Arsi-Guji",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "gjn",
+      "iso6393": "gjn",
+      "name": "Gonja",
+      "baseName": "Gonja",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "gkp",
+      "iso6393": "gkp",
+      "name": "Kpelle, Guinea",
+      "baseName": "Kpelle, Guinea",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "gla",
+      "iso6393": "gla",
+      "name": "Gaelic, Scottish",
+      "baseName": "Gaelic, Scottish",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "gld",
+      "iso6393": "gld",
+      "name": "Nanai",
+      "baseName": "Nanai",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "gle",
+      "iso6393": "gle",
+      "name": "Gaelic, Irish",
+      "baseName": "Gaelic, Irish",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "glg",
+      "iso6393": "glg",
+      "name": "Galician",
+      "baseName": "Galician",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "glv",
+      "iso6393": "glv",
+      "name": "Manx",
+      "baseName": "Manx",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "gnw",
+      "iso6393": "gnw",
+      "name": "Guarani, Western Bolivian",
+      "baseName": "Guarani, Western Bolivian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "gsw1",
+      "iso6393": "gsw",
+      "name": "Alemannisch (Elsassisch)",
+      "baseName": "Alemannisch",
+      "scriptLabel": "Elsassisch",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "guc",
+      "iso6393": "guc",
+      "name": "Wayuu",
+      "baseName": "Wayuu",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "gug",
+      "iso6393": "gug",
+      "name": "Guaraní, Paraguayan",
+      "baseName": "Guaraní, Paraguayan",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "guj",
+      "iso6393": "guj",
+      "name": "Gujarati",
+      "baseName": "Gujarati",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "guu",
+      "iso6393": "guu",
+      "name": "Yanomamö",
+      "baseName": "Yanomamö",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "gyr",
+      "iso6393": "gyr",
+      "name": "Guarayu",
+      "baseName": "Guarayu",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hak",
+      "iso6393": "hak",
+      "name": "Chinese, Hakka",
+      "baseName": "Chinese, Hakka",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hat_kreyol",
+      "iso6393": "hat",
+      "name": "Haitian Creole French (Kreyol)",
+      "baseName": "Haitian Creole French",
+      "scriptLabel": "Kreyol",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hat_popular",
+      "iso6393": "hat",
+      "name": "Haitian Creole French (Popular)",
+      "baseName": "Haitian Creole French",
+      "scriptLabel": "Popular",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hau_3",
+      "iso6393": "hau",
+      "name": "Hausa",
+      "baseName": "Hausa",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hau_NE",
+      "iso6393": "hau",
+      "name": "Hausa (Niger)",
+      "baseName": "Hausa",
+      "scriptLabel": "Niger",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hau_NG",
+      "iso6393": "hau",
+      "name": "Hausa (Nigeria)",
+      "baseName": "Hausa",
+      "scriptLabel": "Nigeria",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "haw",
+      "iso6393": "haw",
+      "name": "Hawaiian",
+      "baseName": "Hawaiian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hea",
+      "iso6393": "hea",
+      "name": "Hmong, Northern Qiandong",
+      "baseName": "Hmong, Northern Qiandong",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "heb",
+      "iso6393": "heb",
+      "name": "Hebrew",
+      "baseName": "Hebrew",
+      "scriptLabel": null,
+      "direction": "rtl",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hil",
+      "iso6393": "hil",
+      "name": "Hiligaynon",
+      "baseName": "Hiligaynon",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hin",
+      "iso6393": "hin",
+      "name": "Hindi",
+      "baseName": "Hindi",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hlt",
+      "iso6393": "hlt",
+      "name": "Chin, Matu",
+      "baseName": "Chin, Matu",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hms",
+      "iso6393": "hms",
+      "name": "Hmong, Southern Qiandong",
+      "baseName": "Hmong, Southern Qiandong",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hna",
+      "iso6393": "gej",
+      "name": "Gen",
+      "baseName": "Gen",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hni",
+      "iso6393": "hni",
+      "name": "Hani",
+      "baseName": "Hani",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hns",
+      "iso6393": "hns",
+      "name": "Hindustani, Sarnami",
+      "baseName": "Hindustani, Sarnami",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hrv",
+      "iso6393": "hrv",
+      "name": "Croatian",
+      "baseName": "Croatian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hsb",
+      "iso6393": "hsb",
+      "name": "Sorbian, Upper",
+      "baseName": "Sorbian, Upper",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hsf",
+      "iso6393": "hus",
+      "name": "Huastec (Sierra de Otontepec)",
+      "baseName": "Huastec",
+      "scriptLabel": "Sierra de Otontepec",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hsn",
+      "iso6393": "hsn",
+      "name": "Chinese, Xiang",
+      "baseName": "Chinese, Xiang",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hun",
+      "iso6393": "hun",
+      "name": "Hungarian",
+      "baseName": "Hungarian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hus",
+      "iso6393": "hus",
+      "name": "Huastec (Veracruz)",
+      "baseName": "Huastec",
+      "scriptLabel": "Veracruz",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "huu",
+      "iso6393": "huu",
+      "name": "Huitoto, Murui",
+      "baseName": "Huitoto, Murui",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hva",
+      "iso6393": "hus",
+      "name": "Huastec (San Luís Potosí)",
+      "baseName": "Huastec",
+      "scriptLabel": "San Luís Potosí",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "hye",
+      "iso6393": "hye",
+      "name": "Armenian",
+      "baseName": "Armenian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ibb",
+      "iso6393": "ibb",
+      "name": "Ibibio",
+      "baseName": "Ibibio",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ibo",
+      "iso6393": "ibo",
+      "name": "Igbo",
+      "baseName": "Igbo",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ido",
+      "iso6393": "ido",
+      "name": "Ido",
+      "baseName": "Ido",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "idu",
+      "iso6393": "idu",
+      "name": "Idoma",
+      "baseName": "Idoma",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ijs",
+      "iso6393": "ijs",
+      "name": "Ijo, Southeast",
+      "baseName": "Ijo, Southeast",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ike",
+      "iso6393": "ike",
+      "name": "Inuktitut, Eastern Canadian",
+      "baseName": "Inuktitut, Eastern Canadian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ilo",
+      "iso6393": "ilo",
+      "name": "Ilocano",
+      "baseName": "Ilocano",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ina",
+      "iso6393": "ina",
+      "name": "Interlingua",
+      "baseName": "Interlingua",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ind",
+      "iso6393": "ind",
+      "name": "Indonesian",
+      "baseName": "Indonesian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "isl",
+      "iso6393": "isl",
+      "name": "Icelandic",
+      "baseName": "Icelandic",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ita",
+      "iso6393": "ita",
+      "name": "Italian",
+      "baseName": "Italian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "jav",
+      "iso6393": "jav",
+      "name": "Javanese (Latin)",
+      "baseName": "Javanese",
+      "scriptLabel": "Latin",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "jiv",
+      "iso6393": "jiv",
+      "name": "Shuar",
+      "baseName": "Shuar",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "jpn",
+      "iso6393": "jpn",
+      "name": "Japanese",
+      "baseName": "Japanese",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "jpn_osaka",
+      "iso6393": "jpn",
+      "name": "Japanese (Osaka)",
+      "baseName": "Japanese",
+      "scriptLabel": "Osaka",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "jpn_tokyo",
+      "iso6393": "jpn",
+      "name": "Japanese (Tokyo)",
+      "baseName": "Japanese",
+      "scriptLabel": "Tokyo",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kaa",
+      "iso6393": "kaa",
+      "name": "Karakalpak",
+      "baseName": "Karakalpak",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kal",
+      "iso6393": "kal",
+      "name": "Inuktitut, Greenlandic",
+      "baseName": "Inuktitut, Greenlandic",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kan",
+      "iso6393": "kan",
+      "name": "Kannada",
+      "baseName": "Kannada",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kat",
+      "iso6393": "kat",
+      "name": "Georgian",
+      "baseName": "Georgian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kaz",
+      "iso6393": "kaz",
+      "name": "Kazakh",
+      "baseName": "Kazakh",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kbd",
+      "iso6393": "kbd",
+      "name": "Kabardian",
+      "baseName": "Kabardian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kbp",
+      "iso6393": "kbp",
+      "name": "Kabiyé",
+      "baseName": "Kabiyé",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kde",
+      "iso6393": "kde",
+      "name": "Makonde",
+      "baseName": "Makonde",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kdh",
+      "iso6393": "kdh",
+      "name": "Tem",
+      "baseName": "Tem",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kea",
+      "iso6393": "kea",
+      "name": "Kabuverdianu",
+      "baseName": "Kabuverdianu",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kek",
+      "iso6393": "kek",
+      "name": "Q'eqchi'",
+      "baseName": "Q'eqchi'",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kha",
+      "iso6393": "kha",
+      "name": "Khasi",
+      "baseName": "Khasi",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "khk",
+      "iso6393": "khk",
+      "name": "Mongolian, Halh (Cyrillic)",
+      "baseName": "Mongolian, Halh",
+      "scriptLabel": "Cyrillic",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "khm",
+      "iso6393": "khm",
+      "name": "Khmer, Central",
+      "baseName": "Khmer, Central",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kin",
+      "iso6393": "kin",
+      "name": "Rwanda",
+      "baseName": "Rwanda",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kir",
+      "iso6393": "kir",
+      "name": "Kirghiz",
+      "baseName": "Kirghiz",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kjh",
+      "iso6393": "kjh",
+      "name": "Khakas",
+      "baseName": "Khakas",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kkh_lana",
+      "iso6393": "kkh",
+      "name": "Khün",
+      "baseName": "Khün",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 16
+    },
+    {
+      "code": "kmb",
+      "iso6393": "kmb",
+      "name": "Mbundu",
+      "baseName": "Mbundu",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kmr",
+      "iso6393": "kmr",
+      "name": "Kurdish, Northern",
+      "baseName": "Kurdish, Northern",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "knc",
+      "iso6393": "knc",
+      "name": "Kanuri, Central",
+      "baseName": "Kanuri, Central",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kng",
+      "iso6393": "kng",
+      "name": "Koongo",
+      "baseName": "Koongo",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kng_AO",
+      "iso6393": "kng",
+      "name": "Koongo (Angola)",
+      "baseName": "Koongo",
+      "scriptLabel": "Angola",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "koi",
+      "iso6393": "koi",
+      "name": "Komi-Permyak",
+      "baseName": "Komi-Permyak",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "koo",
+      "iso6393": "koo",
+      "name": "Konjo",
+      "baseName": "Konjo",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kor",
+      "iso6393": "kor",
+      "name": "Korean",
+      "baseName": "Korean",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kqn",
+      "iso6393": "kqn",
+      "name": "Kaonde",
+      "baseName": "Kaonde",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kqs",
+      "iso6393": "kqs",
+      "name": "Kissi, Northern",
+      "baseName": "Kissi, Northern",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kri",
+      "iso6393": "kri",
+      "name": "Krio",
+      "baseName": "Krio",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "krl",
+      "iso6393": "krl",
+      "name": "Karelian",
+      "baseName": "Karelian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ktu",
+      "iso6393": "ktu",
+      "name": "Kituba",
+      "baseName": "Kituba",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "kwi",
+      "iso6393": "kwi",
+      "name": "Awa-Cuaiquer",
+      "baseName": "Awa-Cuaiquer",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lad",
+      "iso6393": "lad",
+      "name": "Ladino",
+      "baseName": "Ladino",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lao",
+      "iso6393": "lao",
+      "name": "Lao",
+      "baseName": "Lao",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lat",
+      "iso6393": "lat",
+      "name": "Latin",
+      "baseName": "Latin",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lav",
+      "iso6393": "lvs",
+      "name": "Latvian",
+      "baseName": "Latvian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lia",
+      "iso6393": "lia",
+      "name": "Limba, West-Central",
+      "baseName": "Limba, West-Central",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lij",
+      "iso6393": "lij",
+      "name": "Ligurian",
+      "baseName": "Ligurian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lin",
+      "iso6393": "lin",
+      "name": "Lingala",
+      "baseName": "Lingala",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lin_tones",
+      "iso6393": "lin",
+      "name": "Lingala (tones)",
+      "baseName": "Lingala",
+      "scriptLabel": "tones",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lit",
+      "iso6393": "lit",
+      "name": "Lithuanian",
+      "baseName": "Lithuanian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lld",
+      "iso6393": "lld",
+      "name": "Ladin",
+      "baseName": "Ladin",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lnc",
+      "iso6393": "oci",
+      "name": "Occitan (Languedocien)",
+      "baseName": "Occitan",
+      "scriptLabel": "Languedocien",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lns",
+      "iso6393": "lns",
+      "name": "Lamnso'",
+      "baseName": "Lamnso'",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lob",
+      "iso6393": "lob",
+      "name": "Lobi",
+      "baseName": "Lobi",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lot",
+      "iso6393": "lot",
+      "name": "Otuho",
+      "baseName": "Otuho",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "loz",
+      "iso6393": "loz",
+      "name": "Lozi",
+      "baseName": "Lozi",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ltz",
+      "iso6393": "ltz",
+      "name": "Luxembourgeois",
+      "baseName": "Luxembourgeois",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lua",
+      "iso6393": "lua",
+      "name": "Luba-Kasai",
+      "baseName": "Luba-Kasai",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lue",
+      "iso6393": "lue",
+      "name": "Luvale",
+      "baseName": "Luvale",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lug",
+      "iso6393": "lug",
+      "name": "Ganda",
+      "baseName": "Ganda",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lun",
+      "iso6393": "lun",
+      "name": "Lunda",
+      "baseName": "Lunda",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "lus",
+      "iso6393": "lus",
+      "name": "Mizo",
+      "baseName": "Mizo",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mad",
+      "iso6393": "mad",
+      "name": "Madura",
+      "baseName": "Madura",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mag",
+      "iso6393": "mag",
+      "name": "Magahi",
+      "baseName": "Magahi",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mah",
+      "iso6393": "mah",
+      "name": "Marshallese",
+      "baseName": "Marshallese",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mai",
+      "iso6393": "mai",
+      "name": "Maithili",
+      "baseName": "Maithili",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mal",
+      "iso6393": "mal",
+      "name": "Malayalam",
+      "baseName": "Malayalam",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mam",
+      "iso6393": "mam",
+      "name": "Mam, Northern",
+      "baseName": "Mam, Northern",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mar",
+      "iso6393": "mar",
+      "name": "Marathi",
+      "baseName": "Marathi",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "maz",
+      "iso6393": "maz",
+      "name": "Mazahua Central",
+      "baseName": "Mazahua Central",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mcd",
+      "iso6393": "mcd",
+      "name": "Sharanahua",
+      "baseName": "Sharanahua",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mcf",
+      "iso6393": "mcf",
+      "name": "Matsés",
+      "baseName": "Matsés",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "men",
+      "iso6393": "men",
+      "name": "Mende",
+      "baseName": "Mende",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mfq",
+      "iso6393": "mfq",
+      "name": "Moba",
+      "baseName": "Moba",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mic",
+      "iso6393": "mic",
+      "name": "Micmac",
+      "baseName": "Micmac",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "min",
+      "iso6393": "min",
+      "name": "Minangkabau",
+      "baseName": "Minangkabau",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "miq",
+      "iso6393": "miq",
+      "name": "Mískito",
+      "baseName": "Mískito",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mkd",
+      "iso6393": "mkd",
+      "name": "Macedonian",
+      "baseName": "Macedonian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mlt",
+      "iso6393": "mlt",
+      "name": "Maltese",
+      "baseName": "Maltese",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mly_arab",
+      "iso6393": "zlm",
+      "name": "Malay (Arabic)",
+      "baseName": "Malay",
+      "scriptLabel": "Arabic",
+      "direction": "rtl",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mly_latn",
+      "iso6393": "zlm",
+      "name": "Malay (Latin)",
+      "baseName": "Malay",
+      "scriptLabel": "Latin",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mnw",
+      "iso6393": "mnw",
+      "name": "Mon",
+      "baseName": "Mon",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mor",
+      "iso6393": "mor",
+      "name": "Moro",
+      "baseName": "Moro",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mos",
+      "iso6393": "mos",
+      "name": "Mòoré",
+      "baseName": "Mòoré",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mri",
+      "iso6393": "mri",
+      "name": "Maori",
+      "baseName": "Maori",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mto",
+      "iso6393": "mto",
+      "name": "Mixe, Totontepec",
+      "baseName": "Mixe, Totontepec",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mtp",
+      "iso6393": "mtp",
+      "name": "Wichí Lhamtés Nocten",
+      "baseName": "Wichí Lhamtés Nocten",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mxi",
+      "iso6393": "mxi",
+      "name": "Mozarabic",
+      "baseName": "Mozarabic",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mxv",
+      "iso6393": "mxv",
+      "name": "Mixtec, Metlatónoc",
+      "baseName": "Mixtec, Metlatónoc",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mya",
+      "iso6393": "mya",
+      "name": "Burmese",
+      "baseName": "Burmese",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "mzi",
+      "iso6393": "mzi",
+      "name": "Mazatec, Ixcatlán",
+      "baseName": "Mazatec, Ixcatlán",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "nan",
+      "iso6393": "nan",
+      "name": "Chinese, Min Nan",
+      "baseName": "Chinese, Min Nan",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "nav",
+      "iso6393": "nav",
+      "name": "Navajo",
+      "baseName": "Navajo",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "nba",
+      "iso6393": "nba",
+      "name": "Nyemba",
+      "baseName": "Nyemba",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "nbl",
+      "iso6393": "nbl",
+      "name": "Ndebele",
+      "baseName": "Ndebele",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ndo",
+      "iso6393": "ndo",
+      "name": "Ndonga",
+      "baseName": "Ndonga",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "nds",
+      "iso6393": "nds",
+      "name": "Saxon, Low",
+      "baseName": "Saxon, Low",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "nep",
+      "iso6393": "npi",
+      "name": "Nepali",
+      "baseName": "Nepali",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "nhn",
+      "iso6393": "nhn",
+      "name": "Nahuatl, Central",
+      "baseName": "Nahuatl, Central",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "nio",
+      "iso6393": "nio",
+      "name": "Nganasan",
+      "baseName": "Nganasan",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "niu",
+      "iso6393": "niu",
+      "name": "Niue",
+      "baseName": "Niue",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "niv",
+      "iso6393": "niv",
+      "name": "Gilyak",
+      "baseName": "Gilyak",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "njo",
+      "iso6393": "njo",
+      "name": "Naga, Ao",
+      "baseName": "Naga, Ao",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "nku",
+      "iso6393": "nku",
+      "name": "Kulango, Bouna",
+      "baseName": "Kulango, Bouna",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "nld",
+      "iso6393": "nld",
+      "name": "Dutch",
+      "baseName": "Dutch",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "nno",
+      "iso6393": "nno",
+      "name": "Norwegian, Nynorsk",
+      "baseName": "Norwegian, Nynorsk",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "nob",
+      "iso6393": "nob",
+      "name": "Norwegian, Bokmål",
+      "baseName": "Norwegian, Bokmål",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "not",
+      "iso6393": "not",
+      "name": "Nomatsiguenga",
+      "baseName": "Nomatsiguenga",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "nso",
+      "iso6393": "nso",
+      "name": "Sotho, Northern",
+      "baseName": "Sotho, Northern",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "nya_chechewa",
+      "iso6393": "nya",
+      "name": "Nyanja (Chechewa)",
+      "baseName": "Nyanja",
+      "scriptLabel": "Chechewa",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "nya_chinyanja",
+      "iso6393": "nya",
+      "name": "Nyanja (Chinyanja)",
+      "baseName": "Nyanja",
+      "scriptLabel": "Chinyanja",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "nym",
+      "iso6393": "nym",
+      "name": "Nyamwezi",
+      "baseName": "Nyamwezi",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "nyn",
+      "iso6393": "nyn",
+      "name": "Nyankore",
+      "baseName": "Nyankore",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "nzi",
+      "iso6393": "nzi",
+      "name": "Nzema",
+      "baseName": "Nzema",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "oaa",
+      "iso6393": "oaa",
+      "name": "Orok",
+      "baseName": "Orok",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "oci_1",
+      "iso6393": "frp",
+      "name": "Francoprovençal (Fribourg)",
+      "baseName": "Francoprovençal",
+      "scriptLabel": "Fribourg",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "oci_2",
+      "iso6393": "frp",
+      "name": "Francoprovençal (Savoie)",
+      "baseName": "Francoprovençal",
+      "scriptLabel": "Savoie",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "oci_3",
+      "iso6393": "frp",
+      "name": "Francoprovençal (Vaud)",
+      "baseName": "Francoprovençal",
+      "scriptLabel": "Vaud",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "oci_4",
+      "iso6393": "frp",
+      "name": "Francoprovençal (Valais)",
+      "baseName": "Francoprovençal",
+      "scriptLabel": "Valais",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ojb",
+      "iso6393": "ojb",
+      "name": "Ojibwa, Northwestern",
+      "baseName": "Ojibwa, Northwestern",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "oki",
+      "iso6393": "oki",
+      "name": "Okiek",
+      "baseName": "Okiek",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "orh",
+      "iso6393": "orh",
+      "name": "Oroqen",
+      "baseName": "Oroqen",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "oss",
+      "iso6393": "oss",
+      "name": "Osetin",
+      "baseName": "Osetin",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ote",
+      "iso6393": "ote",
+      "name": "Otomi, Mezquital",
+      "baseName": "Otomi, Mezquital",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "pam",
+      "iso6393": "pam",
+      "name": "Pampangan",
+      "baseName": "Pampangan",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "pan",
+      "iso6393": "pan",
+      "name": "Panjabi, Eastern",
+      "baseName": "Panjabi, Eastern",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "pap",
+      "iso6393": "pap",
+      "name": "Papiamentu",
+      "baseName": "Papiamentu",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "pau",
+      "iso6393": "pau",
+      "name": "Palauan",
+      "baseName": "Palauan",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "pbb",
+      "iso6393": "pbb",
+      "name": "Páez",
+      "baseName": "Páez",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "pbu",
+      "iso6393": "pbu",
+      "name": "Pashto, Northern",
+      "baseName": "Pashto, Northern",
+      "scriptLabel": null,
+      "direction": "rtl",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "pcd",
+      "iso6393": "pcd",
+      "name": "Picard",
+      "baseName": "Picard",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "pcm",
+      "iso6393": "pcm",
+      "name": "Pidgin, Nigerian",
+      "baseName": "Pidgin, Nigerian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "pes_1",
+      "iso6393": "pes",
+      "name": "Farsi, Western",
+      "baseName": "Farsi, Western",
+      "scriptLabel": null,
+      "direction": "rtl",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "pes_2",
+      "iso6393": "prs",
+      "name": "Dari",
+      "baseName": "Dari",
+      "scriptLabel": null,
+      "direction": "rtl",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "pis",
+      "iso6393": "pis",
+      "name": "Pijin",
+      "baseName": "Pijin",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "piu",
+      "iso6393": "piu",
+      "name": "Pintupi-Luritja",
+      "baseName": "Pintupi-Luritja",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "plt",
+      "iso6393": "plt",
+      "name": "Malagasy, Plateau",
+      "baseName": "Malagasy, Plateau",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "pnb",
+      "iso6393": "pnb",
+      "name": "Panjabi, Western",
+      "baseName": "Panjabi, Western",
+      "scriptLabel": null,
+      "direction": "rtl",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "pol",
+      "iso6393": "pol",
+      "name": "Polish",
+      "baseName": "Polish",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "pon",
+      "iso6393": "pon",
+      "name": "Pohnpeian",
+      "baseName": "Pohnpeian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "por_BR",
+      "iso6393": "por",
+      "name": "Portuguese (Brazil)",
+      "baseName": "Portuguese",
+      "scriptLabel": "Brazil",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "por_PT",
+      "iso6393": "por",
+      "name": "Portuguese (Portugal)",
+      "baseName": "Portuguese",
+      "scriptLabel": "Portugal",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "pov",
+      "iso6393": "pov",
+      "name": "Crioulo, Upper Guinea",
+      "baseName": "Crioulo, Upper Guinea",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ppl",
+      "iso6393": "ppl",
+      "name": "Pipil",
+      "baseName": "Pipil",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "prv",
+      "iso6393": "oci",
+      "name": "Occitan",
+      "baseName": "Occitan",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "quc",
+      "iso6393": "quc",
+      "name": "K'iche', Central",
+      "baseName": "K'iche', Central",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "qud",
+      "iso6393": "que",
+      "name": "Quechua (Unified Quichua, old Hispanic orthography)",
+      "baseName": "Quechua",
+      "scriptLabel": "Unified Quichua, old Hispanic orthography",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "qug",
+      "iso6393": "qug",
+      "name": "Quichua, Chimborazo Highland",
+      "baseName": "Quichua, Chimborazo Highland",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "qul",
+      "iso6393": "qul",
+      "name": "Quechua, North Bolivian",
+      "baseName": "Quechua, North Bolivian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "quy",
+      "iso6393": "quy",
+      "name": "Quechua, Ayacucho",
+      "baseName": "Quechua, Ayacucho",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "quz",
+      "iso6393": "quz",
+      "name": "Quechua, Cusco",
+      "baseName": "Quechua, Cusco",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "qva",
+      "iso6393": "qva",
+      "name": "Quechua, Ambo-Pasco",
+      "baseName": "Quechua, Ambo-Pasco",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "qvc",
+      "iso6393": "qvc",
+      "name": "Quechua, Cajamarca",
+      "baseName": "Quechua, Cajamarca",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "qvh",
+      "iso6393": "qvh",
+      "name": "Quechua, Huamalíes-Dos de Mayo Huánuco",
+      "baseName": "Quechua, Huamalíes-Dos de Mayo Huánuco",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "qvm",
+      "iso6393": "qvm",
+      "name": "Quechua, Margos-Yarowilca-Lauricocha",
+      "baseName": "Quechua, Margos-Yarowilca-Lauricocha",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "qvn",
+      "iso6393": "qvn",
+      "name": "Quechua, North Junín",
+      "baseName": "Quechua, North Junín",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "qwh",
+      "iso6393": "qwh",
+      "name": "Quechua, Huaylas Ancash",
+      "baseName": "Quechua, Huaylas Ancash",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "qxa",
+      "iso6393": "quh",
+      "name": "Quechua, South Bolivian",
+      "baseName": "Quechua, South Bolivian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "qxn",
+      "iso6393": "qxn",
+      "name": "Quechua, Northern Conchucos Ancash",
+      "baseName": "Quechua, Northern Conchucos Ancash",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "qxu",
+      "iso6393": "qxu",
+      "name": "Quechua, Arequipa-La Unión",
+      "baseName": "Quechua, Arequipa-La Unión",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "rar",
+      "iso6393": "rar",
+      "name": "Rarotongan",
+      "baseName": "Rarotongan",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "rmn",
+      "iso6393": "rmn",
+      "name": "Romani, Balkan",
+      "baseName": "Romani, Balkan",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "rmy",
+      "iso6393": "rup",
+      "name": "Aromanian",
+      "baseName": "Aromanian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "roh",
+      "iso6393": "roh",
+      "name": "Romansch",
+      "baseName": "Romansch",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "roh_puter",
+      "iso6393": "roh",
+      "name": "Romansch (Puter)",
+      "baseName": "Romansch",
+      "scriptLabel": "Puter",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "roh_rumgr",
+      "iso6393": "roh",
+      "name": "Romansch (Grischun)",
+      "baseName": "Romansch",
+      "scriptLabel": "Grischun",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "roh_surmiran",
+      "iso6393": "roh",
+      "name": "Romansch (Surmiran)",
+      "baseName": "Romansch",
+      "scriptLabel": "Surmiran",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "roh_sursilv",
+      "iso6393": "roh",
+      "name": "Romansch (Sursilvan)",
+      "baseName": "Romansch",
+      "scriptLabel": "Sursilvan",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "roh_sutsilv",
+      "iso6393": "roh",
+      "name": "Romansch (Sutsilvan)",
+      "baseName": "Romansch",
+      "scriptLabel": "Sutsilvan",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "roh_vallader",
+      "iso6393": "roh",
+      "name": "Romansch (Vallader)",
+      "baseName": "Romansch",
+      "scriptLabel": "Vallader",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "run",
+      "iso6393": "run",
+      "name": "Rundi",
+      "baseName": "Rundi",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "rus",
+      "iso6393": "rus",
+      "name": "Russian",
+      "baseName": "Russian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "sag",
+      "iso6393": "sag",
+      "name": "Sango",
+      "baseName": "Sango",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "sah",
+      "iso6393": "sah",
+      "name": "Yakut",
+      "baseName": "Yakut",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "san",
+      "iso6393": "san",
+      "name": "Sanskrit",
+      "baseName": "Sanskrit",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "san_gran",
+      "iso6393": "san",
+      "name": "Sanskrit (Grantha)",
+      "baseName": "Sanskrit",
+      "scriptLabel": "Grantha",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "sco",
+      "iso6393": "sco",
+      "name": "Scots",
+      "baseName": "Scots",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "sey",
+      "iso6393": "sey",
+      "name": "Secoya",
+      "baseName": "Secoya",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "shk",
+      "iso6393": "shk",
+      "name": "Shilluk",
+      "baseName": "Shilluk",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "shn",
+      "iso6393": "shn",
+      "name": "Shan",
+      "baseName": "Shan",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "shp",
+      "iso6393": "shp",
+      "name": "Shipibo-Conibo",
+      "baseName": "Shipibo-Conibo",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "sin",
+      "iso6393": "sin",
+      "name": "Sinhala",
+      "baseName": "Sinhala",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "skr",
+      "iso6393": "skr",
+      "name": "Seraiki",
+      "baseName": "Seraiki",
+      "scriptLabel": null,
+      "direction": "rtl",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "slk",
+      "iso6393": "slk",
+      "name": "Slovak",
+      "baseName": "Slovak",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "slr",
+      "iso6393": "slr",
+      "name": "Salar",
+      "baseName": "Salar",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "slv",
+      "iso6393": "slv",
+      "name": "Slovenian",
+      "baseName": "Slovenian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "sme",
+      "iso6393": "sme",
+      "name": "North Saami",
+      "baseName": "North Saami",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "smo",
+      "iso6393": "smo",
+      "name": "Samoan",
+      "baseName": "Samoan",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "sna",
+      "iso6393": "sna",
+      "name": "Shona",
+      "baseName": "Shona",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "snk",
+      "iso6393": "snk",
+      "name": "Soninke",
+      "baseName": "Soninke",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "snn",
+      "iso6393": "snn",
+      "name": "Siona",
+      "baseName": "Siona",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "som",
+      "iso6393": "som",
+      "name": "Somali",
+      "baseName": "Somali",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "sot",
+      "iso6393": "sot",
+      "name": "Sotho, Southern",
+      "baseName": "Sotho, Southern",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "spa",
+      "iso6393": "spa",
+      "name": "Spanish",
+      "baseName": "Spanish",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "src",
+      "iso6393": "src",
+      "name": "Sardinian, Logudorese",
+      "baseName": "Sardinian, Logudorese",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "srp_cyrl",
+      "iso6393": "srp",
+      "name": "Serbian (Cyrillic)",
+      "baseName": "Serbian",
+      "scriptLabel": "Cyrillic",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "srp_latn",
+      "iso6393": "srp",
+      "name": "Serbian (Latin)",
+      "baseName": "Serbian",
+      "scriptLabel": "Latin",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "srq",
+      "iso6393": "srq",
+      "name": "Sirionó",
+      "baseName": "Sirionó",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "srr",
+      "iso6393": "srr",
+      "name": "Serer-Sine",
+      "baseName": "Serer-Sine",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ssw",
+      "iso6393": "ssw",
+      "name": "Swati",
+      "baseName": "Swati",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "suk",
+      "iso6393": "suk",
+      "name": "Sukuma",
+      "baseName": "Sukuma",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "sun",
+      "iso6393": "sun",
+      "name": "Sunda",
+      "baseName": "Sunda",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "sus",
+      "iso6393": "sus",
+      "name": "Susu",
+      "baseName": "Susu",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "swb",
+      "iso6393": "swb",
+      "name": "Comorian, Maore",
+      "baseName": "Comorian, Maore",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "swe",
+      "iso6393": "swe",
+      "name": "Swedish",
+      "baseName": "Swedish",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "swh",
+      "iso6393": "swh",
+      "name": "Swahili",
+      "baseName": "Swahili",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tah",
+      "iso6393": "tah",
+      "name": "Tahitian",
+      "baseName": "Tahitian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tam",
+      "iso6393": "tam",
+      "name": "Tamil",
+      "baseName": "Tamil",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tam_LK",
+      "iso6393": "tam",
+      "name": "Tamil (Sri Lanka)",
+      "baseName": "Tamil",
+      "scriptLabel": "Sri Lanka",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tat",
+      "iso6393": "tat",
+      "name": "Tatar",
+      "baseName": "Tatar",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tbz",
+      "iso6393": "tbz",
+      "name": "Ditammari",
+      "baseName": "Ditammari",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tca",
+      "iso6393": "tca",
+      "name": "Ticuna",
+      "baseName": "Ticuna",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tel",
+      "iso6393": "tel",
+      "name": "Telugu",
+      "baseName": "Telugu",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tem",
+      "iso6393": "tem",
+      "name": "Themne",
+      "baseName": "Themne",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tet",
+      "iso6393": "tet",
+      "name": "Tetun",
+      "baseName": "Tetun",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tgk",
+      "iso6393": "tgk",
+      "name": "Tajiki",
+      "baseName": "Tajiki",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tgl",
+      "iso6393": "tgl",
+      "name": "Tagalog",
+      "baseName": "Tagalog",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tha",
+      "iso6393": "tha",
+      "name": "Thai",
+      "baseName": "Thai",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tir",
+      "iso6393": "tir",
+      "name": "Tigrigna",
+      "baseName": "Tigrigna",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tiv",
+      "iso6393": "tiv",
+      "name": "Tiv",
+      "baseName": "Tiv",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tji",
+      "iso6393": "tji",
+      "name": "Tujia, Nothern",
+      "baseName": "Tujia, Nothern",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tly",
+      "iso6393": "tly",
+      "name": "Talysh",
+      "baseName": "Talysh",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tna",
+      "iso6393": "tna",
+      "name": "Tacana",
+      "baseName": "Tacana",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tob",
+      "iso6393": "tob",
+      "name": "Toba",
+      "baseName": "Toba",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "toi",
+      "iso6393": "toi",
+      "name": "Tonga",
+      "baseName": "Tonga",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "toj",
+      "iso6393": "toj",
+      "name": "Tojolabal",
+      "baseName": "Tojolabal",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ton",
+      "iso6393": "ton",
+      "name": "Tongan",
+      "baseName": "Tongan",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "top",
+      "iso6393": "top",
+      "name": "Totonac, Papantla",
+      "baseName": "Totonac, Papantla",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tpi",
+      "iso6393": "tpi",
+      "name": "Tok Pisin",
+      "baseName": "Tok Pisin",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "trn",
+      "iso6393": "trn",
+      "name": "Trinitario",
+      "baseName": "Trinitario",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tsn",
+      "iso6393": "tsn",
+      "name": "Tswana",
+      "baseName": "Tswana",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tso_MZ",
+      "iso6393": "tso",
+      "name": "Tsonga (Mozambique)",
+      "baseName": "Tsonga",
+      "scriptLabel": "Mozambique",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tso_ZW",
+      "iso6393": "tso",
+      "name": "Tsonga (Zimbabwe)",
+      "baseName": "Tsonga",
+      "scriptLabel": "Zimbabwe",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tsz",
+      "iso6393": "tsz",
+      "name": "Purepecha",
+      "baseName": "Purepecha",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tuk_cyrl",
+      "iso6393": "tuk",
+      "name": "Turkmen (Cyrillic)",
+      "baseName": "Turkmen",
+      "scriptLabel": "Cyrillic",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tuk_latn",
+      "iso6393": "tuk",
+      "name": "Turkmen (Latin)",
+      "baseName": "Turkmen",
+      "scriptLabel": "Latin",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tur",
+      "iso6393": "tur",
+      "name": "Turkish",
+      "baseName": "Turkish",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tyv",
+      "iso6393": "tyv",
+      "name": "Tuva",
+      "baseName": "Tuva",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tzc",
+      "iso6393": "tzo",
+      "name": "Tzotzil (Chamula)",
+      "baseName": "Tzotzil",
+      "scriptLabel": "Chamula",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tzh",
+      "iso6393": "tzh",
+      "name": "Tzeltal, Oxchuc",
+      "baseName": "Tzeltal, Oxchuc",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "tzm",
+      "iso6393": "tzm",
+      "name": "Tamazight, Central Atlas",
+      "baseName": "Tamazight, Central Atlas",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "udu",
+      "iso6393": "udu",
+      "name": "Uduk",
+      "baseName": "Uduk",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "uig_arab",
+      "iso6393": "uig",
+      "name": "Uyghur (Arabic)",
+      "baseName": "Uyghur",
+      "scriptLabel": "Arabic",
+      "direction": "rtl",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "uig_latn",
+      "iso6393": "uig",
+      "name": "Uyghur (Latin)",
+      "baseName": "Uyghur",
+      "scriptLabel": "Latin",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ukr",
+      "iso6393": "ukr",
+      "name": "Ukrainian",
+      "baseName": "Ukrainian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "umb",
+      "iso6393": "umb",
+      "name": "Umbundu",
+      "baseName": "Umbundu",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ura",
+      "iso6393": "ura",
+      "name": "Urarina",
+      "baseName": "Urarina",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "urd",
+      "iso6393": "urd",
+      "name": "Urdu",
+      "baseName": "Urdu",
+      "scriptLabel": null,
+      "direction": "rtl",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "uzn_cyrl",
+      "iso6393": "uzn",
+      "name": "Uzbek, Northern (Cyrillic)",
+      "baseName": "Uzbek, Northern",
+      "scriptLabel": "Cyrillic",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "uzn_latn",
+      "iso6393": "uzn",
+      "name": "Uzbek, Northern (Latin)",
+      "baseName": "Uzbek, Northern",
+      "scriptLabel": "Latin",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "vai",
+      "iso6393": "vai",
+      "name": "Vai",
+      "baseName": "Vai",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "vec",
+      "iso6393": "vec",
+      "name": "Venetian",
+      "baseName": "Venetian",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ven",
+      "iso6393": "ven",
+      "name": "Venda",
+      "baseName": "Venda",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "vep",
+      "iso6393": "vep",
+      "name": "Veps",
+      "baseName": "Veps",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "vie",
+      "iso6393": "vie",
+      "name": "Vietnamese",
+      "baseName": "Vietnamese",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "vie_han",
+      "iso6393": "vie",
+      "name": "Vietnamese (Han nom)",
+      "baseName": "Vietnamese",
+      "scriptLabel": "Han nom",
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "vmw",
+      "iso6393": "vmw",
+      "name": "Makhuwa",
+      "baseName": "Makhuwa",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "war",
+      "iso6393": "war",
+      "name": "Waray-Waray",
+      "baseName": "Waray-Waray",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "wln",
+      "iso6393": "wln",
+      "name": "Walloon",
+      "baseName": "Walloon",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "wol",
+      "iso6393": "wol",
+      "name": "Wolof",
+      "baseName": "Wolof",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "wuu",
+      "iso6393": "wuu",
+      "name": "Chinese, Wu",
+      "baseName": "Chinese, Wu",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "wwa",
+      "iso6393": "wwa",
+      "name": "Waama",
+      "baseName": "Waama",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "xho",
+      "iso6393": "xho",
+      "name": "Xhosa",
+      "baseName": "Xhosa",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "xsm",
+      "iso6393": "xsm",
+      "name": "Kasem",
+      "baseName": "Kasem",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "yad",
+      "iso6393": "yad",
+      "name": "Yagua",
+      "baseName": "Yagua",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "yao",
+      "iso6393": "yao",
+      "name": "Yao",
+      "baseName": "Yao",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "yap",
+      "iso6393": "yap",
+      "name": "Yapese",
+      "baseName": "Yapese",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ydd",
+      "iso6393": "ydd",
+      "name": "Yiddish, Eastern",
+      "baseName": "Yiddish, Eastern",
+      "scriptLabel": null,
+      "direction": "rtl",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ykg",
+      "iso6393": "ykg",
+      "name": "Yukaghir, Northern",
+      "baseName": "Yukaghir, Northern",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "yor",
+      "iso6393": "yor",
+      "name": "Yoruba",
+      "baseName": "Yoruba",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "yrk",
+      "iso6393": "yrk",
+      "name": "Nenets",
+      "baseName": "Nenets",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "yua",
+      "iso6393": "yua",
+      "name": "Maya, Yucatán",
+      "baseName": "Maya, Yucatán",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "yue",
+      "iso6393": "yue",
+      "name": "Chinese, Yue",
+      "baseName": "Chinese, Yue",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "yuz",
+      "iso6393": "yuz",
+      "name": "Yuracare",
+      "baseName": "Yuracare",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "zam",
+      "iso6393": "zam",
+      "name": "Zapotec, Miahuatlán",
+      "baseName": "Zapotec, Miahuatlán",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "zdj",
+      "iso6393": "zdj",
+      "name": "Comorian, Ngazidja",
+      "baseName": "Comorian, Ngazidja",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "zgh",
+      "iso6393": "zgh",
+      "name": "Tamazight, Standard Morocan",
+      "baseName": "Tamazight, Standard Morocan",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "zro",
+      "iso6393": "zro",
+      "name": "Záparo",
+      "baseName": "Záparo",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "ztu",
+      "iso6393": "ztu",
+      "name": "Zapotec, Güilá",
+      "baseName": "Zapotec, Güilá",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    },
+    {
+      "code": "zul",
+      "iso6393": "zul",
+      "name": "Zulu",
+      "baseName": "Zulu",
+      "scriptLabel": null,
+      "direction": "ltr",
+      "encodingStage": 4,
+      "snippetCount": 20
+    }
+  ],
+  "dropped": [
+    {
+      "code": "008",
+      "name": "Crioulo, Upper Guinea (008)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "009",
+      "name": "Mbundu (009)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "011",
+      "name": "Umbundu (011)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "013",
+      "name": "(Mijisa)",
+      "reason": "undetermined-iso6393"
+    },
+    {
+      "code": "014",
+      "name": "(Maiunan)",
+      "reason": "undetermined-iso6393"
+    },
+    {
+      "code": "016",
+      "name": "(Minjiang, spoken)",
+      "reason": "undetermined-iso6393"
+    },
+    {
+      "code": "017",
+      "name": "(Minjiang, written)",
+      "reason": "undetermined-iso6393"
+    },
+    {
+      "code": "021",
+      "name": "(Muzzi)",
+      "reason": "undetermined-iso6393"
+    },
+    {
+      "code": "022",
+      "name": "(Klau)",
+      "reason": "undetermined-iso6393"
+    },
+    {
+      "code": "023",
+      "name": "(Jinan)",
+      "reason": "undetermined-iso6393"
+    },
+    {
+      "code": "025",
+      "name": "(Bizisa)",
+      "reason": "undetermined-iso6393"
+    },
+    {
+      "code": "026",
+      "name": "(Yeonbyeon)",
+      "reason": "undetermined-iso6393"
+    },
+    {
+      "code": "030",
+      "name": "Kituba (2)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "041",
+      "name": "Latvian (2)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "048",
+      "name": "Minangkabau (2)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "050",
+      "name": "(Bataknese)",
+      "reason": "undetermined-iso6393"
+    },
+    {
+      "code": "053",
+      "name": "Hausa (2)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "054",
+      "name": "Catalan (2)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "059",
+      "name": "North Saami (2)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "067",
+      "name": "Finnish (2)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "069",
+      "name": "Maori (2)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "acu_1",
+      "name": "Achuar-Shiwiar (1)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "amh",
+      "name": "Amharic",
+      "reason": "too-few-snippets(0)"
+    },
+    {
+      "code": "chv",
+      "name": "Chuvash",
+      "reason": "stage<3"
+    },
+    {
+      "code": "deu_1901",
+      "name": "German, Standard (1901)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "deu_1996",
+      "name": "German, Standard (1996)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "fuv2",
+      "name": "Fulfulde, Nigerian (2)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "iii",
+      "name": "Nuosu",
+      "reason": "too-few-snippets(0)"
+    },
+    {
+      "code": "jav_java",
+      "name": "Javanese (Javanese)",
+      "reason": "too-few-snippets(0)"
+    },
+    {
+      "code": "khk_mong",
+      "name": "Mongolian, Halh (Mongolian)",
+      "reason": "stage<3"
+    },
+    {
+      "code": "lat_1",
+      "name": "Latin (1)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "mal_chillus",
+      "name": "Malayalam",
+      "reason": "manual-exclude"
+    },
+    {
+      "code": "rmn_1",
+      "name": "Romani, Balkan (1)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "ron_1953",
+      "name": "Romanian (1953)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "ron_1993",
+      "name": "Romanian (1993)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "ron_2006",
+      "name": "Romanian (2006)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "taj",
+      "name": "Tamang, Eastern",
+      "reason": "too-few-snippets(3)"
+    },
+    {
+      "code": "tgl_tglg",
+      "name": "Tagalog (Tagalog)",
+      "reason": "stage<3"
+    },
+    {
+      "code": "tha2",
+      "name": "Thai (2)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "tzm_tfng",
+      "name": "Tamazight, Central Atlas (Tifinagh)",
+      "reason": "stage<3"
+    },
+    {
+      "code": "urd_2",
+      "name": "Urdu (2)",
+      "reason": "numbered-duplicate"
+    },
+    {
+      "code": "ven2",
+      "name": "Venda",
+      "reason": "manual-exclude"
+    }
+  ],
+  "warnings": []
+}

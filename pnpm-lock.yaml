@@ -24,6 +24,9 @@ importers:
       '@susisu/eslint-config':
         specifier: ^0.0.102
         version: 0.0.102(eslint@10.5.0)(typescript@6.0.3)
+      '@types/hast':
+        specifier: ^3.0.4
+        version: 3.0.4
       '@types/node':
         specifier: ^22.0.0
         version: 22.19.21
