@@ -72,9 +72,9 @@
 /* The chip the player just picked, flashed while the answer is revealed. The
    compound selectors outrank `.active` so the verdict color always wins. */
 .option.correct {
-  border-color: var(--accent);
-  background: var(--accent-soft);
-  color: var(--accent-strong);
+  border-color: var(--correct);
+  background: var(--correct-soft);
+  color: var(--correct-strong);
   animation: chip-pop 240ms ease;
 }
 

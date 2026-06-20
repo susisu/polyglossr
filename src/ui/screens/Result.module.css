@@ -80,7 +80,7 @@
 }
 
 .ok {
-  background: var(--accent);
+  background: var(--correct);
 }
 
 .no {

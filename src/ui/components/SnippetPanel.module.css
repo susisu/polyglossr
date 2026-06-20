@@ -14,8 +14,8 @@
 }
 
 .correct {
-  border-color: var(--accent);
-  background: var(--accent-soft);
+  border-color: var(--correct);
+  background: var(--correct-soft);
 }
 
 .incorrect {

@@ -81,8 +81,8 @@
 }
 
 .toastCorrect {
-  border-inline-start-color: var(--accent);
-  background: var(--accent-soft);
+  border-inline-start-color: var(--correct);
+  background: var(--correct-soft);
 }
 
 .toastIncorrect {

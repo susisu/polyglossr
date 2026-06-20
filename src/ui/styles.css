@@ -4,15 +4,23 @@
   --surface: #fffefb;
   --fg: #2b2a28;
   --fg-muted: #6f6b64;
-  --accent: #6b8f86;
-  --accent-strong: #557a71;
-  --accent-soft: #eaf1ee;
+  /* Interactive accent — hover, focus, links, primary buttons. */
+  --accent: #6d87ab;
+  --accent-strong: #56708f;
+  --accent-soft: #e9eef5;
+
+  /* Answer verdict — green for correct, rose for incorrect. Kept distinct from
+     the interactive accent so a highlighted/selected option never reads as
+     "correct". */
+  --correct: #6b8f86;
+  --correct-strong: #557a71;
+  --correct-soft: #eaf1ee;
   --danger: #b07a6e;
   --danger-soft: #f5eae6;
   --border: #e4e0d8;
 
-  /* Stage-progress accents — a muted gold for success, kept distinct from the
-     teal interactive accent (used on hover) so the two never read alike. */
+  /* Stage-progress accents — a muted gold for cleared stages, kept distinct from
+     the blue interactive accent and the green verdict so they never read alike. */
   --played: #cdc3ad;
   --cleared: #b5934e;
   --cleared-strong: #8f6d2e;
