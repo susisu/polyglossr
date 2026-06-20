@@ -2,12 +2,20 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  /* Fill `main` so the bar and snippet stay pinned while the options scroll. */
+  flex: 1;
+  min-height: 0;
 }
 
 .bar {
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex: 0 0 auto;
+}
+
+.snippetSlot {
+  flex: 0 0 auto;
 }
 
 .stage {
@@ -50,59 +58,77 @@
   cursor: pointer;
 }
 
-.feedback {
+/* Verdict toast: one at a time, pinned just above the fixed footer. It fades in,
+   holds, then fades out over its lifetime (cleared from state at the same mark). */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  z-index: 10;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-  padding: 1.25rem;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.6rem;
+  max-width: min(32rem, calc(100vw - 2rem));
+  padding: 0.75rem 1.1rem;
   border: 1px solid var(--border);
-  border-radius: var(--radius);
   border-inline-start-width: 3px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 6px 20px rgb(0 0 0 / 12%);
+  animation: toast 2000ms ease forwards;
 }
 
-.correct {
+.toastCorrect {
   border-inline-start-color: var(--accent);
   background: var(--accent-soft);
 }
 
-.incorrect {
+.toastIncorrect {
   border-inline-start-color: var(--danger);
   background: var(--danger-soft);
 }
 
-.verdict {
-  margin: 0;
-  font-size: 0.875rem;
+.toastVerdict {
+  font-size: 0.8125rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--fg-muted);
 }
 
-.answer {
-  margin: 0;
-  font-size: 1.375rem;
+.toastAnswer {
+  font-size: 1.125rem;
   font-family: var(--font-text);
 }
 
-.yourGuess {
-  margin: 0;
+.toastGuess {
+  width: 100%;
   color: var(--fg-muted);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
 }
 
-.continue {
-  margin-top: 0.75rem;
-  padding: 0.6rem 1.4rem;
-  font: inherit;
-  color: var(--surface);
-  background: var(--accent);
-  border: none;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: background-color 160ms ease;
+@keyframes toast {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0.5rem);
+  }
+  8% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  88% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 0.25rem);
+  }
 }
 
-.continue:hover {
-  background: var(--accent-strong);
+@media (prefers-reduced-motion: reduce) {
+  .toast {
+    animation: none;
+  }
 }

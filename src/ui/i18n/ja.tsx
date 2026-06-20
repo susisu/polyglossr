@@ -28,7 +28,6 @@ export const ja = {
     correct: "正解",
     notQuite: "不正解",
     youGuessed: (name) => `あなたの回答: ${name}`,
-    continue: "次へ",
     sourceLabel: (base, script) => `${base}・${script}`,
   },
   picker: {

@@ -10,6 +10,10 @@ interface Props {
   /** Called with the chosen option id. */
   onPick: (optionId: string) => void;
   disabled: boolean;
+  /** While the answer is revealed, the option the player chose (for the effect). */
+  pickedOptionId: string | null;
+  /** Whether the picked option was the correct one (drives the effect color). */
+  pickedCorrect: boolean;
 }
 
 /**
@@ -17,7 +21,13 @@ interface Props {
  * suggestion (arrow keys + Enter, or click) — arbitrary text can't be submitted,
  * so the answer is always a real option of the stage.
  */
-export function OptionPicker({ options, onPick, disabled }: Props): ReactElement {
+export function OptionPicker({
+  options,
+  onPick,
+  disabled,
+  pickedOptionId,
+  pickedCorrect,
+}: Props): ReactElement {
   const messages = useMessages();
   const [query, setQuery] = useState("");
   const [highlight, setHighlight] = useState(0);
@@ -88,7 +98,12 @@ export function OptionPicker({ options, onPick, disabled }: Props): ReactElement
           <li key={option.id} role="option" aria-selected={index === activeIndex}>
             <button
               type="button"
-              className={clsx(styles["option"], index === activeIndex && styles["active"])}
+              className={clsx(
+                styles["option"],
+                index === activeIndex && styles["active"],
+                option.id === pickedOptionId
+                  && (pickedCorrect ? styles["correct"] : styles["incorrect"]),
+              )}
               disabled={disabled}
               onClick={() => {
                 choose(option.id);

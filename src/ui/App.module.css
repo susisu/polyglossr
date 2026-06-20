@@ -1,17 +1,19 @@
 .app {
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
+  /* A fixed-height frame: the header and footer stay put while `main` scrolls
+     internally. This keeps the footer anchored (where the game's toast lives)
+     and lets the game pin its snippet while only its options scroll. */
+  height: 100dvh;
   max-width: 56rem;
   margin: 0 auto;
-  padding: 0 clamp(1rem, 4vw, 2rem);
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 0;
+  padding: 1.5rem var(--gutter);
 }
 
 .brand {
@@ -47,12 +49,15 @@
 
 .main {
   flex: 1;
-  padding: 1rem 0 3rem;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-inline: var(--gutter);
 }
 
 .footer {
-  padding: 1.5rem 0;
-  border-top: 1px solid var(--border);
+  padding: 1.5rem var(--gutter);
 }
 
 .credit {

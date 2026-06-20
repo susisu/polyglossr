@@ -24,6 +24,22 @@ interface Props {
   onQuit: () => void;
 }
 
+// How long the revealed answer lingers before the next question auto-advances,
+// and how long the verdict toast stays up (it outlives the advance on purpose).
+const ADVANCE_DELAY_MS = 1000;
+const TOAST_DURATION_MS = 2000;
+
+/** The verdict toast shown after each answer (one at a time, never stacked). */
+interface Toast {
+  /** Bumped per answer so React remounts the node and the CSS animation restarts. */
+  key: number;
+  isCorrect: boolean;
+  /** The correct answer's label. */
+  answer: string;
+  /** The player's wrong guess, or null when they were right. */
+  guess: string | null;
+}
+
 type Action = { type: "answer"; optionId: string };
 
 function reducer(state: GameState, action: Action): GameState {
@@ -69,7 +85,9 @@ export function Game({ stage, seed, onFinish, onQuit }: Props): ReactElement {
   // The option id the player picked for the current question, while its answer
   // is revealed; null while they are still choosing.
   const [pickedOptionId, setPickedOptionId] = useState<string | null>(null);
-  const continueRef = useRef<HTMLButtonElement>(null);
+  const [toast, setToast] = useState<Toast | null>(null);
+  const advanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const options = useMemo(() => stageOptions(stage, locale), [stage, locale]);
 
@@ -77,25 +95,45 @@ export function Game({ stage, seed, onFinish, onQuit }: Props): ReactElement {
     if (state.status !== "playing") onFinish(state);
   }, [state, onFinish]);
 
-  useEffect(() => {
-    if (pickedOptionId !== null) continueRef.current?.focus();
-  }, [pickedOptionId]);
+  // Drop any pending timers when the game unmounts (quit, finish, navigation).
+  useEffect(
+    () => () => {
+      if (advanceTimer.current !== null) clearTimeout(advanceTimer.current);
+      if (toastTimer.current !== null) clearTimeout(toastTimer.current);
+    },
+    [],
+  );
 
   const question = state.questions[state.current];
   if (question === undefined) return <div className={styles["game"]} />;
+  // Capture the fields handlePick needs: control-flow narrowing of `question`
+  // isn't carried into the closure, but these consts keep their narrowed types.
+  const { index: questionIndex, optionId: answerOptionId, sourceCode } = question;
 
-  const source = sourceFor(question.sourceCode);
+  const source = sourceFor(sourceCode);
   const revealed = pickedOptionId !== null;
-  const isCorrect = revealed && pickedOptionId === question.optionId;
+  const pickedCorrect = revealed && pickedOptionId === answerOptionId;
 
   function handlePick(optionId: string): void {
-    if (!revealed) setPickedOptionId(optionId);
-  }
-
-  function handleContinue(): void {
-    if (pickedOptionId === null) return;
-    dispatch({ type: "answer", optionId: pickedOptionId });
-    setPickedOptionId(null);
+    if (revealed) return;
+    const correct = optionId === answerOptionId;
+    setPickedOptionId(optionId);
+    setToast({
+      key: questionIndex,
+      isCorrect: correct,
+      answer: sourceLabel(stage, sourceCode, answerOptionId, messages, locale),
+      guess: correct ? null : stageOptionName(stage, optionId, locale),
+    });
+    // Reveal the verdict, then auto-advance; the toast lingers a beat longer.
+    if (advanceTimer.current !== null) clearTimeout(advanceTimer.current);
+    if (toastTimer.current !== null) clearTimeout(toastTimer.current);
+    advanceTimer.current = setTimeout(() => {
+      dispatch({ type: "answer", optionId });
+      setPickedOptionId(null);
+    }, ADVANCE_DELAY_MS);
+    toastTimer.current = setTimeout(() => {
+      setToast(null);
+    }, TOAST_DURATION_MS);
   }
 
   return (
@@ -121,38 +159,42 @@ export function Game({ stage, seed, onFinish, onQuit }: Props): ReactElement {
         </button>
       </header>
 
-      <SnippetPanel
-        snippet={question.snippet}
-        direction={question.direction}
-        bcp47={source?.bcp47 ?? "und"}
+      <div className={styles["snippetSlot"]}>
+        <SnippetPanel
+          snippet={question.snippet}
+          direction={question.direction}
+          bcp47={source?.bcp47 ?? "und"}
+        />
+      </div>
+
+      <OptionPicker
+        key={`question-${question.index}`}
+        options={options}
+        onPick={handlePick}
+        disabled={revealed}
+        pickedOptionId={pickedOptionId}
+        pickedCorrect={pickedCorrect}
       />
 
-      {revealed ?
+      {toast !== null && (
         <div
-          className={clsx(styles["feedback"], isCorrect ? styles["correct"] : styles["incorrect"])}
-        >
-          <p className={styles["verdict"]}>
-            {isCorrect ? messages.game.correct : messages.game.notQuite}
-          </p>
-          <p className={styles["answer"]}>
-            {sourceLabel(stage, question.sourceCode, question.optionId, messages, locale)}
-          </p>
-          {!isCorrect && (
-            <p className={styles["yourGuess"]}>
-              {messages.game.youGuessed(stageOptionName(stage, pickedOptionId, locale))}
-            </p>
+          key={`toast-${toast.key}`}
+          role="status"
+          aria-live="polite"
+          className={clsx(
+            styles["toast"],
+            toast.isCorrect ? styles["toastCorrect"] : styles["toastIncorrect"],
           )}
-          <button
-            ref={continueRef}
-            type="button"
-            className={styles["continue"]}
-            onClick={handleContinue}
-          >
-            {messages.game.continue}
-          </button>
+        >
+          <span className={styles["toastVerdict"]}>
+            {toast.isCorrect ? messages.game.correct : messages.game.notQuite}
+          </span>
+          <span className={styles["toastAnswer"]}>{toast.answer}</span>
+          {toast.guess !== null && (
+            <span className={styles["toastGuess"]}>{messages.game.youGuessed(toast.guess)}</span>
+          )}
         </div>
-      : <OptionPicker key={question.index} options={options} onPick={handlePick} disabled={false} />
-      }
+      )}
     </div>
   );
 }

@@ -28,7 +28,6 @@ export const en = {
     correct: "Correct",
     notQuite: "Not quite",
     youGuessed: (name) => `You guessed ${name}`,
-    continue: "Continue",
     sourceLabel: (base, script) => `${base} · ${script}`,
   },
   picker: {

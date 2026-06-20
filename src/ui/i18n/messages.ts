@@ -41,7 +41,6 @@ export interface Messages {
     correct: string;
     notQuite: string;
     youGuessed: (name: string) => string;
-    continue: string;
     /** Answer label "Language · Script" (script omitted for single-script langs). */
     sourceLabel: (base: string, script: string) => string;
   };
