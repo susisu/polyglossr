@@ -975,6 +975,192 @@ export const STAGES: readonly Stage[] = [
       { id: "sin", sourceCodes: ["sin"] },
     ],
   },
+  {
+    id: "true-polyglot",
+    name: { en: "True Polyglot", ja: "真のポリグロット" },
+    description: {
+      en: "The ultimate challenge.",
+      ja: "最終到達点。",
+    },
+    // The catch-all final stage: every distinct language any other stage can show,
+    // each as a single language option. This is the union of all language-stage
+    // options plus the languages that otherwise appear only inside the script and
+    // family stages (Assyrian Neo-Aramaic, Tibetan, Chakma, Maldivian, Pular,
+    // Punjabi, Vai) — so a player here must name all 143. Grouped geographically
+    // for authoring; multi-code options bundle the scripts/variants of one
+    // language (e.g. Serbian Cyrillic + Latin) so it stays weighted as one.
+    category: "language",
+    regions: ["world"],
+    options: [
+      // Europe — Romance
+      { id: "spa", sourceCodes: ["spa"] },
+      { id: "fra", sourceCodes: ["fra"] },
+      { id: "ita", sourceCodes: ["ita"] },
+      { id: "por", sourceCodes: ["por_PT", "por_BR"] },
+      { id: "ron", sourceCodes: ["ron_2006"] },
+      { id: "cat", sourceCodes: ["cat"] },
+      { id: "glg", sourceCodes: ["glg"] },
+      { id: "oci", sourceCodes: ["prv"] },
+      { id: "roh", sourceCodes: ["roh"] },
+      // Europe — Germanic
+      { id: "eng", sourceCodes: ["eng"] },
+      { id: "deu", sourceCodes: ["deu_1996"] },
+      { id: "nld", sourceCodes: ["nld"] },
+      { id: "swe", sourceCodes: ["swe"] },
+      { id: "dan", sourceCodes: ["dan"] },
+      { id: "nob", sourceCodes: ["nob"] },
+      { id: "nno", sourceCodes: ["nno"] },
+      { id: "isl", sourceCodes: ["isl"] },
+      { id: "fao", sourceCodes: ["fao"] },
+      { id: "ltz", sourceCodes: ["ltz"] },
+      // Europe — Celtic
+      { id: "gle", sourceCodes: ["gle"] },
+      { id: "gla", sourceCodes: ["gla"] },
+      { id: "cym", sourceCodes: ["cym"] },
+      { id: "bre", sourceCodes: ["bre"] },
+      // Europe — Slavic
+      { id: "pol", sourceCodes: ["pol"] },
+      { id: "ces", sourceCodes: ["ces"] },
+      { id: "slk", sourceCodes: ["slk"] },
+      { id: "slv", sourceCodes: ["slv"] },
+      { id: "hrv", sourceCodes: ["hrv"] },
+      { id: "srp", sourceCodes: ["srp_cyrl", "srp_latn"] },
+      { id: "mkd", sourceCodes: ["mkd"] },
+      { id: "bul", sourceCodes: ["bul"] },
+      { id: "rus", sourceCodes: ["rus"] },
+      { id: "ukr", sourceCodes: ["ukr"] },
+      { id: "bel", sourceCodes: ["bel"] },
+      { id: "hsb", sourceCodes: ["hsb"] },
+      // Europe — Baltic
+      { id: "lit", sourceCodes: ["lit"] },
+      { id: "lvs", sourceCodes: ["lav"] },
+      // Europe — Uralic
+      { id: "fin", sourceCodes: ["fin"] },
+      { id: "ekk", sourceCodes: ["est"] },
+      { id: "hun", sourceCodes: ["hun"] },
+      { id: "sme", sourceCodes: ["sme"] },
+      // Europe — other (Hellenic, Albanian, Basque, Maltese)
+      { id: "ell", sourceCodes: ["ell_monotonic"] },
+      { id: "als", sourceCodes: ["als"] },
+      { id: "eus", sourceCodes: ["eus"] },
+      { id: "mlt", sourceCodes: ["mlt"] },
+      // Caucasus
+      { id: "kat", sourceCodes: ["kat"] },
+      { id: "hye", sourceCodes: ["hye"] },
+      // Middle East & West Asia — Semitic
+      { id: "arb", sourceCodes: ["arb"] },
+      { id: "heb", sourceCodes: ["heb"] },
+      { id: "aii", sourceCodes: ["aii"] }, // Assyrian Neo-Aramaic (Syriac script)
+      // Middle East & Central Asia — Iranian
+      { id: "pes", sourceCodes: ["pes_1"] },
+      { id: "ckb", sourceCodes: ["ckb"] },
+      { id: "kmr", sourceCodes: ["kmr"] },
+      { id: "pbu", sourceCodes: ["pbu"] },
+      { id: "tgk", sourceCodes: ["tgk"] },
+      // Central & West Asia — Turkic
+      { id: "tur", sourceCodes: ["tur"] },
+      { id: "azj", sourceCodes: ["azj_latn"] },
+      { id: "kaz", sourceCodes: ["kaz"] },
+      { id: "kir", sourceCodes: ["kir"] },
+      { id: "uzn", sourceCodes: ["uzn_cyrl", "uzn_latn"] },
+      { id: "tuk", sourceCodes: ["tuk_cyrl", "tuk_latn"] },
+      { id: "tat", sourceCodes: ["tat"] },
+      { id: "uig", sourceCodes: ["uig_arab"] },
+      // Mongolic
+      { id: "khk", sourceCodes: ["khk"] },
+      // South Asia — Indo-Aryan
+      { id: "hin", sourceCodes: ["hin"] },
+      { id: "urd", sourceCodes: ["urd"] },
+      { id: "ben", sourceCodes: ["ben"] },
+      { id: "guj", sourceCodes: ["guj"] },
+      { id: "mar", sourceCodes: ["mar"] },
+      { id: "pan", sourceCodes: ["pan"] }, // Punjabi (Gurmukhi)
+      { id: "npi", sourceCodes: ["nep"] },
+      { id: "sin", sourceCodes: ["sin"] },
+      { id: "div", sourceCodes: ["div"] }, // Maldivian (Thaana)
+      // South Asia — Dravidian
+      { id: "tam", sourceCodes: ["tam"] },
+      { id: "tel", sourceCodes: ["tel"] },
+      { id: "kan", sourceCodes: ["kan"] },
+      { id: "mal", sourceCodes: ["mal"] },
+      // South Asia — Tibetic & other
+      { id: "bod", sourceCodes: ["bod"] }, // Tibetan
+      { id: "dzo", sourceCodes: ["dzo"] },
+      { id: "ccp", sourceCodes: ["ccp"] }, // Chakma
+      // Southeast Asia
+      { id: "tha", sourceCodes: ["tha"] },
+      { id: "lao", sourceCodes: ["lao"] },
+      { id: "khm", sourceCodes: ["khm"] },
+      { id: "mya", sourceCodes: ["mya"] },
+      { id: "vie", sourceCodes: ["vie"] },
+      { id: "ind", sourceCodes: ["ind"] },
+      { id: "zlm", sourceCodes: ["mly_latn"] },
+      { id: "tgl", sourceCodes: ["tgl"] },
+      // East Asia
+      { id: "cmn", sourceCodes: ["cmn_hans", "cmn_hant"] },
+      { id: "jpn", sourceCodes: ["jpn"] },
+      { id: "kor", sourceCodes: ["kor"] },
+      // Africa — Berber
+      { id: "kab", sourceCodes: ["071"] },
+      { id: "tzm", sourceCodes: ["tzm"] },
+      // Africa — West Africa
+      { id: "hau", sourceCodes: ["hau_3"] },
+      { id: "yor", sourceCodes: ["yor"] },
+      { id: "ibo", sourceCodes: ["ibo"] },
+      { id: "wol", sourceCodes: ["wol"] },
+      { id: "bam", sourceCodes: ["bam"] },
+      { id: "twi", sourceCodes: ["aka_asante"] },
+      { id: "ewe", sourceCodes: ["ewe"] },
+      { id: "fuf", sourceCodes: ["fuf_adlm"] }, // Pular (Adlam)
+      { id: "vai", sourceCodes: ["vai"] }, // Vai
+      // Africa — Bantu
+      { id: "swh", sourceCodes: ["swh"] },
+      { id: "lin", sourceCodes: ["lin"] },
+      { id: "kng", sourceCodes: ["kng"] },
+      { id: "lug", sourceCodes: ["lug"] },
+      { id: "kin", sourceCodes: ["kin"] },
+      { id: "sna", sourceCodes: ["sna"] },
+      { id: "zul", sourceCodes: ["zul"] },
+      { id: "xho", sourceCodes: ["xho"] },
+      { id: "nso", sourceCodes: ["nso"] },
+      { id: "sot", sourceCodes: ["sot"] },
+      { id: "tsn", sourceCodes: ["tsn"] },
+      { id: "ven", sourceCodes: ["ven"] },
+      { id: "tso", sourceCodes: ["tso_ZW"] },
+      { id: "ssw", sourceCodes: ["ssw"] },
+      { id: "nya", sourceCodes: ["nya_chinyanja"] },
+      { id: "umb", sourceCodes: ["umb"] },
+      // Africa — Horn of Africa
+      { id: "amh", sourceCodes: ["amh"] },
+      { id: "tir", sourceCodes: ["tir"] },
+      { id: "som", sourceCodes: ["som"] },
+      { id: "aar", sourceCodes: ["aar"] },
+      // Americas — North America
+      { id: "nav", sourceCodes: ["nav"] },
+      { id: "chr", sourceCodes: ["chr_cased"] },
+      { id: "cic", sourceCodes: ["cic"] },
+      { id: "ike", sourceCodes: ["ike"] },
+      { id: "kal", sourceCodes: ["kal"] },
+      // Americas — Mesoamerica
+      { id: "nhn", sourceCodes: ["nhn"] },
+      { id: "quc", sourceCodes: ["quc"] },
+      { id: "kek", sourceCodes: ["kek"] },
+      { id: "cak", sourceCodes: ["cak"] },
+      { id: "mam", sourceCodes: ["mam"] },
+      { id: "tzo", sourceCodes: ["tzc"] },
+      // Americas — South America
+      { id: "quz", sourceCodes: ["quz"] },
+      { id: "ayr", sourceCodes: ["ayr"] },
+      { id: "gug", sourceCodes: ["gug"] },
+      { id: "arn", sourceCodes: ["arn"] },
+      { id: "jiv", sourceCodes: ["jiv"] },
+      { id: "shp", sourceCodes: ["shp"] },
+      { id: "cni", sourceCodes: ["cni"] },
+      { id: "huu", sourceCodes: ["huu"] },
+      { id: "yad", sourceCodes: ["yad"] },
+      { id: "cof", sourceCodes: ["cof"] },
+    ],
+  },
 ];
 
 /** Look up a stage by its id. */
