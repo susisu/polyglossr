@@ -737,8 +737,8 @@ export const STAGES: readonly Stage[] = [
     id: "south-asia-scripts",
     name: { en: "Scripts of South Asia", ja: "南アジアの文字" },
     description: {
-      en: "Name the writing system, not the language — the Brahmic scripts of the Indian subcontinent and its neighbours.",
-      ja: "言語ではなく書記体系を答えよう。インド亜大陸とその周辺のブラーフミー系文字たち。",
+      en: "Name the writing system, not the language — the scripts of the Indian subcontinent and its neighbours.",
+      ja: "言語ではなく書記体系を答えよう。インド亜大陸とその周辺の文字たち。",
     },
     // Options are writing systems, not languages. The South Asia portion of the
     // Scripts of the World stage, gathered on its own: northern Brahmic (Devanagari,
