@@ -730,6 +730,45 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
+    id: "south-asia-scripts",
+    name: { en: "Scripts of South Asia", ja: "南アジアの文字" },
+    description: {
+      en: "Name the writing system, not the language — the Brahmic scripts of the Indian subcontinent and its neighbours.",
+      ja: "言語ではなく書記体系を答えよう。インド亜大陸とその周辺のブラーフミー系文字たち。",
+    },
+    // Options are writing systems, not languages. The South Asia portion of the
+    // Scripts of the World stage, gathered on its own: northern Brahmic (Devanagari,
+    // Bengali, Gurmukhi, Gujarati), the Dravidian quartet (Tamil, Telugu — Kannada's
+    // close sister — and Malayalam), Sinhala and Chakma, plus Thaana (Maldives) and
+    // Tibetan (Bhutan/Himalaya) at the edges. The Perso-Arabic script of Urdu is the
+    // lone non-Brahmic member — the outlier that stands out by script alone.
+    category: "script",
+    regions: ["asia"],
+    options: [
+      // Northern Brahmic
+      {
+        id: "deva",
+        label: { en: "Devanagari", ja: "デーヴァナーガリー文字" },
+        sourceCodes: ["hin", "nep", "mar"],
+      },
+      { id: "beng", label: { en: "Bengali", ja: "ベンガル文字" }, sourceCodes: ["ben"] },
+      { id: "guru", label: { en: "Gurmukhi", ja: "グルムキー文字" }, sourceCodes: ["pan"] },
+      { id: "gujr", label: { en: "Gujarati", ja: "グジャラート文字" }, sourceCodes: ["guj"] },
+      // Dravidian, Sinhala, Chakma
+      { id: "taml", label: { en: "Tamil", ja: "タミル文字" }, sourceCodes: ["tam"] },
+      { id: "telu", label: { en: "Telugu", ja: "テルグ文字" }, sourceCodes: ["tel"] },
+      { id: "knda", label: { en: "Kannada", ja: "カンナダ文字" }, sourceCodes: ["kan"] },
+      { id: "mlym", label: { en: "Malayalam", ja: "マラヤーラム文字" }, sourceCodes: ["mal"] },
+      { id: "sinh", label: { en: "Sinhala", ja: "シンハラ文字" }, sourceCodes: ["sin"] },
+      { id: "cakm", label: { en: "Chakma", ja: "チャクマ文字" }, sourceCodes: ["ccp"] },
+      // Edges
+      { id: "thaa", label: { en: "Thaana", ja: "ターナ文字" }, sourceCodes: ["div"] },
+      { id: "tibt", label: { en: "Tibetan", ja: "チベット文字" }, sourceCodes: ["bod", "dzo"] },
+      // Perso-Arabic — the lone non-Brahmic script
+      { id: "arab", label: { en: "Arabic", ja: "アラビア文字" }, sourceCodes: ["urd"] },
+    ],
+  },
+  {
     id: "celtic",
     name: { en: "Celtic", ja: "ケルト語派" },
     description: {
