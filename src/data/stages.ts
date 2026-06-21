@@ -717,13 +717,17 @@ export const STAGES: readonly Stage[] = [
     options: [
       { id: "hin", sourceCodes: ["hin"] },
       { id: "urd", sourceCodes: ["urd"] },
+      { id: "mar", sourceCodes: ["mar"] }, // Marathi (Devanagari)
       { id: "ben", sourceCodes: ["ben"] },
+      { id: "ccp", sourceCodes: ["ccp"] }, // Chakma
+      { id: "pan", sourceCodes: ["pan"] }, // Punjabi (Gurmukhi)
       { id: "guj", sourceCodes: ["guj"] },
       { id: "tam", sourceCodes: ["tam"] },
       { id: "tel", sourceCodes: ["tel"] },
       { id: "kan", sourceCodes: ["kan"] },
       { id: "mal", sourceCodes: ["mal"] },
       { id: "sin", sourceCodes: ["sin"] },
+      { id: "div", sourceCodes: ["div"] }, // Maldivian / Dhivehi (Thaana)
       { id: "npi", sourceCodes: ["nep"] },
       { id: "bod", sourceCodes: ["bod"] }, // Tibetan — Tibetan script, with Dzongkha
       { id: "dzo", sourceCodes: ["dzo"] },
