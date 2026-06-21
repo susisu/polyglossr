@@ -571,8 +571,27 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
+    id: "romance-easy",
+    name: { en: "Romance (Easy)", ja: "ロマンス諸語（初級）" },
+    description: {
+      en: "The major Romance languages — Spanish, French, Italian and their best-known siblings.",
+      ja: "メジャーなロマンス諸語。スペイン語・フランス語・イタリア語とよく知られた仲間たち。",
+    },
+    // The national Romance languages; the regional/minority members (Catalan,
+    // Galician, Occitan, Romansch) are held back for the hard stage.
+    category: "language",
+    regions: ["europe"],
+    options: [
+      { id: "spa", sourceCodes: ["spa"] },
+      { id: "fra", sourceCodes: ["fra"] },
+      { id: "ita", sourceCodes: ["ita"] },
+      { id: "por", sourceCodes: ["por_PT", "por_BR"] },
+      { id: "ron", sourceCodes: ["ron_2006"] },
+    ],
+  },
+  {
     id: "romance",
-    name: { en: "Romance", ja: "ロマンス諸語" },
+    name: { en: "Romance (Hard)", ja: "ロマンス諸語（上級）" },
     description: {
       en: "Sister languages of the Latin world — Spanish, Portuguese, Italian and their neighbours.",
       ja: "ラテン世界の姉妹言語たち。スペイン語・ポルトガル語・イタリア語とその隣人。",
@@ -592,8 +611,29 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
+    id: "germanic-easy",
+    name: { en: "Germanic (Easy)", ja: "ゲルマン語派（初級）" },
+    description: {
+      en: "The major Germanic languages, from English and German to the big Nordic tongues.",
+      ja: "メジャーなゲルマン諸語。英語・ドイツ語から、主要な北欧語まで。",
+    },
+    // The well-known national Germanic languages; the regional/minority members
+    // (Scots, Low Saxon, Frisian, Afrikaans, Faroese, Luxembourgish) and the
+    // Norwegian written standards are held back for the hard stage.
+    category: "language",
+    regions: ["europe"],
+    options: [
+      { id: "eng", sourceCodes: ["eng"] },
+      { id: "deu", sourceCodes: ["deu_1996"] },
+      { id: "nld", sourceCodes: ["nld"] },
+      { id: "swe", sourceCodes: ["swe"] },
+      { id: "dan", sourceCodes: ["dan"] },
+      { id: "isl", sourceCodes: ["isl"] },
+    ],
+  },
+  {
     id: "germanic",
-    name: { en: "Germanic", ja: "ゲルマン語派" },
+    name: { en: "Germanic (Hard)", ja: "ゲルマン語派（上級）" },
     description: {
       en: "From English and German to the languages of the North.",
       ja: "英語・ドイツ語から、北欧の言語まで。",
@@ -618,8 +658,29 @@ export const STAGES: readonly Stage[] = [
     ],
   },
   {
+    id: "slavic-easy",
+    name: { en: "Slavic (Easy)", ja: "スラヴ語派（初級）" },
+    description: {
+      en: "The major Slavic languages, written in both Latin and Cyrillic.",
+      ja: "メジャーなスラヴ諸語。ラテン文字とキリル文字、両方で書かれる。",
+    },
+    // One well-known representative per look-alike cluster; the smaller and
+    // hardest-to-tell-apart members (Slovak, Slovene, Serbian, Macedonian,
+    // Belarusian, Sorbian) are held back for the hard stage.
+    category: "language",
+    regions: ["europe"],
+    options: [
+      { id: "pol", sourceCodes: ["pol"] },
+      { id: "ces", sourceCodes: ["ces"] },
+      { id: "hrv", sourceCodes: ["hrv"] },
+      { id: "rus", sourceCodes: ["rus"] },
+      { id: "ukr", sourceCodes: ["ukr"] },
+      { id: "bul", sourceCodes: ["bul"] },
+    ],
+  },
+  {
     id: "slavic",
-    name: { en: "Slavic", ja: "スラヴ語派" },
+    name: { en: "Slavic (Hard)", ja: "スラヴ語派（上級）" },
     description: {
       en: "The Slavic languages, written in both Latin and Cyrillic.",
       ja: "ラテン文字とキリル文字、両方で書かれるスラヴ語派。",
