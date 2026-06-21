@@ -19,14 +19,18 @@
 }
 
 .stage {
+  flex: 1 1 auto;
+  min-width: 0;
   font-family: var(--font-text);
   font-weight: 500;
 }
 
 .progress {
+  flex: 0 0 auto;
   font-variant-numeric: tabular-nums;
   color: var(--fg-muted);
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .lives {
