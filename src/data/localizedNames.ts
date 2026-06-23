@@ -70,6 +70,7 @@ const LANGUAGE_NAMES: Record<string, Partial<Localized<string>>> = {
   gld: { ja: "ナナイ語" },
   gle: { ja: "アイルランド語" },
   glg: { ja: "ガリシア語" },
+  glv: { ja: "マン島語" },
   gug: { ja: "グアラニー語" },
   guj: { ja: "グジャラート語" },
   hak: { ja: "客家語" },

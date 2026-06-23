@@ -776,14 +776,15 @@ export const STAGES: readonly Stage[] = [
     id: "celtic",
     name: { en: "Celtic", ja: "ケルト語派" },
     description: {
-      en: "The surviving Celtic languages of the British Isles and Brittany.",
-      ja: "ブリテン諸島とブルターニュに受け継がれるケルトの言語たち。",
+      en: "The Celtic languages still alive in the British Isles and Brittany.",
+      ja: "ブリテン諸島とブルターニュに今も生きるケルトの言語たち。",
     },
     category: "language",
     regions: ["europe"],
     options: [
       { id: "gle", sourceCodes: ["gle"] }, // Irish
       { id: "gla", sourceCodes: ["gla"] }, // Scottish Gaelic
+      { id: "glv", sourceCodes: ["glv"] }, // Manx
       { id: "cym", sourceCodes: ["cym"] }, // Welsh
       { id: "bre", sourceCodes: ["bre"] }, // Breton
     ],
@@ -1353,6 +1354,7 @@ export const STAGES: readonly Stage[] = [
       // Europe — Celtic
       { id: "gle", sourceCodes: ["gle"] },
       { id: "gla", sourceCodes: ["gla"] },
+      { id: "glv", sourceCodes: ["glv"] },
       { id: "cym", sourceCodes: ["cym"] },
       { id: "bre", sourceCodes: ["bre"] },
       // Europe — Slavic
