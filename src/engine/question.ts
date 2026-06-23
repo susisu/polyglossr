@@ -64,58 +64,55 @@ function drawsByOption(input: GenerateRunInput): Draw[][] {
 }
 
 /**
- * One balanced pass over all unique draws: round-robin across a shuffled option
- * order, taking one draw per option per round (each option's draws shuffled).
- * Spreads options out and visits every unique draw exactly once.
- */
-function balancedPass(byOption: ReadonlyArray<readonly Draw[]>, seed: number): Draw[] {
-  const rng = mulberry32(seed);
-  const queues = shuffle(
-    Array.from(byOption, (draws) => shuffle(draws, rng)),
-    rng,
-  );
-  const result: Draw[] = [];
-  let progressed = true;
-  while (progressed) {
-    progressed = false;
-    for (const queue of queues) {
-      const draw = queue.pop();
-      if (draw !== undefined) {
-        result.push(draw);
-        progressed = true;
-      }
-    }
-  }
-  return result;
-}
-
-/**
- * Generate a deterministic 30-question run for a stage. The whole run is a pure
- * function of the seed. No (source, snippet) pair repeats until every unique
- * pair has been shown; if the stage is too small for that many uniques, further
- * passes (reshuffled) are appended as a fallback.
+ * Generate a deterministic run of `totalQuestions` questions for a stage, as a
+ * pure function of the seed.
+ *
+ * - **Balanced options.** Each option gets an equal share of the run; any
+ *   leftover questions go to a random subset of options.
+ * - **No repeated example.** Each pass through an option's unique (source,
+ *   snippet) draws is a fresh shuffle, so every example is shown once before any
+ *   repeats, and a repeat never reuses the previous pass's order.
+ * - **Random order.** The run is shuffled as a whole, so the same option may
+ *   fall on consecutive questions — that is fine as long as the run stays
+ *   balanced overall.
  */
 export function generateRun(input: GenerateRunInput): Question[] {
   const byOption = drawsByOption(input);
   if (byOption.length === 0) return [];
 
-  const questions: Question[] = [];
-  let pass = 0;
-  while (questions.length < input.totalQuestions) {
-    // Vary each fallback pass by perturbing the seed.
-    const draws = balancedPass(byOption, input.seed + pass);
-    if (draws.length === 0) break;
-    for (const draw of draws) {
-      if (questions.length >= input.totalQuestions) break;
-      questions.push({
-        index: questions.length,
-        sourceCode: draw.sourceCode,
-        optionId: draw.optionId,
-        snippet: draw.snippet,
-        direction: draw.direction,
-      });
+  const rng = mulberry32(input.seed);
+  const total = input.totalQuestions;
+  const optionCount = byOption.length;
+
+  // Even split across options, with the remainder handed to a random subset.
+  const base = Math.floor(total / optionCount);
+  const remainder = total % optionCount;
+  const withExtra = new Set(
+    shuffle(
+      byOption.map((_, i) => i),
+      rng,
+    ).slice(0, remainder),
+  );
+
+  // Pull each option's share. Each pass through its examples is a fresh shuffle,
+  // so once the uniques run out the repeats never reuse the previous order.
+  const picked: Draw[] = [];
+  for (const [i, draws] of byOption.entries()) {
+    const count = base + (withExtra.has(i) ? 1 : 0);
+    let bag: Draw[] = [];
+    for (let j = 0; j < count; j++) {
+      if (bag.length === 0) bag = shuffle(draws, rng);
+      const draw = bag.pop();
+      if (draw !== undefined) picked.push(draw);
     }
-    pass += 1;
   }
-  return questions;
+
+  // Random order across the whole run; balance is already fixed by the shares.
+  return shuffle(picked, rng).map((draw, index) => ({
+    index,
+    sourceCode: draw.sourceCode,
+    optionId: draw.optionId,
+    snippet: draw.snippet,
+    direction: draw.direction,
+  }));
 }

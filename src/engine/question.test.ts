@@ -39,18 +39,32 @@ describe("generateRun", () => {
     expect(run.map((q) => q.index)).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
   });
 
-  it("does not repeat a (source, snippet) pair until all uniques are shown", () => {
-    // 12 unique draws exist; the first 12 questions must all be distinct.
+  it("does not repeat an example while uniques remain", () => {
+    // 12 unique draws exist; 12 questions must all be distinct.
     const run = runWith({ totalQuestions: 12 });
     const keys = run.map(drawKey);
     expect(new Set(keys).size).toBe(12);
   });
 
-  it("falls back to repeats only after exhausting uniques (small stage)", () => {
+  it("repeats examples only after a stage's uniques are exhausted", () => {
     const run = runWith({ totalQuestions: 20 });
     expect(run).toHaveLength(20);
-    const firstPass = run.slice(0, 12).map(drawKey);
-    expect(new Set(firstPass).size).toBe(12);
+    const keys = run.map(drawKey);
+    // All 12 uniques are used before any example repeats...
+    expect(new Set(keys).size).toBe(12);
+    // ...and no example shows more than twice (20 questions over 12 uniques).
+    const counts = new Map<string, number>();
+    for (const key of keys) counts.set(key, (counts.get(key) ?? 0) + 1);
+    expect(Math.max(...counts.values())).toBe(2);
+  });
+
+  it("selects options with balanced frequency", () => {
+    const run = runWith({ totalQuestions: 20 });
+    const counts = new Map<string, number>();
+    for (const q of run) counts.set(q.optionId, (counts.get(q.optionId) ?? 0) + 1);
+    expect(counts.size).toBe(3);
+    const values = [...counts.values()];
+    expect(Math.max(...values) - Math.min(...values)).toBeLessThanOrEqual(1);
   });
 
   it("labels every question with its source's logical language (option id)", () => {
