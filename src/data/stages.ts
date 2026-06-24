@@ -1321,9 +1321,10 @@ export const STAGES: readonly Stage[] = [
     // each as a single language option. This is the union of all language-stage
     // options plus the languages that otherwise appear only inside the script and
     // family stages (Assyrian Neo-Aramaic, Tibetan, Chakma, Maldivian, Pular,
-    // Punjabi, Vai) — so a player here must name them all. Grouped geographically
-    // for authoring; multi-code options bundle the scripts/variants of one
-    // language (e.g. Serbian Cyrillic + Latin) so it stays weighted as one.
+    // Punjabi, Vai) and a handful that appear in no other stage at all (Esperanto,
+    // Latin, Sanskrit, Yiddish) — so a player here must name them all. Grouped
+    // geographically for authoring; multi-code options bundle the scripts/variants
+    // of one language (e.g. Serbian Cyrillic + Latin) so it stays weighted as one.
     category: "language",
     regions: ["world"],
     options: [
@@ -1337,6 +1338,7 @@ export const STAGES: readonly Stage[] = [
       { id: "glg", sourceCodes: ["glg"] },
       { id: "oci", sourceCodes: ["prv"] },
       { id: "roh", sourceCodes: ["roh"] },
+      { id: "lat", sourceCodes: ["lat"] }, // Latin
       // Europe — Germanic
       { id: "eng", sourceCodes: ["eng"] },
       { id: "sco", sourceCodes: ["sco"] }, // Scots
@@ -1351,6 +1353,7 @@ export const STAGES: readonly Stage[] = [
       { id: "isl", sourceCodes: ["isl"] },
       { id: "fao", sourceCodes: ["fao"] },
       { id: "ltz", sourceCodes: ["ltz"] },
+      { id: "ydd", sourceCodes: ["ydd"] }, // Yiddish
       // Europe — Celtic
       { id: "gle", sourceCodes: ["gle"] },
       { id: "gla", sourceCodes: ["gla"] },
@@ -1383,7 +1386,7 @@ export const STAGES: readonly Stage[] = [
       { id: "als", sourceCodes: ["als"] },
       { id: "eus", sourceCodes: ["eus"] },
       { id: "mlt", sourceCodes: ["mlt"] },
-      // Constructed — appears only here, in no regional stage
+      // Constructed
       { id: "epo", sourceCodes: ["epo"] }, // Esperanto
       // Caucasus
       { id: "kat", sourceCodes: ["kat"] },
@@ -1423,6 +1426,7 @@ export const STAGES: readonly Stage[] = [
       { id: "npi", sourceCodes: ["nep"] },
       { id: "sin", sourceCodes: ["sin"] },
       { id: "div", sourceCodes: ["div"] }, // Maldivian (Thaana)
+      { id: "san", sourceCodes: ["san"] }, // Sanskrit
       // South Asia — Dravidian
       { id: "tam", sourceCodes: ["tam"] },
       { id: "tel", sourceCodes: ["tel"] },
